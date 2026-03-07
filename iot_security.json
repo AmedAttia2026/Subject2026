@@ -3,7 +3,7 @@
   "title": "IoT Security Complete Course",
   "sheets": [
     {
-      "title": "Tutorial 1: Security Foundations and Architecture",
+      "title": "Tutorial 1",
       "questions": [
         {
           "type": "mcq",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "title": "Tutorial 2: Threat Modeling for IoT Systems",
+      "title": "Tutorial 2",
       "questions": [
         {
           "type": "mcq",
@@ -678,7 +678,7 @@
       ]
     },
     {
-      "title": "Tutorial 3: Cryptography and Device Identity",
+      "title": "Tutorial 3",
       "questions": [
         {
           "type": "mcq",
