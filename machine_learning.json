@@ -1,0 +1,81 @@
+{
+  "id": "machine_learning",
+  "title": "Machine Learning Basics",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        { "type": "tf", "q": "1. Machine Learning became widely adopted only after big data and powerful GPUs became available.", "correct": "T" },
+        { "type": "tf", "q": "2. Supervised learning works without labeled data.", "correct": "F" },
+        { "type": "tf", "q": "3. Reinforcement learning is based on rewards and penalties.", "correct": "T" },
+        { "type": "tf", "q": "4. Machine Learning and Traditional Programming follow the same logic-based approach.", "correct": "F" },
+        { "type": "tf", "q": "5. Deep Learning is a specialized subset of Machine Learning.", "correct": "T" },
+        { "type": "tf", "q": "6. Generative AI models can create new data based on patterns they learned.", "correct": "T" },
+        { "type": "tf", "q": "7. Overfitting happens when a model performs well on training data but poorly on new data.", "correct": "T" },
+        { "type": "tf", "q": "8. Unsupervised learning is mainly used in clustering and dimensionality reduction.", "correct": "T" },
+        { "type": "tf", "q": "9. ML Life Cycle includes steps such as data collection, cleaning, modeling, and evaluation.", "correct": "T" },
+        { "type": "tf", "q": "10. Machine Learning can solve all real-world problems without limitations.", "correct": "F" },
+        { "type": "mcq", "q": "1. Machine Learning became more successful mainly due to:", "options": ["A. Bigger screens", "B. More data + stronger GPUs", "C. New programming languages", "D. Cloud storage only"], "correct": 1 },
+        { "type": "mcq", "q": "2. Traditional programming focuses on:", "options": ["A. Data + rules → output", "B. Data + output → rules", "C. Rewards and penalties", "D. Random predictions"], "correct": 0 },
+        { "type": "mcq", "q": "3. Which ML type requires labeled data?", "options": ["A. Unsupervised", "B. Semi-Supervised", "C. Supervised", "D. Reinforcement"], "correct": 2 },
+        { "type": "mcq", "q": "4. Clustering is an example of:", "options": ["A. Supervised learning", "B. Unsupervised learning", "C. Reinforcement learning", "D. Deep learning"], "correct": 1 },
+        { "type": "mcq", "q": "5. “The model memorizes training data but fails on test data” refers to:", "options": ["A. Underfitting", "B. Normal behavior", "C. Perfect generalization", "D. Overfitting"], "correct": 3 },
+        { "type": "mcq", "q": "6. Which of the following is a popular ML library in Python?", "options": ["A. NumPy", "B. TensorFlow", "C. OpenCV", "D. Flask"], "correct": 1 },
+        { "type": "mcq", "q": "7. Generative AI is mainly used for:", "options": ["A. Predicting labels", "B. Creating new data (text/images/audio)", "C. Cleaning datasets", "D. Database indexing"], "correct": 1 },
+        { "type": "mcq", "q": "8. A challenge in Machine Learning is:", "options": ["A. Having too little data", "B. Data bias", "C. High computational cost", "D. All of the above"], "correct": 3 },
+        { "type": "mcq", "q": "9. Which algorithm is used for classification?", "options": ["A. K-Means", "B. Linear Regression", "C. Logistic Regression", "D. PCA"], "correct": 2 },
+        { "type": "mcq", "q": "10. The last step of the ML Life Cycle is usually:", "options": ["A. Data collection", "B. Model deployment", "C. Feature engineering", "D. Model training"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Sheet 2",
+      "questions": [
+        { "type": "tf", "q": "1. Artificial Intelligence is a broader field that includes Machine Learning as one of its subfields.", "correct": "T" },
+        { "type": "tf", "q": "2. Artificial Neural Networks (ANNs) are inspired by the structure of the human brain.", "correct": "T" },
+        { "type": "tf", "q": "3. Deep Learning is a subset of Machine Learning that uses multiple neural network layers.", "correct": "T" },
+        { "type": "tf", "q": "4. Machine Learning always requires Artificial Neural Networks.", "correct": "F" },
+        { "type": "tf", "q": "5. Classification and regression are examples of Machine Learning tasks.", "correct": "T" },
+        { "type": "tf", "q": "6. Quantitative data can be measured numerically.", "correct": "T" },
+        { "type": "tf", "q": "7. Qualitative data represents categories or labels rather than numbers.", "correct": "T" },
+        { "type": "tf", "q": "8. One-Hot Encoding increases the number of features in a dataset.", "correct": "T" },
+        { "type": "tf", "q": "9. Label Encoding is suitable for all categorical features without risk.", "correct": "F" },
+        { "type": "tf", "q": "10. High-quality datasets improve the accuracy and reliability of ML models.", "correct": "T" },
+        { "type": "mcq", "q": "1. Which statement best describes the relationship between AI and ML?", "options": ["A. AI is a subset of ML", "B. ML is a subset of AI", "C. AI and ML are identical", "D. ML is unrelated to AI"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which of the following is NOT an AI branch?", "options": ["A. Machine Learning", "B. Robotics", "C. Computer Vision", "D. Database Management"], "correct": 3 },
+        { "type": "mcq", "q": "3. Artificial Neural Networks are mainly composed of:", "options": ["A. Rules and logic", "B. Neurons and weighted connections", "C. Databases and tables", "D. Decision trees only"], "correct": 1 },
+        { "type": "mcq", "q": "4. Which ANN type is commonly used for image processing?", "options": ["A. RNN", "B. CNN", "C. GAN", "D. SVM"], "correct": 1 },
+        { "type": "mcq", "q": "5. What is the key difference between ML and ANN-based models?", "options": ["A. ML never uses data", "B. ANN is a specific ML approach", "C. ANN replaces ML completely", "D. ML cannot learn patterns"], "correct": 1 },
+        { "type": "mcq", "q": "6. Which data type represents categories such as “Red, Blue, Green”?", "options": ["A. Quantitative", "B. Continuous", "C. Qualitative", "D. Numerical"], "correct": 2 },
+        { "type": "mcq", "q": "7. Which encoding technique creates a separate binary column for each category?", "options": ["A. Label Encoding", "B. Frequency Encoding", "C. One-Hot Encoding", "D. Target Encoding"], "correct": 2 },
+        { "type": "mcq", "q": "8. Which encoding technique replaces categories with their occurrence frequency?", "options": ["A. Binary Encoding", "B. Frequency Encoding", "C. One-Hot Encoding", "D. Label Encoding"], "correct": 1 },
+        { "type": "mcq", "q": "9. Which dataset source is considered reliable for ML projects?", "options": ["A. Random internet comments", "B. Public datasets (e.g., Kaggle, UCI)", "C. Unverified social media posts", "D. Synthetic noise data only"], "correct": 1 },
+        { "type": "mcq", "q": "10. Which strategy improves dataset quality?", "options": ["A. Removing labels", "B. Data cleaning and preprocessing", "C. Using small datasets", "D. Ignoring missing values"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Sheet 3",
+      "questions": [
+        { "type": "tf", "q": "1. Data loading is the first step before understanding and preparing the dataset.", "correct": "T" },
+        { "type": "tf", "q": "2. Raw data is always clean and ready to be used directly in machine learning models.", "correct": "F" },
+        { "type": "tf", "q": "3. Checking data dimensions helps identify the number of features and records.", "correct": "T" },
+        { "type": "tf", "q": "4. Statistical summaries include measures such as mean, median, and standard deviation.", "correct": "T" },
+        { "type": "tf", "q": "5. Class distribution review is important only for regression problems.", "correct": "F" },
+        { "type": "tf", "q": "6. Data preparation improves model performance and reliability.", "correct": "T" },
+        { "type": "tf", "q": "7. Feature engineering focuses on creating or transforming features to improve learning.", "correct": "T" },
+        { "type": "tf", "q": "8. Precision measures how many actual positive cases were correctly predicted.", "correct": "F" },
+        { "type": "tf", "q": "9. Recall is also known as sensitivity.", "correct": "T" },
+        { "type": "tf", "q": "10. Logarithmic Loss (LogLoss) penalizes confident but wrong predictions.", "correct": "T" },
+        { "type": "mcq", "q": "1. Which of the following is a common method for loading data in Python?", "options": ["A. print()", "B. read_csv()", "C. load_data()", "D. input()"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which function shows the first few rows of a dataset?", "options": ["A. info()", "B. describe()", "C. head()", "D. shape()"], "correct": 2 },
+        { "type": "mcq", "q": "3. Which method is used to check the number of rows and columns?", "options": ["A. shape", "B. head()", "C. dtypes", "D. corr()"], "correct": 0 },
+        { "type": "mcq", "q": "4. Which metric evaluates how well classes are balanced?", "options": ["A. Correlation", "B. Class distribution", "C. Skewness", "D. Feature scaling"], "correct": 1 },
+        { "type": "mcq", "q": "5. Which step removes missing values and duplicates?", "options": ["A. Data Reduction", "B. Data Splitting", "C. Data Cleaning", "D. Feature Engineering"], "correct": 2 },
+        { "type": "mcq", "q": "6. Feature engineering mainly aims to:", "options": ["A. Reduce hardware cost", "B. Improve model learning", "C. Increase dataset size", "D. Remove labels"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which metric combines precision and recall?", "options": ["A. Accuracy", "B. ROC AUC", "C. F1 Score", "D. Support"], "correct": 2 },
+        { "type": "mcq", "q": "8. A Confusion Matrix is mainly used to evaluate:", "options": ["A. Regression models", "B. Clustering models", "C. Classification models", "D. Dimensionality reduction"], "correct": 2 },
+        { "type": "mcq", "q": "9. Which metric measures how many positive predictions were correct?", "options": ["A. Recall", "B. Precision", "C. Accuracy", "D. Specificity"], "correct": 1 },
+        { "type": "mcq", "q": "10. ROC AUC Score measures:", "options": ["A. Error rate", "B. Probability loss", "C. Model’s ability to separate classes", "D. Number of features"], "correct": 2 }
+      ]
+    }
+  ]
+}

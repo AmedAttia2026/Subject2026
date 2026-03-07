@@ -1,0 +1,79 @@
+{
+  "id": "big_data",
+  "title": "Big Data & Analytics",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        { "type": "tf", "q": "1. The growth of IoT devices is one of the main causes of the data explosion.", "correct": "T" },
+        { "type": "tf", "q": "2. Big Data only refers to structured data stored in relational databases.", "correct": "F" },
+        { "type": "tf", "q": "3. Volume refers to the speed at which data is generated.", "correct": "F" },
+        { "type": "tf", "q": "4. Velocity describes how fast data is generated and processed.", "correct": "T" },
+        { "type": "tf", "q": "5. Variety refers to different formats such as text, images, and videos.", "correct": "T" },
+        { "type": "tf", "q": "6. Veracity deals with data accuracy and reliability.", "correct": "T" },
+        { "type": "tf", "q": "7. Traditional systems are always sufficient for handling petabytes of data.", "correct": "F" },
+        { "type": "tf", "q": "8. Distributed computing allows multiple machines to work together.", "correct": "T" },
+        { "type": "tf", "q": "9. Big Data architecture includes ingestion, storage, processing, and analytics layers.", "correct": "T" },
+        { "type": "tf", "q": "10. Scalability is not a challenge in Big Data systems.", "correct": "F" },
+        { "type": "mcq", "q": "1. Which of the following contributes most to the data explosion?", "options": ["a) Manual record keeping", "b) IoT devices", "c) Typewriters", "d) Fax machines"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which “V” represents the scale of data?", "options": ["a) Velocity", "b) Value", "c) Volume", "d) Variety"], "correct": 2 },
+        { "type": "mcq", "q": "3. Which layer is responsible for collecting data from different sources?", "options": ["a) Storage", "b) Analytics", "c) Ingestion", "d) Visualization"], "correct": 2 },
+        { "type": "mcq", "q": "4. Which of the following is an example of unstructured data?", "options": ["a) Excel table", "b) SQL database", "c) Social media image", "d) CSV file"], "correct": 2 },
+        { "type": "mcq", "q": "5. Traditional systems mainly rely on:", "options": ["a) Distributed clusters", "b) Single-server architecture", "c) Cloud-native systems", "d) Edge computing"], "correct": 1 },
+        { "type": "mcq", "q": "6. Velocity mainly concerns:", "options": ["a) Data size", "b) Data speed", "c) Data quality", "d) Data storage cost"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which industry uses Big Data for fraud detection?", "options": ["a) Agriculture", "b) Finance", "c) Construction", "d) Manufacturing"], "correct": 1 },
+        { "type": "mcq", "q": "8. Veracity is related to:", "options": ["a) Data truthfulness", "b) Data format", "c) Data speed", "d) Data duplication"], "correct": 0 },
+        { "type": "mcq", "q": "9. Distributed computing improves:", "options": ["a) Manual processing", "b) Scalability", "c) Paper documentation", "d) Data entry speed"], "correct": 1 },
+        { "type": "mcq", "q": "10. One key challenge in Big Data implementation is:", "options": ["a) Low internet usage", "b) Data security", "c) Small datasets", "d) Limited software options"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Sheet 2 – Part 1",
+      "questions": [
+        { "type": "tf", "q": "1. The ingestion layer is responsible for collecting data from different sources.", "correct": "T" },
+        { "type": "tf", "q": "2. Apache Kafka is mainly used for streaming data ingestion.", "correct": "T" },
+        { "type": "tf", "q": "3. Hadoop Distributed File System is a distributed file system used for large-scale storage.", "correct": "T" },
+        { "type": "tf", "q": "4. Data warehouses are optimized mainly for transactional workloads.", "correct": "F" },
+        { "type": "tf", "q": "5. ETL loads data first and then transforms it.", "correct": "F" },
+        { "type": "tf", "q": "6. Stateless services help improve scalability.", "correct": "T" },
+        { "type": "tf", "q": "7. Leader election is part of high availability mechanisms.", "correct": "T" },
+        { "type": "tf", "q": "8. Encryption is part of the security layer in Big Data architecture.", "correct": "T" },
+        { "type": "mcq", "q": "1. Which layer is responsible for storing large volumes of data?", "options": ["a) Ingestion", "b) Storage", "c) Analytics", "d) Monitoring"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which of the following is an example of streaming ingestion tool?", "options": ["a) Power BI", "b) Apache Kafka", "c) MySQL", "d) Excel"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which storage option is commonly used in Hadoop ecosystems?", "options": ["a) HDFS", "b) FTP", "c) HTML", "d) SMTP"], "correct": 0 },
+        { "type": "mcq", "q": "4. ELT differs from ETL because transformation happens:", "options": ["a) Before loading", "b) During ingestion", "c) After loading", "d) Outside the system"], "correct": 2 },
+        { "type": "mcq", "q": "5. Sharding is mainly used for:", "options": ["a) Backup", "b) Partitioning data", "c) Encryption", "d) Visualization"], "correct": 1 },
+        { "type": "mcq", "q": "6. Geo-replication improves:", "options": ["a) Data formatting", "b) Geographic availability", "c) Dashboard design", "d) Programming speed"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which tool is commonly used for monitoring cluster metrics?", "options": ["a) Kafka", "b) Prometheus", "c) HDFS", "d) SQL Server"], "correct": 1 },
+        { "type": "mcq", "q": "8. Data lakes are beneficial because they:", "options": ["a) Reduce flexibility", "b) Store only structured data", "c) Support machine learning readiness", "d) Eliminate scalability"], "correct": 2 },
+        { "type": "mcq", "q": "9. Stateless services are important for:", "options": ["a) Security only", "b) Scalability and autoscaling", "c) Manual processing", "d) Backup operations"], "correct": 1 },
+        { "type": "mcq", "q": "10. In high availability systems, automated failover ensures:", "options": ["a) Manual restart", "b) Immediate recovery from failure", "c) Data deletion", "d) Reduced monitoring"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Sheet 2 – Part 2",
+      "questions": [
+        { "type": "tf", "q": "1. RDBMS systems are fully optimized for petabyte-scale Big Data workloads.", "correct": "F" },
+        { "type": "tf", "q": "2. Scalability is one of the main limitations of traditional RDBMS when handling Big Data.", "correct": "T" },
+        { "type": "tf", "q": "3. Apache Hadoop is designed for distributed storage and processing of large datasets.", "correct": "T" },
+        { "type": "tf", "q": "4. Hadoop provides built-in fault tolerance.", "correct": "T" },
+        { "type": "tf", "q": "5. NoSQL databases are limited to structured data only.", "correct": "F" },
+        { "type": "tf", "q": "6. Hadoop Distributed File System is part of the Hadoop storage layer.", "correct": "T" },
+        { "type": "tf", "q": "7. Apache Spark is generally faster than MapReduce due to in-memory processing.", "correct": "T" },
+        { "type": "tf", "q": "8. Apache Hive belongs to the data querying layer of the Hadoop ecosystem.", "correct": "T" },
+        { "type": "tf", "q": "9. Hadoop cluster management can be performed using Apache Ambari.", "correct": "T" },
+        { "type": "tf", "q": "10. Hadoop is only suitable for structured relational data.", "correct": "F" },
+        { "type": "mcq", "q": "1. Which of the following is a limitation of RDBMS in Big Data?", "options": ["a) High scalability", "b) Low cost storage", "c) Limited scalability", "d) Built-in fault tolerance"], "correct": 2 },
+        { "type": "mcq", "q": "2. Hadoop mainly solves problems related to:", "options": ["a) Small datasets", "b) Distributed storage and processing", "c) Desktop computing", "d) Word processing"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which tool belongs to the Hadoop ingestion layer?", "options": ["a) Hive", "b) Spark", "c) Flume", "d) HDFS"], "correct": 2 },
+        { "type": "mcq", "q": "4. Which component is used for distributed storage?", "options": ["a) HDFS", "b) Pig", "c) Hive", "d) Oozie"], "correct": 0 },
+        { "type": "mcq", "q": "5. MapReduce primarily processes data in:", "options": ["a) Real-time memory", "b) Distributed batch mode", "c) Manual mode", "d) Local spreadsheets"], "correct": 1 },
+        { "type": "mcq", "q": "6. Which language is commonly used with Hive?", "options": ["a) SQL", "b) HQL", "c) Python", "d) C++"], "correct": 1 },
+        { "type": "mcq", "q": "7. HBase is best described as:", "options": ["a) Relational database", "b) NoSQL wide-column database", "c) Visualization tool", "d) Monitoring tool"], "correct": 1 },
+        { "type": "mcq", "q": "8. Which company is known as a leading Big Data vendor?", "options": ["a) Cloudera", "b) Adobe", "c) Intel", "d) Oracle Forms"], "correct": 0 },
+        { "type": "mcq", "q": "9. Spark is preferred over MapReduce because:", "options": ["a) It is slower", "b) It lacks scalability", "c) It supports in-memory processing", "d) It does not support ML"], "correct": 2 },
+        { "type": "mcq", "q": "10. Hadoop supports which type of data?", "options": ["a) Only structured", "b) Only unstructured", "c) Structured, semi-structured, and unstructured", "d) Only relational"], "correct": 2 }
+      ]
+    }
+  ]
+}

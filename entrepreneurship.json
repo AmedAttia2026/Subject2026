@@ -1,0 +1,71 @@
+{
+  "id": "entrepreneurship",
+  "title": "Entrepreneurship Basics",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        {
+          "type": "tf",
+          "q": "1. An entrepreneur takes risks to start and grow a business.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "2. Innovation is not important for entrepreneurial success.",
+          "correct": "F"
+        },
+        {
+          "type": "mcq",
+          "q": "3. Which of the following is a common source of funding for startups?",
+          "options": ["a) Venture capital", "b) Salaries", "c) Banknotes", "d) Taxes"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "4. A business plan mainly helps to:",
+          "options": ["a) Set goals and strategy", "b) Calculate taxes", "c) Hire employees", "d) Design logos"],
+          "correct": 0
+        },
+        {
+          "type": "tf",
+          "q": "5. Customer feedback is essential for improving products and services.",
+          "correct": "T"
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Which term describes a business that is scalable and repeatable?",
+          "options": ["a) Lifestyle business", "b) Startup", "c) Non-profit", "d) Sole proprietorship"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "2. Marketing helps entrepreneurs reach and attract customers.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "3. Lean Startup methodology emphasizes:",
+          "options": ["a) Heavy investment", "b) Rapid prototyping and iteration", "c) Ignoring customer feedback", "d) Long-term planning only"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "4. Networking is useful for finding mentors, partners, and investors.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "5. Revenue streams in a business model describe:",
+          "options": ["a) Costs of operations", "b) Sources of income", "c) Marketing channels", "d) Employee hierarchy"],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}

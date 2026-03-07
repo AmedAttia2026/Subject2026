@@ -1,0 +1,71 @@
+{
+  "id": "ccnp_route",
+  "title": "Big Data & Analytics - CCNP Practice",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        {
+          "type": "tf",
+          "q": "1. IoT devices are a major contributor to the growth of data.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "2. Big Data only includes structured data stored in SQL databases.",
+          "correct": "F"
+        },
+        {
+          "type": "mcq",
+          "q": "3. Which 'V' of Big Data refers to the speed of data generation?",
+          "options": ["a) Volume", "b) Velocity", "c) Variety", "d) Veracity"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "4. Distributed computing is mainly used for:",
+          "options": ["a) Data storage only", "b) Multiple machines working together", "c) Manual data entry", "d) Reducing data quality"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "5. Traditional single-server systems are enough to handle petabytes of data.",
+          "correct": "F"
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Which layer in Big Data architecture is responsible for collecting data from various sources?",
+          "options": ["a) Storage", "b) Analytics", "c) Ingestion", "d) Visualization"],
+          "correct": 2
+        },
+        {
+          "type": "tf",
+          "q": "2. Apache Kafka is commonly used for streaming data ingestion.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "3. What is HDFS mainly used for?",
+          "options": ["a) Distributed storage", "b) Data analytics", "c) Data visualization", "d) Security management"],
+          "correct": 0
+        },
+        {
+          "type": "tf",
+          "q": "4. Stateless services help improve scalability in Big Data systems.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "5. One key challenge in Big Data implementation is:",
+          "options": ["a) Small datasets", "b) Data security", "c) Low internet usage", "d) Limited hardware options"],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}

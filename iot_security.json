@@ -1,0 +1,71 @@
+{
+  "id": "iot_security",
+  "title": "IoT Security Basics",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        {
+          "type": "tf",
+          "q": "1. IoT devices are often targeted by cyber attackers due to weak security.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "2. Encryption is unnecessary for IoT communications.",
+          "correct": "F"
+        },
+        {
+          "type": "mcq",
+          "q": "3. Which is a common IoT security threat?",
+          "options": ["a) DDoS attacks", "b) Firewall configuration", "c) Data backups", "d) IP addressing"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "4. What is essential for securing IoT devices?",
+          "options": ["a) Strong passwords and encryption", "b) Ignoring firmware updates", "c) Disabling firewalls", "d) Open Wi-Fi networks"],
+          "correct": 0
+        },
+        {
+          "type": "tf",
+          "q": "5. Regular firmware updates improve IoT device security.",
+          "correct": "T"
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Which protocol is considered secure for IoT data transmission?",
+          "options": ["a) HTTP", "b) MQTT with TLS", "c) FTP", "d) Telnet"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "2. Physical security of IoT devices is not important.",
+          "correct": "F"
+        },
+        {
+          "type": "mcq",
+          "q": "3. What is a common method for authenticating IoT devices?",
+          "options": ["a) Multi-factor authentication", "b) Open access", "c) Default passwords", "d) Public Wi-Fi"],
+          "correct": 0
+        },
+        {
+          "type": "tf",
+          "q": "4. Network segmentation can help reduce the impact of compromised IoT devices.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "5. One challenge in IoT security is:",
+          "options": ["a) Limited device resources", "b) Unlimited storage", "c) High-speed internet", "d) Overpowered CPUs"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "ccnp_switch",
+  "title": "CCNP Switching Practice",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        {
+          "type": "tf",
+          "q": "1. VLANs are used to segment a network logically.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "2. STP (Spanning Tree Protocol) prevents loops in a switched network.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "3. Which device operates primarily at Layer 2 of the OSI model?",
+          "options": ["a) Router", "b) Switch", "c) Firewall", "d) Modem"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "4. Trunk ports are used to:",
+          "options": ["a) Connect end devices", "b) Carry multiple VLANs", "c) Filter traffic", "d) Assign IP addresses"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "5. Port security can limit MAC addresses on a switch port.",
+          "correct": "T"
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Which STP state actively forwards traffic?",
+          "options": ["a) Listening", "b) Learning", "c) Forwarding", "d) Blocking"],
+          "correct": 2
+        },
+        {
+          "type": "tf",
+          "q": "2. EtherChannel allows multiple physical links to act as one logical link.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "3. VTP is used to:",
+          "options": ["a) Assign IP addresses", "b) Manage VLANs across switches", "c) Forward traffic", "d) Block loops"],
+          "correct": 1
+        },
+        {
+          "type": "tf",
+          "q": "4. Switches cannot perform routing between VLANs without a Layer 3 device.",
+          "correct": "T"
+        },
+        {
+          "type": "mcq",
+          "q": "5. Which mode in STP prevents a port from becoming the root port?",
+          "options": ["a) Root Guard", "b) BPDU Guard", "c) PortFast", "d) EtherChannel"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}
