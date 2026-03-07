@@ -1,7 +1,7 @@
 {
   "status": "safe",
   "authorized_devices": [
-    "",
-    ""
+    ["ahmed attia", "DEV6C968D3F"],
+    ["محمود عباس", "DEV11EA81E2"]
   ]
 }
