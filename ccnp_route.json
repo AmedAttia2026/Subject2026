@@ -7,213 +7,183 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "1. DR and BDR election occurs on which type of network?",
+          "q": "1. **DR and BDR election** occurs on which type of network?",
           "options": ["A. Point-to-Point", "B. Broadcast", "C. Loopback", "D. MPLS"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "2. In OSPF, routers that are neither DR nor BDR are called:",
+          "q": "2. In OSPF, routers that are **neither DR nor BDR** are called:",
           "options": ["A. Passive routers", "B. DROther routers", "C. Slave routers", "D. Secondary routers"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "3. Which OSPF value is primarily used to elect DR and BDR?",
+          "q": "3. Which OSPF value is **primarily used** to elect DR and BDR?",
           "options": ["A. Cost", "B. Hello interval", "C. Priority", "D. Area ID"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "4. The default OSPF interface priority is:",
+          "q": "4. The **default** OSPF interface priority is:",
           "options": ["A. 0", "B. 1", "C. 10", "D. 255"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "5. If the OSPF priority is set to 0, the router:",
+          "q": "5. If the OSPF priority is **set to 0**, the router:",
           "options": ["A. Becomes DR", "B. Becomes BDR", "C. Cannot become DR or BDR", "D. Becomes master"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "6. If two routers have the same priority, what is used to break the tie?",
+          "q": "6. If two routers have the **same priority**, what is used to break the tie?",
           "options": ["A. IP address", "B. Cost", "C. Router ID", "D. MAC address"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "7. Which router has the highest chance of becoming DR?",
+          "q": "7. Which router has the **highest chance** of becoming DR?",
           "options": ["A. Lowest Router ID", "B. Highest Priority", "C. Lowest Cost", "D. Highest IP address"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "8. If the DR fails, who becomes the new DR?",
+          "q": "8. If the **DR fails**, who becomes the new DR?",
           "options": ["A. DROther", "B. ABR", "C. BDR", "D. ASBR"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "9. DR is responsible for:",
+          "q": "9. **DR** is responsible for:",
           "options": ["A. Sending all traffic", "B. Summarizing routes", "C. Reducing adjacency requirements", "D. Assigning IP addresses"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "10. Which multicast address is used to send LSAs to DR and BDR?",
+          "q": "10. Which **multicast address** is used to send LSAs to DR and BDR?",
           "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 255.255.255.255", "D. 224.0.0.9"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "11. Which multicast address is used by DR to send updates to all OSPF routers?",
+          "q": "11. Which **multicast address** is used by DR to send updates to **all OSPF routers**?",
           "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.1", "D. 224.0.0.9"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "12. DR and BDR election happens when:",
+          "q": "12. **DR and BDR election** happens when:",
           "options": ["A. Router boots up", "B. OSPF starts on the interface", "C. Hello packets are exchanged", "D. All of the above"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "13. Which network type does NOT require DR/BDR election?",
+          "q": "13. Which network type does **NOT** require DR/BDR election?",
           "options": ["A. Broadcast", "B. NBMA", "C. Point-to-Point", "D. Multi-access"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "14. What is the first OSPF neighbor state?",
+          "q": "14. What is the **first** OSPF neighbor state?",
           "options": ["A. Init", "B. Down", "C. Full", "D. 2-Way"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "15. In which state does a router start sending Hello packets?",
+          "q": "15. In which state does a router **start sending** Hello packets?",
           "options": ["A. Down", "B. Init", "C. Full", "D. Exchange"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "16. When a router receives a Hello packet from a neighbor, it enters which state?",
+          "q": "16. When a router **receives a Hello packet** from a neighbor, it enters which state?",
           "options": ["A. Full", "B. Init", "C. Exchange", "D. Loading"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "17. In which state do routers see their own Router ID in the neighbor’s Hello packet?",
+          "q": "17. In which state do routers see their **own Router ID** in the neighbor’s Hello packet?",
           "options": ["A. Init", "B. Down", "C. 2-Way", "D. Full"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "18. On a broadcast network, OSPF routers form full adjacency with:",
+          "q": "18. On a broadcast network, OSPF routers form **full adjacency** with:",
           "options": ["A. All routers", "B. Only DR and BDR", "C. Only DR", "D. Only BDR"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "19. Which state comes after 2-Way?",
+          "q": "19. Which state comes **after 2-Way**?",
           "options": ["A. Down", "B. Exchange", "C. ExStart", "D. Loading"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "20. During which state are DBD (Database Description) packets exchanged?",
+          "q": "20. During which state are **DBD (Database Description)** packets exchanged?",
           "options": ["A. Init", "B. ExStart", "C. Exchange", "D. Full"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "21. In which state do routers request missing LSAs?",
+          "q": "21. In which state do routers **request missing LSAs**?",
           "options": ["A. Loading", "B. Full", "C. Down", "D. 2-Way"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "22. When is OSPF adjacency considered complete?",
+          "q": "22. When is OSPF adjacency considered **complete**?",
           "options": ["A. Exchange", "B. ExStart", "C. Full", "D. Init"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "23. Which packet type carries actual link-state information?",
+          "q": "23. Which packet type carries **actual link-state information**?",
           "options": ["A. LSU", "B. LSR", "C. Hello", "D. DBD"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "24. What happens if Hello intervals do not match between neighbors?",
+          "q": "24. What happens if **Hello intervals do not match** between neighbors?",
           "options": ["A. Full adjacency forms", "B. 2-Way state forms", "C. No adjacency forms", "D. Exchange state forms"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "25. Which OSPF state indicates bidirectional communication?",
+          "q": "25. Which OSPF state indicates **bidirectional communication**?",
           "options": ["A. Init", "B. Down", "C. 2-Way", "D. Loading"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "26. On a point-to-point link, routers usually reach which final state?",
+          "q": "26. On a point-to-point link, routers usually reach which **final state**?",
           "options": ["A. 2-Way", "B. Init", "C. Full", "D. Down"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "27. Which state comes just before Full?",
+          "q": "27. Which state comes **just before Full**?",
           "options": ["A. Exchange", "B. Loading", "C. Init", "D. Down"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "28. If the Area ID does not match between two routers, what state will they stay in?",
+          "q": "28. If the **Area ID does not match** between two routers, what state will they stay in?",
           "options": ["A. Full", "B. 2-Way", "C. Down/Init", "D. Exchange"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "29. What is the default Dead Timer for OSPF on an Ethernet interface?",
+          "q": "29. What is the **default Dead Timer** for OSPF on an Ethernet interface?",
           "options": ["A. 10 seconds", "B. 30 seconds", "C. 40 seconds", "D. 60 seconds"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "30. Which command allows you to view the current OSPF neighbor states?",
+          "q": "30. Which command allows you to view the **current OSPF neighbor states**?",
           "options": ["A. show ip route", "B. show ip ospf neighbor", "C. show ip interface brief", "D. show ip ospf database"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         }
       ]
     },
@@ -224,152 +194,131 @@
           "type": "written",
           "q": "Explain **Type 1** and **Type 2 LSAs** and describe how they differ.",
           "qt": "اشرح **Type 1** و **Type 2 LSAs** وصف كيف يختلفان.",
-          "a": "• Type 1 (Router LSA):\nGenerated by every OSPF router to describe its directly connected links. It is flooded only within its own area.\n\n• Type 2 (Network LSA):\nGenerated only by the Designated Router (DR) on broadcast networks to describe all routers attached to that segment. It is also flooded only within the area.",
-          "at": "• النوع الأول (Router LSA):\nيتم إنشاؤه بواسطة كل راوتر OSPF لوصف الروابط المتصلة به مباشرة. يتم نشره فقط داخل منطقته الخاصة.\n\n• النوع الثاني (Network LSA):\nيتم إنشاؤه فقط بواسطة الراوتر المعين (DR) في شبكات البث لوصف جميع الراوترات المتصلة بذلك المقطع. يتم نشره أيضاً داخل المنطقة فقط.",
-          "points": 1
+          "a": "• ==Type 1 (Router LSA)==:\nGenerated by ==every OSPF router== to describe its directly connected links. It is flooded only within its own area.\n\n• ==Type 2 (Network LSA)==:\nGenerated only by the ==Designated Router (DR)== on broadcast networks to describe all routers attached to that segment. It is also flooded only within the area.",
+          "at": "• ==النوع الأول (Router LSA)==:\nيتم إنشاؤه بواسطة ==كل راوتر OSPF== لوصف الروابط المتصلة به مباشرة. يتم نشره فقط داخل منطقته الخاصة.\n\n• ==النوع الثاني (Network LSA)==:\nيتم إنشاؤه فقط بواسطة ==الراوتر المعين (DR)== في شبكات البث لوصف جميع الراوترات المتصلة بذلك المقطع. يتم نشره أيضاً داخل المنطقة فقط."
         },
         {
           "type": "written",
           "q": "What is the role of **Type 3** and **Type 4 LSAs** in multi-area OSPF networks?",
           "qt": "ما هو دور **Type 3** و **Type 4 LSAs** في شبكات OSPF متعددة المناطق؟",
-          "a": "• Type 3 (Summary LSA):\nGenerated by the ABR (Area Border Router) to advertise networks from one area to another.\n\n• Type 4 (ASBR Summary LSA):\nGenerated by the ABR as well, but its specific purpose is to advertise the route to reach an ASBR (Autonomous System Boundary Router) to other areas.",
-          "at": "• النوع الثالث (Summary LSA):\nيتم إنشاؤه بواسطة ABR (راوتر حدود المنطقة) للإعلان عن الشبكات من منطقة إلى أخرى.\n\n• النوع الرابع (ASBR Summary LSA):\nيتم إنشاؤه بواسطة ABR أيضاً، ولكن غرضه المحدد هو الإعلان عن المسار للوصول إلى ASBR للمناطق الأخرى.",
-          "points": 1
+          "a": "• ==Type 3 (Summary LSA)==:\nGenerated by the ==ABR (Area Border Router)== to advertise networks from one area to another.\n\n• ==Type 4 (ASBR Summary LSA)==:\nGenerated by the ==ABR== as well, but its specific purpose is to advertise the route to reach an ==ASBR (Autonomous System Boundary Router)== to other areas.",
+          "at": "• ==النوع الثالث (Summary LSA)==:\nيتم إنشاؤه بواسطة ==ABR (راوتر حدود المنطقة)== للإعلان عن الشبكات من منطقة إلى أخرى.\n\n• ==النوع الرابع (ASBR Summary LSA)==:\nيتم إنشاؤه بواسطة ==ABR== أيضاً، ولكن غرضه المحدد هو الإعلان عن المسار للوصول إلى ==ASBR== للمناطق الأخرى."
         },
         {
           "type": "written",
           "q": "Describe **Type 5 LSA** and explain when it is generated.",
           "qt": "صف **النوع الخامس من LSA** واشرح متى يتم إنشاؤه.",
-          "a": "• Type 5 (External LSA):\nGenerated by an ASBR when routes from an external routing domain (like EIGRP, BGP, or static routes) are redistributed into OSPF.\n\n• Flooding Scope:\nIt is flooded throughout the entire OSPF autonomous system (except stub areas).",
-          "at": "• النوع الخامس (External LSA):\nيتم إنشاؤه بواسطة ASBR عندما يتم إعادة توزيع المسارات من نطاق توجيه خارجي (مثل EIGRP أو BGP أو المسارات الثابتة) إلى OSPF.\n\n• نطاق النشر:\nيتم نشره في كامل نظام OSPF المستقل (باستثناء مناطق stub).",
-          "points": 1
+          "a": "• ==Type 5 (External LSA)==:\nGenerated by an ==ASBR== when routes from an ==external routing domain== (like EIGRP, BGP, or static routes) are redistributed into OSPF.\n\n• Flooding Scope:\nIt is flooded throughout the ==entire OSPF autonomous system== (except stub areas).",
+          "at": "• ==النوع الخامس (External LSA)==:\nيتم إنشاؤه بواسطة ==ASBR== عندما يتم إعادة توزيع المسارات من ==نطاق توجيه خارجي== (مثل EIGRP أو BGP أو المسارات الثابتة) إلى OSPF.\n\n• نطاق النشر:\nيتم نشره في ==كامل نظام OSPF المستقل== (باستثناء مناطق stub)."
         },
         {
           "type": "written",
           "q": "Explain how LSAs are stored and used in the **OSPF Link-State Database (LSDB)**.",
           "qt": "اشرح كيف يتم تخزين واستخدام رسائل LSA في **قاعدة بيانات حالة الارتباط (LSDB)**.",
-          "a": "• Storage in LSDB:\nLSAs are collected and stored in the LSDB, ensuring all routers in the same area have an identical map of the network topology.\n\n• Usage and Calculation:\nThe SPF (Dijkstra) algorithm then runs against the LSDB to calculate the shortest and best paths to all known destinations.",
-          "at": "• التخزين في LSDB:\nيتم جمع رسائل LSA وتخزينها في LSDB، مما يضمن أن جميع الراوترات في نفس المنطقة لديها خريطة متطابقة لطوبولوجيا الشبكة.\n\n• الاستخدام والحساب:\nتقوم خوارزمية SPF (Dijkstra) بعد ذلك بالعمل على LSDB لحساب أقصر وأفضل المسارات لجميع الوجهات المعروفة.",
-          "points": 1
+          "a": "• Storage in LSDB:\nLSAs are collected and stored in the LSDB, ensuring all routers in the same area have an ==identical map== of the network topology.\n\n• Usage and Calculation:\nThe ==SPF (Dijkstra) algorithm== then runs against the LSDB to calculate the shortest and best paths to all known destinations.",
+          "at": "• التخزين في LSDB:\nيتم جمع رسائل LSA وتخزينها في LSDB، مما يضمن أن جميع الراوترات في نفس المنطقة لديها ==خريطة متطابقة== لطوبولوجيا الشبكة.\n\n• الاستخدام والحساب:\nتقوم خوارزمية ==SPF (Dijkstra)== بعد ذلك بالعمل على LSDB لحساب أقصر وأفضل المسارات لجميع الوجهات المعروفة."
         },
         {
           "type": "mcq",
-          "q": "1. Which OSPF authentication type provides encryption?",
+          "q": "1. Which OSPF authentication type provides **encryption**?",
           "options": ["A) Null authentication", "B) Plain text authentication", "C) MD5 authentication", "D) Static routing"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "2. In Null authentication, OSPF packets are:",
+          "q": "2. In **Null authentication**, OSPF packets are:",
           "options": ["A) Encrypted", "B) Not authenticated", "C) Signed with MD5", "D) Blocked"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "3. Which OSPF authentication type sends the password in clear text?",
+          "q": "3. Which OSPF authentication type sends the password in **clear text**?",
           "options": ["A) MD5", "B) SHA", "C) Plain text", "D) IPsec"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "4. OSPF authentication must match on:",
+          "q": "4. OSPF authentication must **match** on:",
           "options": ["A) Only one router", "B) All routers in the area", "C) Only the DR", "D) Only the BDR"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "5. If OSPF authentication mismatches, routers will:",
+          "q": "5. If OSPF authentication **mismatches**, routers will:",
           "options": ["A) Still form adjacency", "B) Restart automatically", "C) Not become neighbors", "D) Change area ID"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "6. OSPF authentication is configured:",
+          "q": "6. OSPF authentication is **configured**:",
           "options": ["A) Globally only", "B) Per interface", "C) On switches only", "D) On servers"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "7. Which OSPF packet contains authentication information?",
+          "q": "7. Which OSPF packet contains **authentication information**?",
           "options": ["A) Hello packet", "B) LSA only", "C) ARP packet", "D) DNS packet"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "8. OSPF authentication is configured under:",
+          "q": "8. OSPF authentication is configured **under**:",
           "options": ["A) VLAN", "B) Interface", "C) DHCP", "D) NAT"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "9. Authentication in OSPF helps prevent:",
+          "q": "9. **Authentication** in OSPF helps prevent:",
           "options": ["A) Broadcast storms", "B) Unauthorized routers", "C) IP conflicts", "D) VLAN hopping"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "10. Which LSA type is generated by every OSPF router?",
+          "q": "10. Which LSA type is generated by **every OSPF router**?",
           "options": ["A) Type 2", "B) Type 3", "C) Type 1", "D) Type 5"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "11. Type 1 LSA is also called:",
+          "q": "11. **Type 1 LSA** is also called:",
           "options": ["A) Network LSA", "B) Router LSA", "C) Summary LSA", "D) External LSA"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "12. Type 2 LSA is generated by:",
+          "q": "12. **Type 2 LSA** is generated by:",
           "options": ["A) DR (Designated Router)", "B) ABR", "C) ASBR", "D) All routers"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "13. Type 3 LSA is generated by:",
+          "q": "13. **Type 3 LSA** is generated by:",
           "options": ["A) DR", "B) ABR", "C) ASBR", "D) Internal router"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "14. Type 5 LSA advertises:",
+          "q": "14. **Type 5 LSA** advertises:",
           "options": ["A) Inter-area routes", "B) External routes", "C) Router IDs", "D) Loopback addresses"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "15. Which LSA type is flooded only within an area?",
+          "q": "15. Which LSA type is flooded **only within an area**?",
           "options": ["A) Type 5", "B) Type 1", "C) Type 4", "D) Type 7"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "16. In OSPF, LSAs are stored in:",
+          "q": "16. In OSPF, LSAs are **stored** in:",
           "options": ["A) Routing table", "B) ARP table", "C) Link-State Database (LSDB)", "D) MAC table"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "17. Type 2 LSA exists in which type of network?",
+          "q": "17. **Type 2 LSA** exists in which type of network?",
           "options": ["A) Point-to-point", "B) Broadcast", "C) Stub only", "D) Virtual link"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         }
       ]
     },
@@ -378,108 +327,93 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "1. What is the backbone area in OSPF?",
+          "q": "1. What is the **backbone area** in OSPF?",
           "options": ["A. Area 1", "B. Area 10", "C. Area 0", "D. Stub Area"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "2. All OSPF areas must connect to:",
+          "q": "2. All OSPF areas **must connect** to:",
           "options": ["A. Stub Area", "B. NSSA", "C. Area 0", "D. Transit Area"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "3. Which OSPF area blocks external LSAs?",
+          "q": "3. Which OSPF area **blocks external LSAs**?",
           "options": ["A. Normal Area", "B. Stub Area", "C. Backbone Area", "D. Transit Area"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "4. Which area allows external routes as Type 7 LSAs?",
+          "q": "4. Which area allows external routes as **Type 7 LSAs**?",
           "options": ["A. Stub", "B. NSSA", "C. Area 0", "D. Totally Stubby"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "5. Which router connects different OSPF areas?",
+          "q": "5. Which router **connects different OSPF areas**?",
           "options": ["A. Internal Router", "B. Backbone Router", "C. ABR", "D. ASBR"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "6. ASBR means:",
+          "q": "6. **ASBR** means:",
           "options": ["A. Area System Border Router", "B. Autonomous System Boundary Router", "C. Area Service Backup Router", "D. Automatic System Border Router"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "7. Stub areas block which LSA?",
+          "q": "7. **Stub areas** block which LSA?",
           "options": ["A. Type 1", "B. Type 2", "C. Type 5", "D. Type 3"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "8. Totally Stubby Areas are:",
+          "q": "8. **Totally Stubby Areas** are:",
           "options": ["A. Standard OSPF", "B. Cisco proprietary", "C. Cisco proprietary feature", "D. Default area"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "9. NSSA blocks:",
+          "q": "9. **NSSA** blocks:",
           "options": ["A. Type 7", "B. Type 5 LSAS", "C. Type 1", "D. Type 2"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "10. Area 0 is also called:",
+          "q": "10. **Area 0** is also called:",
           "options": ["A. Stub Area", "B. Backbone Area", "C. Transit Area", "D. External Area"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "11. Totally Stubby Area blocks:",
+          "q": "11. **Totally Stubby Area** blocks:",
           "options": ["A. Type 5 only", "B. Type 3 and Type 5", "C. Type 1", "D. Type 2"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "12. NSSA uses which LSA for external routes?",
+          "q": "12. **NSSA** uses which LSA for external routes?",
           "options": ["A. Type 3", "B. Type 5", "C. Type 7", "D. Type 2"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "13. External routes enter OSPF through:",
+          "q": "13. External routes enter OSPF **through**:",
           "options": ["A. ABR", "B. ASBR", "C. DR", "D. BDR"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "14. Which area reduces routing table size?",
+          "q": "14. Which area **reduces routing table size**?",
           "options": ["A. Normal", "B. Stub Area", "C. Backbone", "D. Transit"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "15. Stub area cannot contain",
+          "q": "15. **Stub area** cannot contain:",
           "options": ["A. ABR", "B. ASBR", "C. DR", "D. BDR"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         }
       ]
     },
@@ -488,101 +422,87 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "1. Which OSPF router type connects a backbone area to a non-backbone area?",
+          "q": "1. Which OSPF router type connects a backbone area to a **non-backbone area**?",
           "options": ["A. Internal Router (IR)", "B. Backbone Router (BR)", "C. Area Border Router (ABR)", "D. Autonomous System Border Router (ASBR)"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "2. Which LSA type is generated by every OSPF router and stays restricted within its own area?",
+          "q": "2. Which LSA type is generated by **every OSPF router** and stays restricted within its own area?",
           "options": ["A. Type 1 (Router LSA)", "B. Type 2 (Network LSA)", "C. Type 3 (Summary LSA)", "D. Type 5 (External LSA)"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "3. Who is responsible for generating Type 2 (Network) LSAs on a broadcast network?",
+          "q": "3. Who is responsible for generating **Type 2 (Network) LSAs** on a broadcast network?",
           "options": ["A. The Root Bridge", "B. The Area Border Router (ABR)", "C. The Designated Router (DR)", "D. Every OSPF router on the segment"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "4. What is the purpose of a Type 3 (Summary) LSA?",
+          "q": "4. What is the purpose of a **Type 3 (Summary) LSA**?",
           "options": ["A. To advertise external routes from a different AS.", "B. To advertise network prefixes from one area into another area via the ABR.", "C. To describe the DR on a multi-access segment.", "D. To synchronize the LSDB during the Exchange state."],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "5. Which LSA type is used to advertise routes redistributed from an external protocol (like EIGRP) into OSPF?",
+          "q": "5. Which LSA type is used to advertise routes **redistributed from an external protocol** (like EIGRP) into OSPF?",
           "options": ["A. Type 2", "B. Type 3", "C. Type 4", "D. Type 5"],
-          "correct": 3,
-          "points": 1
+          "correct": 3
         },
         {
           "type": "mcq",
-          "q": "6. In a broadcast multi-access network, how is the Designated Router (DR) elected first?",
+          "q": "6. In a broadcast multi-access network, how is the **Designated Router (DR) elected first**?",
           "options": ["A. Lowest Router ID", "B. Highest OSPF Priority", "C. Highest Loopback IP Address", "D. Highest MAC Address"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "7. What is the default OSPF priority value for an interface?",
+          "q": "7. What is the **default OSPF priority** value for an interface?",
           "options": ["A. 0", "B. 1", "C. 100", "D. 255"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "8. If a router's OSPF priority is set to 0, what is its role in the DR/BDR election?",
+          "q": "8. If a router's OSPF priority is **set to 0**, what is its role in the DR/BDR election?",
           "options": ["A. It becomes the DR immediately.", "B. It becomes the BDR immediately.", "C. It cannot participate in the election and will never be DR or BDR.", "D. It only participates if all other routers have a priority of 0."],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "9. Which OSPF multicast address is used by DROthers to send updates to the DR and BDR?",
+          "q": "9. Which OSPF multicast address is used by **DROthers** to send updates to the DR and BDR?",
           "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.9", "D. 224.0.0.10"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "10. Which OSPF multicast address is used by the DR to send updates to all other OSPF routers on the segment?",
+          "q": "10. Which OSPF multicast address is used by the **DR** to send updates to all other OSPF routers on the segment?",
           "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.10", "D. 224.0.0.1"],
-          "correct": 0,
-          "points": 1
+          "correct": 0
         },
         {
           "type": "mcq",
-          "q": "11. In what order does an OSPF router choose its Router ID (RID)?",
+          "q": "11. In what order does an OSPF router **choose its Router ID (RID)**?",
           "options": ["A. Physical Interface > Loopback > Manual Configuration", "B. Manual Configuration > Highest Loopback IP > Highest Physical IP", "C. Lowest Physical IP > Highest Loopback IP > Manual Configuration", "D. Process ID > Area ID > Priority"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "12. What OSPF packet type is used to request specific link-state records from a neighbor?",
+          "q": "12. What OSPF packet type is used to **request specific link-state records** from a neighbor?",
           "options": ["A. Hello", "B. DBD (Database Description)", "C. LSR (Link State Request)", "D. LSU (Link State Update)"],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "13. Which command is used to restart the OSPF process so that a new Router ID can take effect?",
+          "q": "13. Which command is used to **restart the OSPF process** so that a new Router ID can take effect?",
           "options": ["A. reload", "B. clear ip ospf process", "C. no router ospf 1", "D. shutdown followed by no shutdown on the interface"],
-          "correct": 1,
-          "points": 1
+          "correct": 1
         },
         {
           "type": "mcq",
-          "q": "14. Why are OSPF networks divided into areas?",
+          "q": "14. Why are OSPF networks **divided into areas**?",
           "options": ["A. To increase the size of the Link-State Database (LSDB).", "B. To allow different routers to have different views of the topology.", "C. To reduce the CPU load and limit the scope of SPF calculations.", "D. To enable RIP and OSPF to communicate."],
-          "correct": 2,
-          "points": 1
+          "correct": 2
         }
       ]
     }
