@@ -8,36 +8,31 @@
         {
           "type": "tf",
           "q": "1. An entrepreneur **takes risks** to start and grow a business.",
-          "correct": "T",
-          "points": 1
+          "correct": "T"
         },
         {
           "type": "tf",
           "q": "2. **Innovation** is not important for entrepreneurial success.",
-          "correct": "F",
-          "points": 1
+          "correct": "F"
         },
         {
           "type": "mcq",
           "q": "3. Which of the following is a common source of **funding** for startups?",
-          "options": ["a) **Venture capital**", "b) Salaries", "c) Banknotes", "d) Taxes"],
-          "correct": 0,
-          "points": 1
+          "options": ["a) Venture capital", "b) Salaries", "c) Banknotes", "d) Taxes"],
+          "correct": 0
         },
         {
           "type": "mcq",
           "q": "4. A **business plan** mainly helps to:",
-          "options": ["a) **Set goals and strategy**", "b) Calculate taxes", "c) Hire employees", "d) Design logos"],
-          "correct": 0,
-          "points": 1
+          "options": ["a) Set goals and strategy", "b) Calculate taxes", "c) Hire employees", "d) Design logos"],
+          "correct": 0
         },
         {
           "type": "written",
           "q": "5. Why is **customer feedback** essential?",
           "qt": "5. لماذا تعتبر **آراء العملاء** ضرورية؟",
-          "a": "Customer feedback is essential because it helps in **improving products and services** continuously based on real user needs.",
-          "at": "تعتبر آراء العملاء ضرورية لأنها تساعد في **تحسين المنتجات والخدمات** بشكل مستمر بناءً على احتياجات المستخدم الحقيقية.",
-          "points": 1
+          "a": "Customer feedback is essential because it helps in ==improving products and services== continuously based on real user needs.",
+          "at": "تعتبر آراء العملاء ضرورية لأنها تساعد في ==تحسين المنتجات والخدمات== بشكل مستمر بناءً على احتياجات المستخدم الحقيقية."
         }
       ]
     },
@@ -47,36 +42,31 @@
         {
           "type": "mcq",
           "q": "1. Which term describes a business that is **scalable and repeatable**?",
-          "options": ["a) Lifestyle business", "b) **Startup**", "c) Non-profit", "d) Sole proprietorship"],
-          "correct": 1,
-          "points": 1
+          "options": ["a) Lifestyle business", "b) Startup", "c) Non-profit", "d) Sole proprietorship"],
+          "correct": 1
         },
         {
           "type": "tf",
           "q": "2. **Marketing** helps entrepreneurs reach and attract customers.",
-          "correct": "T",
-          "points": 1
+          "correct": "T"
         },
         {
           "type": "written",
           "q": "3. What does the **Lean Startup** methodology emphasize?",
           "qt": "3. على ماذا تؤكد منهجية **الشركة الناشئة المرنة (Lean Startup)**؟",
-          "a": "The Lean Startup methodology emphasizes **rapid prototyping and iteration** to minimize waste and maximize learning.",
-          "at": "تؤكد منهجية (Lean Startup) على **النماذج الأولية السريعة والتكرار** لتقليل الهدر وزيادة التعلم.",
-          "points": 1
+          "a": "The Lean Startup methodology emphasizes ==rapid prototyping and iteration== to minimize waste and maximize learning.",
+          "at": "تؤكد منهجية (Lean Startup) على ==النماذج الأولية السريعة والتكرار== لتقليل الهدر وزيادة التعلم."
         },
         {
           "type": "tf",
           "q": "4. **Networking** is useful for finding mentors, partners, and investors.",
-          "correct": "T",
-          "points": 1
+          "correct": "T"
         },
         {
           "type": "mcq",
           "q": "5. **Revenue streams** in a business model describe:",
-          "options": ["a) Costs of operations", "b) **Sources of income**", "c) Marketing channels", "d) Employee hierarchy"],
-          "correct": 1,
-          "points": 1
+          "options": ["a) Costs of operations", "b) Sources of income", "c) Marketing channels", "d) Employee hierarchy"],
+          "correct": 1
         }
       ]
     }
