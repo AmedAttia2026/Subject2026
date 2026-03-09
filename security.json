@@ -1,6 +1,7 @@
 {
   "status": "safe",
   "authorized_devices": [
+    ["احمد عطية", "DEV6C968D3F"],
     ["محمود عباس", "DEV11EA81E2"],
     ["احمد عثمان", "DEV275DA664"],
     ["توني", "DEVBADB1960"],
