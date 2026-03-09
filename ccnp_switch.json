@@ -3,67 +3,79 @@
   "title": "CCNP Switching Practice",
   "sheets": [
     {
-      "title": "Sheet 1",
+      "title": "Assignment 1",
       "questions": [
         {
-          "type": "tf",
-          "q": "1. VLANs are used to segment a network logically.",
-          "correct": "T"
-        },
-        {
-          "type": "tf",
-          "q": "2. STP (Spanning Tree Protocol) prevents loops in a switched network.",
-          "correct": "T"
-        },
-        {
           "type": "mcq",
-          "q": "3. Which device operates primarily at Layer 2 of the OSI model?",
-          "options": ["a) Router", "b) Switch", "c) Firewall", "d) Modem"],
+          "q": "1. **STP** prevents:",
+          "options": ["A. Broadcast routing", "B. Layer 2 loops", "C. IP conflict", "D. VLAN mismatch"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "4. Trunk ports are used to:",
-          "options": ["a) Connect end devices", "b) Carry multiple VLANs", "c) Filter traffic", "d) Assign IP addresses"],
+          "q": "2. **Root Bridge** is selected based on:",
+          "options": ["A. Port speed", "B. Bridge ID", "C. VLAN number", "D. IP address"],
           "correct": 1
         },
         {
-          "type": "tf",
-          "q": "5. Port security can limit MAC addresses on a switch port.",
-          "correct": "T"
-        }
-      ]
-    },
-    {
-      "title": "Sheet 2",
-      "questions": [
+          "type": "mcq",
+          "q": "3. **Bridge ID** consists of:",
+          "options": ["A. IP + VLAN", "B. Priority + MAC Address", "C. Port + Speed", "D. Cost + VLAN"],
+          "correct": 1
+        },
         {
           "type": "mcq",
-          "q": "1. Which STP state actively forwards traffic?",
-          "options": ["a) Listening", "b) Learning", "c) Forwarding", "d) Blocking"],
+          "q": "4. **Default STP priority**:",
+          "options": ["A. 1", "B. 1024", "C. 32768", "D. 65535"],
           "correct": 2
         },
         {
-          "type": "tf",
-          "q": "2. EtherChannel allows multiple physical links to act as one logical link.",
-          "correct": "T"
+          "type": "mcq",
+          "q": "5. **Root Bridge** has:",
+          "options": ["A. Blocking ports", "B. Alternate ports", "C. All designated ports", "D. Disabled ports"],
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "3. VTP is used to:",
-          "options": ["a) Assign IP addresses", "b) Manage VLANs across switches", "c) Forward traffic", "d) Block loops"],
+          "q": "6. **Lower Bridge ID** wins because of:",
+          "options": ["A. Higher MAC", "B. Lower priority/MAC", "C. Faster link", "D. VLAN ID"],
           "correct": 1
         },
         {
-          "type": "tf",
-          "q": "4. Switches cannot perform routing between VLANs without a Layer 3 device.",
-          "correct": "T"
+          "type": "mcq",
+          "q": "7. If priorities equal, **selection** uses:",
+          "options": ["A. Port ID", "B. Cost", "C. MAC address", "D. IP"],
+          "correct": 2
         },
         {
           "type": "mcq",
-          "q": "5. Which mode in STP prevents a port from becoming the root port?",
-          "options": ["a) Root Guard", "b) BPDU Guard", "c) PortFast", "d) EtherChannel"],
+          "q": "8. **STP** uses which address to send BPDUs?",
+          "options": ["A. Broadcast", "B. Multicast MAC", "C. Unicast", "D. Anycast"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "10. **STP BPDU** destination MAC:",
+          "options": ["A. 01:80:C2:00:00:00", "B. 01:00:5E:00:00:00", "C. FF:FF:FF:FF:FF:FF", "D. 00:80:C2:00:00:00"],
           "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "11. Who sends **Hello BPDUs**?",
+          "options": ["A. All switches", "B. Root Bridge", "C. Access switch", "D. Router"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "12. **Classic STP** standard:",
+          "options": ["A. 802.1D", "B. 802.1w", "C. 802.1Q", "D. 802.3"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "13. **Root Port** exists on:",
+          "options": ["A. Root bridge", "B. Non-root switches", "C. Routers", "D. Servers"],
+          "correct": 1
         }
       ]
     }
