@@ -7,74 +7,187 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "1. **STP** prevents:",
+          "q": "1. STP prevents:",
           "options": ["A. Broadcast routing", "B. Layer 2 loops", "C. IP conflict", "D. VLAN mismatch"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "2. **Root Bridge** is selected based on:",
+          "q": "2. Root Bridge is selected based on:",
           "options": ["A. Port speed", "B. Bridge ID", "C. VLAN number", "D. IP address"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "3. **Bridge ID** consists of:",
+          "q": "3. Bridge ID consists of:",
           "options": ["A. IP + VLAN", "B. Priority + MAC Address", "C. Port + Speed", "D. Cost + VLAN"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "4. **Default STP priority**:",
+          "q": "4. Default STP priority:",
           "options": ["A. 1", "B. 1024", "C. 32768", "D. 65535"],
           "correct": 2
         },
         {
           "type": "mcq",
-          "q": "5. **Root Bridge** has:",
+          "q": "5. Root Bridge has:",
           "options": ["A. Blocking ports", "B. Alternate ports", "C. All designated ports", "D. Disabled ports"],
           "correct": 2
         },
         {
           "type": "mcq",
-          "q": "6. **Lower Bridge ID** wins because of:",
+          "q": "6. Lower Bridge ID wins because of:",
           "options": ["A. Higher MAC", "B. Lower priority/MAC", "C. Faster link", "D. VLAN ID"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "7. If priorities equal, **selection** uses:",
+          "q": "7. If priorities equal, selection uses:",
           "options": ["A. Port ID", "B. Cost", "C. MAC address", "D. IP"],
           "correct": 2
         },
         {
           "type": "mcq",
-          "q": "8. **STP** uses which address to send BPDUs?",
+          "q": "8. STP uses which address to send BPDUs?",
           "options": ["A. Broadcast", "B. Multicast MAC", "C. Unicast", "D. Anycast"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "10. **STP BPDU** destination MAC:",
+          "q": "10. STP BPDU destination MAC:",
           "options": ["A. 01:80:C2:00:00:00", "B. 01:00:5E:00:00:00", "C. FF:FF:FF:FF:FF:FF", "D. 00:80:C2:00:00:00"],
           "correct": 0
         },
         {
           "type": "mcq",
-          "q": "11. Who sends **Hello BPDUs**?",
+          "q": "11. Who sends Hello BPDUs?",
           "options": ["A. All switches", "B. Root Bridge", "C. Access switch", "D. Router"],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "12. **Classic STP** standard:",
+          "q": "12. Classic STP standard:",
           "options": ["A. 802.1D", "B. 802.1w", "C. 802.1Q", "D. 802.3"],
           "correct": 0
         },
         {
           "type": "mcq",
-          "q": "13. **Root Port** exists on:",
+          "q": "13. Root Port exists on:",
           "options": ["A. Root bridge", "B. Non-root switches", "C. Routers", "D. Servers"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "title": "Assignment 2",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Which two components are combined to form the Bridge ID (BID) used in the root bridge election?",
+          "options": ["A. IP address and Port ID", "B. Bridge Priority and MAC Address", "C. MAC Address and IP address", "D. Port ID and Bridge Priority"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "2. In a network with four switches where all priority values are set to the default (32768), how is the root bridge elected?",
+          "options": ["A. The switch with the highest MAC address.", "B. The switch with the lowest MAC address.", "C. The switch with the highest IP address.", "D. A random election occurs."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "3. What is the default STP priority for a Cisco switch?",
+          "options": ["A. 4096", "B. 1", "C. 32768", "D. 65535"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "4. A network administrator wants Switch3 to be the root bridge. Which command would achieve this with the highest certainty?",
+          "options": ["A. spanning-tree vlan 1 priority 0", "B. spanning-tree vlan 1 priority 4096", "C. spanning-tree vlan 1 root primary", "D. Both A and C are effective, but A is more specific."],
+          "correct": 3
+        },
+        {
+          "type": "mcq",
+          "q": "5. What is the first step in the Spanning Tree operation?",
+          "options": ["A. Select the Root Ports.", "B. Select the Designated Ports.", "C. Select the Root Bridge.", "D. Place redundant ports in blocking mode."],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "6. Which port role exists on every non-root switch and provides the best path to the root bridge?",
+          "options": ["A. Designated Port", "B. Root Port", "C. Alternate Port", "D. Backup Port"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "7. All ports on a root bridge are automatically assigned which role?",
+          "options": ["A. Root Port", "B. Blocking Port", "C. Designated Port", "D. Listening Port"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "8. In which two STP states does a switch learn MAC addresses?",
+          "options": ["A. Blocking and Listening", "B. Listening and Learning", "C. Learning and Forwarding", "D. Forwarding and Blocking"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "9. What is the STP cost for a 1 Gbps (Gigabit) Ethernet interface by default?",
+          "options": ["A. 100", "B. 19", "C. 4", "D. 2"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "10. If two paths to the root bridge have the same path cost, what is the next tie-breaker for selecting a Root Port?",
+          "options": ["A. Lowest upstream Bridge ID", "B. Lowest local Port ID", "C. Highest MAC address", "D. Lowest local IP address"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "11. Which RSTP port role serves as a standby for the Root Port?",
+          "options": ["A. Backup Port", "B. Alternate Port", "C. Edge Port", "D. Designated Port"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "12. How many port states are used by Rapid PVST+?",
+          "options": ["A. Discarding, Listening, Learning", "B. Discarding, Learning, Forwarding", "C. Listening, Learning, Forwarding", "D. Blocking, Listening, Forwarding"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "13. What is the default Hello Timer for STP?",
+          "options": ["A. 1 second", "B. 2 seconds", "C. 15 seconds", "D. 20 seconds"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "16. Which type of message is used by switches to communicate STP information?",
+          "options": ["A. ARP", "B. BPDU", "C. LSA", "D. Broadcast"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "17. What is the \"Max Age\" timer's default value in classic STP (802.1D)?",
+          "options": ["A. 15 seconds", "B. 20 seconds", "C. 30 seconds", "D. 50 seconds"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "18. Which protocol allows for a separate spanning tree instance for every VLAN?",
+          "options": ["A. MSTP", "B. RSTP", "C. PVST+", "D. CST"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "19. What is the primary purpose of the \"Extended System ID\" in a Bridge ID?",
+          "options": ["A. To store the MAC address.", "B. To carry the VLAN ID.", "C. To speed up convergence.", "D. To prevent broadcast storms."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "20. If a non-root switch receives BPDUs with equal path costs and equal sender BIDs, which tie-breaker is used last?",
+          "options": ["A. Lowest Sender Port ID", "B. Lowest Receiver Port ID", "C. Lowest MAC address", "D. Lowest IP address"],
           "correct": 1
         }
       ]
