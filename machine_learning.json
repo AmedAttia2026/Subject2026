@@ -76,6 +76,71 @@
         { "type": "mcq", "q": "9. Which metric measures how many positive predictions were correct?", "options": ["A. Recall", "B. Precision", "C. Accuracy", "D. Specificity"], "correct": 1 },
         { "type": "mcq", "q": "10. ROC AUC Score measures:", "options": ["A. Error rate", "B. Probability loss", "C. Model’s ability to separate classes", "D. Number of features"], "correct": 2 }
       ]
+    },
+    {
+      "title": "Sheet 4 - Part 1",
+      "questions": [
+        { "type": "tf", "q": "1. Linear regression is used to predict continuous numerical values.", "correct": "T" },
+        { "type": "tf", "q": "2. A linear equation represents a straight-line relationship between variables.", "correct": "T" },
+        { "type": "tf", "q": "3. Gradient Descent is used to maximize the error in a machine learning model.", "correct": "F" },
+        { "type": "tf", "q": "4. Matrix addition is possible only if the matrices have the same dimensions.", "correct": "T" },
+        { "type": "tf", "q": "5. Matrix subtraction requires both matrices to have identical sizes.", "correct": "T" },
+        { "type": "tf", "q": "6. Scalar multiplication multiplies each element in the matrix by a constant value.", "correct": "T" },
+        { "type": "tf", "q": "7. In dot matrix multiplication, the number of columns of the first matrix must equal the number of rows of the second matrix.", "correct": "T" },
+        { "type": "tf", "q": "8. The transpose of a matrix swaps rows with columns.", "correct": "T" },
+        { "type": "tf", "q": "9. A singular matrix has a determinant equal to zero.", "correct": "T" },
+        { "type": "tf", "q": "10. An identity matrix contains ones on the main diagonal and zeros elsewhere.", "correct": "T" },
+        { "type": "mcq", "q": "1. Linear regression attempts to model the relationship between variables using:", "options": ["A) A curve", "B) A straight line", "C) A circle", "D) A polynomial only"], "correct": 1 },
+        { "type": "mcq", "q": "2. The equation of a simple linear regression model is:", "options": ["A) y = ax² + bx + c", "B) y = mx + b", "C) y = mx²", "D) y = m/x"], "correct": 1 },
+        { "type": "mcq", "q": "3. Gradient Descent is mainly used for:", "options": ["A) Data cleaning", "B) Parameter optimization", "C) Sorting data", "D) Data visualization"], "correct": 1 },
+        { "type": "mcq", "q": "4. Matrix addition requires:", "options": ["A) Same number of rows only", "B) Same number of columns only", "C) Same dimensions", "D) Same determinant"], "correct": 2 },
+        { "type": "mcq", "q": "5. The transpose of a matrix A is represented as:", "options": ["A) A⁻¹", "B) Aᵀ", "C) A²", "D) A°"], "correct": 1 },
+        { "type": "mcq", "q": "6. A vector is best described as:", "options": ["A) A single number", "B) A one-dimensional array of numbers", "C) A square matrix", "D) A random variable"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which matrix contains only zeros?", "options": ["A) Identity Matrix", "B) Diagonal Matrix", "C) Zero Matrix", "D) Scalar Matrix"], "correct": 2 },
+        { "type": "mcq", "q": "8. Which matrix has ones on the main diagonal?", "options": ["A) Zero Matrix", "B) Identity Matrix", "C) Random Matrix", "D) Singular Matrix"], "correct": 1 },
+        { "type": "mcq", "q": "9. If a matrix has no inverse, it is called:", "options": ["A) Identity matrix", "B) Non-square matrix", "C) Singular matrix", "D) Diagonal matrix"], "correct": 2 },
+        { "type": "mcq", "q": "10. In gradient descent, parameters are updated in the direction of:", "options": ["A) Maximum gradient", "B) Zero gradient", "C) Negative gradient", "D) Random gradient"], "correct": 2 },
+        {
+          "type": "written",
+          "q": "1. What is **Linear Regression**?",
+          "qt": "1. ما هو **الانحدار الخطي (Linear Regression)**؟",
+          "a": "Linear regression is a supervised machine learning algorithm used to predict **==continuous numerical values==** based on the linear relationship between independent and dependent variables.",
+          "at": "الانحدار الخطي هو خوارزمية تعلم آلي خاضع للإشراف تُستخدم للتنبؤ بـ **==قيم رقمية مستمرة==** بناءً على العلاقة الخطية بين المتغيرات المستقلة والتابعة."
+        },
+        {
+          "type": "written",
+          "q": "2. Write the general equation of a **straight line** used in Linear Regression.",
+          "qt": "2. اكتب المعادلة العامة لـ **الخط المستقيم** المستخدمة في الانحدار الخطي.",
+          "a": "The general equation is **==y = mx + b==**, where y is the dependent variable, m is the slope, x is the independent variable, and b is the y-intercept.",
+          "at": "المعادلة العامة هي **==y = mx + b==**، حيث y هو المتغير التابع، m هو الميل، x هو المتغير المستقل، و b هو الجزء المقطوع من المحور الصادي."
+        },
+        {
+          "type": "written",
+          "q": "3. What is the purpose of **Gradient Descent** in machine learning?",
+          "qt": "3. ما هو الغرض من خوارزمية **الانحدار التدريجي (Gradient Descent)** في التعلم الآلي؟",
+          "a": "Gradient descent is an optimization algorithm used to **==minimize the error/loss function==** by iteratively updating the model's parameters.",
+          "at": "الانحدار التدريجي هو خوارزمية تحسين تُستخدم لـ **==تقليل دالة الخطأ/الخسارة==** عن طريق تحديث معلمات النموذج (Parameters) بشكل متكرر."
+        },
+        {
+          "type": "written",
+          "q": "4. What is a **Matrix Transpose**?",
+          "qt": "4. ما هو **منقول المصفوفة (Matrix Transpose)**؟",
+          "a": "A matrix transpose is an operation that **==swaps the rows and columns==** of a matrix.",
+          "at": "منقول المصفوفة هو عملية تقوم بـ **==تبديل الصفوف بالأعمدة==** للمصفوفة لتصبح الصفوف أعمدة والأعمدة صفوف."
+        },
+        {
+          "type": "written",
+          "q": "5. What is the difference between an **Identity Matrix** and a **Zero Matrix**?",
+          "qt": "5. ما الفرق بين **مصفوفة الوحدة (Identity Matrix)** و **المصفوفة الصفرية (Zero Matrix)**؟",
+          "a": "An Identity Matrix is a square matrix with **==ones on the main diagonal and zeros elsewhere==**, while a Zero Matrix has **==zeros for all its elements==**.",
+          "at": "مصفوفة الوحدة هي مصفوفة مربعة تحتوي على **==آحاد (1) في القطر الرئيسي وأصفار في باقي العناصر==**، بينما المصفوفة الصفرية تحتوي على **==أصفار (0) في جميع عناصرها==**."
+        },
+        {
+          "type": "code",
+          "q": "1. Write a program that calculates **Linear Regression** using **Gradient Descent** for a simple dataset.",
+          "code": "import numpy as np\n\n# 1. Prepare simple dataset\nX = np.array([1, 2, 3, 4, 5])\ny = np.array([2, 4, 5, 4, 5])\n\n# 2. Initialize parameters\nm = 0.0\nb = 0.0\nlearning_rate = 0.01\nepochs = 1000\nn = float(len(X))\n\n# 3. Gradient Descent Loop\nfor i in range(epochs):\n    # Calculate predictions\n    y_pred = (m * X) + b\n    \n    # Calculate derivatives (gradients)\n    D_m = (-2/n) * sum(X * (y - y_pred))\n    D_b = (-2/n) * sum(y - y_pred)\n    \n    # Update parameters\n    m = m - (learning_rate * D_m)\n    b = b - (learning_rate * D_b)\n\nprint(f\"Optimized Slope (m): {m:.4f}\")\nprint(f\"Optimized Intercept (b): {b:.4f}\")"
+        }
+      ]
     }
   ]
 }
