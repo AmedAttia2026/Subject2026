@@ -962,6 +962,275 @@
           "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\", # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----\\nREPLACE_ME\\n-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)"
         }
       ]
+    },
+    {
+      "title": "Tutorial 4",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. In IoT systems, telemetry usually means:",
+          "options": ["A) Server → device actions", "B) Device → server measurements", "C) Device reset", "D) User login"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "2. In IoT systems, commands usually mean:",
+          "options": ["A) Device → server readings", "B) Server/app → device actions", "C) Router cloud logs", "D) File encryption"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "3. Commands are often higher risk than telemetry because commands:",
+          "options": ["A) Are always bigger", "B) Can trigger physical actions", "C) Always use UDP", "D) Never need authentication"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "4. A common telemetry example is:",
+          "options": ["A) \"unlock door\"", "B) \"turn motor on\"", "C) \"temp=25C every 5 sec\"", "D) \"delete account\""],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "5. A common command example is:",
+          "options": ["A) \"humidity=45%\"", "B) \"uptime=120s\"", "C) \"LED ON\"", "D) \"battery=3.9V\""],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "6. Network segmentation means:",
+          "options": ["A) Faster internet", "B) Split network into zones", "C) Disable passwords", "D) One flat network for all"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "7. Network isolation means:",
+          "options": ["A) Allow all traffic", "B) Restrict traffic between zones", "C) Remove firewalls", "D) Turn off encryption"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "8. Main benefit of segmentation/isolation is:",
+          "options": ["A) Higher sensor accuracy", "B) Reduced attacker movement (blast radius)", "C) Larger RAM", "D) Faster CPU"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "9. A good segmentation example is:",
+          "options": ["A) IoT + staff laptops on same VLAN", "B) IoT devices on separate VLAN from staff laptops", "C) Open Wi-Fi for all", "D) Disable router firewall"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "10. A secure channel is mainly needed to protect data:",
+          "options": ["A) Stored in flash", "B) While traveling on the network", "C) After deletion", "D) Only in RAM"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "11. TLS mainly provides:",
+          "options": ["A) Compression", "B) Encryption + integrity + authentication", "C) Larger packets", "D) Faster CPU"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "12. DTLS is best described as:",
+          "options": ["A) TLS for UDP", "B) TLS for Bluetooth", "C) A hash algorithm", "D) A firewall rule"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "13. CoAP is designed mainly for:",
+          "options": ["A) Desktop PCs", "B) Constrained IoT devices", "C) Video streaming", "D) Databases only"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "14. A common way to secure CoAP is:",
+          "options": ["A) FTP", "B) DTLS", "C) Telnet", "D) Plain HTTP"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "15. MQTT communication style is:",
+          "options": ["A) File transfer", "B) Publish/Subscribe", "C) Email-based", "D) Peer-to-peer only"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "16. In MQTT, the broker is:",
+          "options": ["A) The sensor", "B) The server that routes messages", "C) The router", "D) The mobile app"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "17. In MQTT, a topic is:",
+          "options": ["A) A password", "B) A message channel name", "C) A certificate", "D) A port number"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "18. A publisher in MQTT:",
+          "options": ["A) Receives only", "B) Sends messages to a topic", "C) Generates certificates", "D) Blocks traffic"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "19. A subscriber in MQTT:",
+          "options": ["A) Sends only", "B) Receives messages from subscribed topics", "C) Disables TLS", "D) Changes broker config"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "20. MQTT authentication answers:",
+          "options": ["A) What topics exist?", "B) Who are you?", "C) How fast are you?", "D) What is your IP?"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "21. MQTT ACLs/authorization control:",
+          "options": ["A) Wi-Fi strength", "B) What a client can publish/subscribe", "C) Hash length", "D) Battery usage"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "22. Secure MQTT usually needs:",
+          "options": ["A) Only TLS", "B) Only username/password", "C) Auth + ACLs + TLS", "D) Only topic naming"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "23. Using MQTT without TLS means traffic may be:",
+          "options": ["A) Encrypted automatically", "B) Readable to sniffers", "C) Signed always", "D) Impossible to capture"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "24. Eavesdropping means the attacker:",
+          "options": ["A) Changes messages", "B) Listens to traffic", "C) Creates new topics", "D) Rotates keys"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "25. Impersonation (spoofing) means the attacker:",
+          "options": ["A) Re-sends an old message", "B) Pretends to be a real device/server/user", "C) Encrypts traffic", "D) Blocks the broker"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "26. A replay attack means the attacker:",
+          "options": ["A) Records a valid message and sends it again later", "B) Deletes the message", "C) Compresses the message", "D) Creates a new key"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "27. DoS means the attacker:",
+          "options": ["A) Improves availability", "B) Floods/overloads resources to stop the service", "C) Encrypts the network", "D) Creates ACLs"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "28. Best defense against eavesdropping is:",
+          "options": ["A) TLS/DTLS encryption", "B) Default passwords", "C) Open Wi-Fi", "D) Disable logging"],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "29. Best defense against replay attacks is:",
+          "options": ["A) Bigger packets", "B) Timestamps/nonces/sequence numbers", "C) Disable TLS", "D) Use same key for all devices"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "30. BLE is mainly used for:",
+          "options": ["A) Long-range city networks", "B) Short-range communication and device onboarding", "C) Cloud databases", "D) Satellite internet"],
+          "correct": 1
+        },
+        {
+          "type": "written",
+          "q": "1. Explain **telemetry** and **commands** with one IoT example for each.",
+          "qt": "1. اشرح **القياس عن بعد (Telemetry)** و **الأوامر (Commands)** مع ذكر مثال لكل منهما.",
+          "a": "Telemetry = **==data the device sends out==** to report its status or sensor readings (device → server). Example: a temperature sensor sends temp = 25C.\nCommands = **==instructions the server/app sends to the device==** to change what it does (server/app → device). Example: a mobile app sends LED ON.",
+          "at": "القياس عن بعد (Telemetry) = **==البيانات التي يرسلها الجهاز==** للإبلاغ عن حالته أو قراءات المستشعر (من الجهاز للسيرفر). مثال: حساس يرسل درجة الحرارة.\nالأوامر (Commands) = **==التعليمات التي يرسلها السيرفر/التطبيق للجهاز==** لتغيير عمله (من السيرفر للجهاز). مثال: تطبيق يرسل أمر تشغيل الإضاءة.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "2. Explain what **segmentation** means and why it reduces **\"blast radius.\"**",
+          "qt": "2. اشرح معنى **التجزئة (Segmentation)** ولماذا تقلل من **نطاق الضرر (Blast radius)**.",
+          "a": "Segmentation means **==dividing the network into separate zones==** and controlling how they communicate.\nIt reduces blast radius because if one IoT device is hacked, the attacker **==cannot easily reach everything else==**; the damage stays limited to that segment.",
+          "at": "التجزئة تعني **==تقسيم الشبكة إلى مناطق منفصلة==** والتحكم في كيفية تواصلها.\nتقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT، **==لا يمكن للمهاجم الوصول بسهولة لباقي الأجهزة==**؛ ويبقى الضرر محدوداً في تلك المنطقة.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "3. What does **TLS protect**, and what does it **NOT fix** by itself?",
+          "qt": "3. ماذا يحمي **TLS**، وما الذي **لا يعالجه** بمفرده؟",
+          "a": "TLS protects: **==Confidentiality, Integrity, and Authentication==**.\nTLS does NOT fix: **==Bad authorization/ACLs, weak passwords, DoS attacks, or application bugs==**.",
+          "at": "يحمي TLS: **==السرية، النزاهة، والمصادقة==**.\nلا يعالج TLS بمفرده: **==سوء إدارة الصلاحيات (ACLs)، كلمات المرور الضعيفة، هجمات حجب الخدمة (DoS)، أو أخطاء التطبيق==**.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "4. Explain **MQTT publish/subscribe** using **\"topic\"** and **\"broker.\"**",
+          "qt": "4. اشرح نظام **النشر/الاشتراك (Publish/Subscribe) في MQTT** باستخدام مصطلحات **\"الموضوع (Topic)\"** و **\"الوسيط (Broker)\"**.",
+          "a": "Devices communicate through a **==broker==**. A publisher sends a message to a named channel called a **==topic==**. A subscriber tells the broker to send it messages from that topic.",
+          "at": "تتواصل الأجهزة من خلال **==وسيط (Broker)==**. يرسل الناشر رسالة إلى قناة تسمى **==موضوع (Topic)==**. ويطلب المشترك من الوسيط إرسال الرسائل الخاصة بهذا الموضوع إليه.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "5. Give an example of **good MQTT topic design** for one device (telemetry + commands).",
+          "qt": "5. أعط مثالاً على **تصميم جيد لموضوع MQTT** لجهاز واحد (القياس + الأوامر).",
+          "a": "A good design separates them and includes the device ID:\nTelemetry: **==devices/device7/telemetry==**\nCommand: **==devices/device7/cmd==**",
+          "at": "التصميم الجيد يفصل بينهما ويتضمن معرف الجهاز:\nالقياس: **==devices/device7/telemetry==**\nالأوامر: **==devices/device7/cmd==**",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "6. Explain why **MQTT ACLs** are important even if you use **TLS**.",
+          "qt": "6. اشرح لماذا تعتبر قوائم التحكم في الوصول **(MQTT ACLs)** مهمة حتى لو استخدمت **TLS**.",
+          "a": "TLS encrypts the connection, but **==does not decide what a client is allowed to do==**. Without ACLs, a compromised device could **==publish or subscribe to any topic==** and control other devices.",
+          "at": "تشفير TLS يحمي الاتصال، لكنه **==لا يحدد ما يُسمح للعميل بفعله==**. بدون قوائم التحكم في الوصول (ACLs)، يمكن لجهاز مخترق أن **==ينشر أو يشترك في أي موضوع==** ويتحكم بأجهزة أخرى.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "7. Explain **replay attacks** and give one way to **reduce replay risk**.",
+          "qt": "7. اشرح **هجمات إعادة الإرسال (Replay attacks)** واذكر طريقة واحدة **لتقليل خطرها**.",
+          "a": "A replay attack is when an attacker **==records a valid message and sends it again later==** to repeat the action.\nReduce risk: Use **==timestamps or sequence numbers==** so the receiver rejects old messages.",
+          "at": "هجوم إعادة الإرسال يحدث عندما **==يسجل المهاجم رسالة صالحة ويرسلها لاحقاً==** لتكرار الإجراء.\nلتقليل الخطر: استخدم **==الطوابع الزمنية أو الأرقام التسلسلية==** لكي يرفض المستقبل الرسائل القديمة.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "8. Compare **BLE security** and **Zigbee security** at high level (1-2 points each).",
+          "qt": "8. قارن بين **أمان البلوتوث (BLE)** و **أمان زيجبي (Zigbee)** بشكل عام.",
+          "a": "BLE: Strongly depends on the **==pairing method==**; weak pairing (Just Works) is vulnerable.\nZigbee: Uses **==network keys==**; vulnerable if the joining process is weak or the network key leaks.",
+          "at": "البلوتوث (BLE): يعتمد بشدة على **==طريقة الاقتران==**؛ الاقتران الضعيف عرضة للهجوم.\nزيجبي (Zigbee): يستخدم **==مفاتيح الشبكة==**؛ يكون عرضة للخطر إذا كانت عملية الانضمام ضعيفة أو تم تسريب المفتاح.",
+          "correct": true
+        },
+        {
+          "type": "code",
+          "q": "Coding Q1: MQTT Publisher (Send Sensor Data)",
+          "code": "import time\nimport json\nimport random\nimport paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nclient = mqtt.Client(client_id=\"device7_publisher\")\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_start()\n\ntry:\n    while True:\n        data = {\n            \"device_id\": \"device7\",\n            \"temp\": round(random.uniform(20, 30), 2),\n            \"hum\": round(random.uniform(40, 60), 2)\n        }\n        payload = json.dumps(data)\n        client.publish(TOPIC, payload)\n        print(\"Published:\", payload)\n        time.sleep(2)\nexcept KeyboardInterrupt:\n    print(\"Stopped publisher.\")\nfinally:\n    client.loop_stop()\n    client.disconnect()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q2: MQTT Subscriber (Receive and Display Data)",
+          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q3: Add Authentication (Username/Password)",
+          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected OK\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"Connection failed return code:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"auth_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q4: Add TLS (Concept + Code Configuration)",
+          "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\nclient.tls_set(\n    ca_certs=CA_CERT,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\n# Require certificate verification (important!)\nclient.tls_insecure_set(False)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+        }
+      ]
     }
   ]
 }
