@@ -191,6 +191,113 @@
           "correct": 1
         }
       ]
+    },
+    {
+      "title": "Assignment 3",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. What happens to a port when it receives a BPDU and has BPDU Guard enabled?",
+          "options": ["A. It transitions to the Blocking state.", "B. It ignores the BPDU and continues forwarding.", "C. It enters the err-disable state.", "D. It becomes the root port."],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "2. Which command enables BPDU Guard on a specific interface?",
+          "options": ["A. spanning-tree bpduguard default", "B. spanning-tree bpduguard enable", "C. spanning-tree guard bpdu", "D. switchport bpduguard"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "3. What is the status of a BPDU Guard-disabled port in show interface?",
+          "options": ["A. up/up", "B. up/down", "C. down/down (err-disabled)", "D. administratively down"],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "4. BPDU Guard is most commonly used in which network layer?",
+          "options": ["A. Access Layer.", "B. Core Layer.", "C. Distribution Layer.", "D. ISP Edge."],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "5. Which command shows if a port is in the err-disable state?",
+          "options": ["A. show spanning-tree summary", "B. show interfaces status", "C. show spanning-tree bpduguard", "D. show ip interface brief"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "6. What is the primary function of Root Guard?",
+          "options": ["A. To disable a port if it receives any BPDU.", "B. To speed up STP convergence.", "C. To prevent an unauthorized switch from becoming the root bridge.", "D. To detect fiber link failures."],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "7. Which command enables Root Guard on an interface?",
+          "options": ["A. spanning-tree rootguard enable", "B. spanning-tree guard root", "C. spanning-tree root primary", "D. spanning-tree bpdu root-guard"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "8. When a port with Root Guard receives a \"superior\" BPDU, what state does it enter?",
+          "options": ["A. err-disable", "B. root-inconsistent", "C. loop-inconsistent", "D. forwarding"],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "9. How does a port recover from the root-inconsistent state?",
+          "options": ["A. It requires a manual shutdown / no shutdown.", "B. It recovers automatically once superior BPDUs stop.", "C. It requires a switch reload.", "D. It never recovers automatically."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "10. What is a \"superior\" BPDU in the context of Root Guard?",
+          "options": ["A. A BPDU with a lower Bridge ID than the current root.", "B. A BPDU with a higher Bridge ID than the current root.", "C. A BPDU sent every 1 second instead of 2.", "D. A BPDU containing a VLAN tag."],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "11. What is the primary behavior of BPDU Filter?",
+          "options": ["A. It blocks all data traffic.", "B. It stops the port from sending and receiving BPDUs.", "C. It only blocks superior BPDUs.", "D. It forces the port into the err-disable state."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "12. What happens if a port configured with BPDU Filter globally receives a BPDU?",
+          "options": ["A. It enters the err-disable state.", "B. It loses its PortFast status and becomes a normal STP port.", "C. It ignores the BPDU.", "D. It reboots the switch."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "13. What status does a BPDU Filter-enabled port show in show spanning-tree?",
+          "options": ["A. Forwarding (usually in PortFast mode).", "B. Err-disabled.", "C. Root-inconsistent.", "D. Blocking."],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "14. UDLD is primarily designed for which medium?",
+          "options": ["A. Copper (Cat6).", "B. Fiber-optic.", "C. Wireless.", "D. Coaxial."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "15. What are the two modes of UDLD?",
+          "options": ["A. Active and Passive.", "B. Normal and Aggressive.", "C. Fast and Slow.", "D. Filter and Guard."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "16. What layer of the OSI model does UDLD operate at?",
+          "options": ["A. Layer 1.", "B. Layer 2.", "C. Layer 3.", "D. Layer 4."],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "17. What status is displayed for a port blocked by Root Guard?",
+          "options": ["A. BLK", "B. LIS", "C. BKN* (Broken) or ROOT_INC.", "D. ERR-DIS."],
+          "correct": 2
+        }
+      ]
     }
   ]
 }
