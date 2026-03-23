@@ -29,8 +29,8 @@
           "type": "written",
           "q": "1. Define **Big Data** in your own words.",
           "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلماتك الخاصة.",
-          "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. \"Big Data is not about the data itself, but about **==what you do with the data==**.\"",
-          "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. \"البيانات الضخمة لا تتعلق بالبيانات نفسها، بل بـ **==ما تفعله بهذه البيانات==**.\""
+          "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. It requires **==advanced technologies==** to extract **==useful insights==**.",
+          "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. وتتطلب **==تقنيات متقدمة==** لاستخراج **==رؤى مفيدة==**."
         },
         {
           "type": "written",
