@@ -24,7 +24,42 @@
         { "type": "mcq", "q": "7. Which industry uses Big Data for fraud detection?", "options": ["a) Agriculture", "b) Finance", "c) Construction", "d) Manufacturing"], "correct": 1 },
         { "type": "mcq", "q": "8. Veracity is related to:", "options": ["a) Data truthfulness", "b) Data format", "c) Data speed", "d) Data duplication"], "correct": 0 },
         { "type": "mcq", "q": "9. Distributed computing improves:", "options": ["a) Manual processing", "b) Scalability", "c) Paper documentation", "d) Data entry speed"], "correct": 1 },
-        { "type": "mcq", "q": "10. One key challenge in Big Data implementation is:", "options": ["a) Low internet usage", "b) Data security", "c) Small datasets", "d) Limited software options"], "correct": 1 }
+        { "type": "mcq", "q": "10. One key challenge in Big Data implementation is:", "options": ["a) Low internet usage", "b) Data security", "c) Small datasets", "d) Limited software options"], "correct": 1 },
+        {
+          "type": "written",
+          "q": "1. Define **Big Data** in your own words.",
+          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلماتك الخاصة.",
+          "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. \"Big Data is not about the data itself, but about **==what you do with the data==**.\"",
+          "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. \"البيانات الضخمة لا تتعلق بالبيانات نفسها، بل بـ **==ما تفعله بهذه البيانات==**.\""
+        },
+        {
+          "type": "written",
+          "q": "2. Explain the difference between **Volume** and **Velocity**.",
+          "qt": "2. اشرح الفرق بين **الحجم (Volume)** و **السرعة (Velocity)**.",
+          "a": "Volume: The **==sheer quantity of data==** generated and stored (terabytes to zettabytes).\nVelocity: The **==speed at which data is generated, collected, and processed==** (real-time data streams).",
+          "at": "الحجم (Volume): **==الكمية الهائلة من البيانات==** التي يتم إنشاؤها وتخزينها (من تيرابايت إلى زيتابايت).\nالسرعة (Velocity): **==السرعة التي يتم بها إنشاء البيانات وجمعها ومعالجتها==** (تدفقات البيانات في الوقت الفعلي)."
+        },
+        {
+          "type": "written",
+          "q": "3. Why do **traditional systems** struggle with Big Data?",
+          "qt": "3. لماذا تواجه **الأنظمة التقليدية** صعوبة في التعامل مع البيانات الضخمة؟",
+          "a": "Traditional systems are designed to scale by **==increasing the power of a single server (vertical scaling)==**. This approach becomes **==economically unfeasible and technically challenging==** when dealing with the immense volume and rapid growth of Big Data, leading to **==single-node bottlenecks==**.",
+          "at": "الأنظمة التقليدية مصممة للتوسع عن طريق **==زيادة قوة خادم واحد (التوسع الرأسي)==**. هذا النهج يصبح **==غير مجدٍ اقتصاديًا وصعبًا تقنيًا==** عند التعامل مع الحجم الهائل والنمو السريع للبيانات الضخمة، مما يؤدي إلى **==اختناقات في العقدة المفردة (single-node bottlenecks)==**."
+        },
+        {
+          "type": "written",
+          "q": "4. List the main components of the **Big Data technology stack**.",
+          "qt": "4. اذكر المكونات الرئيسية لـ **حزمة تقنيات البيانات الضخمة (Big Data technology stack)**.",
+          "a": "**==1. Ingestion\n2. Storage\n3. Processing\n4. Analytics==**",
+          "at": "**==1. الاستيعاب/الإدخال (Ingestion)\n2. التخزين (Storage)\n3. المعالجة (Processing)\n4. التحليلات (Analytics)==**"
+        },
+        {
+          "type": "written",
+          "q": "5. Mention two Big Data **use cases** in healthcare or e-commerce.",
+          "qt": "5. اذكر **حالتي استخدام (Use cases)** للبيانات الضخمة في الرعاية الصحية أو التجارة الإلكترونية.",
+          "a": "Healthcare: Leveraging patient records and wearable data to **==improve diagnostic accuracy, personalize treatments, and predict disease outbreaks==**.\nE-commerce: Enhancing customer experience through **==personalized recommendations, optimizing supply chains, and forecasting demand==**.",
+          "at": "الرعاية الصحية: الاستفادة من سجلات المرضى وبيانات الأجهزة القابلة للارتداء لـ **==تحسين دقة التشخيص، وتخصيص العلاجات، والتنبؤ بتفشي الأمراض==**.\nالتجارة الإلكترونية: تحسين تجربة العملاء من خلال **==التوصيات المخصصة، وتحسين سلاسل التوريد، والتنبؤ بالطلب==**."
+        }
       ]
     },
     {
