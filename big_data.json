@@ -43,8 +43,8 @@
           "type": "written",
           "q": "3. Why do **traditional systems** struggle with Big Data?",
           "qt": "3. لماذا تواجه **الأنظمة التقليدية** صعوبة في التعامل مع البيانات الضخمة؟",
-          "a": "Traditional systems are designed to scale by **==increasing the power of a single server (vertical scaling)==**. This approach becomes **==economically unfeasible and technically challenging==** when dealing with the immense volume and rapid growth of Big Data, leading to **==single-node bottlenecks==**.",
-          "at": "الأنظمة التقليدية مصممة للتوسع عن طريق **==زيادة قوة خادم واحد (التوسع الرأسي)==**. هذا النهج يصبح **==غير مجدٍ اقتصاديًا وصعبًا تقنيًا==** عند التعامل مع الحجم الهائل والنمو السريع للبيانات الضخمة، مما يؤدي إلى **==اختناقات في العقدة المفردة (single-node bottlenecks)==**."
+          "a": "Traditional systems rely on **==vertical scaling (single server)==** which becomes **==expensive and insufficient==** for the huge volume and velocity of Big Data, causing **==single-node bottlenecks==**.",
+          "at": "تعتمد الأنظمة التقليدية على **==التوسع الرأسي (خادم واحد)==** والذي يصبح **==مكلفًا وغير كافٍ==** للحجم الهائل والسرعة العالية للبيانات الضخمة، مما يتسبب في **==اختناقات العقدة المفردة==**."
         },
         {
           "type": "written",
