@@ -87,36 +87,36 @@
           "type": "written",
           "q": "1. Explain the main components of **Big Data Architecture**.",
           "qt": "1. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
-          "a": "Ingestion: **==Capture raw data==** and deliver to storage.\nStorage: **==Durable distributed storage==**.\nProcessing: **==Transformations, aggregations==**.\nAnalytics: **==Serving data to dashboards and ML models==**.",
-          "at": "الاستيعاب (Ingestion): **==التقاط البيانات الخام==** وتوصيلها للتخزين.\nالتخزين (Storage): **==تخزين موزع متين==**.\nالمعالجة (Processing): **==التحويلات والتجميعات==**.\nالتحليلات (Analytics): **==تقديم البيانات للوحات المعلومات ونماذج تعلم الآلة==**."
+          "a": "• Ingestion: **==Capture raw data==** from sources (streaming & batch) and deliver to storage.\n• Storage: **==Durable distributed storage==** (HDFS, Cloud Object Storage, Data Warehouses).\n• Processing: **==Transformations, aggregations==** using batch (Spark) or stream processing (Flink).\n• Analytics: Serving data to **==dashboards, BI tools, and ML models==** for insights.",
+          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (تدفق ودفعات) وتوصيلها للتخزين.\n• التخزين (Storage): **==تخزين موزع متين==** (مثل HDFS، التخزين السحابي، مستودعات البيانات).\n• المعالجة (Processing): **==التحويلات والتجميعات==** باستخدام معالجة الدفعات (Spark) أو التدفق (Flink).\n• التحليلات (Analytics): تقديم البيانات لـ **==لوحات المعلومات، وأدوات ذكاء الأعمال، ونماذج تعلم الآلة==** لاستخراج الرؤى."
         },
         {
           "type": "written",
           "q": "2. What is the difference between **ETL** and **ELT**?",
           "qt": "2. ما الفرق بين **ETL** و **ELT**؟",
-          "a": "**ETL — Traditional**\n• **==Predefined schema==**\n• **==Control & quality at ingest==**\n• Latency: **==higher for new use cases==**\n\n**ELT — Modern**\n• **==Schema-on-read==**\n• **==Faster ingest, later transformations==**\n• Supports **==ad-hoc analytics & ML==**",
-          "at": "**ETL — تقليدي**\n• **==مخطط محدد مسبقاً (Predefined schema)==**\n• **==التحكم والجودة عند الإدخال==**\n• التأخير: **==أعلى لحالات الاستخدام الجديدة==**\n\n**ELT — حديث**\n• **==المخطط عند القراءة (Schema-on-read)==**\n• **==إدخال أسرع، وتحويلات لاحقة==**\n• يدعم **==التحليلات الفورية وتعلم الآلة (ML)==**"
+          "a": "• ETL (Extract, Transform, Load): **==Transform data before loading==** → traditional for data warehouses, **==predefined schema==**.\n• ELT (Extract, Load, Transform): **==Load raw data first into data lake, then transform==** → modern for Big Data, **==schema-on-read==**, faster for ad-hoc analytics & ML.",
+          "at": "• ETL (استخراج، تحويل، تحميل): **==تحويل البيانات قبل التحميل==** ← تقليدي لمستودعات البيانات، وله **==مخطط محدد مسبقاً==**.\n• ELT (استخراج، تحميل، تحويل): **==تحميل البيانات الخام أولاً في بحيرة بيانات، ثم تحويلها==** ← حديث للبيانات الضخمة، يعتمد على **==المخطط عند القراءة==**، وأسرع للتحليلات الفورية وتعلم الآلة."
         },
         {
           "type": "written",
           "q": "3. Define **fault tolerance** and give one **replication strategy** example.",
           "qt": "3. عرف **التسامح مع الأخطاء (fault tolerance)** واذكر مثالاً على **استراتيجية النسخ المتماثل (replication strategy)**.",
-          "a": "Fault tolerance: **==Ability of the system to continue working when components fail==**.\nExample: **==Geo-replication==** (copies data across geographic regions).",
-          "at": "التسامح مع الأخطاء: **==قدرة النظام على الاستمرار في العمل عند فشل بعض المكونات==**.\nمثال: **==النسخ المتماثل الجغرافي (Geo-replication)==** (نسخ البيانات عبر مناطق جغرافية مختلفة)."
+          "a": "Fault tolerance: **==Ability of the system to continue working when some components fail==** (high availability & no data loss).\nExample: **==Geo-replication==** (copies data across different geographic regions for disaster recovery).",
+          "at": "التسامح مع الأخطاء: **==قدرة النظام على الاستمرار في العمل عند فشل بعض المكونات==** (توافر عالي وبدون فقدان للبيانات).\nمثال: **==النسخ المتماثل الجغرافي (Geo-replication)==** (نسخ البيانات عبر مناطق جغرافية مختلفة للتعافي من الكوارث)."
         },
         {
           "type": "written",
           "q": "4. What are the benefits of a **Data Lake**?",
           "qt": "4. ما هي فوائد **بحيرة البيانات (Data Lake)**؟",
-          "a": "**==Cost-efficient storage==** for large volumes.\n**==Schema-on-read agility==** (flexible exploration).\n**==Machine learning readiness==** (raw data).\nSupports **==structured, semi-structured, and unstructured data==**.",
-          "at": "**==تخزين فعال من حيث التكلفة==** للأحجام الكبيرة.\n**==مرونة المخطط عند القراءة==** (استكشاف مرن).\n**==الجاهزية لتعلم الآلة==** (بيانات خام).\nيدعم **==البيانات المهيكلة وشبه المهيكلة وغير المهيكلة==**."
+          "a": "• **==Cost-efficient storage==** for large volumes.\n• **==Schema-on-read agility==** (flexible exploration without rigid ETL).\n• **==Machine learning readiness==** (raw data for feature engineering).\n• Supports **==structured, semi-structured, and unstructured data==**.",
+          "at": "• **==تخزين فعال من حيث التكلفة==** للأحجام الكبيرة.\n• **==مرونة المخطط عند القراءة==** (استكشاف مرن بدون قيود ETL الصارمة).\n• **==الجاهزية لتعلم الآلة==** (بيانات خام لهندسة الميزات).\n• يدعم **==البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة==**."
         },
         {
           "type": "written",
           "q": "5. Explain the importance of **monitoring** in distributed systems.",
           "qt": "5. اشرح أهمية **المراقبة (monitoring)** في الأنظمة الموزعة.",
-          "a": "Provides **==operational visibility==** (performance, health).\n**==Detects failures quickly==** using metrics and logs.\nEnables **==automated alerting==** (e.g., Prometheus + Grafana).",
-          "at": "يوفر **==رؤية تشغيلية==** (الأداء، والصحة).\n**==يكتشف الأعطال بسرعة==** باستخدام المقاييس والسجلات.\nيُمكّن **==التنبيه الآلي==** (مثل استخدام Prometheus و Grafana)."
+          "a": "• Provides **==operational visibility==** (performance, health, capacity).\n• **==Detects failures quickly==** using metrics, logs, and traces.\n• Enables **==rapid incident response and automated alerting==**.\n• Tools: **==Prometheus + Grafana==**.",
+          "at": "• يوفر **==رؤية تشغيلية==** (الأداء، الصحة، السعة).\n• **==يكتشف الأعطال بسرعة==** باستخدام المقاييس والسجلات والتتبعات.\n• يُمكّن من **==الاستجابة السريعة للحوادث والتنبيه الآلي==**.\n• الأدوات: **==Prometheus + Grafana==**."
         }
       ]
     },
