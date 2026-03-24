@@ -82,7 +82,42 @@
         { "type": "mcq", "q": "7. Which tool is commonly used for monitoring cluster metrics?", "options": ["a) Kafka", "b) Prometheus", "c) HDFS", "d) SQL Server"], "correct": 1 },
         { "type": "mcq", "q": "8. Data lakes are beneficial because they:", "options": ["a) Reduce flexibility", "b) Store only structured data", "c) Support machine learning readiness", "d) Eliminate scalability"], "correct": 2 },
         { "type": "mcq", "q": "9. Stateless services are important for:", "options": ["a) Security only", "b) Scalability and autoscaling", "c) Manual processing", "d) Backup operations"], "correct": 1 },
-        { "type": "mcq", "q": "10. In high availability systems, automated failover ensures:", "options": ["a) Manual restart", "b) Immediate recovery from failure", "c) Data deletion", "d) Reduced monitoring"], "correct": 1 }
+        { "type": "mcq", "q": "10. In high availability systems, automated failover ensures:", "options": ["a) Manual restart", "b) Immediate recovery from failure", "c) Data deletion", "d) Reduced monitoring"], "correct": 1 },
+        {
+          "type": "written",
+          "q": "1. Explain the main components of **Big Data Architecture**.",
+          "qt": "1. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
+          "a": "Ingestion: **==Capture raw data==** and deliver to storage.\nStorage: **==Durable distributed storage==**.\nProcessing: **==Transformations, aggregations==**.\nAnalytics: **==Serving data to dashboards and ML models==**.",
+          "at": "الاستيعاب (Ingestion): **==التقاط البيانات الخام==** وتوصيلها للتخزين.\nالتخزين (Storage): **==تخزين موزع متين==**.\nالمعالجة (Processing): **==التحويلات والتجميعات==**.\nالتحليلات (Analytics): **==تقديم البيانات للوحات المعلومات ونماذج تعلم الآلة==**."
+        },
+        {
+          "type": "written",
+          "q": "2. What is the difference between **ETL** and **ELT**?",
+          "qt": "2. ما الفرق بين **ETL** و **ELT**؟",
+          "a": "**ETL — Traditional**\n• **==Predefined schema==**\n• **==Control & quality at ingest==**\n• Latency: **==higher for new use cases==**\n\n**ELT — Modern**\n• **==Schema-on-read==**\n• **==Faster ingest, later transformations==**\n• Supports **==ad-hoc analytics & ML==**",
+          "at": "**ETL — تقليدي**\n• **==مخطط محدد مسبقاً (Predefined schema)==**\n• **==التحكم والجودة عند الإدخال==**\n• التأخير: **==أعلى لحالات الاستخدام الجديدة==**\n\n**ELT — حديث**\n• **==المخطط عند القراءة (Schema-on-read)==**\n• **==إدخال أسرع، وتحويلات لاحقة==**\n• يدعم **==التحليلات الفورية وتعلم الآلة (ML)==**"
+        },
+        {
+          "type": "written",
+          "q": "3. Define **fault tolerance** and give one **replication strategy** example.",
+          "qt": "3. عرف **التسامح مع الأخطاء (fault tolerance)** واذكر مثالاً على **استراتيجية النسخ المتماثل (replication strategy)**.",
+          "a": "Fault tolerance: **==Ability of the system to continue working when components fail==**.\nExample: **==Geo-replication==** (copies data across geographic regions).",
+          "at": "التسامح مع الأخطاء: **==قدرة النظام على الاستمرار في العمل عند فشل بعض المكونات==**.\nمثال: **==النسخ المتماثل الجغرافي (Geo-replication)==** (نسخ البيانات عبر مناطق جغرافية مختلفة)."
+        },
+        {
+          "type": "written",
+          "q": "4. What are the benefits of a **Data Lake**?",
+          "qt": "4. ما هي فوائد **بحيرة البيانات (Data Lake)**؟",
+          "a": "**==Cost-efficient storage==** for large volumes.\n**==Schema-on-read agility==** (flexible exploration).\n**==Machine learning readiness==** (raw data).\nSupports **==structured, semi-structured, and unstructured data==**.",
+          "at": "**==تخزين فعال من حيث التكلفة==** للأحجام الكبيرة.\n**==مرونة المخطط عند القراءة==** (استكشاف مرن).\n**==الجاهزية لتعلم الآلة==** (بيانات خام).\nيدعم **==البيانات المهيكلة وشبه المهيكلة وغير المهيكلة==**."
+        },
+        {
+          "type": "written",
+          "q": "5. Explain the importance of **monitoring** in distributed systems.",
+          "qt": "5. اشرح أهمية **المراقبة (monitoring)** في الأنظمة الموزعة.",
+          "a": "Provides **==operational visibility==** (performance, health).\n**==Detects failures quickly==** using metrics and logs.\nEnables **==automated alerting==** (e.g., Prometheus + Grafana).",
+          "at": "يوفر **==رؤية تشغيلية==** (الأداء، والصحة).\n**==يكتشف الأعطال بسرعة==** باستخدام المقاييس والسجلات.\nيُمكّن **==التنبيه الآلي==** (مثل استخدام Prometheus و Grafana)."
+        }
       ]
     },
     {
