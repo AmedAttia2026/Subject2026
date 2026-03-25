@@ -175,8 +175,8 @@
           "type": "written",
           "q": "5. What is the role of **Apache Ambari** in Hadoop?",
           "qt": "5. ما هو دور **Apache Ambari** في نظام Hadoop؟",
-          "a": "Apache Ambari is a tool used to **==manage, monitor, and provision==** Hadoop cluster ecosystems through a **==web-based dashboard==**.",
-          "at": "برنامج Apache Ambari هو أداة تُستخدم لـ **==إدارة، مراقبة، وتهيئة==** أنظمة مجموعة Hadoop البيئية من خلال **==لوحة معلومات قائمة على الويب==**."
+          "a": "Apache Ambari provides an **==intuitive, easy-to-use web UI==** for Hadoop cluster management. It allows **==provisioning, monitoring, and managing the entire Hadoop ecosystem==** (HDFS, MapReduce, Hive, HBase, etc.).",
+          "at": "يوفر Apache Ambari **==واجهة مستخدم ويب سهلة الاستخدام وبديهية==** لإدارة مجموعة Hadoop. ويسمح بـ **==تهيئة ومراقبة وإدارة نظام Hadoop البيئي بأكمله==** (مثل HDFS و MapReduce و Hive و HBase وغيرها)."
         }
       ]
     }
