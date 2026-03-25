@@ -115,8 +115,8 @@
           "type": "written",
           "q": "5. Explain the importance of **monitoring** in distributed systems.",
           "qt": "5. اشرح أهمية **المراقبة (monitoring)** في الأنظمة الموزعة.",
-          "a": "• Provides **==operational visibility==** for performance, health, and capacity planning.\n• Combines metrics, logs, and traces for **==rapid incident response==**.\n• **Tools:**\n  1. **==Ambari==**: Manages and monitors Hadoop cluster ecosystems.\n  2. **==Prometheus==**: Collects and stores time series data as metrics.",
-          "at": "• يوفر **==رؤية تشغيلية==** للأداء والصحة وتخطيط السعة.\n• يجمع بين المقاييس والسجلات والتتبعات من أجل **==الاستجابة السريعة للحوادث==**.\n• **الأدوات:**\n  1. **==Ambari==**: يدير ويراقب أنظمة مجموعة Hadoop البيئية.\n  2. **==Prometheus==**: يجمع ويخزن بيانات السلاسل الزمنية كمقاييس."
+          "a": "• Provides **==operational visibility==** for performance, health, and capacity planning.\n• Combines metrics, logs, and traces for **==rapid incident response==**.\n• Tools: **==Ambari, Prometheus, Grafana==**.",
+          "at": "• يوفر **==رؤية تشغيلية==** للأداء والصحة وتخطيط السعة.\n• يجمع بين المقاييس والسجلات والتتبعات من أجل **==الاستجابة السريعة للحوادث==**.\n• الأدوات: **==Ambari, Prometheus, Grafana==**."
         }
       ]
     },
@@ -142,7 +142,42 @@
         { "type": "mcq", "q": "7. HBase is best described as:", "options": ["a) Relational database", "b) NoSQL wide-column database", "c) Visualization tool", "d) Monitoring tool"], "correct": 1 },
         { "type": "mcq", "q": "8. Which company is known as a leading Big Data vendor?", "options": ["a) Cloudera", "b) Adobe", "c) Intel", "d) Oracle Forms"], "correct": 0 },
         { "type": "mcq", "q": "9. Spark is preferred over MapReduce because:", "options": ["a) It is slower", "b) It lacks scalability", "c) It supports in-memory processing", "d) It does not support ML"], "correct": 2 },
-        { "type": "mcq", "q": "10. Hadoop supports which type of data?", "options": ["a) Only structured", "b) Only unstructured", "c) Structured, semi-structured, and unstructured", "d) Only relational"], "correct": 2 }
+        { "type": "mcq", "q": "10. Hadoop supports which type of data?", "options": ["a) Only structured", "b) Only unstructured", "c) Structured, semi-structured, and unstructured", "d) Only relational"], "correct": 2 },
+        {
+          "type": "written",
+          "q": "1. Why is **RDBMS** not suitable for Big Data workloads?",
+          "qt": "1. لماذا لا يعد نظام **RDBMS** مناسباً لأحمال عمل البيانات الضخمة؟",
+          "a": "RDBMS was designed for structured data and smaller volumes. Its main limits are: **==Scalability (vertical scaling only)==**, **==Size (petabyte-scale data is too large)==**, Data types (**==cannot handle unstructured/semi-structured data well==**), **==Velocity (not built for high-speed data)==**, and **==Cost (very expensive to scale)==**.",
+          "at": "تم تصميم نظام إدارة قواعد البيانات العلائقية (RDBMS) للبيانات المهيكلة والأحجام الأصغر. حدوده الرئيسية هي: **==قابلية التوسع (التوسع الرأسي فقط)==**، **==الحجم (بيانات بحجم بيتابايت كبيرة جداً)==**، أنواع البيانات (**==لا يمكنه التعامل جيداً مع البيانات غير المهيكلة/شبه المهيكلة==**)، **==السرعة (غير مبني للبيانات عالية السرعة)==**، و **==التكلفة (مكلف جداً للتوسع)==**."
+        },
+        {
+          "type": "written",
+          "q": "2. What are the main advantages of **Hadoop**?",
+          "qt": "2. ما هي المزايا الرئيسية لـ **Hadoop**؟",
+          "a": "It stores and processes huge amounts of any kind of data quickly. Advantages include: **==Scales linearly==**, handles **==structured, semi-structured, and unstructured data==**, provides **==fault tolerance==**, **==low cost==**, **==scalability==**, **==flexibility==**, and high **==computing power==**.",
+          "at": "يقوم بتخزين ومعالجة كميات ضخمة من أي نوع من البيانات بسرعة. تشمل المزايا: **==يتوسع بشكل خطي==**، يتعامل مع **==البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة==**، يوفر **==التسامح مع الأخطاء==**، **==تكلفة منخفضة==**، **==قابلية للتوسع==**، **==المرونة==**، و **==قوة حوسبة عالية==**."
+        },
+        {
+          "type": "written",
+          "q": "3. Explain the difference between **HDFS** and **HBase**.",
+          "qt": "3. اشرح الفرق بين **HDFS** و **HBase**.",
+          "a": "• HDFS: Hadoop Distributed File System → the **==storage layer for large files with replication and fault tolerance==**.\n• HBase: **==NoSQL wide-column database==** that runs on top of HDFS. It adds **==random read/write access==** and supports point queries.",
+          "at": "• نظام HDFS: نظام ملفات هادوب الموزع ← هو **==طبقة التخزين للملفات الكبيرة مع النسخ المتماثل والتسامح مع الأخطاء==**.\n• نظام HBase: **==قاعدة بيانات NoSQL واسعة الأعمدة==** تعمل فوق HDFS. يضيف **==وصول قراءة/كتابة عشوائي==** ويدعم الاستعلامات النقطية."
+        },
+        {
+          "type": "written",
+          "q": "4. Compare **MapReduce** and **Spark**.",
+          "qt": "4. قارن بين **MapReduce** و **Spark**.",
+          "a": "• MapReduce: A **==batch processing==** engine that writes intermediate data to **==disk (slower)==**.\n• Spark: An **==in-memory processing==** engine, making it **==much faster==** for iterative tasks and analytics.",
+          "at": "• محرك MapReduce: محرك **==معالجة الدفعات (batch processing)==** يكتب البيانات الوسيطة على **==القرص (مما يجعله أبطأ)==**.\n• محرك Spark: محرك **==معالجة في الذاكرة (in-memory processing)==**، مما يجعله **==أسرع بكثير==** للمهام التكرارية والتحليلات."
+        },
+        {
+          "type": "written",
+          "q": "5. What is the role of **Apache Ambari** in Hadoop?",
+          "qt": "5. ما هو دور **Apache Ambari** في نظام Hadoop؟",
+          "a": "Apache Ambari is a tool used to **==manage, monitor, and provision==** Hadoop cluster ecosystems through a **==web-based dashboard==**.",
+          "at": "برنامج Apache Ambari هو أداة تُستخدم لـ **==إدارة، مراقبة، وتهيئة==** أنظمة مجموعة Hadoop البيئية من خلال **==لوحة معلومات قائمة على الويب==**."
+        }
       ]
     }
   ]
