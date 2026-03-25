@@ -115,8 +115,8 @@
           "type": "written",
           "q": "5. Explain the importance of **monitoring** in distributed systems.",
           "qt": "5. اشرح أهمية **المراقبة (monitoring)** في الأنظمة الموزعة.",
-          "a": "• Provides **==operational visibility==** (performance, health, capacity).\n• **==Detects failures quickly==** using metrics, logs, and traces.\n• Enables **==rapid incident response and automated alerting==**.\n• Tools: **==Prometheus + Grafana==**.",
-          "at": "• يوفر **==رؤية تشغيلية==** (الأداء، الصحة، السعة).\n• **==يكتشف الأعطال بسرعة==** باستخدام المقاييس والسجلات والتتبعات.\n• يُمكّن من **==الاستجابة السريعة للحوادث والتنبيه الآلي==**.\n• الأدوات: **==Prometheus + Grafana==**."
+          "a": "• Provides **==operational visibility==** for performance, health, and capacity planning.\n• Combines metrics, logs, and traces for **==rapid incident response==**.\n• **Tools:**\n  1. **==Ambari==**: Manages and monitors Hadoop cluster ecosystems.\n  2. **==Prometheus==**: Collects and stores time series data as metrics.",
+          "at": "• يوفر **==رؤية تشغيلية==** للأداء والصحة وتخطيط السعة.\n• يجمع بين المقاييس والسجلات والتتبعات من أجل **==الاستجابة السريعة للحوادث==**.\n• **الأدوات:**\n  1. **==Ambari==**: يدير ويراقب أنظمة مجموعة Hadoop البيئية.\n  2. **==Prometheus==**: يجمع ويخزن بيانات السلاسل الزمنية كمقاييس."
         }
       ]
     },
