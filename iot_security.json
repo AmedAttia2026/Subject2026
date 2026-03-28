@@ -10,7 +10,7 @@
           "q": "1) What is IoT security?",
           "options": [
             "A. IoT security protects only cloud servers.",
-            "B. IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world.",
+            "B. IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world through actuators like locks, motors, or alarms.",
             "C. IoT security means turning off Wi-Fi to be safe.",
             "D. IoT security protects only mobile apps."
           ],
@@ -21,7 +21,7 @@
           "q": "2) Why is IoT security special?",
           "options": [
             "A. IoT security is special because IoT devices never connect to networks.",
-            "B. IoT security is special because IoT connects digital systems to real environments, so a security issue can become a real-world problem.",
+            "B. IoT security is special because IoT connects digital systems to real environments, so a security issue can become a real-world problem, not just a “computer problem.”",
             "C. IoT security is special because only privacy matters.",
             "D. IoT security is special because only integrity matters."
           ],
@@ -31,7 +31,7 @@
           "type": "mcq",
           "q": "3) Why does end-to-end matter in IoT security?",
           "options": [
-            "A. IoT security must cover the whole system: Device → Network → Cloud → App Operations.",
+            "A. IoT security must cover the whole system: Device → Network → Cloud → App → Operations.",
             "B. IoT security only needs the device layer.",
             "C. IoT security only needs the cloud layer.",
             "D. IoT security only needs the app layer."
@@ -172,163 +172,143 @@
         },
         {
           "type": "written",
-          "q": "1. Explain what **IoT security** is, and mention one example of an **actuator**.",
-          "qt": "1. اشرح ما هو **أمن إنترنت الأشياء (IoT Security)**، واذكر مثالاً واحداً على **المشغل الميكانيكي (Actuator)**.",
-          "a": "IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world through **==actuators==**.\n\nExample of an actuator: **==Locks, motors, or alarms==**.",
-          "at": "أمن إنترنت الأشياء يحمي الأجهزة التي تستشعر البيئة، وتتواصل عبر الشبكات، وأحياناً تتصرف في العالم المادي من خلال **==المشغلات==**.\n\nمثال: **==الأقفال، المحركات، أو أجهزة الإنذار==**.",
-          "correct": true
+          "q": "1. Explain what **IoT security** is, and mention one example of an actuator (locks, motors, or alarms).",
+          "qt": "1. اشرح ما هو **أمن إنترنت الأشياء (IoT Security)**، واذكر مثالاً واحداً على المشغل الميكانيكي (مثل الأقفال أو المحركات أو أجهزة الإنذار).",
+          "a": "IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world through **==actuators like locks, motors, or alarms==**. One example of an actuator is a **==lock==**.",
+          "at": "أمن إنترنت الأشياء يحمي الأجهزة التي تستشعر البيئة، وتتواصل عبر الشبكات، وأحياناً تتصرف في العالم المادي من خلال **==المشغلات مثل الأقفال أو المحركات أو أجهزة الإنذار==**. أحد الأمثلة على المشغل الميكانيكي هو **==القفل==**."
         },
         {
           "type": "written",
           "q": "2. Why is **IoT security special** compared to normal computer security?",
           "qt": "2. لماذا يعتبر **أمن إنترنت الأشياء مميزاً** مقارنة بأمن الكمبيوتر العادي؟",
-          "a": "IoT connects digital systems to real environments, so a security issue can become a **==real-world problem (physical safety)==**, not just a \"computer problem\".",
-          "at": "لأن الـ IoT يربط الأنظمة الرقمية بالبيئات الحقيقية، لذا فإن أي مشكلة أمنية قد تتحول إلى **==مشكلة واقعية (سلامة جسدية)==**، وليست مجرد مشكلة حاسوبية.",
-          "correct": true
+          "a": "IoT connects digital systems to real environments, so a security issue can become a **==real-world problem==**, not just a \"computer problem.\"",
+          "at": "لأن إنترنت الأشياء يربط الأنظمة الرقمية بالبيئات الحقيقية، لذا فإن أي مشكلة أمنية قد تتحول إلى **==مشكلة واقعية==**، وليست مجرد \"مشكلة حاسوبية\"."
         },
         {
           "type": "written",
           "q": "3. Write the **end-to-end IoT layers** in order, and explain why **end-to-end matters**.",
           "qt": "3. اكتب **طبقات الـ IoT من البداية للنهاية** بالترتيب، واشرح لماذا تهم **الحماية الشاملة (End-to-End)**.",
-          "a": "Layers: **==Device → Network → Cloud → App Operations==**.\n\nWhy it matters: IoT security must cover the whole system because attackers often choose the **==weakest layer==**, so every layer must be protected.",
-          "at": "الطبقات: **==الجهاز ← الشبكة ← السحابة ← عمليات التطبيق==**.\n\nالأهمية: يجب أن يغطي الأمن النظام بأكمله لأن المهاجمين يختارون غالباً **==الطبقة الأضعف==**، لذا يجب حماية كل الطبقات.",
-          "correct": true
+          "a": "Device → Network → Cloud → App → Operations. IoT security must cover the whole system, because attackers often choose the **==weakest layer==**, so **==every layer must be protected==**.",
+          "at": "الجهاز ← الشبكة ← السحابة ← التطبيق ← العمليات. يجب أن يغطي أمن إنترنت الأشياء النظام بأكمله، لأن المهاجمين يختارون غالباً **==الطبقة الأضعف==**، لذا **==يجب حماية كل طبقة==**."
         },
         {
           "type": "written",
           "q": "4. List the **main security goals** we protect in IoT systems.",
           "qt": "4. اذكر **الأهداف الأمنية الرئيسية** التي نحميها في أنظمة IoT.",
-          "a": "- **==Confidentiality==**\n- **==Integrity==**\n- **==Availability==**\n- **==Safety==**\n- **==Privacy==**",
-          "at": "- **==السرية (Confidentiality)==**\n- **==النزاهة/السلامة (Integrity)==**\n- **==التوافر (Availability)==**\n- **==الأمان المادي (Safety)==**\n- **==الخصوصية (Privacy)==**",
-          "correct": true
+          "a": "**==Confidentiality, Integrity, Availability, Safety, and Privacy==**.",
+          "at": "**==السرية، النزاهة/السلامة، التوافر، الأمان المادي، والخصوصية==**."
         },
         {
           "type": "written",
           "q": "5. Define **confidentiality** using the slide meaning, and give two examples of sensitive IoT data.",
-          "qt": "5. عرف **السرية (Confidentiality)** حسب السلايد، واذكر مثالين لبيانات حساسة.",
-          "a": "Confidentiality: Data must **==stay private==** so attackers cannot read it.\nExamples: **==Video feeds, telemetry, health data, location, credentials, or keys==**.",
-          "at": "السرية: يجب أن **==تظل البيانات خاصة==** بحيث لا يستطيع المهاجمون قراءتها.\nأمثلة: **==بث الفيديو، القياسات عن بعد، البيانات الصحية، الموقع، بيانات الاعتماد، أو المفاتيح==**.",
-          "correct": true
+          "qt": "5. عرف **السرية (Confidentiality)** حسب السلايد، واذكر مثالين لبيانات حساسة في IoT.",
+          "a": "Confidentiality means data must **==stay private==** so attackers cannot read video, telemetry, health data, location, credentials, or keys. Examples: **==video and location==**.",
+          "at": "السرية تعني أنه يجب أن **==تظل البيانات خاصة==** بحيث لا يستطيع المهاجمون قراءة الفيديو أو القياسات عن بعد أو البيانات الصحية أو الموقع أو بيانات الاعتماد أو المفاتيح. أمثلة: **==الفيديو والموقع==**."
         },
         {
           "type": "written",
           "q": "6. Define **integrity** using the slide meaning, and give one example of something an attacker could alter.",
-          "qt": "6. عرف **النزاهة (Integrity)**، واذكر مثالاً لشيء قد يغيره المهاجم.",
-          "a": "Integrity: Data and behavior must **==not be changed without permission==**.\nExample: Altering **==sensor readings, commands, or firmware==**.",
-          "at": "النزاهة: يجب **==عدم تغيير البيانات والسلوك دون إذن==**.\nمثال: تغيير **==قراءات الحساسات، الأوامر، أو البرنامج الثابت (Firmware)==**.",
-          "correct": true
+          "qt": "6. عرف **النزاهة (Integrity)** حسب السلايد، واذكر مثالاً لشيء قد يغيره المهاجم.",
+          "a": "Integrity means data and behavior must **==not be changed without permission==**, such as altering sensor readings, commands, or firmware. Example: **==altering sensor readings==**.",
+          "at": "النزاهة تعني أنه يجب **==عدم تغيير البيانات والسلوك دون إذن==**، مثل تغيير قراءات المستشعر أو الأوامر أو البرنامج الثابت (firmware). مثال: **==تغيير قراءات المستشعر==**."
         },
         {
           "type": "written",
           "q": "7. Define **availability** using the slide meaning, and name one type of attack that targets availability.",
-          "qt": "7. عرف **التوافر (Availability)**، واذكر نوع هجوم يستهدفه.",
-          "a": "Availability: Devices and services must **==keep working even under attacks==**.\nAttack Type: **==Denial-of-Service (DoS)==** or overload attacks.",
-          "at": "التوافر: يجب أن **==تستمر الأجهزة والخدمات في العمل حتى تحت الهجوم==**.\nنوع الهجوم: **==هجوم حجب الخدمة (DoS)==** أو التحميل الزائد.",
-          "correct": true
+          "qt": "7. عرف **التوافر (Availability)** حسب السلايد، واذكر نوع هجوم يستهدف التوافر.",
+          "a": "Availability means devices and services must **==keep working even under attacks==** like overload or denial-of-service. A **==denial-of-service attack==** targets availability.",
+          "at": "التوافر يعني أنه يجب أن **==تستمر الأجهزة والخدمات في العمل حتى تحت الهجمات==** مثل التحميل الزائد أو حجب الخدمة. هجوم **==حجب الخدمة (denial-of-service)==** يستهدف التوافر."
         },
         {
           "type": "written",
           "q": "8. Define **safety** in IoT systems and explain why **actuators** make safety important.",
-          "qt": "8. عرف **الأمان المادي (Safety)** واشرح لماذا تجعله **المشغلات (Actuators)** مهماً.",
-          "a": "Safety: The system must **==prevent physical harm==** caused by wrong device actions.\nWhy: Actuators can **==change the physical world==** (e.g., open a lock, start a motor), so incorrect actions can cause physical harm.",
-          "at": "الأمان المادي: يجب أن **==يمنع النظام الضرر الجسدي==** الناتج عن تصرفات الجهاز الخاطئة.\nالسبب: المشغلات يمكنها **==تغيير العالم المادي==** (مثلاً: فتح قفل، تشغيل محرك)، لذا الأفعال الخاطئة قد تسبب ضرراً.",
-          "correct": true
+          "qt": "8. عرف **الأمان المادي (Safety)** في أنظمة IoT واشرح لماذا تجعل المشغلات الأمان مهماً.",
+          "a": "Safety means the system must **==prevent physical harm==** caused by wrong device actions, especially for actuators. Actuators can **==change the physical world==**, so incorrect actions can cause harm.",
+          "at": "الأمان المادي يعني أنه يجب على النظام **==منع الضرر الجسدي==** الناتج عن تصرفات الجهاز الخاطئة، خاصة للمشغلات. يمكن للمشغلات **==تغيير العالم المادي==**، لذا فإن الإجراءات غير الصحيحة يمكن أن تسبب ضرراً."
         },
         {
           "type": "written",
           "q": "9. Define **privacy** in IoT and explain why IoT data creates privacy risk.",
-          "qt": "9. عرف **الخصوصية (Privacy)** واشرح لماذا تخلق بيانات الـ IoT خطراً عليها.",
-          "a": "Privacy: The system must **==prevent tracking and surveillance==**.\nWhy: IoT data can **==reveal personal habits and routines==** (e.g., when you are home, your health status).",
-          "at": "الخصوصية: يجب أن **==يمنع النظام التتبع والمراقبة==**.\nالسبب: بيانات الـ IoT قد **==تكشف العادات والروتين الشخصي==** (مثلاً: متى تكون في المنزل، حالتك الصحية).",
-          "correct": true
+          "qt": "9. عرف **الخصوصية (Privacy)** في IoT واشرح لماذا تخلق بيانات IoT خطراً على الخصوصية.",
+          "a": "Privacy means the system must **==prevent tracking and surveillance==**, because IoT data can **==reveal personal habits and routines==**.",
+          "at": "الخصوصية تعني أنه يجب على النظام **==منع التتبع والمراقبة==**، لأن بيانات إنترنت الأشياء يمكن أن **==تكشف عن العادات والروتين الشخصي==**."
         },
         {
           "type": "written",
           "q": "10. Describe the **device layer** and list three things included in it.",
           "qt": "10. صف **طبقة الجهاز (Device Layer)** واذكر ثلاثة أشياء تتضمنها.",
-          "a": "The device layer includes the **==physical hardware and low-level software==**.\nIncludes: **==Sensors/actuators, firmware, and embedded identity material==** (like keys or certificates).",
-          "at": "تشمل **==الأجهزة المادية والبرمجيات منخفضة المستوى==**.\nتتضمن: **==الحساسات/المشغلات، الـ Firmware، ومعلومات الهوية المدمجة==** (مثل المفاتيح والشهادات).",
-          "correct": true
+          "a": "The device layer includes **==sensors/actuators, firmware, and embedded identity material==** like keys or certificates.",
+          "at": "تتضمن طبقة الجهاز **==أجهزة الاستشعار/المشغلات، والبرنامج الثابت (firmware)، ومواد الهوية المدمجة==** مثل المفاتيح أو الشهادات."
         },
         {
           "type": "written",
           "q": "11. Describe the **network layer** and list three things included in it.",
           "qt": "11. صف **طبقة الشبكة (Network Layer)** واذكر ثلاثة أشياء تتضمنها.",
-          "a": "The network layer handles **==local communication and connectivity==**.\nIncludes: **==Wi-Fi, BLE, Zigbee, routers, and access points==**.",
-          "at": "تتعامل مع **==الاتصالات المحلية والربط الشبكي==**.\nتتضمن: **==Wi-Fi، BLE، Zigbee، الراوترات، ونقاط الوصول==**.",
-          "correct": true
+          "a": "The network layer includes local communication such as Wi-Fi, BLE, Zigbee, routers, and access points. Examples: **==Wi-Fi, routers, access points==**.",
+          "at": "تتضمن طبقة الشبكة الاتصالات المحلية مثل Wi-Fi و BLE و Zigbee وأجهزة التوجيه ونقاط الوصول. أمثلة: **==Wi-Fi وأجهزة التوجيه ونقاط الوصول==**."
         },
         {
           "type": "written",
           "q": "12. What is the **gateway/edge layer** (optional), and list two tasks it may perform.",
           "qt": "12. ما هي **طبقة البوابة/الحافة (Gateway/Edge)**، واذكر مهمتين قد تقوم بهما.",
-          "a": "The gateway layer **==connects local devices to the cloud==**.\nTasks: **==Translate protocols, aggregate data, buffer messages, or enforce local rules==**.",
-          "at": "**==تربط الأجهزة المحلية بالسحابة==**.\nالمهام: **==ترجمة البروتوكولات، تجميع البيانات، تخزين الرسائل مؤقتاً، أو فرض القواعد المحلية==**.",
-          "correct": true
+          "a": "The gateway/edge layer may translate protocols, aggregate data, buffer messages, or enforce local rules. Two tasks: **==translate protocols and aggregate data==**.",
+          "at": "قد تقوم طبقة البوابة/الحافة بترجمة البروتوكولات أو تجميع البيانات أو تخزين الرسائل مؤقتاً أو فرض القواعد المحلية. مهمتين: **==ترجمة البروتوكولات وتجميع البيانات==**."
         },
         {
           "type": "written",
           "q": "13. Describe the **cloud/backend layer** and name four components it usually includes.",
-          "qt": "13. صف **طبقة السحابة/الخلفية (Cloud/Backend)** واذكر 4 مكونات لها.",
-          "a": "The cloud layer **==manages devices and processes data centrally==**.\nComponents: **==Device registry, message broker, databases, analytics, and APIs==**.",
-          "at": "**==تدير الأجهزة وتعالج البيانات مركزياً==**.\nالمكونات: **==سجل الأجهزة، وسيط الرسائل، قواعد البيانات، التحليلات، وواجهات برمجة التطبيقات (APIs)==**.",
-          "correct": true
+          "qt": "13. صف **طبقة السحابة/الخلفية (Cloud/Backend)** واذكر 4 مكونات تتضمنها عادة.",
+          "a": "The cloud/backend layer usually includes device registry, message broker, databases, analytics, and APIs. Four components: **==device registry, message broker, databases, APIs==**.",
+          "at": "تتضمن طبقة السحابة/الخلفية عادةً سجل الأجهزة، وسيط الرسائل، قواعد البيانات، التحليلات، وواجهات برمجة التطبيقات (APIs). أربعة مكونات: **==سجل الأجهزة، وسيط الرسائل، قواعد البيانات، واجهات برمجة التطبيقات==**."
         },
         {
           "type": "written",
           "q": "14. Describe the **apps/users layer** and name two examples of tools found in this layer.",
-          "qt": "14. صف **طبقة التطبيقات/المستخدمين** واذكر مثالين للأدوات فيها.",
-          "a": "The apps layer **==allows humans to interact with the system==**.\nExamples: **==Mobile apps, dashboards, and admin tools==**.",
-          "at": "**==تسمح للبشر بالتفاعل مع النظام==**.\nأمثلة: **==تطبيقات الهاتف، لوحات المعلومات (Dashboards)، وأدوات الإدارة==**.",
-          "correct": true
+          "qt": "14. صف **طبقة التطبيقات/المستخدمين** واذكر مثالين للأدوات الموجودة فيها.",
+          "a": "The apps/users layer includes mobile apps, dashboards, and admin tools used to monitor and control devices. Examples: **==mobile apps and dashboards==**.",
+          "at": "تتضمن طبقة التطبيقات/المستخدمين تطبيقات الهاتف المحمول ولوحات المعلومات وأدوات الإدارة المستخدمة لمراقبة الأجهزة والتحكم فيها. أمثلة: **==تطبيقات الهاتف المحمول ولوحات المعلومات==**."
         },
         {
           "type": "written",
-          "q": "15. List five **key IoT assets** and explain why credentials and cryptographic keys are valuable.",
-          "qt": "15. اذكر 5 **أصول رئيسية في الـ IoT** واشرح لماذا تعتبر المفاتيح والبيانات الاعتمادية قيمة.",
-          "a": "Assets: **==Device control, sensitive data, credentials/keys, uptime/reliability, customer trust==**.\nWhy keys are valuable: Because they **==unlock access to devices and cloud APIs==**, allowing attackers to take control.",
-          "at": "الأصول: **==التحكم بالجهاز، البيانات الحساسة، المفاتيح، وقت التشغيل، ثقة العملاء==**.\nأهمية المفاتيح: لأنها **==تفتح الوصول للأجهزة و APIs السحابة==**، مما يسمح للمهاجم بالسيطرة.",
-          "correct": true
+          "q": "15. List five **key IoT assets** (what has value) and explain why credentials and cryptographic keys are valuable.",
+          "qt": "15. اذكر 5 **أصول رئيسية في IoT** واشرح لماذا تعتبر البيانات الاعتمادية والمفاتيح التشفيرية قيمة.",
+          "a": "Assets include **==device control, sensitive data, credentials and cryptographic keys, uptime and reliability, and customer trust and compliance==**. Credentials and keys are valuable because they **==unlock access to devices and cloud APIs==**.",
+          "at": "تشمل الأصول **==التحكم في الأجهزة، البيانات الحساسة، بيانات الاعتماد ومفاتيح التشفير، وقت التشغيل والموثوقية، وثقة العملاء والامتثال==**. تعتبر بيانات الاعتماد والمفاتيح ذات قيمة لأنها **==تفتح الوصول إلى الأجهزة وواجهات برمجة التطبيقات السحابية==**."
         },
         {
           "type": "written",
           "q": "16. List four **attacker goals** from the slides and describe each.",
           "qt": "16. اذكر 4 **أهداف للمهاجمين** واشرح كل منها.",
-          "a": "- **==Money==**: Extortion, theft, or resale of data.\n- **==Botnets==**: Using devices for large-scale attacks (DDoS).\n- **==Spying==**: Privacy invasion by watching/tracking users.\n- **==Sabotage==**: Disrupting operations to cause harm or downtime.",
-          "at": "- **==المال==**: الابتزاز أو بيع البيانات.\n- **==Botnets==**: استخدام الأجهزة لهجمات واسعة النطاق (DDoS).\n- **==التجسس==**: انتهاك الخصوصية بمراقبة المستخدمين.\n- **==التخريب==**: تعطيل العمليات لإحداث ضرر.",
-          "correct": true
+          "a": "**==Money==**: extortion, theft, or resale of data.\n**==Botnets==**: using devices for large-scale attacks like DDoS.\n**==Spying==**: privacy invasion by watching, listening, or tracking users.\n**==Sabotage==**: disrupting operations to cause harm or downtime.",
+          "at": "**==المال==**: الابتزاز أو السرقة أو إعادة بيع البيانات.\n**==Botnets==**: استخدام الأجهزة لشن هجمات واسعة النطاق مثل DDoS.\n**==التجسس==**: انتهاك الخصوصية من خلال المراقبة أو الاستماع أو تتبع المستخدمين.\n**==التخريب==**: تعطيل العمليات لإحداث ضرر أو توقف."
         },
         {
           "type": "written",
           "q": "17. Explain five reasons why **IoT is hard to secure**.",
-          "qt": "17. اشرح 5 أسباب تجعل **تأمين الـ IoT صعباً**.",
-          "a": "1. **==Limited resources==**: Not enough CPU/RAM for heavy security.\n2. **==Long lifetime==**: Old devices stay deployed with unpatched vulnerabilities.\n3. **==Huge scale==**: Managing security for millions of devices is hard.\n4. **==Physical exposure==**: Devices can be stolen or tampered with.\n5. **==Many technologies==**: Complexity leads to configuration mistakes.",
-          "at": "1. **==موارد محدودة==**: ضعف المعالج والذاكرة للتشفير القوي.\n2. **==عمر طويل==**: أجهزة قديمة تبقى دون تحديثات.\n3. **==نطاق ضخم==**: صعوبة إدارة ملايين الأجهزة.\n4. **==انكشاف مادي==**: يمكن سرقة الأجهزة أو العبث بها.\n5. **==تقنيات متعددة==**: التعقيد يؤدي لأخطاء في الإعداد.",
-          "correct": true
+          "qt": "17. اشرح 5 أسباب تجعل **تأمين IoT صعباً**.",
+          "a": "1. **==Limited resources==**: not enough CPU/RAM/power for heavy encryption, logging, or monitoring.\n2. **==Long lifetime==**: devices stay deployed for many years, so old vulnerabilities remain.\n3. **==Huge scale==**: fleets need secure onboarding and updates at massive scale.\n4. **==Physical exposure==**: devices can be touched, stolen, opened, or reset.\n5. **==Many technologies==**: different vendors and protocols increase complexity and configuration mistakes.",
+          "at": "1. **==الموارد المحدودة==**: عدم وجود وحدة معالجة مركزية/ذاكرة وصول عشوائي/طاقة كافية للتشفير الثقيل أو التسجيل أو المراقبة.\n2. **==عمر طويل==**: تبقى الأجهزة منتشرة لسنوات عديدة، لذا تظل نقاط الضعف القديمة موجودة.\n3. **==نطاق ضخم==**: تحتاج أساطيل الأجهزة إلى الإعداد الآمن والتحديثات على نطاق واسع.\n4. **==التعرض المادي==**: يمكن لمس الأجهزة أو سرقتها أو فتحها أو إعادة ضبطها.\n5. **==تقنيات متعددة==**: يؤدي اختلاف البائعين والبروتوكولات إلى زيادة التعقيد وأخطاء التكوين."
         },
         {
           "type": "written",
           "q": "18. List the **attack surfaces** across layers and give one example risk for each.",
-          "qt": "18. اذكر **أسطح الهجوم (Attack Surfaces)** عبر الطبقات مع مثال لكل منها.",
-          "a": "- Device: **==Firmware bugs or weak local auth==**.\n- Network: **==Intercepting unencrypted traffic==**.\n- Cloud: **==Misconfigurations or weak APIs==**.\n- App: **==Poor token storage==**.\n- Operations: **==Missing updates or weak monitoring==**.",
-          "at": "- الجهاز: **==ثغرات Firmware أو كلمات مرور ضعيفة==**.\n- الشبكة: **==اعتراض البيانات غير المشفرة==**.\n- السحابة: **==إعدادات خاطئة أو APIs ضعيفة==**.\n- التطبيق: **==تخزين سيء لرموز الدخول==**.\n- العمليات: **==غياب التحديثات أو المراقبة==**.",
-          "correct": true
+          "qt": "18. اذكر **أسطح الهجوم (Attack Surfaces)** عبر الطبقات مع مثال لكل خطر.",
+          "a": "- Device attack surface: **==firmware bugs or weak local authentication==**.\n- Network attack surface: **==intercepting unencrypted traffic or missing segmentation==**.\n- Cloud attack surface: **==misconfigurations or weak APIs==**.\n- App attack surface: **==poor token storage or hardcoded secrets==**.\n- Operations attack surface: **==missing updates or weak monitoring==**.",
+          "at": "- سطح هجوم الجهاز: **==أخطاء البرنامج الثابت (firmware) أو المصادقة المحلية الضعيفة==**.\n- سطح هجوم الشبكة: **==اعتراض حركة المرور غير المشفرة أو التجزئة المفقودة==**.\n- سطح هجوم السحابة: **==التكوينات الخاطئة أو واجهات برمجة التطبيقات (APIs) الضعيفة==**.\n- سطح هجوم التطبيق: **==تخزين ضعيف للرموز (tokens) أو الأسرار المكتوبة في الكود==**.\n- سطح هجوم العمليات: **==التحديثات المفقودة أو المراقبة الضعيفة==**."
         },
         {
           "type": "written",
           "q": "19. Explain these **secure-by-design principles**: least privilege, defense in depth, secure defaults, fail safely, patchability, auditability.",
           "qt": "19. اشرح مبادئ **'الأمن حسب التصميم' (Secure-by-design Principles)**.",
-          "a": "- Least privilege: **==Give only necessary permissions==**.\n- Defense in depth: **==Use multiple layers of security==**.\n- Secure defaults: **==Safe out-of-the-box==** (no default passwords).\n- Fail safely: **==Errors shouldn't cause physical harm==**.\n- Patchability: **==Ability to update software remotely==**.\n- Auditability: **==Keep logs for detection==**.",
-          "at": "- أقل الصلاحيات: **==منح الأذونات الضرورية فقط==**.\n- الدفاع في العمق: **==طبقات حماية متعددة==**.\n- إعدادات افتراضية آمنة: **==آمن فور إخراجه من الصندوق==**.\n- الفشل الآمن: **==الأخطاء لا تسبب ضرراً مادياً==**.\n- قابلية التحديث: **==إمكانية التحديث عن بعد==**.\n- قابلية التدقيق: **==الاحتفاظ بالسجلات للاكتشاف==**.",
-          "correct": true
+          "a": "- Least privilege: each device/user/service should have **==only the permissions it truly needs==**.\n- Defense in depth: use **==multiple controls==** so one failure does not break the system.\n- Secure defaults: the product should be **==safe out of the box==**.\n- Fail safely: if errors happen, the system should **==avoid unsafe actuator actions==**.\n- Patchability: **==secure update capability==** must exist because vulnerabilities will be found.\n- Auditability: **==logs and security telemetry==** should exist for detection and investigation.",
+          "at": "- أقل الصلاحيات: يجب أن يمتلك كل جهاز/مستخدم/خدمة **==فقط الأذونات التي يحتاجها حقاً==**.\n- الدفاع في العمق: استخدام **==ضوابط متعددة==** بحيث لا يؤدي فشل واحد إلى تعطل النظام.\n- إعدادات افتراضية آمنة: يجب أن يكون المنتج **==آمناً بمجرد إخراجه من العلبة==**.\n- الفشل الآمن: إذا حدثت أخطاء، يجب أن **==يتجنب النظام إجراءات المشغل غير الآمنة==**.\n- قابلية التصحيح: يجب أن توجد **==قدرة تحديث آمنة==** لأنه سيتم اكتشاف الثغرات.\n- قابلية التدقيق: يجب أن توجد **==السجلات والقياسات الأمنية==** للاكتشاف والتحقيق."
         },
         {
           "type": "written",
           "q": "20. Smart camera mini case: list **three risks** and **four controls**.",
           "qt": "20. حالة الكاميرا الذكية: اذكر **3 مخاطر** و **4 ضوابط (Controls)**.",
-          "a": "Risks: **==Privacy leak, unauthorized control, disruption/outage==**.\nControls: **==Secure firmware (signed), Secure OTA updates, Account security (strong login), Encryption, and Segmentation==**.",
-          "at": "المخاطر: **==تسريب الخصوصية، تحكم غير مصرح به، انقطاع الخدمة==**.\nالضوابط: **==Firmware آمن (موقع)، تحديثات OTA آمنة، أمن الحساب (دخول قوي)، التشفير، و تجزئة الشبكة==**.",
-          "correct": true
+          "a": "Risks: **==privacy leak==** (view live streams or stored recordings), **==unauthorized control==** (change settings/disable alerts/take over ownership), **==disruption/outage==** (forced offline).\nControls: **==secure firmware==** (signed firmware), **==secure OTA updates==**, **==account security==** (strong login protections and access control), **==encryption and strict cloud storage permissions==**, and **==segmentation==** (separate IoT network).",
+          "at": "المخاطر: **==تسريب الخصوصية==** (عرض البث المباشر أو التسجيلات المخزنة)، **==التحكم غير المصرح به==** (تغيير الإعدادات / تعطيل التنبيهات / الاستيلاء على الملكية)، **==التعطيل / الانقطاع==** (إجباره على عدم الاتصال).\nالضوابط: **==البرامج الثابتة الآمنة==** (البرامج الثابتة الموقعة)، **==تحديثات OTA الآمنة==**، **==أمان الحساب==** (حماية تسجيل الدخول القوية والتحكم في الوصول)، **==التشفير وأذونات التخزين السحابي الصارمة==**، و **==التقسيم==** (شبكة IoT منفصلة)."
         }
       ]
     },
