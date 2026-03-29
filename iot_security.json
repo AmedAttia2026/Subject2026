@@ -943,30 +943,22 @@
         },
         {
           "type": "code",
-          "q": "Coding Q1: Hashing demo",
+          "q": "Coding Q1: Hashing demo: Write Python code that calculates SHA-256 for two similar messages and prints both hashes to show that a small change produces a very different hash.",
           "code": "import hashlib\n\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\n\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\n\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)"
         },
         {
           "type": "code",
-          "q": "Coding Q2: File hashing",
+          "q": "Coding Q2: File hashing: Write Python code that reads a file and prints its SHA-256 hash, then explain how this can detect if the file was modified.\n\nExplanation:\nIf you compute the hash of the file, then change even one character in the file and compute the hash again, the hash will change completely. So, if the hash is different, it means the file was modified.",
           "code": "import hashlib\n\ndef sha256_file(path: str) -> str:\n    sha = hashlib.sha256()\n    with open(path, \"rb\") as f:\n        while True:\n            chunk = f.read(4096)\n            if not chunk:\n                break\n            sha.update(chunk)\n    return sha.hexdigest()\n\nfile_path = input(\"Enter file path: \").strip()\nprint(\"SHA-256:\", sha256_file(file_path))"
         },
         {
-          "type": "written",
-          "q": "Explain how **file hashing** can detect if a file was modified (based on the File Hashing code).",
-          "qt": "اشرح كيف يمكن لـ **تجزئة الملفات (File Hashing)** اكتشاف ما إذا كان الملف قد تم تعديله (بناءً على كود File Hashing).",
-          "a": "If you compute the hash of the file, then **==change even one character==** in the file and compute the hash again, the **==hash will change completely==**. So, if the hash is different, it means **==the file was modified==**.",
-          "at": "إذا قمت بحساب تجزئة الملف، ثم **==غيّرت حرفاً واحداً فقط==** في الملف وحسبت التجزئة مرة أخرى، فإن **==التجزئة ستتغير تماماً==**. لذا، إذا كانت التجزئة مختلفة، فهذا يعني أن **==الملف قد تم تعديله==**.",
-          "correct": true
-        },
-        {
           "type": "code",
-          "q": "Coding Q3: HMAC demo",
+          "q": "Coding Q3: HMAC demo: Write Python code that generates an HMAC tag for a message using a shared key, then verifies the tag by recomputing it.",
           "code": "import hmac\nimport hashlib\n\nkey = b\"shared_secret_key\"\nmessage = b\"device=7;temp=25\"\n\n# Create tag (sender)\ntag = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Message:\", message.decode())\nprint(\"HMAC tag:\", tag)\n\n# Verify (receiver recomputes)\ntag_check = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Valid?\", hmac.compare_digest(tag, tag_check))"
         },
         {
           "type": "code",
-          "q": "Coding Q4: Device identity record",
+          "q": "Coding Q4: Device identity record: Write Python code that generates a JSON file containing a device_id (UUID) plus placeholders for certificate/PSK and a “revoked” field.",
           "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)"
         }
       ]
@@ -1159,64 +1151,56 @@
           "q": "1. Explain **telemetry** and **commands** with one IoT example for each.",
           "qt": "1. اشرح **القياس عن بعد (telemetry)** و **الأوامر (commands)** مع مثال واحد في إنترنت الأشياء لكل منهما.",
           "a": "• Telemetry = **==data the device sends out to report its status or sensor readings==** (device → server).\nExample: a temperature sensor sends temp=25°C to the cloud every 5 seconds.\n• Commands = **==instructions the server/app sends to the device to change what it does==** (server/app → device).\nExample: a mobile app sends LED=ON or unlock to a smart lock.",
-          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي.",
-          "correct": true
+          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي."
         },
         {
           "type": "written",
           "q": "2. Explain what **segmentation** means and why it reduces **“blast radius.”**",
           "qt": "2. اشرح ما يعنيه **التقسيم (segmentation)** ولماذا يقلل من **\"نطاق الضرر\" (blast radius)**.",
           "a": "• Segmentation means **==dividing the network into separate zones==** (for example: an IoT network, an employee network, and an admin network) and **==controlling how they communicate using rules==** (firewall/VLAN rules).\n• It reduces blast radius because if one IoT device is hacked, the attacker **==cannot easily reach everything else==** (like staff laptops, databases, or admin systems). The **==damage stays limited to that segment==**.",
-          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**.",
-          "correct": true
+          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**."
         },
         {
           "type": "written",
           "q": "3. What does **TLS protect**, and what does it **NOT fix** by itself?",
           "qt": "3. ماذا يحمي بروتوكول **TLS**، وما الذي **لا يعالجه** بمفرده؟",
           "a": "• TLS protects:\n  o **==Confidentiality==** (encrypts traffic so others cannot read it)\n  o **==Integrity==** (detects if messages were modified in transit)\n  o **==Authentication==** (verifies the server identity using certificates; and can also verify client if mutual TLS is used)\n• TLS does NOT fix by itself:\n  o **==Weak passwords or stolen credentials==**\n  o **==Bad authorization/ACL configuration==** (who is allowed to publish/subscribe/command)\n  o **==Application logic bugs==** (e.g., an API that gives admin access)\n  o **==DoS attacks==** (TLS doesn’t stop flooding by itself)",
-          "at": "• يحمي TLS:\n  o **==السرية (Confidentiality)==** (يشفر حركة المرور حتى لا يتمكن الآخرون من قراءتها)\n  o **==النزاهة (Integrity)==** (يكتشف ما إذا تم تعديل الرسائل أثناء الإرسال)\n  o **==المصادقة (Authentication)==** (يتحقق من هوية الخادم باستخدام الشهادات؛ ويمكنه أيضًا التحقق من العميل إذا تم استخدام Mutual TLS)\n• لا يعالج TLS بمفرده:\n  o **==كلمات المرور الضعيفة أو بيانات الاعتماد المسروقة==**\n  o **==سوء تكوين التفويض/قوائم التحكم في الوصول (ACL)==** (من يُسمح له بالنشر/الاشتراك/إرسال الأوامر)\n  o **==أخطاء منطق التطبيق==** (مثل: واجهة برمجة تطبيقات API تعطي وصول مسؤول)\n  o **==هجمات حجب الخدمة DoS==** (لا يوقف TLS الإغراق بمفرده)",
-          "correct": true
+          "at": "• يحمي TLS:\n  o **==السرية (Confidentiality)==** (يشفر حركة المرور حتى لا يتمكن الآخرون من قراءتها)\n  o **==النزاهة (Integrity)==** (يكتشف ما إذا تم تعديل الرسائل أثناء الإرسال)\n  o **==المصادقة (Authentication)==** (يتحقق من هوية الخادم باستخدام الشهادات؛ ويمكنه أيضًا التحقق من العميل إذا تم استخدام Mutual TLS)\n• لا يعالج TLS بمفرده:\n  o **==كلمات المرور الضعيفة أو بيانات الاعتماد المسروقة==**\n  o **==سوء تكوين التفويض/قوائم التحكم في الوصول (ACL)==** (من يُسمح له بالنشر/الاشتراك/إرسال الأوامر)\n  o **==أخطاء منطق التطبيق==** (مثل: واجهة برمجة تطبيقات API تعطي وصول مسؤول)\n  o **==هجمات حجب الخدمة DoS==** (لا يوقف TLS الإغراق بمفرده)"
         },
         {
           "type": "written",
           "q": "4. Explain **MQTT publish/subscribe** using **“topic”** and **“broker.”**",
           "qt": "4. اشرح **النشر/الاشتراك في MQTT** باستخدام **\"الموضوع\" (topic)** و **\"الوسيط\" (broker)**.",
           "a": "• In MQTT, devices and apps do not usually talk directly to each other. They **==communicate through a broker==**.\n• A publisher **==sends a message to a named channel called a topic==** (example: devices/device7/telemetry).\n• A subscriber **==tells the broker: “Send me messages from this topic.”==**\n• The broker receives messages from publishers and **==forwards them to all subscribers of that topic==**.",
-          "at": "• في MQTT، لا تتحدث الأجهزة والتطبيقات عادةً مع بعضها البعض مباشرة. بل **==تتواصل من خلال وسيط (broker)==**.\n• يرسل الناشر **==رسالة إلى قناة مسماة تُعرف باسم الموضوع==** (مثال: devices/device7/telemetry).\n• يخبر المشترك الوسيط: **==\"أرسل لي الرسائل من هذا الموضوع.\"==**\n• يتلقى الوسيط الرسائل من الناشرين و **==يوجهها إلى جميع المشتركين في هذا الموضوع==**.",
-          "correct": true
+          "at": "• في MQTT، لا تتحدث الأجهزة والتطبيقات عادةً مع بعضها البعض مباشرة. بل **==تتواصل من خلال وسيط (broker)==**.\n• يرسل الناشر **==رسالة إلى قناة مسماة تُعرف باسم الموضوع==** (مثال: devices/device7/telemetry).\n• يخبر المشترك الوسيط: **==\"أرسل لي الرسائل من هذا الموضوع.\"==**\n• يتلقى الوسيط الرسائل من الناشرين و **==يوجهها إلى جميع المشتركين في هذا الموضوع==**."
         },
         {
           "type": "written",
           "q": "5. Give an example of good **MQTT topic design** for one device (telemetry + commands).",
           "qt": "5. أعط مثالاً على **تصميم موضوع MQTT** جيد لجهاز واحد (قياس + أوامر).",
           "a": "A clear design **==separates telemetry from commands and includes the device ID==**:\n• Telemetry topic (device → cloud): **==devices/device7/telemetry==**\n• Command topic (cloud/app → device): **==devices/device7/cmd==**\nThis makes permissions easier and prevents confusion.",
-          "at": "التصميم الواضح **==يفصل بين القياس والأوامر ويتضمن معرف الجهاز (Device ID)==**:\n• موضوع القياس (الجهاز ← السحابة): **==devices/device7/telemetry==**\n• موضوع الأوامر (السحابة/التطبيق ← الجهاز): **==devices/device7/cmd==**\nهذا يجعل الصلاحيات أسهل ويمنع الارتباك.",
-          "correct": true
+          "at": "التصميم الواضح **==يفصل بين القياس والأوامر ويتضمن معرف الجهاز (Device ID)==**:\n• موضوع القياس (الجهاز ← السحابة): **==devices/device7/telemetry==**\n• موضوع الأوامر (السحابة/التطبيق ← الجهاز): **==devices/device7/cmd==**\nهذا يجعل الصلاحيات أسهل ويمنع الارتباك."
         },
         {
           "type": "written",
           "q": "6. Explain why **MQTT ACLs** are important even if you use **TLS**.",
           "qt": "6. اشرح لماذا تعتبر قوائم التحكم في الوصول **(MQTT ACLs)** مهمة حتى لو كنت تستخدم **TLS**.",
           "a": "• TLS protects the connection (encrypts data and helps prevent sniffing/MITM).\n• But TLS **==does not decide what a connected client is allowed to do==**.\n• Without ACLs, a client that successfully connects (even with TLS) might **==publish to any topic or subscribe to any topic==**—meaning one compromised device could control or spy on others.\n• ACLs enforce rules like: “Device7 can **==only publish to its own telemetry topic and only subscribe to its own command topic==**.”",
-          "at": "• يحمي TLS الاتصال (يشفر البيانات ويساعد في منع التنصت/هجمات الوسيط MITM).\n• لكن TLS **==لا يقرر ما يُسمح للعميل المتصل بفعله==**.\n• بدون قوائم ACLs، قد يقوم العميل الذي يتصل بنجاح (حتى مع TLS) **==بالنشر في أي موضوع أو الاشتراك في أي موضوع==** - مما يعني أن جهازًا واحدًا مخترقًا يمكنه التحكم في أجهزة أخرى أو التجسس عليها.\n• تفرض قوائم ACLs قواعد مثل: \"يمكن لـ Device7 **==النشر فقط في موضوع القياس الخاص به والاشتراك فقط في موضوع الأوامر الخاص به==**.\"",
-          "correct": true
+          "at": "• يحمي TLS الاتصال (يشفر البيانات ويساعد في منع التنصت/هجمات الوسيط MITM).\n• لكن TLS **==لا يقرر ما يُسمح للعميل المتصل بفعله==**.\n• بدون قوائم ACLs، قد يقوم العميل الذي يتصل بنجاح (حتى مع TLS) **==بالنشر في أي موضوع أو الاشتراك في أي موضوع==** - مما يعني أن جهازًا واحدًا مخترقًا يمكنه التحكم في أجهزة أخرى أو التجسس عليها.\n• تفرض قوائم ACLs قواعد مثل: \"يمكن لـ Device7 **==النشر فقط في موضوع القياس الخاص به والاشتراك فقط في موضوع الأوامر الخاص به==**.\""
         },
         {
           "type": "written",
           "q": "7. Explain **replay attacks** and give one way to **reduce replay risk**.",
           "qt": "7. اشرح **هجمات إعادة الإرسال (replay attacks)** واذكر طريقة واحدة **لتقليل خطر الإعادة**.",
           "a": "• A replay attack happens when an attacker **==records a valid message (example: unlock) and sends the same message again later==** to repeat the action.\n• One way to reduce replay risk: **==use timestamps or sequence numbers (or a nonce)==**. The receiver **==rejects old or repeated messages==**.\nExample: device only accepts commands with a timestamp within the last 10 seconds.",
-          "at": "• يحدث هجوم إعادة الإرسال عندما **==يسجل المهاجم رسالة صالحة (مثال: فتح القفل) ويرسل نفس الرسالة مرة أخرى لاحقًا==** لتكرار الإجراء.\n• إحدى الطرق لتقليل خطر الإعادة: **==استخدام الطوابع الزمنية (timestamps) أو الأرقام التسلسلية (أو nonce)==**. بالتالي **==يرفض المتلقي الرسائل القديمة أو المتكررة==**.\nمثال: يقبل الجهاز فقط الأوامر التي تحمل طابعًا زمنيًا خلال الـ 10 ثوانٍ الماضية.",
-          "correct": true
+          "at": "• يحدث هجوم إعادة الإرسال عندما **==يسجل المهاجم رسالة صالحة (مثال: فتح القفل) ويرسل نفس الرسالة مرة أخرى لاحقًا==** لتكرار الإجراء.\n• إحدى الطرق لتقليل خطر الإعادة: **==استخدام الطوابع الزمنية (timestamps) أو الأرقام التسلسلية (أو nonce)==**. بالتالي **==يرفض المتلقي الرسائل القديمة أو المتكررة==**.\nمثال: يقبل الجهاز فقط الأوامر التي تحمل طابعًا زمنيًا خلال الـ 10 ثوانٍ الماضية."
         },
         {
           "type": "written",
           "q": "8. Compare **BLE security** and **Zigbee security** at high level (1–2 points each).",
           "qt": "8. قارن بين **أمان BLE** و **أمان Zigbee** على مستوى عالٍ (1-2 نقطة لكل منهما).",
           "a": "• BLE security:\n  o **==Depends strongly on the pairing method==**. Weak pairing (like “Just Works”) can be easier to attack in some cases.\n  o Often used for short-range setup; security mistakes happen when **==secrets are sent before secure pairing finishes==**.\n• Zigbee security:\n  o **==Uses keys for network communication==**; security depends on secure joining/commissioning and proper key handling.\n  o **==Weak join procedures or leaked network keys==** can let attackers join the mesh and control devices.",
-          "at": "• أمان BLE:\n  o **==يعتمد بشدة على طريقة الاقتران==**. الاقتران الضعيف (مثل \"Just Works\") يمكن أن يكون أسهل في الهجوم في بعض الحالات.\n  o يُستخدم غالبًا للإعداد قصير المدى؛ تحدث الأخطاء الأمنية عندما **==يتم إرسال الأسرار قبل انتهاء الاقتران الآمن==**.\n• أمان Zigbee:\n  o **==يستخدم المفاتيح لاتصال الشبكة==**؛ يعتمد الأمان على الانضمام/التشغيل الآمن والتعامل السليم مع المفاتيح.\n  o **==إجراءات الانضمام الضعيفة أو مفاتيح الشبكة المسربة==** يمكن أن تسمح للمهاجمين بالانضمام إلى الشبكة (mesh) والتحكم في الأجهزة.",
-          "correct": true
+          "at": "• أمان BLE:\n  o **==يعتمد بشدة على طريقة الاقتران==**. الاقتران الضعيف (مثل \"Just Works\") يمكن أن يكون أسهل في الهجوم في بعض الحالات.\n  o يُستخدم غالبًا للإعداد قصير المدى؛ تحدث الأخطاء الأمنية عندما **==يتم إرسال الأسرار قبل انتهاء الاقتران الآمن==**.\n• أمان Zigbee:\n  o **==يستخدم المفاتيح لاتصال الشبكة==**؛ يعتمد الأمان على الانضمام/التشغيل الآمن والتعامل السليم مع المفاتيح.\n  o **==إجراءات الانضمام الضعيفة أو مفاتيح الشبكة المسربة==** يمكن أن تسمح للمهاجمين بالانضمام إلى الشبكة (mesh) والتحكم في الأجهزة."
         },
         {
           "type": "code",
