@@ -606,7 +606,7 @@
         },
         {
           "type": "written",
-          "q": "14. Explain **Elevation of Privilege** using an IoT cloud dashboard example.",
+          "q": "14. Explain **Elevation of Privilege** in an IoT cloud dashboard.",
           "qt": "14. اشرح **تصعيد الصلاحيات** باستخدام مثال لوحة تحكم سحابية لـ IoT.",
           "a": "A normal user **==gains admin access due to weak authorization==** and can control all devices. That is elevation of privilege.",
           "at": "**==حصول مستخدم عادي على صلاحيات مسؤول بسبب ضعف التفويض==** مما يسمح له بالتحكم في جميع الأجهزة. هذا هو تصعيد الصلاحيات.",
@@ -1159,76 +1159,84 @@
           "q": "1. Explain **telemetry** and **commands** with one IoT example for each.",
           "qt": "1. اشرح **القياس عن بعد (telemetry)** و **الأوامر (commands)** مع مثال واحد في إنترنت الأشياء لكل منهما.",
           "a": "• Telemetry = **==data the device sends out to report its status or sensor readings==** (device → server).\nExample: a temperature sensor sends temp=25°C to the cloud every 5 seconds.\n• Commands = **==instructions the server/app sends to the device to change what it does==** (server/app → device).\nExample: a mobile app sends LED=ON or unlock to a smart lock.",
-          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي."
+          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "2. Explain what **segmentation** means and why it reduces **“blast radius.”**",
           "qt": "2. اشرح ما يعنيه **التقسيم (segmentation)** ولماذا يقلل من **\"نطاق الضرر\" (blast radius)**.",
           "a": "• Segmentation means **==dividing the network into separate zones==** (for example: an IoT network, an employee network, and an admin network) and **==controlling how they communicate using rules==** (firewall/VLAN rules).\n• It reduces blast radius because if one IoT device is hacked, the attacker **==cannot easily reach everything else==** (like staff laptops, databases, or admin systems). The **==damage stays limited to that segment==**.",
-          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**."
+          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "3. What does **TLS protect**, and what does it **NOT fix** by itself?",
           "qt": "3. ماذا يحمي بروتوكول **TLS**، وما الذي **لا يعالجه** بمفرده؟",
           "a": "• TLS protects:\n  o **==Confidentiality==** (encrypts traffic so others cannot read it)\n  o **==Integrity==** (detects if messages were modified in transit)\n  o **==Authentication==** (verifies the server identity using certificates; and can also verify client if mutual TLS is used)\n• TLS does NOT fix by itself:\n  o **==Weak passwords or stolen credentials==**\n  o **==Bad authorization/ACL configuration==** (who is allowed to publish/subscribe/command)\n  o **==Application logic bugs==** (e.g., an API that gives admin access)\n  o **==DoS attacks==** (TLS doesn’t stop flooding by itself)",
-          "at": "• يحمي TLS:\n  o **==السرية (Confidentiality)==** (يشفر حركة المرور حتى لا يتمكن الآخرون من قراءتها)\n  o **==النزاهة (Integrity)==** (يكتشف ما إذا تم تعديل الرسائل أثناء الإرسال)\n  o **==المصادقة (Authentication)==** (يتحقق من هوية الخادم باستخدام الشهادات؛ ويمكنه أيضًا التحقق من العميل إذا تم استخدام Mutual TLS)\n• لا يعالج TLS بمفرده:\n  o **==كلمات المرور الضعيفة أو بيانات الاعتماد المسروقة==**\n  o **==سوء تكوين التفويض/قوائم التحكم في الوصول (ACL)==** (من يُسمح له بالنشر/الاشتراك/إرسال الأوامر)\n  o **==أخطاء منطق التطبيق==** (مثل: واجهة برمجة تطبيقات API تعطي وصول مسؤول)\n  o **==هجمات حجب الخدمة DoS==** (لا يوقف TLS الإغراق بمفرده)"
+          "at": "• يحمي TLS:\n  o **==السرية (Confidentiality)==** (يشفر حركة المرور حتى لا يتمكن الآخرون من قراءتها)\n  o **==النزاهة (Integrity)==** (يكتشف ما إذا تم تعديل الرسائل أثناء الإرسال)\n  o **==المصادقة (Authentication)==** (يتحقق من هوية الخادم باستخدام الشهادات؛ ويمكنه أيضًا التحقق من العميل إذا تم استخدام Mutual TLS)\n• لا يعالج TLS بمفرده:\n  o **==كلمات المرور الضعيفة أو بيانات الاعتماد المسروقة==**\n  o **==سوء تكوين التفويض/قوائم التحكم في الوصول (ACL)==** (من يُسمح له بالنشر/الاشتراك/إرسال الأوامر)\n  o **==أخطاء منطق التطبيق==** (مثل: واجهة برمجة تطبيقات API تعطي وصول مسؤول)\n  o **==هجمات حجب الخدمة DoS==** (لا يوقف TLS الإغراق بمفرده)",
+          "correct": true
         },
         {
           "type": "written",
           "q": "4. Explain **MQTT publish/subscribe** using **“topic”** and **“broker.”**",
           "qt": "4. اشرح **النشر/الاشتراك في MQTT** باستخدام **\"الموضوع\" (topic)** و **\"الوسيط\" (broker)**.",
           "a": "• In MQTT, devices and apps do not usually talk directly to each other. They **==communicate through a broker==**.\n• A publisher **==sends a message to a named channel called a topic==** (example: devices/device7/telemetry).\n• A subscriber **==tells the broker: “Send me messages from this topic.”==**\n• The broker receives messages from publishers and **==forwards them to all subscribers of that topic==**.",
-          "at": "• في MQTT، لا تتحدث الأجهزة والتطبيقات عادةً مع بعضها البعض مباشرة. بل **==تتواصل من خلال وسيط (broker)==**.\n• يرسل الناشر **==رسالة إلى قناة مسماة تُعرف باسم الموضوع==** (مثال: devices/device7/telemetry).\n• يخبر المشترك الوسيط: **==\"أرسل لي الرسائل من هذا الموضوع.\"==**\n• يتلقى الوسيط الرسائل من الناشرين و **==يوجهها إلى جميع المشتركين في هذا الموضوع==**."
+          "at": "• في MQTT، لا تتحدث الأجهزة والتطبيقات عادةً مع بعضها البعض مباشرة. بل **==تتواصل من خلال وسيط (broker)==**.\n• يرسل الناشر **==رسالة إلى قناة مسماة تُعرف باسم الموضوع==** (مثال: devices/device7/telemetry).\n• يخبر المشترك الوسيط: **==\"أرسل لي الرسائل من هذا الموضوع.\"==**\n• يتلقى الوسيط الرسائل من الناشرين و **==يوجهها إلى جميع المشتركين في هذا الموضوع==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "5. Give an example of good **MQTT topic design** for one device (telemetry + commands).",
           "qt": "5. أعط مثالاً على **تصميم موضوع MQTT** جيد لجهاز واحد (قياس + أوامر).",
           "a": "A clear design **==separates telemetry from commands and includes the device ID==**:\n• Telemetry topic (device → cloud): **==devices/device7/telemetry==**\n• Command topic (cloud/app → device): **==devices/device7/cmd==**\nThis makes permissions easier and prevents confusion.",
-          "at": "التصميم الواضح **==يفصل بين القياس والأوامر ويتضمن معرف الجهاز (Device ID)==**:\n• موضوع القياس (الجهاز ← السحابة): **==devices/device7/telemetry==**\n• موضوع الأوامر (السحابة/التطبيق ← الجهاز): **==devices/device7/cmd==**\nهذا يجعل الصلاحيات أسهل ويمنع الارتباك."
+          "at": "التصميم الواضح **==يفصل بين القياس والأوامر ويتضمن معرف الجهاز (Device ID)==**:\n• موضوع القياس (الجهاز ← السحابة): **==devices/device7/telemetry==**\n• موضوع الأوامر (السحابة/التطبيق ← الجهاز): **==devices/device7/cmd==**\nهذا يجعل الصلاحيات أسهل ويمنع الارتباك.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "6. Explain why **MQTT ACLs** are important even if you use **TLS**.",
           "qt": "6. اشرح لماذا تعتبر قوائم التحكم في الوصول **(MQTT ACLs)** مهمة حتى لو كنت تستخدم **TLS**.",
           "a": "• TLS protects the connection (encrypts data and helps prevent sniffing/MITM).\n• But TLS **==does not decide what a connected client is allowed to do==**.\n• Without ACLs, a client that successfully connects (even with TLS) might **==publish to any topic or subscribe to any topic==**—meaning one compromised device could control or spy on others.\n• ACLs enforce rules like: “Device7 can **==only publish to its own telemetry topic and only subscribe to its own command topic==**.”",
-          "at": "• يحمي TLS الاتصال (يشفر البيانات ويساعد في منع التنصت/هجمات الوسيط MITM).\n• لكن TLS **==لا يقرر ما يُسمح للعميل المتصل بفعله==**.\n• بدون قوائم ACLs، قد يقوم العميل الذي يتصل بنجاح (حتى مع TLS) **==بالنشر في أي موضوع أو الاشتراك في أي موضوع==** - مما يعني أن جهازًا واحدًا مخترقًا يمكنه التحكم في أجهزة أخرى أو التجسس عليها.\n• تفرض قوائم ACLs قواعد مثل: \"يمكن لـ Device7 **==النشر فقط في موضوع القياس الخاص به والاشتراك فقط في موضوع الأوامر الخاص به==**.\""
+          "at": "• يحمي TLS الاتصال (يشفر البيانات ويساعد في منع التنصت/هجمات الوسيط MITM).\n• لكن TLS **==لا يقرر ما يُسمح للعميل المتصل بفعله==**.\n• بدون قوائم ACLs، قد يقوم العميل الذي يتصل بنجاح (حتى مع TLS) **==بالنشر في أي موضوع أو الاشتراك في أي موضوع==** - مما يعني أن جهازًا واحدًا مخترقًا يمكنه التحكم في أجهزة أخرى أو التجسس عليها.\n• تفرض قوائم ACLs قواعد مثل: \"يمكن لـ Device7 **==النشر فقط في موضوع القياس الخاص به والاشتراك فقط في موضوع الأوامر الخاص به==**.\"",
+          "correct": true
         },
         {
           "type": "written",
           "q": "7. Explain **replay attacks** and give one way to **reduce replay risk**.",
           "qt": "7. اشرح **هجمات إعادة الإرسال (replay attacks)** واذكر طريقة واحدة **لتقليل خطر الإعادة**.",
           "a": "• A replay attack happens when an attacker **==records a valid message (example: unlock) and sends the same message again later==** to repeat the action.\n• One way to reduce replay risk: **==use timestamps or sequence numbers (or a nonce)==**. The receiver **==rejects old or repeated messages==**.\nExample: device only accepts commands with a timestamp within the last 10 seconds.",
-          "at": "• يحدث هجوم إعادة الإرسال عندما **==يسجل المهاجم رسالة صالحة (مثال: فتح القفل) ويرسل نفس الرسالة مرة أخرى لاحقًا==** لتكرار الإجراء.\n• إحدى الطرق لتقليل خطر الإعادة: **==استخدام الطوابع الزمنية (timestamps) أو الأرقام التسلسلية (أو nonce)==**. بالتالي **==يرفض المتلقي الرسائل القديمة أو المتكررة==**.\nمثال: يقبل الجهاز فقط الأوامر التي تحمل طابعًا زمنيًا خلال الـ 10 ثوانٍ الماضية."
+          "at": "• يحدث هجوم إعادة الإرسال عندما **==يسجل المهاجم رسالة صالحة (مثال: فتح القفل) ويرسل نفس الرسالة مرة أخرى لاحقًا==** لتكرار الإجراء.\n• إحدى الطرق لتقليل خطر الإعادة: **==استخدام الطوابع الزمنية (timestamps) أو الأرقام التسلسلية (أو nonce)==**. بالتالي **==يرفض المتلقي الرسائل القديمة أو المتكررة==**.\nمثال: يقبل الجهاز فقط الأوامر التي تحمل طابعًا زمنيًا خلال الـ 10 ثوانٍ الماضية.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "8. Compare **BLE security** and **Zigbee security** at high level (1–2 points each).",
           "qt": "8. قارن بين **أمان BLE** و **أمان Zigbee** على مستوى عالٍ (1-2 نقطة لكل منهما).",
           "a": "• BLE security:\n  o **==Depends strongly on the pairing method==**. Weak pairing (like “Just Works”) can be easier to attack in some cases.\n  o Often used for short-range setup; security mistakes happen when **==secrets are sent before secure pairing finishes==**.\n• Zigbee security:\n  o **==Uses keys for network communication==**; security depends on secure joining/commissioning and proper key handling.\n  o **==Weak join procedures or leaked network keys==** can let attackers join the mesh and control devices.",
-          "at": "• أمان BLE:\n  o **==يعتمد بشدة على طريقة الاقتران==**. الاقتران الضعيف (مثل \"Just Works\") يمكن أن يكون أسهل في الهجوم في بعض الحالات.\n  o يُستخدم غالبًا للإعداد قصير المدى؛ تحدث الأخطاء الأمنية عندما **==يتم إرسال الأسرار قبل انتهاء الاقتران الآمن==**.\n• أمان Zigbee:\n  o **==يستخدم المفاتيح لاتصال الشبكة==**؛ يعتمد الأمان على الانضمام/التشغيل الآمن والتعامل السليم مع المفاتيح.\n  o **==إجراءات الانضمام الضعيفة أو مفاتيح الشبكة المسربة==** يمكن أن تسمح للمهاجمين بالانضمام إلى الشبكة (mesh) والتحكم في الأجهزة."
+          "at": "• أمان BLE:\n  o **==يعتمد بشدة على طريقة الاقتران==**. الاقتران الضعيف (مثل \"Just Works\") يمكن أن يكون أسهل في الهجوم في بعض الحالات.\n  o يُستخدم غالبًا للإعداد قصير المدى؛ تحدث الأخطاء الأمنية عندما **==يتم إرسال الأسرار قبل انتهاء الاقتران الآمن==**.\n• أمان Zigbee:\n  o **==يستخدم المفاتيح لاتصال الشبكة==**؛ يعتمد الأمان على الانضمام/التشغيل الآمن والتعامل السليم مع المفاتيح.\n  o **==إجراءات الانضمام الضعيفة أو مفاتيح الشبكة المسربة==** يمكن أن تسمح للمهاجمين بالانضمام إلى الشبكة (mesh) والتحكم في الأجهزة.",
+          "correct": true
         },
         {
           "type": "code",
-          "q": "Coding Q1: MQTT Publisher (Send Sensor Data)",
+          "q": "Coding Q1: MQTT Publisher (Send Sensor Data)\nGoal: Publish fake sensor data every 2 seconds to a topic.\nThis example teaches:\n• How telemetry is sent (device → broker)\n• Topics and payload format",
           "code": "import time\nimport json\nimport random\nimport paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nclient = mqtt.Client(client_id=\"device7_publisher\")\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_start()\n\ntry:\n    while True:\n        data = {\n            \"device_id\": \"device7\",\n            \"temp\": round(random.uniform(20, 30), 2),\n            \"hum\": round(random.uniform(40, 60), 2)\n        }\n        payload = json.dumps(data)\n        client.publish(TOPIC, payload)\n        print(\"Published:\", payload)\n        time.sleep(2)\nexcept KeyboardInterrupt:\n    print(\"Stopped publisher.\")\nfinally:\n    client.loop_stop()\n    client.disconnect()"
         },
         {
           "type": "code",
-          "q": "Coding Q2: MQTT Subscriber (Receive and Display Data)",
+          "q": "Coding Q2: MQTT Subscriber (Receive and Display Data)\nGoal: Subscribe to the telemetry topic and print incoming messages.",
           "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         },
         {
           "type": "code",
-          "q": "Coding Q3: Add Authentication (Username/Password)",
-          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected OK\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"Connection failed, return code:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"auth_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+          "q": "Coding Q3: Add Authentication (Username/Password)\nGoal: Connect to broker using username/password.\nIf credentials are wrong, broker should reject connection.\nImportant concept:\n• TLS is about encryption, but authentication is about proving identity.",
+          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nUSERNAME = \"student\"\nPASSWORD = \"student123\"   # instructor may change\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected OK \")\n        client.subscribe(TOPIC)\n    else:\n        print(\"Connection failed , return code:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"auth_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         },
         {
           "type": "code",
-          "q": "Coding Q4: Add TLS (Concept + Code Configuration)",
-          "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"\n\n# If mutual TLS is used, instructor will provide these too:\nCLIENT_CERT = None            # e.g., \"client.crt\"\nCLIENT_KEY  = None            # e.g., \"client.key\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\nclient.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\n\n# Require certificate verification (important!)\nclient.tls_insecure_set(False)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+          "q": "Coding Q4: Add TLS (Concept + Code Configuration)\nWhat TLS adds:\n• Encrypts MQTT traffic (prevents sniffing)\n• Allows server authentication using certificates\n• Prevents MITM if certificates are validated correctly\n\nInstructor will provide:\n• CA certificate file (and possibly client cert/key depending on setup)\n• TLS port (commonly 8883)",
+          "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"            # provided by instructor\n\n# If mutual TLS is used, instructor will provide these too:\nCLIENT_CERT = None            # e.g., \"client.crt\"\nCLIENT_KEY  = None            # e.g., \"client.key\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\nclient.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\n\n# Require certificate verification (important!)\nclient.tls_insecure_set(False)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         }
       ]
     }
