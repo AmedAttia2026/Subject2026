@@ -175,140 +175,160 @@
           "q": "1. Explain what **IoT security** is, and mention one example of an actuator (locks, motors, or alarms).",
           "qt": "1. اشرح ما هو **أمن إنترنت الأشياء (IoT Security)**، واذكر مثالاً واحداً على المشغل الميكانيكي (مثل الأقفال أو المحركات أو أجهزة الإنذار).",
           "a": "IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world through **==actuators like locks, motors, or alarms==**. One example of an actuator is a **==lock==**.",
-          "at": "أمن إنترنت الأشياء يحمي الأجهزة التي تستشعر البيئة، وتتواصل عبر الشبكات، وأحياناً تتصرف في العالم المادي من خلال **==المشغلات مثل الأقفال أو المحركات أو أجهزة الإنذار==**. أحد الأمثلة على المشغل الميكانيكي هو **==القفل==**."
+          "at": "أمن إنترنت الأشياء يحمي الأجهزة التي تستشعر البيئة، وتتواصل عبر الشبكات، وأحياناً تتصرف في العالم المادي من خلال **==المشغلات مثل الأقفال أو المحركات أو أجهزة الإنذار==**. أحد الأمثلة على المشغل الميكانيكي هو **==القفل==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "2. Why is **IoT security special** compared to normal computer security?",
           "qt": "2. لماذا يعتبر **أمن إنترنت الأشياء مميزاً** مقارنة بأمن الكمبيوتر العادي؟",
           "a": "IoT connects digital systems to real environments, so a security issue can become a **==real-world problem==**, not just a \"computer problem.\"",
-          "at": "لأن إنترنت الأشياء يربط الأنظمة الرقمية بالبيئات الحقيقية، لذا فإن أي مشكلة أمنية قد تتحول إلى **==مشكلة واقعية==**، وليست مجرد \"مشكلة حاسوبية\"."
+          "at": "لأن إنترنت الأشياء يربط الأنظمة الرقمية بالبيئات الحقيقية، لذا فإن أي مشكلة أمنية قد تتحول إلى **==مشكلة واقعية==**، وليست مجرد \"مشكلة حاسوبية\".",
+          "correct": true
         },
         {
           "type": "written",
           "q": "3. Write the **end-to-end IoT layers** in order, and explain why **end-to-end matters**.",
           "qt": "3. اكتب **طبقات الـ IoT من البداية للنهاية** بالترتيب، واشرح لماذا تهم **الحماية الشاملة (End-to-End)**.",
           "a": "Device → Network → Cloud → App → Operations. IoT security must cover the whole system, because attackers often choose the **==weakest layer==**, so **==every layer must be protected==**.",
-          "at": "الجهاز ← الشبكة ← السحابة ← التطبيق ← العمليات. يجب أن يغطي أمن إنترنت الأشياء النظام بأكمله، لأن المهاجمين يختارون غالباً **==الطبقة الأضعف==**، لذا **==يجب حماية كل طبقة==**."
+          "at": "الجهاز ← الشبكة ← السحابة ← التطبيق ← العمليات. يجب أن يغطي أمن إنترنت الأشياء النظام بأكمله، لأن المهاجمين يختارون غالباً **==الطبقة الأضعف==**، لذا **==يجب حماية كل طبقة==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "4. List the **main security goals** we protect in IoT systems.",
           "qt": "4. اذكر **الأهداف الأمنية الرئيسية** التي نحميها في أنظمة IoT.",
           "a": "**==Confidentiality, Integrity, Availability, Safety, and Privacy==**.",
-          "at": "**==السرية، النزاهة/السلامة، التوافر، الأمان المادي، والخصوصية==**."
+          "at": "**==السرية، النزاهة/السلامة، التوافر، الأمان المادي، والخصوصية==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "5. Define **confidentiality** using the slide meaning, and give two examples of sensitive IoT data.",
           "qt": "5. عرف **السرية (Confidentiality)** حسب السلايد، واذكر مثالين لبيانات حساسة في IoT.",
           "a": "Confidentiality means data must **==stay private==** so attackers cannot read video, telemetry, health data, location, credentials, or keys. Examples: **==video and location==**.",
-          "at": "السرية تعني أنه يجب أن **==تظل البيانات خاصة==** بحيث لا يستطيع المهاجمون قراءة الفيديو أو القياسات عن بعد أو البيانات الصحية أو الموقع أو بيانات الاعتماد أو المفاتيح. أمثلة: **==الفيديو والموقع==**."
+          "at": "السرية تعني أنه يجب أن **==تظل البيانات خاصة==** بحيث لا يستطيع المهاجمون قراءة الفيديو أو القياسات عن بعد أو البيانات الصحية أو الموقع أو بيانات الاعتماد أو المفاتيح. أمثلة: **==الفيديو والموقع==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "6. Define **integrity** using the slide meaning, and give one example of something an attacker could alter.",
           "qt": "6. عرف **النزاهة (Integrity)** حسب السلايد، واذكر مثالاً لشيء قد يغيره المهاجم.",
           "a": "Integrity means data and behavior must **==not be changed without permission==**, such as altering sensor readings, commands, or firmware. Example: **==altering sensor readings==**.",
-          "at": "النزاهة تعني أنه يجب **==عدم تغيير البيانات والسلوك دون إذن==**، مثل تغيير قراءات المستشعر أو الأوامر أو البرنامج الثابت (firmware). مثال: **==تغيير قراءات المستشعر==**."
+          "at": "النزاهة تعني أنه يجب **==عدم تغيير البيانات والسلوك دون إذن==**، مثل تغيير قراءات المستشعر أو الأوامر أو البرنامج الثابت (firmware). مثال: **==تغيير قراءات المستشعر==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "7. Define **availability** using the slide meaning, and name one type of attack that targets availability.",
           "qt": "7. عرف **التوافر (Availability)** حسب السلايد، واذكر نوع هجوم يستهدف التوافر.",
           "a": "Availability means devices and services must **==keep working even under attacks==** like overload or denial-of-service. A **==denial-of-service attack==** targets availability.",
-          "at": "التوافر يعني أنه يجب أن **==تستمر الأجهزة والخدمات في العمل حتى تحت الهجمات==** مثل التحميل الزائد أو حجب الخدمة. هجوم **==حجب الخدمة (denial-of-service)==** يستهدف التوافر."
+          "at": "التوافر يعني أنه يجب أن **==تستمر الأجهزة والخدمات في العمل حتى تحت الهجمات==** مثل التحميل الزائد أو حجب الخدمة. هجوم **==حجب الخدمة (denial-of-service)==** يستهدف التوافر.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "8. Define **safety** in IoT systems and explain why **actuators** make safety important.",
           "qt": "8. عرف **الأمان المادي (Safety)** في أنظمة IoT واشرح لماذا تجعل المشغلات الأمان مهماً.",
           "a": "Safety means the system must **==prevent physical harm==** caused by wrong device actions, especially for actuators. Actuators can **==change the physical world==**, so incorrect actions can cause harm.",
-          "at": "الأمان المادي يعني أنه يجب على النظام **==منع الضرر الجسدي==** الناتج عن تصرفات الجهاز الخاطئة، خاصة للمشغلات. يمكن للمشغلات **==تغيير العالم المادي==**، لذا فإن الإجراءات غير الصحيحة يمكن أن تسبب ضرراً."
+          "at": "الأمان المادي يعني أنه يجب على النظام **==منع الضرر الجسدي==** الناتج عن تصرفات الجهاز الخاطئة، خاصة للمشغلات. يمكن للمشغلات **==تغيير العالم المادي==**، لذا فإن الإجراءات غير الصحيحة يمكن أن تسبب ضرراً.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "9. Define **privacy** in IoT and explain why IoT data creates privacy risk.",
           "qt": "9. عرف **الخصوصية (Privacy)** في IoT واشرح لماذا تخلق بيانات IoT خطراً على الخصوصية.",
           "a": "Privacy means the system must **==prevent tracking and surveillance==**, because IoT data can **==reveal personal habits and routines==**.",
-          "at": "الخصوصية تعني أنه يجب على النظام **==منع التتبع والمراقبة==**، لأن بيانات إنترنت الأشياء يمكن أن **==تكشف عن العادات والروتين الشخصي==**."
+          "at": "الخصوصية تعني أنه يجب على النظام **==منع التتبع والمراقبة==**، لأن بيانات إنترنت الأشياء يمكن أن **==تكشف عن العادات والروتين الشخصي==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "10. Describe the **device layer** and list three things included in it.",
           "qt": "10. صف **طبقة الجهاز (Device Layer)** واذكر ثلاثة أشياء تتضمنها.",
           "a": "The device layer includes **==sensors/actuators, firmware, and embedded identity material==** like keys or certificates.",
-          "at": "تتضمن طبقة الجهاز **==أجهزة الاستشعار/المشغلات، والبرنامج الثابت (firmware)، ومواد الهوية المدمجة==** مثل المفاتيح أو الشهادات."
+          "at": "تتضمن طبقة الجهاز **==أجهزة الاستشعار/المشغلات، والبرنامج الثابت (firmware)، ومواد الهوية المدمجة==** مثل المفاتيح أو الشهادات.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "11. Describe the **network layer** and list three things included in it.",
           "qt": "11. صف **طبقة الشبكة (Network Layer)** واذكر ثلاثة أشياء تتضمنها.",
           "a": "The network layer includes local communication such as Wi-Fi, BLE, Zigbee, routers, and access points. Examples: **==Wi-Fi, routers, access points==**.",
-          "at": "تتضمن طبقة الشبكة الاتصالات المحلية مثل Wi-Fi و BLE و Zigbee وأجهزة التوجيه ونقاط الوصول. أمثلة: **==Wi-Fi وأجهزة التوجيه ونقاط الوصول==**."
+          "at": "تتضمن طبقة الشبكة الاتصالات المحلية مثل Wi-Fi و BLE و Zigbee وأجهزة التوجيه ونقاط الوصول. أمثلة: **==Wi-Fi وأجهزة التوجيه ونقاط الوصول==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "12. What is the **gateway/edge layer** (optional), and list two tasks it may perform.",
           "qt": "12. ما هي **طبقة البوابة/الحافة (Gateway/Edge)**، واذكر مهمتين قد تقوم بهما.",
           "a": "The gateway/edge layer may translate protocols, aggregate data, buffer messages, or enforce local rules. Two tasks: **==translate protocols and aggregate data==**.",
-          "at": "قد تقوم طبقة البوابة/الحافة بترجمة البروتوكولات أو تجميع البيانات أو تخزين الرسائل مؤقتاً أو فرض القواعد المحلية. مهمتين: **==ترجمة البروتوكولات وتجميع البيانات==**."
+          "at": "قد تقوم طبقة البوابة/الحافة بترجمة البروتوكولات أو تجميع البيانات أو تخزين الرسائل مؤقتاً أو فرض القواعد المحلية. مهمتين: **==ترجمة البروتوكولات وتجميع البيانات==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "13. Describe the **cloud/backend layer** and name four components it usually includes.",
           "qt": "13. صف **طبقة السحابة/الخلفية (Cloud/Backend)** واذكر 4 مكونات تتضمنها عادة.",
           "a": "The cloud/backend layer usually includes device registry, message broker, databases, analytics, and APIs. Four components: **==device registry, message broker, databases, APIs==**.",
-          "at": "تتضمن طبقة السحابة/الخلفية عادةً سجل الأجهزة، وسيط الرسائل، قواعد البيانات، التحليلات، وواجهات برمجة التطبيقات (APIs). أربعة مكونات: **==سجل الأجهزة، وسيط الرسائل، قواعد البيانات، واجهات برمجة التطبيقات==**."
+          "at": "تتضمن طبقة السحابة/الخلفية عادةً سجل الأجهزة، وسيط الرسائل، قواعد البيانات، التحليلات، وواجهات برمجة التطبيقات (APIs). أربعة مكونات: **==سجل الأجهزة، وسيط الرسائل، قواعد البيانات، واجهات برمجة التطبيقات==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "14. Describe the **apps/users layer** and name two examples of tools found in this layer.",
           "qt": "14. صف **طبقة التطبيقات/المستخدمين** واذكر مثالين للأدوات الموجودة فيها.",
           "a": "The apps/users layer includes mobile apps, dashboards, and admin tools used to monitor and control devices. Examples: **==mobile apps and dashboards==**.",
-          "at": "تتضمن طبقة التطبيقات/المستخدمين تطبيقات الهاتف المحمول ولوحات المعلومات وأدوات الإدارة المستخدمة لمراقبة الأجهزة والتحكم فيها. أمثلة: **==تطبيقات الهاتف المحمول ولوحات المعلومات==**."
+          "at": "تتضمن طبقة التطبيقات/المستخدمين تطبيقات الهاتف المحمول ولوحات المعلومات وأدوات الإدارة المستخدمة لمراقبة الأجهزة والتحكم فيها. أمثلة: **==تطبيقات الهاتف المحمول ولوحات المعلومات==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "15. List five **key IoT assets** (what has value) and explain why credentials and cryptographic keys are valuable.",
           "qt": "15. اذكر 5 **أصول رئيسية في IoT** واشرح لماذا تعتبر البيانات الاعتمادية والمفاتيح التشفيرية قيمة.",
           "a": "Assets include **==device control, sensitive data, credentials and cryptographic keys, uptime and reliability, and customer trust and compliance==**. Credentials and keys are valuable because they **==unlock access to devices and cloud APIs==**.",
-          "at": "تشمل الأصول **==التحكم في الأجهزة، البيانات الحساسة، بيانات الاعتماد ومفاتيح التشفير، وقت التشغيل والموثوقية، وثقة العملاء والامتثال==**. تعتبر بيانات الاعتماد والمفاتيح ذات قيمة لأنها **==تفتح الوصول إلى الأجهزة وواجهات برمجة التطبيقات السحابية==**."
+          "at": "تشمل الأصول **==التحكم في الأجهزة، البيانات الحساسة، بيانات الاعتماد ومفاتيح التشفير، وقت التشغيل والموثوقية، وثقة العملاء والامتثال==**. تعتبر بيانات الاعتماد والمفاتيح ذات قيمة لأنها **==تفتح الوصول إلى الأجهزة وواجهات برمجة التطبيقات السحابية==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "16. List four **attacker goals** from the slides and describe each.",
           "qt": "16. اذكر 4 **أهداف للمهاجمين** واشرح كل منها.",
           "a": "**==Money==**: extortion, theft, or resale of data.\n**==Botnets==**: using devices for large-scale attacks like DDoS.\n**==Spying==**: privacy invasion by watching, listening, or tracking users.\n**==Sabotage==**: disrupting operations to cause harm or downtime.",
-          "at": "**==المال==**: الابتزاز أو السرقة أو إعادة بيع البيانات.\n**==Botnets==**: استخدام الأجهزة لشن هجمات واسعة النطاق مثل DDoS.\n**==التجسس==**: انتهاك الخصوصية من خلال المراقبة أو الاستماع أو تتبع المستخدمين.\n**==التخريب==**: تعطيل العمليات لإحداث ضرر أو توقف."
+          "at": "**==المال==**: الابتزاز أو السرقة أو إعادة بيع البيانات.\n**==Botnets==**: استخدام الأجهزة لشن هجمات واسعة النطاق مثل DDoS.\n**==التجسس==**: انتهاك الخصوصية من خلال المراقبة أو الاستماع أو تتبع المستخدمين.\n**==التخريب==**: تعطيل العمليات لإحداث ضرر أو توقف.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "17. Explain five reasons why **IoT is hard to secure**.",
           "qt": "17. اشرح 5 أسباب تجعل **تأمين IoT صعباً**.",
           "a": "1. **==Limited resources==**: not enough CPU/RAM/power for heavy encryption, logging, or monitoring.\n2. **==Long lifetime==**: devices stay deployed for many years, so old vulnerabilities remain.\n3. **==Huge scale==**: fleets need secure onboarding and updates at massive scale.\n4. **==Physical exposure==**: devices can be touched, stolen, opened, or reset.\n5. **==Many technologies==**: different vendors and protocols increase complexity and configuration mistakes.",
-          "at": "1. **==الموارد المحدودة==**: عدم وجود وحدة معالجة مركزية/ذاكرة وصول عشوائي/طاقة كافية للتشفير الثقيل أو التسجيل أو المراقبة.\n2. **==عمر طويل==**: تبقى الأجهزة منتشرة لسنوات عديدة، لذا تظل نقاط الضعف القديمة موجودة.\n3. **==نطاق ضخم==**: تحتاج أساطيل الأجهزة إلى الإعداد الآمن والتحديثات على نطاق واسع.\n4. **==التعرض المادي==**: يمكن لمس الأجهزة أو سرقتها أو فتحها أو إعادة ضبطها.\n5. **==تقنيات متعددة==**: يؤدي اختلاف البائعين والبروتوكولات إلى زيادة التعقيد وأخطاء التكوين."
+          "at": "1. **==الموارد المحدودة==**: عدم وجود وحدة معالجة مركزية/ذاكرة وصول عشوائي/طاقة كافية للتشفير الثقيل أو التسجيل أو المراقبة.\n2. **==عمر طويل==**: تبقى الأجهزة منتشرة لسنوات عديدة، لذا تظل نقاط الضعف القديمة موجودة.\n3. **==نطاق ضخم==**: تحتاج أساطيل الأجهزة إلى الإعداد الآمن والتحديثات على نطاق واسع.\n4. **==التعرض المادي==**: يمكن لمس الأجهزة أو سرقتها أو فتحها أو إعادة ضبطها.\n5. **==تقنيات متعددة==**: يؤدي اختلاف البائعين والبروتوكولات إلى زيادة التعقيد وأخطاء التكوين.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "18. List the **attack surfaces** across layers and give one example risk for each.",
           "qt": "18. اذكر **أسطح الهجوم (Attack Surfaces)** عبر الطبقات مع مثال لكل خطر.",
           "a": "- Device attack surface: **==firmware bugs or weak local authentication==**.\n- Network attack surface: **==intercepting unencrypted traffic or missing segmentation==**.\n- Cloud attack surface: **==misconfigurations or weak APIs==**.\n- App attack surface: **==poor token storage or hardcoded secrets==**.\n- Operations attack surface: **==missing updates or weak monitoring==**.",
-          "at": "- سطح هجوم الجهاز: **==أخطاء البرنامج الثابت (firmware) أو المصادقة المحلية الضعيفة==**.\n- سطح هجوم الشبكة: **==اعتراض حركة المرور غير المشفرة أو التجزئة المفقودة==**.\n- سطح هجوم السحابة: **==التكوينات الخاطئة أو واجهات برمجة التطبيقات (APIs) الضعيفة==**.\n- سطح هجوم التطبيق: **==تخزين ضعيف للرموز (tokens) أو الأسرار المكتوبة في الكود==**.\n- سطح هجوم العمليات: **==التحديثات المفقودة أو المراقبة الضعيفة==**."
+          "at": "- سطح هجوم الجهاز: **==أخطاء البرنامج الثابت (firmware) أو المصادقة المحلية الضعيفة==**.\n- سطح هجوم الشبكة: **==اعتراض حركة المرور غير المشفرة أو التجزئة المفقودة==**.\n- سطح هجوم السحابة: **==التكوينات الخاطئة أو واجهات برمجة التطبيقات (APIs) الضعيفة==**.\n- سطح هجوم التطبيق: **==تخزين ضعيف للرموز (tokens) أو الأسرار المكتوبة في الكود==**.\n- سطح هجوم العمليات: **==التحديثات المفقودة أو المراقبة الضعيفة==**.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "19. Explain these **secure-by-design principles**: least privilege, defense in depth, secure defaults, fail safely, patchability, auditability.",
           "qt": "19. اشرح مبادئ **'الأمن حسب التصميم' (Secure-by-design Principles)**.",
           "a": "- Least privilege: each device/user/service should have **==only the permissions it truly needs==**.\n- Defense in depth: use **==multiple controls==** so one failure does not break the system.\n- Secure defaults: the product should be **==safe out of the box==**.\n- Fail safely: if errors happen, the system should **==avoid unsafe actuator actions==**.\n- Patchability: **==secure update capability==** must exist because vulnerabilities will be found.\n- Auditability: **==logs and security telemetry==** should exist for detection and investigation.",
-          "at": "- أقل الصلاحيات: يجب أن يمتلك كل جهاز/مستخدم/خدمة **==فقط الأذونات التي يحتاجها حقاً==**.\n- الدفاع في العمق: استخدام **==ضوابط متعددة==** بحيث لا يؤدي فشل واحد إلى تعطل النظام.\n- إعدادات افتراضية آمنة: يجب أن يكون المنتج **==آمناً بمجرد إخراجه من العلبة==**.\n- الفشل الآمن: إذا حدثت أخطاء، يجب أن **==يتجنب النظام إجراءات المشغل غير الآمنة==**.\n- قابلية التصحيح: يجب أن توجد **==قدرة تحديث آمنة==** لأنه سيتم اكتشاف الثغرات.\n- قابلية التدقيق: يجب أن توجد **==السجلات والقياسات الأمنية==** للاكتشاف والتحقيق."
+          "at": "- أقل الصلاحيات: يجب أن يمتلك كل جهاز/مستخدم/خدمة **==فقط الأذونات التي يحتاجها حقاً==**.\n- الدفاع في العمق: استخدام **==ضوابط متعددة==** بحيث لا يؤدي فشل واحد إلى تعطل النظام.\n- إعدادات افتراضية آمنة: يجب أن يكون المنتج **==آمناً بمجرد إخراجه من العلبة==**.\n- الفشل الآمن: إذا حدثت أخطاء، يجب أن **==يتجنب النظام إجراءات المشغل غير الآمنة==**.\n- قابلية التصحيح: يجب أن توجد **==قدرة تحديث آمنة==** لأنه سيتم اكتشاف الثغرات.\n- قابلية التدقيق: يجب أن توجد **==السجلات والقياسات الأمنية==** للاكتشاف والتحقيق.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "20. Smart camera mini case: list **three risks** and **four controls**.",
           "qt": "20. حالة الكاميرا الذكية: اذكر **3 مخاطر** و **4 ضوابط (Controls)**.",
           "a": "Risks: **==privacy leak==** (view live streams or stored recordings), **==unauthorized control==** (change settings/disable alerts/take over ownership), **==disruption/outage==** (forced offline).\nControls: **==secure firmware==** (signed firmware), **==secure OTA updates==**, **==account security==** (strong login protections and access control), **==encryption and strict cloud storage permissions==**, and **==segmentation==** (separate IoT network).",
-          "at": "المخاطر: **==تسريب الخصوصية==** (عرض البث المباشر أو التسجيلات المخزنة)، **==التحكم غير المصرح به==** (تغيير الإعدادات / تعطيل التنبيهات / الاستيلاء على الملكية)، **==التعطيل / الانقطاع==** (إجباره على عدم الاتصال).\nالضوابط: **==البرامج الثابتة الآمنة==** (البرامج الثابتة الموقعة)، **==تحديثات OTA الآمنة==**، **==أمان الحساب==** (حماية تسجيل الدخول القوية والتحكم في الوصول)، **==التشفير وأذونات التخزين السحابي الصارمة==**، و **==التقسيم==** (شبكة IoT منفصلة)."
+          "at": "المخاطر: **==تسريب الخصوصية==** (عرض البث المباشر أو التسجيلات المخزنة)، **==التحكم غير المصرح به==** (تغيير الإعدادات / تعطيل التنبيهات / الاستيلاء على الملكية)، **==التعطيل / الانقطاع==** (إجباره على عدم الاتصال).\nالضوابط: **==البرامج الثابتة الآمنة==** (البرامج الثابتة الموقعة)، **==تحديثات OTA الآمنة==**، **==أمان الحساب==** (حماية تسجيل الدخول القوية والتحكم في الوصول)، **==التشفير وأذونات التخزين السحابي الصارمة==**، و **==التقسيم==** (شبكة IoT منفصلة).",
+          "correct": true
         }
       ]
     },
@@ -829,31 +849,31 @@
           "type": "written",
           "q": "1. Explain **confidentiality** in one sentence and give an IoT example.",
           "qt": "1. اشرح **السرية (Confidentiality)** في جملة واحدة واذكر مثالاً من إنترنت الأشياء.",
-          "a": "Confidentiality means **==only authorized parties can read data==**.\nExample: **==Encrypt temperature readings==** so Wi-Fi sniffers cannot read them.",
-          "at": "تعني السرية أن **==الأطراف المصرح لها فقط هي من يمكنها قراءة البيانات==**.\nمثال: **==تشفير قراءات درجة الحرارة==** حتى لا يتمكن المتلصصون على الشبكة من قراءتها.",
+          "a": "Confidentiality means **==only authorized parties can read data==**; example: **==encrypt temperature readings==** so Wi-Fi sniffers cannot read them.",
+          "at": "السرية تعني أن **==الأطراف المصرح لها فقط يمكنها قراءة البيانات==**؛ مثال: **==تشفير قراءات درجة الحرارة==** حتى لا يتمكن المتلصصون على الشبكة من قراءتها.",
           "correct": true
         },
         {
           "type": "written",
           "q": "2. Explain **integrity** in one sentence and give an IoT example.",
           "qt": "2. اشرح **النزاهة (Integrity)** في جملة واحدة واذكر مثالاً من إنترنت الأشياء.",
-          "a": "Integrity means **==message changes are detectable==**.\nExample: If an attacker changes a sensor value, the **==integrity check fails==**.",
-          "at": "تعني النزاهة أن **==أي تغييرات في الرسالة يمكن كشفها==**.\nمثال: إذا قام المهاجم بتغيير قيمة المستشعر، **==سيفشل فحص النزاهة==**.",
+          "a": "Integrity means **==message changes are detectable==**; example: if attacker changes sensor value, the **==integrity check fails==**.",
+          "at": "النزاهة تعني أن **==تغييرات الرسالة يمكن اكتشافها==**؛ مثال: إذا قام المهاجم بتغيير قيمة المستشعر، **==يفشل فحص النزاهة==**.",
           "correct": true
         },
         {
           "type": "written",
           "q": "3. Explain **authentication** in one sentence and give an IoT example.",
           "qt": "3. اشرح **المصادقة (Authentication)** في جملة واحدة واذكر مثالاً من إنترنت الأشياء.",
-          "a": "Authentication **==proves who sent the message==**.\nExample: The cloud **==verifies the device certificate==** before accepting data.",
-          "at": "المصادقة **==تثبت هوية مرسل الرسالة==**.\nمثال: السحابة **==تتحقق من شهادة الجهاز==** قبل قبول البيانات.",
+          "a": "Authentication **==proves who sent the message==**; example: cloud **==verifies the device certificate==** before accepting data.",
+          "at": "المصادقة **==تثبت من أرسل الرسالة==**؛ مثال: السحابة **==تتحقق من شهادة الجهاز==** قبل قبول البيانات.",
           "correct": true
         },
         {
           "type": "written",
           "q": "4. What is the difference between **hashing** and **encryption** (very simply)?",
           "qt": "4. ما الفرق بين **التجزئة (Hashing)** و **التشفير (Encryption)** ببساطة شديدة؟",
-          "a": "Hashing creates a **==one-way fingerprint==** to detect changes; Encryption **==hides data and can be reversed==** with a key.",
+          "a": "Hashing creates a **==one-way fingerprint==** to detect changes; encryption **==hides data and can be reversed==** with a key.",
           "at": "التجزئة تنشئ **==بصمة ذات اتجاه واحد==** لاكتشاف التغييرات؛ التشفير **==يخفي البيانات ويمكن عكسه (فكه)==** باستخدام مفتاح.",
           "correct": true
         },
@@ -861,8 +881,8 @@
           "type": "written",
           "q": "5. What is a **digital signature** used for (very simply)?",
           "qt": "5. فيمَ يُستخدم **التوقيع الرقمي (Digital Signature)** ببساطة؟",
-          "a": "To **==prove who sent a message==** and ensure the message **==was not changed==** (Authentication + Integrity).",
-          "at": "لـ **==إثبات هوية مرسل الرسالة==** والتأكد من أن الرسالة **==لم تتغير==** (مصادقة + نزاهة).",
+          "a": "To **==prove who sent a message==** and ensure the message **==was not changed==**.",
+          "at": "لـ **==إثبات هوية مرسل الرسالة==** والتأكد من أن الرسالة **==لم تتغير==**.",
           "correct": true
         },
         {
@@ -883,17 +903,17 @@
         },
         {
           "type": "written",
-          "q": "8. What is **'device identity'** and why is it important?",
-          "qt": "8. ما هي **'هوية الجهاز' (Device Identity)** ولماذا هي مهمة؟",
-          "a": "It is a **==unique ID + credentials==** that prove the device is real; it **==prevents fake devices (spoofing)==** from joining the system.",
-          "at": "هي **==معرف فريد + بيانات اعتماد==** تثبت أن الجهاز حقيقي؛ وتمنع **==انتحال الأجهزة (spoofing)==** من الانضمام إلى النظام.",
+          "q": "8. What is **\"device identity\"** and why is it important?",
+          "qt": "8. ما هي **\"هوية الجهاز\" (Device Identity)** ولماذا هي مهمة؟",
+          "a": "It is a **==unique ID + credentials==** that prove the device is real; it **==prevents fake devices==** from joining the system.",
+          "at": "هي **==معرف فريد + بيانات اعتماد==** تثبت أن الجهاز حقيقي؛ وتمنع **==الأجهزة المزيفة==** من الانضمام إلى النظام.",
           "correct": true
         },
         {
           "type": "written",
-          "q": "9. What does **'provisioning/onboarding'** mean in IoT?",
-          "qt": "9. ماذا يعني **'التهيئة/الانضمام' (Provisioning/Onboarding)** في إنترنت الأشياء؟",
-          "a": "Setting up the device with **==identity, credentials, and configuration==** so it can join the cloud securely.",
+          "q": "9. What does **\"provisioning/onboarding\"** mean in IoT?",
+          "qt": "9. ماذا يعني **\"التهيئة/الانضمام\" (Provisioning/Onboarding)** في إنترنت الأشياء؟",
+          "a": "It is setting up the device with **==identity, credentials, and configuration==** so it can join the cloud securely.",
           "at": "إعداد الجهاز بـ **==الهوية وبيانات الاعتماد والتكوين==** حتى يتمكن من الانضمام إلى السحابة بشكل آمن.",
           "correct": true
         },
@@ -901,16 +921,16 @@
           "type": "written",
           "q": "10. Name 3 **key management mistakes**.",
           "qt": "10. اذكر 3 **أخطاء في إدارة المفاتيح (Key Management)**.",
-          "a": "**==1. Same key for all devices.\n2. Hardcoding keys in firmware.\n3. No revocation/rotation plan.==**",
-          "at": "**==1. استخدام نفس المفتاح لجميع الأجهزة.\n2. كتابة المفاتيح برمجياً في الـ firmware.\n3. عدم وجود خطة للإلغاء أو التدوير.==**",
+          "a": "**==Same key for all devices==**, **==hardcoding keys in firmware==**, **==no revocation/rotation plan==**.",
+          "at": "**==نفس المفتاح لجميع الأجهزة==**، **==كتابة المفاتيح برمجياً في الـ firmware==**، **==عدم وجود خطة للإلغاء/التدوير==**.",
           "correct": true
         },
         {
           "type": "written",
-          "q": "11. Why is **'revocation'** necessary?",
-          "qt": "11. لماذا تعتبر **'الإلغاء' (Revocation)** ضرورية؟",
-          "a": "If a device is stolen or hacked, revocation allows the system to **==block it so it cannot connect==**.",
-          "at": "إذا تعرض الجهاز للسرقة أو الاختراق، يسمح الإلغاء للنظام بـ **==حظر الوصول الخاص به حتى لا يتمكن من الاتصال==**.",
+          "q": "11. Why is **\"revocation\"** necessary?",
+          "qt": "11. لماذا تعتبر **\"الإلغاء\" (Revocation)** ضرورية؟",
+          "a": "Because if a device is stolen/hacked, revocation allows the system to **==block it so it cannot connect==**.",
+          "at": "لأنه إذا تعرض الجهاز للسرقة أو الاختراق، يسمح الإلغاء للنظام بـ **==حظر وصوله حتى لا يتمكن من الاتصال==**.",
           "correct": true
         },
         {
@@ -924,22 +944,30 @@
         {
           "type": "code",
           "q": "Coding Q1: Hashing demo",
-          "code": "import hashlib\nmsg1 = \"temperature = 25\"\nmsg2 = \"temperature = 26\" # tiny change\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256 :\", h1)\nprint(\"\\nMessage 2:\", msg2)\nprint(\"SHA-256 :\", h2)\nprint(\"\\nAre hashes equal?\", h1 == h2)"
+          "code": "import hashlib\n\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\n\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\n\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)"
         },
         {
           "type": "code",
           "q": "Coding Q2: File hashing",
-          "code": "import hashlib\ndef sha256_file(path: str) -> str:\n    sha = hashlib.sha256()\n    with open(path, \"rb\") as f:\n        while True:\n            chunk = f.read(4096)\n            if not chunk:\n                break\n            sha.update(chunk)\n    return sha.hexdigest()\n\nfile_path = input(\"Enter file path: \").strip()\nprint(\"SHA-256:\", sha256_file(file_path))"
+          "code": "import hashlib\n\ndef sha256_file(path: str) -> str:\n    sha = hashlib.sha256()\n    with open(path, \"rb\") as f:\n        while True:\n            chunk = f.read(4096)\n            if not chunk:\n                break\n            sha.update(chunk)\n    return sha.hexdigest()\n\nfile_path = input(\"Enter file path: \").strip()\nprint(\"SHA-256:\", sha256_file(file_path))"
+        },
+        {
+          "type": "written",
+          "q": "Explain how **file hashing** can detect if a file was modified (based on the File Hashing code).",
+          "qt": "اشرح كيف يمكن لـ **تجزئة الملفات (File Hashing)** اكتشاف ما إذا كان الملف قد تم تعديله (بناءً على كود File Hashing).",
+          "a": "If you compute the hash of the file, then **==change even one character==** in the file and compute the hash again, the **==hash will change completely==**. So, if the hash is different, it means **==the file was modified==**.",
+          "at": "إذا قمت بحساب تجزئة الملف، ثم **==غيّرت حرفاً واحداً فقط==** في الملف وحسبت التجزئة مرة أخرى، فإن **==التجزئة ستتغير تماماً==**. لذا، إذا كانت التجزئة مختلفة، فهذا يعني أن **==الملف قد تم تعديله==**.",
+          "correct": true
         },
         {
           "type": "code",
           "q": "Coding Q3: HMAC demo",
-          "code": "import hmac\nimport hashlib\nkey = b\"shared secret key\"\nmessage = b\"device=7;temp=25\"\n\n# Create tag (sender)\ntag = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Message:\", message.decode())\nprint(\"HMAC tag:\", tag)\n\n# Verify (receiver recomputes)\ntag_check = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Valid?\", hmac.compare_digest(tag, tag_check))"
+          "code": "import hmac\nimport hashlib\n\nkey = b\"shared_secret_key\"\nmessage = b\"device=7;temp=25\"\n\n# Create tag (sender)\ntag = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Message:\", message.decode())\nprint(\"HMAC tag:\", tag)\n\n# Verify (receiver recomputes)\ntag_check = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Valid?\", hmac.compare_digest(tag, tag_check))"
         },
         {
           "type": "code",
           "q": "Coding Q4: Device identity record",
-          "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\", # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----\\nREPLACE_ME\\n-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)"
+          "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)"
         }
       ]
     },
