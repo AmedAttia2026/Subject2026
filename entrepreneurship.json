@@ -1,508 +1,369 @@
 {
-  "id": "ccnp_route",
-  "title": "CCNP Practice - OSPF Assignments",
+  "id": "entrepreneurship",
+  "title": "ريادة الأعمال",
   "sheets": [
     {
-      "title": "Assignment 1",
+      "title": "أسئلة الاختيار من متعدد",
       "questions": [
         {
           "type": "mcq",
-          "q": "1. DR and BDR election occurs on which type of network?",
-          "options": ["A. Point-to-Point", "B. Broadcast", "C. Loopback", "D. MPLS"],
+          "q": "1. تبدأ ريادة الأعمال عندما يظهر لدى الشخص:",
+          "options": [
+            "أ) رغبة في النوم",
+            "ب) فكرة تحل مشكلة يومية بطريقة أفضل",
+            "ج) رغبة في استهلاك المنتجات فقط",
+            "د) خوف من المستقبل"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "2. In OSPF, routers that are neither DR nor BDR are called:",
-          "options": ["A. Passive routers", "B. DROther routers", "C. Slave routers", "D. Secondary routers"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "3. Which OSPF value is primarily used to elect DR and BDR?",
-          "options": ["A. Cost", "B. Hello interval", "C. Priority", "D. Area ID"],
+          "q": "2. تعتبر ريادة الأعمال محركاً هاماً للتنمية لأنها تحول الأفكار إلى:",
+          "options": [
+            "أ) مشكلات جديدة",
+            "ب) دروس نظرية فقط",
+            "ج) مشروعات تقدم قيمة حقيقية للمجتمع",
+            "د) هوايات غير منتجة"
+          ],
           "correct": 2
         },
         {
           "type": "mcq",
-          "q": "4. The default OSPF interface priority is:",
-          "options": ["A. 0", "B. 1", "C. 10", "D. 255"],
+          "q": "3. تتضمن ريادة الأعمال عملية اكتشاف الفرص وتقديم حلول مبتكرة و:",
+          "options": [
+            "أ) تجنب المخاطر تماماً",
+            "ب) إدارة المخاطر لتحقيق النجاح",
+            "ج) الاعتماد على الحظ فقط",
+            "د) العمل بدون تنظيم موارد"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "5. If the OSPF priority is set to 0, the router:",
-          "options": ["A. Becomes DR", "B. Becomes BDR", "C. Cannot become DR or BDR", "D. Becomes master"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "6. If two routers have the same priority, what is used to break the tie?",
-          "options": ["A. IP address", "B. Cost", "C. Router ID", "D. MAC address"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "7. Which router has the highest chance of becoming DR?",
-          "options": ["A. Lowest Router ID", "B. Highest Priority", "C. Lowest Cost", "D. Highest IP address"],
+          "q": "4. الهدف الرئيسي لرائد الأعمال هو:",
+          "options": [
+            "أ) البقاء في منطقة الراحة",
+            "ب) بناء ميزة تنافسية قابلة للتوسع",
+            "ج) العمل بمفردة دون عمال",
+            "د) تقليد الآخرين حرفياً"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "8. If the DR fails, who becomes the new DR?",
-          "options": ["A. DROther", "B. ABR", "C. BDR", "D. ASBR"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "9. DR is responsible for:",
-          "options": ["A. Sending all traffic", "B. Summarizing routes", "C. Reducing adjacency requirements", "D. Assigning IP addresses"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "10. Which multicast address is used to send LSAs to DR and BDR?",
-          "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 255.255.255.255", "D. 224.0.0.9"],
+          "q": "5. يقيس رائد الأعمال نجاحه من خلال مؤشرات مثل:",
+          "options": [
+            "أ) عدد ساعات النوم",
+            "ب) نمو العملاء والحصة السوقية",
+            "ج) حجم المكتب فقط",
+            "د) عدد الأصدقاء الشخصيين"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "11. Which multicast address is used by DR to send updates to all OSPF routers?",
-          "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.1", "D. 224.0.0.9"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "12. DR and BDR election happens when:",
-          "options": ["A. Router boots up", "B. OSPF starts on the interface", "C. Hello packets are exchanged", "D. All of the above"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "13. Which network type does NOT require DR/BDR election?",
-          "options": ["A. Broadcast", "B. NBMA", "C. Point-to-Point", "D. Multi-access"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "14. What is the first OSPF neighbor state?",
-          "options": ["A. Init", "B. Down", "C. Full", "D. 2-Way"],
+          "q": "6. صاحب المشروع الصغير يركز عادة على:",
+          "options": [
+            "أ) النمو العالمي السريع",
+            "ب) توفير دخل ثابت ومستقر له ولأسرته",
+            "ج) ابتكار منتج لم يسبقه إليه أحد",
+            "د) جذب استثمارات بمليارات الدولارات"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "15. In which state does a router start sending Hello packets?",
-          "options": ["A. Down", "B. Init", "C. Full", "D. Exchange"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "16. When a router receives a Hello packet from a neighbor, it enters which state?",
-          "options": ["A. Full", "B. Init", "C. Exchange", "D. Loading"],
+          "q": "7. القدرة على التكرار في أسواق متعددة هي صفة تميز:",
+          "options": [
+            "أ) الموظف التقليدي",
+            "ب) رائد الأعمال",
+            "ج) المستهلك العادي",
+            "د) صاحب الحرفة البسيطة"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "17. In which state do routers see their own Router ID in the neighbor’s Hello packet?",
-          "options": ["A. Init", "B. Down", "C. 2-Way", "D. Full"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "18. On a broadcast network, OSPF routers form full adjacency with:",
-          "options": ["A. All routers", "B. Only DR and BDR", "C. Only DR", "D. Only BDR"],
+          "q": "8. من المزايا التي تسعى ريادة الأعمال لتحقيقها في السوق:",
+          "options": [
+            "أ) زيادة التكاليف",
+            "ب) خلق ميزة تنافسية",
+            "ج) تقليل جودة المنتجات",
+            "د) منع الابتكار"
+          ],
           "correct": 1
         },
         {
           "type": "mcq",
-          "q": "19. Which state comes after 2-Way?",
-          "options": ["A. Down", "B. Exchange", "C. ExStart", "D. Loading"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "20. During which state are DBD (Database Description) packets exchanged?",
-          "options": ["A. Init", "B. ExStart", "C. Exchange", "D. Full"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "21. In which state do routers request missing LSAs?",
-          "options": ["A. Loading", "B. Full", "C. Down", "D. 2-Way"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "22. When is OSPF adjacency considered complete?",
-          "options": ["A. Exchange", "B. ExStart", "C. Full", "D. Init"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "23. Which packet type carries actual link-state information?",
-          "options": ["A. LSU", "B. LSR", "C. Hello", "D. DBD"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "24. What happens if Hello intervals do not match between neighbors?",
-          "options": ["A. Full adjacency forms", "B. 2-Way state forms", "C. No adjacency forms", "D. Exchange state forms"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "25. Which OSPF state indicates bidirectional communication?",
-          "options": ["A. Init", "B. Down", "C. 2-Way", "D. Loading"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "26. On a point-to-point link, routers usually reach which final state?",
-          "options": ["A. 2-Way", "B. Init", "C. Full", "D. Down"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "27. Which state comes just before Full?",
-          "options": ["A. Exchange", "B. Loading", "C. Init", "D. Down"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "28. If the Area ID does not match between two routers, what state will they stay in?",
-          "options": ["A. Full", "B. 2-Way", "C. Down/Init", "D. Exchange"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "29. What is the default Dead Timer for OSPF on an Ethernet interface?",
-          "options": ["A. 10 seconds", "B. 30 seconds", "C. 40 seconds", "D. 60 seconds"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "30. Which command allows you to view the current OSPF neighbor states?",
-          "options": ["A. show ip route", "B. show ip ospf neighbor", "C. show ip interface brief", "D. show ip ospf database"],
-          "correct": 1
-        }
-      ]
-    },
-    {
-      "title": "Assignment 2",
-      "questions": [
-        {
-          "type": "written",
-          "q": "Explain **Type 1** and **Type 2 LSAs** and describe how they differ.",
-          "qt": "اشرح **Type 1** و **Type 2 LSAs** وصف كيف يختلفان.",
-          "a": "• **==Type 1 (Router LSA)==**:\nGenerated by **==every OSPF router==** to describe its directly connected links. It is flooded only within its own area.\n\n• **==Type 2 (Network LSA)==**:\nGenerated only by the **==Designated Router (DR)==** on broadcast networks to describe all routers attached to that segment. It is also flooded only within the area.",
-          "at": "• **==النوع الأول (Router LSA)==**:\nيتم إنشاؤه بواسطة **==كل راوتر OSPF==** لوصف الروابط المتصلة به مباشرة. يتم نشره فقط داخل منطقته الخاصة.\n\n• **==النوع الثاني (Network LSA)==**:\nيتم إنشاؤه فقط بواسطة **==الراوتر المعين (DR)==** في شبكات البث لوصف جميع الراوترات المتصلة بذلك المقطع. يتم نشره أيضاً داخل المنطقة فقط."
-        },
-        {
-          "type": "written",
-          "q": "What is the role of **Type 3** and **Type 4 LSAs** in multi-area OSPF networks?",
-          "qt": "ما هو دور **Type 3** و **Type 4 LSAs** في شبكات OSPF متعددة المناطق؟",
-          "a": "• **==Type 3 (Summary LSA)==**:\nGenerated by the **==ABR (Area Border Router)==** to advertise networks from one area to another.\n\n• **==Type 4 (ASBR Summary LSA)==**:\nGenerated by the **==ABR==** as well, but its specific purpose is to advertise the route to reach an **==ASBR (Autonomous System Boundary Router)==** to other areas.",
-          "at": "• **==النوع الثالث (Summary LSA)==**:\nيتم إنشاؤه بواسطة **==ABR (راوتر حدود المنطقة)==** للإعلان عن الشبكات من منطقة إلى أخرى.\n\n• **==النوع الرابع (ASBR Summary LSA)==**:\nيتم إنشاؤه بواسطة **==ABR==** أيضاً، ولكن غرضه المحدد هو الإعلان عن المسار للوصول إلى **==ASBR==** للمناطق الأخرى."
-        },
-        {
-          "type": "written",
-          "q": "Describe **Type 5 LSA** and explain when it is generated.",
-          "qt": "صف **النوع الخامس من LSA** واشرح متى يتم إنشاؤه.",
-          "a": "• **==Type 5 (External LSA)==**:\nGenerated by an **==ASBR==** when routes from an **==external routing domain==** (like EIGRP, BGP, or static routes) are redistributed into OSPF.\n\n• Flooding Scope:\nIt is flooded throughout the **==entire OSPF autonomous system==** (except stub areas).",
-          "at": "• **==النوع الخامس (External LSA)==**:\nيتم إنشاؤه بواسطة **==ASBR==** عندما يتم إعادة توزيع المسارات من **==نطاق توجيه خارجي==** (مثل EIGRP أو BGP أو المسارات الثابتة) إلى OSPF.\n\n• نطاق النشر:\nيتم نشره في **==كامل نظام OSPF المستقل==** (باستثناء مناطق stub)."
-        },
-        {
-          "type": "written",
-          "q": "Explain how LSAs are stored and used in the **OSPF Link-State Database (LSDB)**.",
-          "qt": "اشرح كيف يتم تخزين واستخدام رسائل LSA في **قاعدة بيانات حالة الارتباط (LSDB)**.",
-          "a": "• Storage in LSDB:\nLSAs are collected and stored in the LSDB, ensuring all routers in the same area have an **==identical map==** of the network topology.\n\n• Usage and Calculation:\nThe **==SPF (Dijkstra) algorithm==** then runs against the LSDB to calculate the shortest and best paths to all known destinations.",
-          "at": "• التخزين في LSDB:\nيتم جمع رسائل LSA وتخزينها في LSDB، مما يضمن أن جميع الراوترات في نفس المنطقة لديها **==خريطة متطابقة==** لطوبولوجيا الشبكة.\n\n• الاستخدام والحساب:\nتقوم خوارزمية **==SPF (Dijkstra)==** بعد ذلك بالعمل على LSDB لحساب أقصر وأفضل المسارات لجميع الوجهات المعروفة."
-        },
-        {
-          "type": "mcq",
-          "q": "1. Which OSPF authentication type provides encryption?",
-          "options": ["A) Null authentication", "B) Plain text authentication", "C) MD5 authentication", "D) Static routing"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "2. In Null authentication, OSPF packets are:",
-          "options": ["A) Encrypted", "B) Not authenticated", "C) Signed with MD5", "D) Blocked"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "3. Which OSPF authentication type sends the password in clear text?",
-          "options": ["A) MD5", "B) SHA", "C) Plain text", "D) IPsec"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "4. OSPF authentication must match on:",
-          "options": ["A) Only one router", "B) All routers in the area", "C) Only the DR", "D) Only the BDR"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "5. If OSPF authentication mismatches, routers will:",
-          "options": ["A) Still form adjacency", "B) Restart automatically", "C) Not become neighbors", "D) Change area ID"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "6. OSPF authentication is configured:",
-          "options": ["A) Globally only", "B) Per interface", "C) On switches only", "D) On servers"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "7. Which OSPF packet contains authentication information?",
-          "options": ["A) Hello packet", "B) LSA only", "C) ARP packet", "D) DNS packet"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "8. OSPF authentication is configured under:",
-          "options": ["A) VLAN", "B) Interface", "C) DHCP", "D) NAT"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "9. Authentication in OSPF helps prevent:",
-          "options": ["A) Broadcast storms", "B) Unauthorized routers", "C) IP conflicts", "D) VLAN hopping"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "10. Which LSA type is generated by every OSPF router?",
-          "options": ["A) Type 2", "B) Type 3", "C) Type 1", "D) Type 5"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "11. Type 1 LSA is also called:",
-          "options": ["A) Network LSA", "B) Router LSA", "C) Summary LSA", "D) External LSA"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "12. Type 2 LSA is generated by:",
-          "options": ["A) DR (Designated Router)", "B) ABR", "C) ASBR", "D) All routers"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "13. Type 3 LSA is generated by:",
-          "options": ["A) DR", "B) ABR", "C) ASBR", "D) Internal router"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "14. Type 5 LSA advertises:",
-          "options": ["A) Inter-area routes", "B) External routes", "C) Router IDs", "D) Loopback addresses"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "15. Which LSA type is flooded only within an area?",
-          "options": ["A) Type 5", "B) Type 1", "C) Type 4", "D) Type 7"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "16. In OSPF, LSAs are stored in:",
-          "options": ["A) Routing table", "B) ARP table", "C) Link-State Database (LSDB)", "D) MAC table"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "17. Type 2 LSA exists in which type of network?",
-          "options": ["A) Point-to-point", "B) Broadcast", "C) Stub only", "D) Virtual link"],
-          "correct": 1
-        }
-      ]
-    },
-    {
-      "title": "Assignment 3",
-      "questions": [
-        {
-          "type": "mcq",
-          "q": "1. What is the backbone area in OSPF?",
-          "options": ["A. Area 1", "B. Area 10", "C. Area 0", "D. Stub Area"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "2. All OSPF areas must connect to:",
-          "options": ["A. Stub Area", "B. NSSA", "C. Area 0", "D. Transit Area"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "3. Which OSPF area blocks external LSAs?",
-          "options": ["A. Normal Area", "B. Stub Area", "C. Backbone Area", "D. Transit Area"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "4. Which area allows external routes as Type 7 LSAs?",
-          "options": ["A. Stub", "B. NSSA", "C. Area 0", "D. Totally Stubby"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "5. Which router connects different OSPF areas?",
-          "options": ["A. Internal Router", "B. Backbone Router", "C. ABR", "D. ASBR"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "6. ASBR means:",
-          "options": ["A. Area System Border Router", "B. Autonomous System Boundary Router", "C. Area Service Backup Router", "D. Automatic System Border Router"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "7. Stub areas block which LSA?",
-          "options": ["A. Type 1", "B. Type 2", "C. Type 5", "D. Type 3"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "8. Totally Stubby Areas are:",
-          "options": ["A. Standard OSPF", "B. Cisco proprietary", "C. Cisco proprietary feature", "D. Default area"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "9. NSSA blocks:",
-          "options": ["A. Type 7", "B. Type 5 LSAS", "C. Type 1", "D. Type 2"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "10. Area 0 is also called:",
-          "options": ["A. Stub Area", "B. Backbone Area", "C. Transit Area", "D. External Area"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "11. Totally Stubby Area blocks:",
-          "options": ["A. Type 5 only", "B. Type 3 and Type 5", "C. Type 1", "D. Type 2"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "12. NSSA uses which LSA for external routes?",
-          "options": ["A. Type 3", "B. Type 5", "C. Type 7", "D. Type 2"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "13. External routes enter OSPF through:",
-          "options": ["A. ABR", "B. ASBR", "C. DR", "D. BDR"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "14. Which area reduces routing table size?",
-          "options": ["A. Normal", "B. Stub Area", "C. Backbone", "D. Transit"],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "15. Stub area cannot contain",
-          "options": ["A. ABR", "B. ASBR", "C. DR", "D. BDR"],
-          "correct": 1
-        }
-      ]
-    },
-    {
-      "title": "Assignment 4",
-      "questions": [
-        {
-          "type": "mcq",
-          "q": "1. Which OSPF router type connects a backbone area to a non-backbone area?",
-          "options": ["A. Internal Router (IR)", "B. Backbone Router (BR)", "C. Area Border Router (ABR)", "D. Autonomous System Border Router (ASBR)"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "2. Which LSA type is generated by every OSPF router and stays restricted within its own area?",
-          "options": ["A. Type 1 (Router LSA)", "B. Type 2 (Network LSA)", "C. Type 3 (Summary LSA)", "D. Type 5 (External LSA)"],
-          "correct": 0
-        },
-        {
-          "type": "mcq",
-          "q": "3. Who is responsible for generating Type 2 (Network) LSAs on a broadcast network?",
-          "options": ["A. The Root Bridge", "B. The Area Border Router (ABR)", "C. The Designated Router (DR)", "D. Every OSPF router on the segment"],
-          "correct": 2
-        },
-        {
-          "type": "mcq",
-          "q": "4. What is the purpose of a Type 3 (Summary) LSA?",
-          "options": ["A. To advertise external routes from a different AS.", "B. To advertise network prefixes from one area into another area via the ABR.", "C. To describe the DR on a multi-access segment.", "D. To synchronize the LSDB during the Exchange state."],
-          "correct": 1
-        },
-        {
-          "type": "mcq",
-          "q": "5. Which LSA type is used to advertise routes redistributed from an external protocol (like EIGRP) into OSPF?",
-          "options": ["A. Type 2", "B. Type 3", "C. Type 4", "D. Type 5"],
+          "q": "9. ريادة الأعمال لا تقتصر على إنشاء مشروع جديد بل تشمل أيضاً:",
+          "options": [
+            "أ) تنظيم الموارد",
+            "ب) تقديم حلول للمشكلات القائمة",
+            "ج) إدارة المخاطر",
+            "د) جميع ما سبق"
+          ],
           "correct": 3
         },
         {
           "type": "mcq",
-          "q": "6. In a broadcast multi-access network, how is the Designated Router (DR) elected first?",
-          "options": ["A. Lowest Router ID", "B. Highest OSPF Priority", "C. Highest Loopback IP Address", "D. Highest MAC Address"],
+          "q": "10. تستهدف منصات الحرفيين (Marketplace) ربط الحرفيين بالعملاء مع ضمان:",
+          "options": [
+            "أ) ارتفاع الأسعار",
+            "ب) الدفع الآمن وتقييمات الجودة",
+            "ج) صعوبة الوصول للخدمة",
+            "د) عدم التواصل بين الطرفين"
+          ],
           "correct": 1
+        }
+      ]
+    },
+    {
+      "title": "الأسئلة المباشرة والمقالية",
+      "questions": [
+        {
+          "type": "written",
+          "q": "11. ما هو محرك التنمية الاقتصادية؟",
+          "a": "**==ريادة الأعمال==**"
         },
         {
-          "type": "mcq",
-          "q": "7. What is the default OSPF priority value for an interface?",
-          "options": ["A. 0", "B. 1", "C. 100", "D. 255"],
-          "correct": 1
+          "type": "written",
+          "q": "12. رائد الأعمال يسعى لـ:",
+          "a": "**==استغلال فرص جديدة==**"
         },
         {
-          "type": "mcq",
-          "q": "8. If a router's OSPF priority is set to 0, what is its role in the DR/BDR election?",
-          "options": ["A. It becomes the DR immediately.", "B. It becomes the BDR immediately.", "C. It cannot participate in the election and will never be DR or BDR.", "D. It only participates if all other routers have a priority of 0."],
-          "correct": 2
+          "type": "written",
+          "q": "13. صاحب المشروع الصغير يركز على الإدارة:",
+          "a": "**==التشغيلية اليومية==**"
         },
         {
-          "type": "mcq",
-          "q": "9. Which OSPF multicast address is used by DROthers to send updates to the DR and BDR?",
-          "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.9", "D. 224.0.0.10"],
-          "correct": 1
+          "type": "written",
+          "q": "14. الابتكار في ريادة الأعمال يعني تقديم:",
+          "a": "**==قيمة حقيقية==**"
         },
         {
-          "type": "mcq",
-          "q": "10. Which OSPF multicast address is used by the DR to send updates to all other OSPF routers on the segment?",
-          "options": ["A. 224.0.0.5", "B. 224.0.0.6", "C. 224.0.0.10", "D. 224.0.0.1"],
-          "correct": 0
+          "type": "written",
+          "q": "15. المخاطرة في ريادة الأعمال هي مخاطرة:",
+          "a": "**==محسوبة ومنظمة==**"
         },
         {
-          "type": "mcq",
-          "q": "11. In what order does an OSPF router choose its Router ID (RID)?",
-          "options": ["A. Physical Interface > Loopback > Manual Configuration", "B. Manual Configuration > Highest Loopback IP > Highest Physical IP", "C. Lowest Physical IP > Highest Loopback IP > Manual Configuration", "D. Process ID > Area ID > Priority"],
-          "correct": 1
+          "type": "written",
+          "q": "16. رائد الأعمال يبحث عن التمويل لـ:",
+          "a": "**==تسريع النمو==**"
         },
         {
-          "type": "mcq",
-          "q": "12. What OSPF packet type is used to request specific link-state records from a neighbor?",
-          "options": ["A. Hello", "B. DBD (Database Description)", "C. LSR (Link State Request)", "D. LSU (Link State Update)"],
-          "correct": 2
+          "type": "written",
+          "q": "17. الحصة السوقية هي مؤشر لـ:",
+          "a": "**==نجاح رائد الأعمال==**"
         },
         {
-          "type": "mcq",
-          "q": "13. Which command is used to restart the OSPF process so that a new Router ID can take effect?",
-          "options": ["A. reload", "B. clear ip ospf process", "C. no router ospf 1", "D. shutdown followed by no shutdown on the interface"],
-          "correct": 1
+          "type": "written",
+          "q": "18. الاستدامة في المشروع تعني:",
+          "a": "**==القدرة على الاستمرار والنمو==**"
         },
         {
-          "type": "mcq",
-          "q": "14. Why are OSPF networks divided into areas?",
-          "options": ["A. To increase the size of the Link-State Database (LSDB).", "B. To allow different routers to have different views of the topology.", "C. To reduce the CPU load and limit the scope of SPF calculations.", "D. To enable RIP and OSPF to communicate."],
-          "correct": 2
+          "type": "written",
+          "q": "19. حل المشكلات يومياً هو جوهر:",
+          "a": "**==التفكير الريادي==**"
+        },
+        {
+          "type": "written",
+          "q": "20. الفرق بين الريادي والتاجر هو:",
+          "a": "**==الابتكار وقابلية التوسع==**"
+        },
+        {
+          "type": "written",
+          "q": "21. ريادة الأعمال تساهم في تقليل:",
+          "a": "**==البطالة==**"
+        },
+        {
+          "type": "written",
+          "q": "22. الريادة الرقمية تعتمد على:",
+          "a": "**==التكنولوجيا والإنترنت==**"
+        },
+        {
+          "type": "written",
+          "q": "23. خلق فرص عمل هو نتيجة لـ:",
+          "a": "**==نمو المشروعات الريادية==**"
+        },
+        {
+          "type": "written",
+          "q": "24. تحويل الفكرة إلى واقع يتطلب:",
+          "a": "**==تنظيم موارد وإدارة مخاطر==**"
+        },
+        {
+          "type": "written",
+          "q": "25. السمة الأساسية لرائد الأعمال هي:",
+          "a": "**==المبادرة==**"
+        },
+        {
+          "type": "written",
+          "q": "26. النمو في ريادة الأعمال يكون:",
+          "a": "**==سريعاً ومتصاعداً==**"
+        },
+        {
+          "type": "written",
+          "q": "27. صاحب العمل الحر يهدف غالباً لـ:",
+          "a": "**==الاستقلال المالي==**"
+        },
+        {
+          "type": "written",
+          "q": "28. السوق المستهدف هو:",
+          "a": "**==مجموعة العملاء الذين يحل المشروع مشكلتهم==**"
+        },
+        {
+          "type": "written",
+          "q": "29. التنافسية تعني تفوق المنتج في:",
+          "a": "**==الجودة أو السعر أو الابتكار==**"
+        },
+        {
+          "type": "written",
+          "q": "30. ريادة الأعمال هي رحلة تبدأ بـ:",
+          "a": "**==شغف ورؤية واضحة==**"
+        },
+        {
+          "type": "written",
+          "q": "1. عرف ريادة الأعمال بأسلوبك الخاص بناءً على ما درست.",
+          "a": "هي عملية تحويل فكرة مبتكرة إلى مشروع تجاري **==يقدم قيمة ويتحمل المخاطر==** لتحقيق النمو."
+        },
+        {
+          "type": "written",
+          "q": "2. اذكر فرقاً واحداً جوهرياً بين رائد الأعمال وصاحب المشروع الصغير.",
+          "a": "رائد الأعمال يركز على **==الابتكار والتوسع السريع==**، بينما يركز صاحب المشروع الصغير على **==الاستقرار والدخل الثابت==**."
+        },
+        {
+          "type": "written",
+          "q": "3. لماذا تعتبر \"إدارة المخاطر\" ركناً أساسياً في ريادة الأعمال؟",
+          "a": "لأن المشروعات الجديدة تواجه عدم يقين، والإدارة الجيدة **==تقلل احتمالات الفشل==**."
+        },
+        {
+          "type": "written",
+          "q": "4. ما المقصود بـ \"القيمة الحقيقية\" التي يقدمها المشروع الريادي؟",
+          "a": "هي **==المنفعة أو الحل==** الذي يحصل عليه العميل مقابل ما يدفعه."
+        },
+        {
+          "type": "written",
+          "q": "5. اذكر اثنين من مؤشرات نجاح رائد الأعمال.",
+          "a": "1- **==نمو عدد المستخدمين/العملاء==**. 2- **==زيادة الحصة السوقية==**."
+        },
+        {
+          "type": "written",
+          "q": "6. كيف تساهم ريادة الأعمال في حل المشكلات المجتمعية؟",
+          "a": "عن طريق تقديم منتجات أو خدمات مبتكرة **==تسد فجوات الاحتياج في المجتمع==**."
+        },
+        {
+          "type": "written",
+          "q": "7. ما أهمية \"التمويل والاستثمار\" لمشروع ريادي ناشئ؟",
+          "a": "يساعد على **==تسريع وتيرة النمو والتوسع==** في أسواق جديدة."
+        },
+        {
+          "type": "written",
+          "q": "8. ماذا يعني مفهوم \"الميزة التنافسية\"؟",
+          "a": "هي السمة التي تجعل منتجك **==أفضل من منافسيك في نظر العملاء==**."
+        },
+        {
+          "type": "written",
+          "q": "9. متى تبدأ رحلة ريادة الأعمال كما ورد في مقدمة المادة؟",
+          "a": "تبدأ عندما تظهر فكرة **==تحل مشكلة يومية بطريقة أفضل وأسرع==**."
+        },
+        {
+          "type": "written",
+          "q": "10. بماذا يقاس نجاح صاحب المشروع الصغير غالباً؟",
+          "a": "يقاس بالربح المنتظم، والسمعة المحلية، و**==القدرة على تغطية التكاليف==**."
+        }
+      ]
+    },
+    {
+      "title": "أسئلة الصواب والخطأ (T/F)",
+      "questions": [
+        {
+          "type": "tf",
+          "q": "1. الفكرة التقليدية تعتمد غالبًا على حلول مألوفة أو متكررة.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "2. الفكرة الريادية تهدف إلى حل مشكلة بطريقة غير تقليدية.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "3. درجة الابتكار في الفكرة التقليدية عادةً عالية لأنها تعتمد على الإبداع.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "4. الفكرة الريادية غالبا تعتمد على أفكار مجربة فقط.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "5. القيمة المضافة في الفكرة التقليدية عادةً محدودة لأنها تقدم حلولا متاحة بالفعل.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "6. الفكرة الريادية تقدم عادةً حلولا جديدة أو محسنة بشكل كبير.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "7. المخاطر في الفكرة التقليدية مرتفعة لأن نجاحها غير مؤكد.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "8. المخاطر في الفكرة الريادية قد تكون مرتفعة بسبب عدم التأكد من نجاح الفكرة الجديدة.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "9. الإمكانية التنافسية للفكرة التقليدية غالبًا قوية لأنها توفر ميزة فريدة.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "10. الفكرة الريادية قد توفر ميزة تنافسية فريدة مقارنة بالمنافسين.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "11. القابلية للنمو في الفكرة التقليدية غالبًا مرتفعة ويمكن أن تتحول بسهولة لمشروع كبير.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "12. الفكرة الريادية غالبًا قابلة للتوسع ويمكن أن تتحول إلى مشروع كبير.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "13. الفكرة التقليدية غالبا تستخدم تكنولوجيا حديثة وطرق جديدة.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "14. الفكرة الريادية قد تعتمد على التكنولوجيا الحديثة أو طرق جديدة.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "15. تأثير الفكرة التقليدية في السوق عادةً كبير لأنه نادر ومبتكر.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "16. الفكرة الريادية قد تحدث تغييرًا كبيرًا في السوق.",
+          "correct": "T"
+        },
+        {
+          "type": "tf",
+          "q": "17. جذب المستثمرين للفكرة التقليدية يكون غالبًا قويا لأنها تحمل فرص ربح عالية.",
+          "correct": "F"
+        },
+        {
+          "type": "tf",
+          "q": "18. جذب المستثمرين للفكرة الريادية قد يكون قويا بسبب إمكانية تحقيق أرباح عالية.",
+          "correct": "T"
         }
       ]
     }
