@@ -147,36 +147,36 @@
           "type": "written",
           "q": "1. Why is **RDBMS** not suitable for Big Data workloads?",
           "qt": "1. لماذا لا يعد نظام **RDBMS** مناسباً لأحمال عمل البيانات الضخمة؟",
-          "a": "RDBMS was designed for structured data and smaller volumes. Its main limits are: **==Scalability (vertical scaling only)==**, **==Size (petabyte-scale data is too large)==**, Data types (**==cannot handle unstructured/semi-structured data well==**), **==Velocity (not built for high-speed data)==**, and **==Cost (very expensive to scale)==**.",
-          "at": "تم تصميم نظام إدارة قواعد البيانات العلائقية (RDBMS) للبيانات المهيكلة والأحجام الأصغر. حدوده الرئيسية هي: **==قابلية التوسع (التوسع الرأسي فقط)==**، **==الحجم (بيانات بحجم بيتابايت كبيرة جداً)==**، أنواع البيانات (**==لا يمكنه التعامل جيداً مع البيانات غير المهيكلة/شبه المهيكلة==**)، **==السرعة (غير مبني للبيانات عالية السرعة)==**، و **==التكلفة (مكلف جداً للتوسع)==**."
+          "a": "RDBMS is designed for structured data and smaller volumes. Main limits:\n• **==Scalability==**: Vertical scaling only.\n• **==Size==**: Petabyte-scale data is too large.\n• **==Data types==**: Cannot handle unstructured/semi-structured data well.\n• **==Velocity==**: Not built for high-speed data.\n• **==Cost==**: Very expensive to scale.",
+          "at": "تم تصميم RDBMS للبيانات المهيكلة والأحجام الأصغر. حدوده الرئيسية هي:\n• **==قابلية التوسع==**: التوسع الرأسي فقط.\n• **==الحجم==**: بيانات بحجم بيتابايت كبيرة جداً.\n• **==أنواع البيانات==**: لا يمكنه التعامل جيداً مع البيانات غير المهيكلة أو شبه المهيكلة.\n• **==السرعة==**: غير مبني للبيانات عالية السرعة.\n• **==التكلفة==**: مكلف جداً للتوسع."
         },
         {
           "type": "written",
           "q": "2. What are the main advantages of **Hadoop**?",
           "qt": "2. ما هي المزايا الرئيسية لـ **Hadoop**؟",
-          "a": "It stores and processes huge amounts of any kind of data quickly. Advantages include: **==Scales linearly==**, handles **==structured, semi-structured, and unstructured data==**, provides **==fault tolerance==**, **==low cost==**, **==scalability==**, **==flexibility==**, and high **==computing power==**.",
-          "at": "يقوم بتخزين ومعالجة كميات ضخمة من أي نوع من البيانات بسرعة. تشمل المزايا: **==يتوسع بشكل خطي==**، يتعامل مع **==البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة==**، يوفر **==التسامح مع الأخطاء==**، **==تكلفة منخفضة==**، **==قابلية للتوسع==**، **==المرونة==**، و **==قوة حوسبة عالية==**."
+          "a": "It stores and processes huge amounts of any kind of data quickly. Advantages:\n• **==Scalability==**: Scales linearly.\n• **==Flexibility==**: Handles structured, semi-structured, and unstructured data.\n• **==Fault tolerance==**: Built-in data replication.\n• **==Low cost==**: Uses commodity hardware.\n• **==Computing power==**: High distributed processing power.",
+          "at": "يقوم بتخزين ومعالجة كميات ضخمة من أي نوع من البيانات بسرعة. المزايا تشمل:\n• **==قابلية التوسع==**: يتوسع بشكل خطي.\n• **==المرونة==**: يتعامل مع البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة.\n• **==التسامح مع الأخطاء==**: نسخ متماثل مدمج للبيانات.\n• **==تكلفة منخفضة==**: يستخدم أجهزة عادية غير مكلفة.\n• **==قوة الحوسبة==**: قوة معالجة موزعة وعالية."
         },
         {
           "type": "written",
           "q": "3. Explain the difference between **HDFS** and **HBase**.",
           "qt": "3. اشرح الفرق بين **HDFS** و **HBase**.",
-          "a": "• HDFS: Hadoop Distributed File System → the **==storage layer for large files with replication and fault tolerance==**.\n• HBase: **==NoSQL wide-column database==** that runs on top of HDFS. It adds **==random read/write access==** and supports point queries.",
-          "at": "• نظام HDFS: نظام ملفات هادوب الموزع ← هو **==طبقة التخزين للملفات الكبيرة مع النسخ المتماثل والتسامح مع الأخطاء==**.\n• نظام HBase: **==قاعدة بيانات NoSQL واسعة الأعمدة==** تعمل فوق HDFS. يضيف **==وصول قراءة/كتابة عشوائي==** ويدعم الاستعلامات النقطية."
+          "a": "• **==HDFS==**: Hadoop Distributed File System → The **==storage layer for large files==** with replication and fault tolerance.\n• **==HBase==**: A **==NoSQL wide-column database==** running on top of HDFS. It adds **==random read/write access==** and supports point queries.",
+          "at": "• **==نظام HDFS==**: نظام ملفات هادوب الموزع ← هو **==طبقة التخزين للملفات الكبيرة==** مع النسخ المتماثل والتسامح مع الأخطاء.\n• **==نظام HBase==**: **==قاعدة بيانات NoSQL واسعة الأعمدة==** تعمل فوق HDFS. يضيف **==وصول قراءة وكتابة عشوائي==** ويدعم الاستعلامات النقطية."
         },
         {
           "type": "written",
           "q": "4. Compare **MapReduce** and **Spark**.",
           "qt": "4. قارن بين **MapReduce** و **Spark**.",
-          "a": "• MapReduce: A **==batch processing==** engine that writes intermediate data to **==disk (slower)==**.\n• Spark: An **==in-memory processing==** engine, making it **==much faster==** for iterative tasks and analytics.",
-          "at": "• محرك MapReduce: محرك **==معالجة الدفعات (batch processing)==** يكتب البيانات الوسيطة على **==القرص (مما يجعله أبطأ)==**.\n• محرك Spark: محرك **==معالجة في الذاكرة (in-memory processing)==**، مما يجعله **==أسرع بكثير==** للمهام التكرارية والتحليلات."
+          "a": "• **==MapReduce==**: A **==batch processing==** engine that writes intermediate data to **==disk (slower)==**.\n• **==Spark==**: An **==in-memory processing==** engine, making it **==much faster==** for iterative tasks and analytics.",
+          "at": "• **==محرك MapReduce==**: محرك **==معالجة دفعات (Batch processing)==** يكتب البيانات الوسيطة على **==القرص (مما يجعله أبطأ)==**.\n• **==محرك Spark==**: محرك **==معالجة في الذاكرة (In-memory processing)==**، مما يجعله **==أسرع بكثير==** للمهام التكرارية والتحليلات."
         },
         {
           "type": "written",
           "q": "5. What is the role of **Apache Ambari** in Hadoop?",
           "qt": "5. ما هو دور **Apache Ambari** في نظام Hadoop؟",
-          "a": "Apache Ambari provides an **==intuitive, easy-to-use web UI==** for Hadoop cluster management. It allows **==provisioning, monitoring, and managing the entire Hadoop ecosystem==** (HDFS, MapReduce, Hive, HBase, etc.).",
-          "at": "يوفر Apache Ambari **==واجهة مستخدم ويب سهلة الاستخدام وبديهية==** لإدارة مجموعة Hadoop. ويسمح بـ **==تهيئة ومراقبة وإدارة نظام Hadoop البيئي بأكمله==** (مثل HDFS و MapReduce و Hive و HBase وغيرها)."
+          "a": "Apache Ambari provides an **==intuitive, easy-to-use web UI==** for Hadoop cluster management. It allows:\n• **==Provisioning==** resources.\n• **==Monitoring==** health and performance.\n• **==Managing==** the entire Hadoop ecosystem (HDFS, MapReduce, Hive, HBase, etc.).",
+          "at": "يوفر Apache Ambari **==واجهة مستخدم ويب سهلة الاستخدام==** لإدارة مجموعة Hadoop. ويسمح بـ:\n• **==تهيئة (Provisioning)==** الموارد.\n• **==مراقبة (Monitoring)==** الصحة والأداء.\n• **==إدارة (Managing)==** نظام Hadoop البيئي بأكمله (مثل HDFS و MapReduce و Hive و HBase)."
         }
       ]
     },
