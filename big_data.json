@@ -179,6 +179,56 @@
           "at": "يوفر Apache Ambari **==واجهة مستخدم ويب سهلة الاستخدام وبديهية==** لإدارة مجموعة Hadoop. ويسمح بـ **==تهيئة ومراقبة وإدارة نظام Hadoop البيئي بأكمله==** (مثل HDFS و MapReduce و Hive و HBase وغيرها)."
         }
       ]
+    },
+    {
+      "title": "Sheet 3",
+      "questions": [
+        { "type": "tf", "q": "1. Data Visualization is used to represent data graphically for better understanding.", "correct": "T" },
+        { "type": "tf", "q": "2. Exploratory Data Analysis (EDA) is only performed after model deployment.", "correct": "F" },
+        { "type": "tf", "q": "3. EDA helps in identifying patterns, trends, and anomalies in data.", "correct": "T" },
+        { "type": "tf", "q": "4. Central tendency refers to measures like mean, median, and mode.", "correct": "T" },
+        { "type": "tf", "q": "5. Dispersion measures the spread of data.", "correct": "T" },
+        { "type": "tf", "q": "6. A histogram is used for multivariate analysis only.", "correct": "F" },
+        { "type": "tf", "q": "7. Box plots can help identify outliers in data.", "correct": "T" },
+        { "type": "tf", "q": "8. Correlation matrix is used to analyze relationships between multiple variables.", "correct": "T" },
+        { "type": "tf", "q": "9. Data visualization has no role in machine learning.", "correct": "F" },
+        { "type": "tf", "q": "10. Scatter plots are used for visualizing relationships between two variables.", "correct": "T" },
+        { "type": "mcq", "q": "1. What is the main goal of EDA?", "options": ["a) Data storage", "b) Data exploration and understanding", "c) Data deletion", "d) Data encryption"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which measure represents central tendency?", "options": ["a) Variance", "b) Mean", "c) Range", "d) Standard deviation"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which plot is used for distribution analysis?", "options": ["a) Histogram", "b) Pie chart", "c) Line chart", "d) Bar chart"], "correct": 0 },
+        { "type": "mcq", "q": "4. Which technique is used to detect outliers?", "options": ["a) Scatter plot", "b) Box plot", "c) Heatmap", "d) Line chart"], "correct": 1 },
+        { "type": "mcq", "q": "5. Which library is commonly used for visualization in Python?", "options": ["a) NumPy", "b) Pandas", "c) Matplotlib", "d) TensorFlow"], "correct": 2 },
+        { "type": "mcq", "q": "6. Correlation matrix is used to:", "options": ["a) Store data", "b) Measure relationships between variables", "c) Clean data", "d) Encode data"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which plot is used for multivariate analysis?", "options": ["a) Histogram", "b) Box plot", "c) Scatter matrix", "d) Density plot"], "correct": 2 },
+        { "type": "mcq", "q": "8. Dispersion includes:", "options": ["a) Mean", "b) Median", "c) Standard deviation", "d) Mode"], "correct": 2 },
+        { "type": "mcq", "q": "9. Density plots are used to:", "options": ["a) Show data categories", "b) Show data distribution smoothly", "c) Show exact values", "d) Store data"], "correct": 1 },
+        { "type": "mcq", "q": "10. Data visualization in ML helps in:", "options": ["a) Ignoring data", "b) Understanding features and patterns", "c) Deleting models", "d) Avoiding preprocessing"], "correct": 1 },
+        {
+          "type": "code",
+          "q": "Coding Q1: Create a Histogram (Univariate Plot)",
+          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Generate some random data\ndata = np.random.randn(1000)\n\n# Create the histogram\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q2: Create a Density Plot (Univariate Plot)",
+          "code": "import seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load a sample dataset\ndf = sns.load_dataset(\"iris\")\n\n# Create the density plot\nsns.kdeplot(data=df, x=\"sepal_length\", fill=True)\n\n# Add labels and title\nplt.xlabel(\"Sepal Length\")\nplt.ylabel(\"Density\")\nplt.title(\"Density Plot of Sepal Length\")\n\n# Show the plot\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q3: Create a Box and Whisker Plot (Univariate Plot)",
+          "code": "import matplotlib.pyplot as plt\n\n# Sample data\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35]\n\n# Create a figure and axes\nfig, ax = plt.subplots()\n\n# Create the boxplot\nax.boxplot(data)\n\n# Set the title\nax.set_title('Box and Whisker Plot')\n\n# Show the plot\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q4: Create a Correlation Matrix Plot (Multivariate Plot)",
+          "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Sample data\ndata = {'A': [1, 2, 3, 4, 5],\n        'B': [5, 4, 3, 2, 1],\n        'C': [2, 3, 1, 4, 5]}\n\ndf = pd.DataFrame(data)\n\n# Calculate the correlation matrix\nc_matrix = df.corr()\n\n# Create a heatmap\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title(\"Correlation Matrix\")\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q5: Create a Scatter Matrix Plot (Multivariate Plot)",
+          "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn import datasets\n\n# Load the iris dataset\niris = datasets.load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\n\n# Create the scatter matrix plot\npd.plotting.scatter_matrix(df, diagonal='hist', figsize=(8,7))\nplt.show()"
+        }
+      ]
     }
   ]
 }
