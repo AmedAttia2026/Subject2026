@@ -202,7 +202,12 @@
         { "type": "mcq", "q": "7. Which plot is used for multivariate analysis?", "options": ["a) Histogram", "b) Box plot", "c) Scatter matrix", "d) Density plot"], "correct": 2 },
         { "type": "mcq", "q": "8. Dispersion includes:", "options": ["a) Mean", "b) Median", "c) Standard deviation", "d) Mode"], "correct": 2 },
         { "type": "mcq", "q": "9. Density plots are used to:", "options": ["a) Show data categories", "b) Show data distribution smoothly", "c) Show exact values", "d) Store data"], "correct": 1 },
-        { "type": "mcq", "q": "10. Data visualization in ML helps in:", "options": ["a) Ignoring data", "b) Understanding features and patterns", "c) Deleting models", "d) Avoiding preprocessing"], "correct": 1 },
+        { "type": "mcq", "q": "10. Data visualization in ML helps in:", "options": ["a) Ignoring data", "b) Understanding features and patterns", "c) Deleting models", "d) Avoiding preprocessing"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Code_Lec3",
+      "questions": [
         {
           "type": "code",
           "q": "Coding Q1: Create a Histogram (Univariate Plot)",
