@@ -211,7 +211,7 @@
         {
           "type": "code",
           "q": "Coding Q1: Create a Histogram (Univariate Plot)",
-          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Generate some random data\ndata = np.random.randn(1000)\n\n# Create the histogram\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
+          "code": "import matplotlib.pyplot as plt\n\n# اختيار عمود رقمي (غير الاسم حسب الداتا عندك)\ncolumn = 'age'\n\nplt.hist(df[column], bins=10)\nplt.title('Histogram')\nplt.xlabel(column)\nplt.ylabel('Frequency')\nplt.show()"
         },
         {
           "type": "code",
