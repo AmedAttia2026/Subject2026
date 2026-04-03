@@ -318,15 +318,15 @@
           "type": "written",
           "q": "4. Define **Exploratory Data Analysis (EDA)**.",
           "qt": "4. عرف **تحليل البيانات الاستكشافي (EDA)**.",
-          "a": "Exploratory Data Analysis (EDA) is a critical **==iterative process of examining datasets==** using **==data visualization==** to **==identify patterns, detect outliers, and understand data structures==** before modeling.",
-          "at": "تحليل البيانات الاستكشافي (EDA) هو **==عملية تكرارية حاسمة لفحص مجموعات البيانات==** باستخدام **==تصوير البيانات==** من أجل **==تحديد الأنماط، واكتشاف القيم المتطرفة، وفهم هياكل البيانات==** قبل بناء النماذج."
+          "a": "Exploratory Data Analysis (EDA) using data visualization is a critical, **==iterative process of examining datasets==** to **==identify patterns, detect outliers, and test hypotheses==** using plots like **==scatter plots, histograms, and heatmaps==**.",
+          "at": "تحليل البيانات الاستكشافي (EDA) باستخدام تصوير البيانات هو **==عملية تكرارية حاسمة لفحص مجموعات البيانات==** من أجل **==تحديد الأنماط، واكتشاف القيم المتطرفة، واختبار الفرضيات==** باستخدام مخططات مثل **==مخططات التشتت والمدرجات التكرارية والخرائط الحرارية==**."
         },
         {
           "type": "written",
           "q": "5. Explain the difference between **univariate** and **multivariate** plots.",
           "qt": "5. اشرح الفرق بين المخططات **أحادية المتغير (univariate)** و **متعددة المتغيرات (multivariate)**.",
-          "a": "• Univariate Plots: Analyze **==one variable only==** (e.g., Histograms, Density Plots, Box Plots).\n• Multivariate Plots: Show **==relationships between two or more variables==** (e.g., Correlation Matrix Plot, Scatter Matrix Plot).",
-          "at": "• المخططات أحادية المتغير: تحلل **==متغيراً واحداً فقط==** (مثل المدرج التكراري والمخطط الصندوقي).\n• المخططات متعددة المتغيرات: توضح **==العلاقات بين متغيرين أو أكثر==** (مثل مصفوفة الارتباط ومصفوفة التشتت)."
+          "a": "• Univariate Analysis: **==Analyzing one variable at a time==** (e.g., histograms).\n• Bivariate/Multivariate Analysis: **==Analyzing relationships between two or more variables==** (e.g., scatter plots, heatmaps).",
+          "at": "• التحليل أحادي المتغير: **==تحليل متغير واحد في كل مرة==** (مثل المدرجات التكرارية).\n• التحليل ثنائي/متعدد المتغيرات: **==تحليل العلاقات بين متغيرين أو أكثر==** (مثل مخططات التشتت والخرائط الحرارية)."
         },
         {
           "type": "code",
