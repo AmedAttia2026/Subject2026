@@ -211,7 +211,7 @@
         {
           "type": "code",
           "q": "Coding Q1: Create a Histogram (Univariate Plot)",
-          "code": "import matplotlib.pyplot as plt\n\n# اختيار عمود رقمي (غير الاسم حسب الداتا عندك)\ncolumn = 'age'\n\nplt.hist(df[column], bins=10)\nplt.title('Histogram')\nplt.xlabel(column)\nplt.ylabel('Frequency')\nplt.show()"
+          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Generate some random data\ndata = np.random.randn(1000)\n\n# Create the histogram\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
         },
         {
           "type": "code",
@@ -331,22 +331,22 @@
         {
           "type": "code",
           "q": "Programming Task 1: Load a dataset and display basic statistical summary (mean, median, std).",
-          "code": "import pandas as pd\n\n# Load the dataset\ndf = pd.read_csv('data.csv')\n\n# Display basic statistical summary\nprint(df.describe())"
+          "code": "import pandas as pd\n\ndf = pd.read_csv('your_dataset.csv')\nprint(df.describe())\n\nprint(\"\\nMean:\\n\", df.mean(numeric_only=True))\nprint(\"\\nMedian:\\n\", df.median(numeric_only=True))\nprint(\"\\nStandard Deviation:\\n\", df.std(numeric_only=True))"
         },
         {
           "type": "code",
           "q": "Programming Task 2: Create a histogram to visualize the distribution of a numeric column.",
-          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Generate some random numeric data\ndata = np.random.randn(1000)\n\n# Create the histogram\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Distribution')\nplt.show()"
+          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\ndata = np.random.randn(1000)\n\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Distribution')\nplt.show()"
         },
         {
           "type": "code",
           "q": "Programming Task 3: Generate a box plot to detect outliers in a dataset.",
-          "code": "import matplotlib.pyplot as plt\n\n# Sample dataset with outliers\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35, 100]\n\n# Create the box plot\nfig, ax = plt.subplots()\nax.boxplot(data)\n\nax.set_title('Box Plot for Outlier Detection')\nplt.show()"
+          "code": "import matplotlib.pyplot as plt\n\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35, 100]\n\nfig, ax = plt.subplots()\nax.boxplot(data)\n\nax.set_title('Box Plot for Outlier Detection')\nplt.show()"
         },
         {
           "type": "code",
           "q": "Programming Task 4: Create a correlation matrix and visualize it.",
-          "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Sample data\ndata = {'A': [1, 2, 3, 4, 5],\n        'B': [5, 4, 3, 2, 1],\n        'C': [2, 3, 1, 4, 5]}\n\ndf = pd.DataFrame(data)\n\n# Calculate correlation matrix\nc_matrix = df.corr()\n\n# Visualize with heatmap\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title(\"Correlation Matrix Visualization\")\nplt.show()"
+          "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndata = {'A': [1, 2, 3, 4, 5],\n        'B': [5, 4, 3, 2, 1],\n        'C': [2, 3, 1, 4, 5]}\n\ndf = pd.DataFrame(data)\n\nc_matrix = df.corr()\n\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title(\"Correlation Matrix Visualization\")\nplt.show()"
         }
       ]
     }
