@@ -28,7 +28,7 @@
         {
           "type": "written",
           "q": "1. Define **Big Data** in your own words.",
-          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلمات الخاصة.",
+          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلماتك الخاصة.",
           "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. It requires **==advanced technologies==** to extract **==useful insights==**.",
           "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. وتتطلب **==تقنيات متقدمة==** لاستخراج **==رؤى مفيدة==**."
         },
@@ -87,8 +87,8 @@
           "type": "written",
           "q": "1. Explain the main components of **Big Data Architecture**.",
           "qt": "1. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
-          "a": "• Ingestion: **==Capture raw data==** from sources (streaming & batch) and deliver to storage.\n• Storage: **==Durable distributed storage==** (HDFS, Cloud Object Storage, Data Warehouses).\n• Processing: **==Transformations, aggregations==** using batch (Spark) or stream processing (Flink).\n• Analytics: Serving data to **==dashboards, BI tools, and ML models==** for insights.",
-          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (تدفق ودفعات) وتوصيلها للتخزين.\n• التخزين (Storage): **==تخزين موزع متين==** (مثل HDFS، التخزين السحابي، مستودعات البيانات).\n• المعالجة (Processing): **==التحويلات والتجميعات==** باستخدام معالجة الدفعات (Spark) أو التدفق (Flink).\n• التحليلات (Analytics): تقديم البيانات لـ **==لوحات المعلومات، وأدوات ذكاء الأعمال، ونماذج تعلم الآلة==** لاستخراج الرؤى."
+          "a": "• Ingestion: **==Capture raw data==** from sources (streaming and batch) and deliver to storage or processing systems.\n• Storage: **==Durable, often distributed storage==** optimized for cost and access patterns (cold vs hot data).\n• Processing: **==Transformations, enrichment, aggregations and model training==** using batch or stream compute frameworks.\n• Analytics: **==Serving results to BI tools, dashboards, or ML inference endpoints==**; support for ad-hoc queries and exploratory analysis.",
+          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (التدفق والدفعات) وتوصيلها إلى أنظمة التخزين أو المعالجة.\n• التخزين (Storage): **==تخزين متين وموزع غالباً==** مُحسّن من حيث التكلفة وأنماط الوصول (البيانات الباردة مقابل الساخنة).\n• المعالجة (Processing): **==التحويلات، والإثراء، والتجميعات، وتدريب النماذج==** باستخدام أطر عمل الحوسبة بالدفعات أو التدفق.\n• التحليلات (Analytics): **==تقديم النتائج لأدوات ذكاء الأعمال، لوحات المعلومات، أو نقاط نهاية استدلال تعلم الآلة==**؛ ودعم الاستعلامات المخصصة والتحليل الاستكشافي."
         },
         {
           "type": "written",
@@ -304,8 +304,8 @@
           "type": "written",
           "q": "2. Explain the main components of **Big Data Architecture**.",
           "qt": "2. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
-          "a": "• Ingestion: **==Capture raw data==** from sources (streaming & batch) and deliver to storage.\n• Storage: **==Durable distributed storage==** (HDFS, Cloud Object Storage, Data Warehouses).\n• Processing: **==Transformations, aggregations==** using batch (Spark) or stream processing (Flink).\n• Analytics: Serving data to **==dashboards, BI tools, and ML models==** for insights.",
-          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (تدفق ودفعات) وتوصيلها للتخزين.\n• التخزين (Storage): **==تخزين موزع متين==** (مثل HDFS، التخزين السحابي، مستودعات البيانات).\n• المعالجة (Processing): **==التحويلات والتجميعات==** باستخدام معالجة الدفعات (Spark) أو التدفق (Flink).\n• التحليلات (Analytics): تقديم البيانات لـ **==لوحات المعلومات، وأدوات ذكاء الأعمال، ونماذج تعلم الآلة==** لاستخراج الرؤى."
+          "a": "• Ingestion: **==Capture raw data==** from sources (streaming and batch) and deliver to storage or processing systems.\n• Storage: **==Durable, often distributed storage==** optimized for cost and access patterns (cold vs hot data).\n• Processing: **==Transformations, enrichment, aggregations and model training==** using batch or stream compute frameworks.\n• Analytics: **==Serving results to BI tools, dashboards, or ML inference endpoints==**; support for ad-hoc queries and exploratory analysis.",
+          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (التدفق والدفعات) وتوصيلها إلى أنظمة التخزين أو المعالجة.\n• التخزين (Storage): **==تخزين متين وموزع غالباً==** مُحسّن من حيث التكلفة وأنماط الوصول (البيانات الباردة مقابل الساخنة).\n• المعالجة (Processing): **==التحويلات، والإثراء، والتجميعات، وتدريب النماذج==** باستخدام أطر عمل الحوسبة بالدفعات أو التدفق.\n• التحليلات (Analytics): **==تقديم النتائج لأدوات ذكاء الأعمال، لوحات المعلومات، أو نقاط نهاية استدلال تعلم الآلة==**؛ ودعم الاستعلامات المخصصة والتحليل الاستكشافي."
         },
         {
           "type": "written",
