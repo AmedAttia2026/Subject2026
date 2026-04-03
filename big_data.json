@@ -28,7 +28,7 @@
         {
           "type": "written",
           "q": "1. Define **Big Data** in your own words.",
-          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلماتك الخاصة.",
+          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلمات الخاصة.",
           "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. It requires **==advanced technologies==** to extract **==useful insights==**.",
           "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. وتتطلب **==تقنيات متقدمة==** لاستخراج **==رؤى مفيدة==**."
         },
@@ -331,7 +331,7 @@
         {
           "type": "code",
           "q": "Programming Task 1: Load a dataset and display basic statistical summary (mean, median, std).",
-          "code": "import pandas as pd\n\ndf = pd.read_csv('your_dataset.csv')\nprint(df.describe())\n\nprint(\"\\nMean:\\n\", df.mean(numeric_only=True))\nprint(\"\\nMedian:\\n\", df.median(numeric_only=True))\nprint(\"\\nStandard Deviation:\\n\", df.std(numeric_only=True))"
+          "code": "import pandas as pd\n\ndf = pd.read_csv('your_dataset.csv')\n\nprint(\"\\nMean:\\n\", df.mean(numeric_only=True))\nprint(\"\\nMedian:\\n\", df.median(numeric_only=True))\nprint(\"\\nStandard Deviation:\\n\", df.std(numeric_only=True))"
         },
         {
           "type": "code",
