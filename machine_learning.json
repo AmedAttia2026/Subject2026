@@ -141,6 +141,31 @@
           "code": "import numpy as np\n\n# 1. Prepare simple dataset\nX = np.array([1, 2, 3, 4, 5])\ny = np.array([2, 4, 5, 4, 5])\n\n# 2. Initialize parameters\nm = 0.0\nb = 0.0\nlearning_rate = 0.01\nepochs = 1000\nn = float(len(X))\n\n# 3. Gradient Descent Loop\nfor i in range(epochs):\n    # Calculate predictions\n    y_pred = (m * X) + b\n    \n    # Calculate derivatives (gradients)\n    D_m = (-2/n) * sum(X * (y - y_pred))\n    D_b = (-2/n) * sum(y - y_pred)\n    \n    # Update parameters\n    m = m - (learning_rate * D_m)\n    b = b - (learning_rate * D_b)\n\nprint(f\"Optimized Slope (m): {m:.4f}\")\nprint(f\"Optimized Intercept (b): {b:.4f}\")"
         }
       ]
+    },
+    {
+      "title": "Sheet 4 - Part 2",
+      "questions": [
+        { "type": "tf", "q": "1. Linear regression with multivariables uses more than one input feature to predict the output.", "correct": "T" },
+        { "type": "tf", "q": "2. In multivariable linear regression, the hypothesis function can include multiple parameters (θ values).", "correct": "T" },
+        { "type": "tf", "q": "3. The learning rate controls how large the update step is during Gradient Descent.", "correct": "T" },
+        { "type": "tf", "q": "4. Increasing the number of iterations always guarantees the best model.", "correct": "F" },
+        { "type": "tf", "q": "5. Data rescaling helps Gradient Descent converge faster.", "correct": "T" },
+        { "type": "tf", "q": "6. Polynomial regression can model nonlinear relationships between variables.", "correct": "T" },
+        { "type": "tf", "q": "7. The Normal Equation is an iterative optimization method.", "correct": "F" },
+        { "type": "tf", "q": "8. Gradient Descent requires selecting a learning rate parameter.", "correct": "T" },
+        { "type": "tf", "q": "9. The Normal Equation can compute theta values directly without iterations.", "correct": "T" },
+        { "type": "tf", "q": "10. Gradient Descent is usually preferred for very large datasets.", "correct": "T" },
+        { "type": "mcq", "q": "1. Multivariable Linear Regression uses:", "options": ["A) One feature only", "B) Multiple input features", "C) Only categorical variables", "D) Only binary variables"], "correct": 1 },
+        { "type": "mcq", "q": "2. The general hypothesis equation for multivariable linear regression is:", "options": ["A) h(x) = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₙxₙ", "B) h(x) = x² + y²", "C) h(x) = θx²", "D) h(x) = x + y²"], "correct": 0 },
+        { "type": "mcq", "q": "3. The parameter that controls the step size in Gradient Descent is called:", "options": ["A) Iteration number", "B) Learning rate", "C) Theta", "D) Bias"], "correct": 1 },
+        { "type": "mcq", "q": "4. If the learning rate is too large, Gradient Descent may:", "options": ["A) Converge slowly", "B) Fail to converge", "C) Always find the exact minimum", "D) Stop immediately"], "correct": 1 },
+        { "type": "mcq", "q": "5. Polynomial regression is used when:", "options": ["A) Data has a nonlinear pattern", "B) Data is always linear", "C) Only one variable exists", "D) Data is categorical"], "correct": 0 },
+        { "type": "mcq", "q": "6. Data rescaling is mainly used to:", "options": ["A) Increase dataset size", "B) Improve convergence speed of Gradient Descent", "C) Remove noise", "D) Change labels"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which method directly computes theta values without iterations?", "options": ["A) Gradient Descent", "B) Normal Equation", "C) Logistic Regression", "D) Decision Tree"], "correct": 1 },
+        { "type": "mcq", "q": "8. Which method requires selecting a learning rate?", "options": ["A) Normal Equation", "B) Gradient Descent", "C) Polynomial Equation", "D) Matrix Inverse"], "correct": 1 },
+        { "type": "mcq", "q": "9. Which of the following equation types represents a second-degree polynomial?", "options": ["A) Linear", "B) Quadratic", "C) Cubic", "D) Square Root"], "correct": 1 },
+        { "type": "mcq", "q": "10. For very large datasets, which method is generally more practical?", "options": ["A) Normal Equation", "B) Gradient Descent", "C) Matrix Inversion Only", "D) Direct Calculation"], "correct": 1 }
+      ]
     }
   ]
 }
