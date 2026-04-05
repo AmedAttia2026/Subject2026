@@ -1,21 +1,21 @@
 {
   "status": "safe",
   "authorized_devices": [
-    ["محمود عباس 4", "DEV11EA81E2"],
-    ["احمد عطية", "DEV6C968D3F"],
-    ["احمد رزق", "DEVA42AC22F"],
-    ["احمد عثمان", "DEV275DA664"],
-    ["رضوان", "DEVDB8A2917"],
-    ["محمد شرف 2", "DEV50869894"],
-    ["محمد شرف 3", "DEVAD9AF443"],
-    ["عبدالله محمد", "DEVDD11E08A"],
-    ["ايمن", "DEVD95F31E6"],
-    ["الدسوقي", "DEV46661BC9"],
-    ["محمود رضا", "DEV14B1A011"]
+    ["محمود عباس 4", "DEV11EA81E2", "every all"],
+    ["احمد عطية", "DEV6C968D3F", "every all"],
+    ["احمد رزق", "DEVA42AC22F", "every all"],
+    ["احمد عثمان", "DEV275DA664", "every all"],
+    ["رضوان", "DEVDB8A2917", "every all"],
+    ["محمد شرف 2", "DEV50869894", "every all"],
+    ["محمد شرف 3", "DEVAD9AF443", "every all"],
+    ["عبدالله محمد", "DEVDD11E08A", "every all"],
+    ["ايمن", "DEVD95F31E6", "every all"],
+    ["الدسوقي", "DEV46661BC9", "every all"],
+    ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]] 
   ],
   "hidden_devices": [
-    ["توني", "DEVBADB1960"],
-    ["web", "DEVECA7EB69"],
-    ["موبيل احمد عطية", "DEVF5144FE5"],
+    ["توني", "DEVBADB1960", "every all"],
+    ["web", "DEVECA7EB69", "every all"],
+    ["موبيل احمد عطية", "DEVF5144FE5", "every all"]
   ]
 }
