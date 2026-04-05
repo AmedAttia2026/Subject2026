@@ -1,7 +1,7 @@
 {
   "status": "safe",
   "authorized_devices": [
-    ["Public Users", "every person", ["big_data","machine_learning","entrepreneurship","iot_security"]]
+    ["Public Users", "every person", ["machine_learning","entrepreneurship","iot_security"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
