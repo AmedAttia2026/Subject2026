@@ -11,7 +11,8 @@
     ["عبدالله محمد", "DEVDD11E08A", "every all"],
     ["ايمن", "DEVD95F31E6", "every all"],
     ["الدسوقي", "DEV46661BC9", "every all"],
-    ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]]
+    ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]],
+    ["Public Users", "every person", ["big_data", "machine_learning"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
@@ -19,14 +20,16 @@
     ["موبيل احمد عطية", "DEVF5144FE5", "every all"]
   ],
   "notes_for_admin": {
-    "info": "قائمة بأسماء معرفات المواد الستة للاستخدام في الصلاحيات المخصصة",
-    "subjects_ids": [
-      "big_data",
-      "machine_learning",
-      "ccnp_route",
-      "ccnp_switch",
-      "entrepreneurship",
-      "iot_security"
-    ]
+    "info": "دليل معرفات المواد الستة وكيفية استخدامها في الصلاحيات المخصصة",
+    "subjects_description": [
+      { "id": "big_data", "desc": "البيانات الضخمة والتحليلات (Big Data & Analytics)" },
+      { "id": "machine_learning", "desc": "تعلم الآلة والذكاء الاصطناعي (Machine Learning)" },
+      { "id": "ccnp_route", "desc": "توجيه الشبكات المتقدم (CCNP Route)" },
+      { "id": "ccnp_switch", "desc": "تبديل الشبكات المتقدم (CCNP Switch)" },
+      { "id": "entrepreneurship", "desc": "ريادة الأعمال والابتكار (Entrepreneurship)" },
+      { "id": "iot_security", "desc": "أمن إنترنت الأشياء (IOT Security)" }
+    ],
+    "how_to_add_user": "لإضافة مستخدم جديد: [الاسم، كود الجهاز، الصلاحية]. الصلاحية تكون 'every all' للكل، أو قائمة معرفات محددة مثل ['big_data']",
+    "public_access_note": "سطر 'Public Users' مع 'every person' يسمح لأي مستخدم جديد بفتح المواد المحددة له تلقائياً بدون تفعيل خاص"
   }
 }
