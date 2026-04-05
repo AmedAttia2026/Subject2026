@@ -11,7 +11,7 @@
     ["ايمن", "DEVD95F31E6", "every all"],
     ["الدسوقي", "DEV46661BC9", "every all"],
     ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]],
-    ["Public Users", "every person", ["big_data", "machine_learning"]]
+    ["Public Users", "every person", ["machine_learning"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
