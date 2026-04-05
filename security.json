@@ -1,6 +1,12 @@
 {
   "status": "safe",
   "authorized_devices": [
+    ["Public Users", "every person", ["machine_learning"]]
+  ],
+  "hidden_devices": [
+    ["توني", "DEVBADB1960", "every all"],
+    ["web", "DEVECA7EB69", "every all"],
+    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["محمود عباس 4", "DEV11EA81E2", "every all"],
     ["احمد رزق", "DEVA42AC22F", "every all"],
     ["احمد عثمان", "DEV275DA664", "every all"],
@@ -11,12 +17,6 @@
     ["ايمن", "DEVD95F31E6", "every all"],
     ["الدسوقي", "DEV46661BC9", "every all"],
     ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]],
-    ["Public Users", "every person", ["machine_learning"]]
-  ],
-  "hidden_devices": [
-    ["توني", "DEVBADB1960", "every all"],
-    ["web", "DEVECA7EB69", "every all"],
-    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["موبيل احمد عطية", "DEVF5144FE5", "every all"]
   ],
   "notes_for_admin": {
