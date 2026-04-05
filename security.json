@@ -2,7 +2,7 @@
   "status": "safe",
   "authorized_devices": [
     ["محمود عباس 4", "DEV11EA81E2", "every all"],
-    ["احمد عطية", "DEV6C968D3F", ["big_data", "machine_learning"]],
+    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["احمد رزق", "DEVA42AC22F", "every all"],
     ["احمد عثمان", "DEV275DA664", "every all"],
     ["رضوان", "DEVDB8A2917", "every all"],
@@ -11,11 +11,22 @@
     ["عبدالله محمد", "DEVDD11E08A", "every all"],
     ["ايمن", "DEVD95F31E6", "every all"],
     ["الدسوقي", "DEV46661BC9", "every all"],
-    ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]] 
+    ["محمود رضا", "DEV14B1A011", ["big_data", "machine_learning"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
     ["web", "DEVECA7EB69", "every all"],
     ["موبيل احمد عطية", "DEVF5144FE5", "every all"]
-  ]
+  ],
+  "notes_for_admin": {
+    "info": "قائمة بأسماء معرفات المواد الستة للاستخدام في الصلاحيات المخصصة",
+    "subjects_ids": [
+      "big_data",
+      "machine_learning",
+      "ccnp_route",
+      "ccnp_switch",
+      "entrepreneurship",
+      "iot_security"
+    ]
+  }
 }
