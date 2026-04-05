@@ -2,7 +2,6 @@
   "status": "safe",
   "authorized_devices": [
     ["محمود عباس 4", "DEV11EA81E2", "every all"],
-    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["احمد رزق", "DEVA42AC22F", "every all"],
     ["احمد عثمان", "DEV275DA664", "every all"],
     ["رضوان", "DEVDB8A2917", "every all"],
@@ -17,6 +16,7 @@
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
     ["web", "DEVECA7EB69", "every all"],
+    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["موبيل احمد عطية", "DEVF5144FE5", "every all"]
   ],
   "notes_for_admin": {
