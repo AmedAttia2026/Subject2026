@@ -3,7 +3,7 @@
   "authorized_devices": [
     ["محمود عباس 4", "DEV11EA81E2", "every all"],
     ["احمد عطية", "DEV6C968D3F", "every all"],
-    ["Public Users", "every person", ["big_data", "machine_learning", "ccnp_route", "ccnp_switch", "entrepreneurship"]]
+    ["Public Users", "every person", [every all]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
