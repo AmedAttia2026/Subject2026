@@ -1151,14 +1151,16 @@
           "q": "1. Explain **telemetry** and **commands** with one IoT example for each.",
           "qt": "1. اشرح **القياس عن بعد (telemetry)** و **الأوامر (commands)** مع مثال واحد في إنترنت الأشياء لكل منهما.",
           "a": "• Telemetry = **==data the device sends out to report its status or sensor readings==** (device → server).\nExample: a temperature sensor sends temp=25°C to the cloud every 5 seconds.\n• Commands = **==instructions the server/app sends to the device to change what it does==** (server/app → device).\nExample: a mobile app sends LED=ON or unlock to a smart lock.",
-          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي."
+          "at": "• القياس عن بعد = **==البيانات التي يرسلها الجهاز للإبلاغ عن حالته أو قراءات المستشعر==** (الجهاز ← الخادم).\nمثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر = **==التعليمات التي يرسلها الخادم/التطبيق إلى الجهاز لتغيير ما يفعله==** (الخادم/التطبيق ← الجهاز).\nمثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي.",
+          "correct": true
         },
         {
           "type": "written",
           "q": "2. Explain what **segmentation** means and why it reduces **“blast radius.”**",
           "qt": "2. اشرح ما يعنيه **التقسيم (segmentation)** ولماذا يقلل من **\"نطاق الضرر\" (blast radius)**.",
           "a": "• Segmentation means **==dividing the network into separate zones==** (for example: an IoT network, an employee network, and an admin network) and **==controlling how they communicate using rules==** (firewall/VLAN rules).\n• It reduces blast radius because if one IoT device is hacked, the attacker **==cannot easily reach everything else==** (like staff laptops, databases, or admin systems). The **==damage stays limited to that segment==**.",
-          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**."
+          "at": "• التقسيم يعني **==تقسيم الشبكة إلى مناطق منفصلة==** (على سبيل المثال: شبكة IoT، شبكة موظفين، وشبكة إدارة) و **==التحكم في كيفية تواصلها باستخدام القواعد==** (قواعد جدار الحماية/VLAN).\n• يقلل من نطاق الضرر لأنه إذا تم اختراق جهاز IoT واحد، **==لا يمكن للمهاجم الوصول بسهولة إلى كل شيء آخر==** (مثل حواسيب الموظفين، قواعد البيانات، أو أنظمة الإدارة). **==يبقى الضرر محدودًا في هذا القسم==**.",
+          "correct": true
         },
         {
           "type": "written",
@@ -1221,6 +1223,701 @@
           "type": "code",
           "q": "Coding Q4: Add TLS (Concept + Code Configuration)\nWhat TLS adds:\n• Encrypts MQTT traffic (prevents sniffing)\n• Allows server authentication using certificates\n• Prevents MITM if certificates are validated correctly\n\nInstructor will provide:\n• CA certificate file (and possibly client cert/key depending on setup)\n• TLS port (commonly 8883)",
           "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"            # provided by instructor\n\n# If mutual TLS is used, instructor will provide these too:\nCLIENT_CERT = None            # e.g., \"client.crt\"\nCLIENT_KEY  = None            # e.g., \"client.key\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\nclient.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\n\n# Require certificate verification (important!)\nclient.tls_insecure_set(False)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+        }
+      ]
+    },
+    {
+      "title": "Revision",
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "1. Asymmetric crypto uses:",
+          "options": [
+            "A) One shared key",
+            "B) No keys",
+            "C) Public key + private key",
+            "D) Only passwords"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "2. Signed firmware updates are important because they:",
+          "options": [
+            "A) Reduce file size",
+            "B) Ensure updates come from the real manufacturer and were not modified",
+            "C) Increase battery drain",
+            "D) Remove the need for authentication"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "3. Why must IoT security be end-to-end?",
+          "options": [
+            "A) Attacks only happen in the cloud",
+            "B) Security must cover Device → Network → Cloud → App → Operations",
+            "C) Only the app layer is important",
+            "D) Only the device layer is important"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "4. STRIDE “D” stands for:",
+          "options": [
+            "A) Debugging",
+            "B) Denial of Service",
+            "C) Data Storage",
+            "D) Device Discovery"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "5. MQTT communication style is:",
+          "options": [
+            "A) File transfer",
+            "B) Publish/Subscribe",
+            "C) Email-based",
+            "D) Peer-to-peer only"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "6. “Hardcoded secret” means:",
+          "options": [
+            "A) A key stored safely in secure hardware",
+            "B) A password/key written directly inside the source code",
+            "C) A key stored only in the cloud",
+            "D) A key that changes daily automatically"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "7. The main crypto goals are:",
+          "options": [
+            "A) Speed, cost, size",
+            "B) Confidentiality, integrity, authentication",
+            "C) Wi-Fi, BLE, Zigbee",
+            "D) Password, username, email"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "8. In IoT systems, telemetry usually means:",
+          "options": [
+            "A) Server → device actions",
+            "B) Device → server measurements",
+            "C) Device reset",
+            "D) User login"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "9. In threat modeling, an asset is:",
+          "options": [
+            "A) A type of attack",
+            "B) Something valuable to protect",
+            "C) A bug in code",
+            "D) A firewall rule"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "10. What is the best definition of IoT security?",
+          "options": [
+            "A) Protecting only cloud databases from hackers",
+            "B) Protecting devices that sense, communicate, and sometimes act on the physical world",
+            "C) Protecting smartphones from malware only",
+            "D) Protecting internet browsers from phishing"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "11. “Fail-safe behavior” means:",
+          "options": [
+            "A) Continue operation even with unsafe configuration",
+            "B) If something is wrong, refuse unsafe actions and use safe defaults",
+            "C) Delete all files",
+            "D) Turn off validation"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "12. TLS mainly provides:",
+          "options": [
+            "A) Compression",
+            "B) Encryption + integrity + authentication",
+            "C) Larger packets",
+            "D) Faster CPU"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "13. A trust boundary is:",
+          "options": [
+            "A) A cable between sensors",
+            "B) A place where trust level changes",
+            "C) A router brand",
+            "D) A database table"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "14. Digital signatures provide:",
+          "options": [
+            "A) Confidentiality only",
+            "B) Integrity + authentication",
+            "C) Faster Wi-Fi",
+            "D) Bigger storage"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "15. Which is the correct typical IoT architecture order (end-to-end view)?",
+          "options": [
+            "A) Cloud → Device → App → Network → Operations",
+            "B) Device → Network → Cloud → App → Operations",
+            "C) App → Cloud → Network → Device → Operations",
+            "D) Operations → Device → Cloud → Network → App"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "16. Firmware is best described as:",
+          "options": [
+            "A) A mobile app",
+            "B) Software running inside the device stored in flash",
+            "C) A cloud database",
+            "D) A network cable"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "17. BLE is mainly used for:",
+          "options": [
+            "A) Long-range city networks",
+            "B) Short-range communication and device onboarding",
+            "C) Cloud databases",
+            "D) Satellite internet"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "18. Risk is mainly about:",
+          "options": [
+            "A) Only impact",
+            "B) Only likelihood",
+            "C) Likelihood and impact together",
+            "D) Device cost"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "19. A hash function is mainly used for:",
+          "options": [
+            "A) Hiding data so nobody reads it",
+            "B) Detecting changes (integrity)",
+            "C) Creating Wi-Fi connection",
+            "D) Increasing battery life"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "20. Which goal is MOST related to keeping devices/services working during overload or DoS attacks?",
+          "options": [
+            "A) Confidentiality",
+            "B) Availability",
+            "C) Integrity",
+            "D) Safety"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "21. The best summary of device physical security is:",
+          "options": [
+            "A) Physical access never matters",
+            "B) Physical access can bypass software controls, so reduce and protect physical attack paths",
+            "C) Only network threats exist",
+            "D) TLS prevents physical attacks"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "22. Network segmentation means:",
+          "options": [
+            "A) Faster internet",
+            "B) Split network into zones",
+            "C) Disable passwords",
+            "D) One flat network for all"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "23. If likelihood = 3 and impact = 2, the risk score is:",
+          "options": [
+            "A) 5",
+            "B) 6",
+            "C) 8",
+            "D) 9"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "24. If you change one character in a message, the SHA-256 hash will:",
+          "options": [
+            "A) Stay similar",
+            "B) Change completely",
+            "C) Become shorter",
+            "D) Become readable text"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "25. Which baseline control directly helps prevent running malicious firmware permanently on a device?",
+          "options": [
+            "A) Segmentation",
+            "B) Secure boot and signed firmware",
+            "C) Monitoring and logging",
+            "D) Vulnerability management process"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "26. A security event log is useful because it:",
+          "options": [
+            "A) Makes device faster",
+            "B) Provides evidence of attacks and failures (audit trail)",
+            "C) Replaces encryption",
+            "D) Removes the need for authentication"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "27. A secure channel is mainly needed to protect data:",
+          "options": [
+            "A) Stored in flash",
+            "B) While traveling on the network",
+            "C) After deletion",
+            "D) Only in RAM"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "28. STRIDE “S” stands for:",
+          "options": [
+            "A) Security",
+            "B) Spoofing",
+            "C) Scanning",
+            "D) Switching"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "29. Confidentiality means:",
+          "options": [
+            "A) Data cannot be changed",
+            "B) Only authorized parties can read data",
+            "C) Everyone can read data",
+            "D) Data is always public"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "30. Which security goal focuses on preventing attackers from reading private data (video, location, health)?",
+          "options": [
+            "A) Integrity",
+            "B) Availability",
+            "C) Confidentiality",
+            "D) Auditability"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "31. A “safe default” security rule means:",
+          "options": [
+            "A) Allow everything by default",
+            "B) Deny risky actions unless explicitly allowed",
+            "C) Disable updates",
+            "D) Use default passwords"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "32. In MQTT, the broker is:",
+          "options": [
+            "A) The sensor",
+            "B) The server that routes messages",
+            "C) The router",
+            "D) The mobile app"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "33. A vulnerability is best described as:",
+          "options": [
+            "A) A weak point that can be exploited",
+            "B) The attacker’s goal",
+            "C) The final damage",
+            "D) A security patch"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "34. HMAC is used for:",
+          "options": [
+            "A) Confidentiality",
+            "B) Integrity + authenticity with shared key",
+            "C) Compression",
+            "D) Creating device IDs"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "35. Which attacker motivation is correctly matched?",
+          "options": [
+            "A) Botnets → to improve user privacy",
+            "B) Spying → to invade privacy using cameras/sensors",
+            "C) Sabotage → to increase service availability",
+            "D) Money → to reduce legal compliance risk"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "36. “Rollback protection” prevents:",
+          "options": [
+            "A) Firmware signing",
+            "B) Downgrading to an old vulnerable firmware version",
+            "C) Encrypting data",
+            "D) Updating certificates"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "37. A replay attack means the attacker:",
+          "options": [
+            "A) Records a valid message and sends it again later",
+            "B) Deletes the message",
+            "C) Compresses the message",
+            "D) Creates a new key"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "mcq",
+          "q": "38. STRIDE “I” stands for:",
+          "options": [
+            "A) Injection",
+            "B) Information Disclosure",
+            "C) Inspection",
+            "D) Initialization"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "39. Symmetric crypto uses:",
+          "options": [
+            "A) Two different keys",
+            "B) One shared key",
+            "C) Only public keys",
+            "D) No keys"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "40. Which is NOT a common reason IoT is hard to secure?",
+          "options": [
+            "A) Limited CPU/RAM/power",
+            "B) Devices staying deployed for many years",
+            "C) Devices are always protected in locked server rooms",
+            "D) Physical exposure (tampering, theft, reset)"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "41. Input validation means:",
+          "options": [
+            "A) Accept any input to avoid errors",
+            "B) Check type, range, and format before using input",
+            "C) Remove encryption",
+            "D) Ignore user data"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "42. In IoT systems, commands usually mean:",
+          "options": [
+            "A) Device → server readings",
+            "B) Server/app → device actions",
+            "C) Router → cloud logs",
+            "D) File encryption"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "43. A threat is:",
+          "options": [
+            "A) A protection method",
+            "B) A weakness",
+            "C) A harmful event/action that could happen",
+            "D) A device setting"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "44. Integrity means:",
+          "options": [
+            "A) Only the receiver can read the message",
+            "B) Message changes can be detected",
+            "C) Device is always online",
+            "D) Password is hidden"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "45. Why is IoT security “special” compared to normal IT security?",
+          "options": [
+            "A) IoT devices never use networks",
+            "B) IoT security is only about privacy",
+            "C) IoT connects digital systems to the physical world, so failures can cause real-world impact",
+            "D) IoT devices cannot be attacked"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "mcq",
+          "q": "46. Secure boot means:",
+          "options": [
+            "A) Device boots faster",
+            "B) Device runs only trusted/verified firmware",
+            "C) Device never needs updates",
+            "D) Device uses BLE only"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "47. A publisher in MQTT:",
+          "options": [
+            "A) Receives only",
+            "B) Sends messages to a topic",
+            "C) Generates certificates",
+            "D) Blocks traffic"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "48. STRIDE “E” stands for:",
+          "options": [
+            "A) Encryption",
+            "B) Elevation of Privilege",
+            "C) Endpoint",
+            "D) Evaluation"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "49. Hashing is:",
+          "options": [
+            "A) Reversible",
+            "B) One-way",
+            "C) Always secret-key based",
+            "D) Same as encryption"
+          ],
+          "correct": 1
+        },
+        {
+          "type": "mcq",
+          "q": "50. Which secure-by-design principle means “give only the permissions truly needed”?",
+          "options": [
+            "A) Patchability",
+            "B) Defense in depth",
+            "C) Least privilege",
+            "D) Fail safely"
+          ],
+          "correct": 2
+        },
+        {
+          "type": "written",
+          "q": "1. What is **encryption**? Explain it in simple words.",
+          "qt": "1. ما هو **التشفير (Encryption)**؟ اشرحه بكلمات بسيطة.",
+          "a": "Encryption **==hides data and can be reversed==** with a key.",
+          "at": "التشفير **==يخفي البيانات ويمكن عكسه (فكه)==** باستخدام مفتاح.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "2. Explain what **IoT security** is, and mention one example of an actuator (locks, motors, or alarms).",
+          "qt": "2. اشرح ما هو **أمن إنترنت الأشياء (IoT Security)**، واذكر مثالاً واحداً على المشغل الميكانيكي (مثل الأقفال أو المحركات أو أجهزة الإنذار).",
+          "a": "IoT security protects devices that sense the environment, communicate over networks, and sometimes act on the physical world through **==actuators like locks, motors, or alarms==**. One example of an actuator is a **==lock==**.",
+          "at": "أمن إنترنت الأشياء يحمي الأجهزة التي تستشعر البيئة، وتتواصل عبر الشبكات، وأحياناً تتصرف في العالم المادي من خلال **==المشغلات مثل الأقفال أو المحركات أو أجهزة الإنذار==**. أحد الأمثلة على المشغل الميكانيكي هو **==القفل==**.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "3. Explain **telemetry** and **commands** with one IoT example for each.",
+          "qt": "3. اشرح **القياس عن بعد (telemetry)** و **الأوامر (commands)** مع مثال واحد في إنترنت الأشياء لكل منهما.",
+          "a": "• Telemetry: **==Data the device sends out==** to report its status or sensor readings (device → server). Example: A temperature sensor sends temp=25°C to the cloud every 5 seconds.\n• Commands: **==Instructions the server/app sends==** to the device to change what it does (server/app → device). Example: A mobile app sends LED=ON or unlock to a smart lock.",
+          "at": "• القياس عن بعد: **==البيانات التي يرسلها الجهاز==** للإبلاغ عن حالته أو قراءات المستشعر (الجهاز ← الخادم). مثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر: **==التعليمات التي يرسلها الخادم/التطبيق==** إلى الجهاز لتغيير ما يفعله (الخادم/التطبيق ← الجهاز). مثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "4. Write one clear definition for each: **asset, threat, vulnerability, risk, mitigation**.",
+          "qt": "4. اكتب تعريفاً واضحاً لكل من: **الأصل، التهديد، الثغرة، المخاطرة، تخفيف المخاطر**.",
+          "a": "- Asset: **==Something valuable to protect==** (data, device identity, service, safety).\n- Threat: **==A harmful action/event==** that could happen (spoofing, stealing, stopping service).\n- Vulnerability: **==A weakness==** that allows a threat to succeed (default password, open port, weak auth).\n- Risk: **==How serious it is==** when a threat can exploit a vulnerability (often likelihood × impact).\n- Mitigation: **==A control that reduces likelihood or impact==** (TLS, access control, secure boot).",
+          "at": "- الأصل (Asset): **==شيء ذو قيمة يجب حمايته==** (البيانات، هوية الجهاز، الخدمة، الأمان).\n- التهديد (Threat): **==حدث أو فعل ضار==** يمكن أن يحدث (الانتحال، السرقة، إيقاف الخدمة).\n- الثغرة (Vulnerability): **==نقطة ضعف==** تسمح بنجاح التهديد (كلمة مرور افتراضية، منفذ مفتوح، مصادقة ضعيفة).\n- المخاطرة (Risk): **==مدى خطورة==** استغلال التهديد للثغرة (غالباً الاحتمالية × التأثير).\n- التخفيف (Mitigation): **==إجراء أو ضابط يقلل من الاحتمالية أو التأثير==** (TLS، التحكم في الوصول، التمهيد الآمن).",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "5. Give 3 examples of **physical access threats** in IoT devices.",
+          "qt": "5. اذكر 3 أمثلة على **تهديدات الوصول المادي (physical access threats)** في أجهزة إنترنت الأشياء.",
+          "a": "1. **==Reading flash memory==** to extract firmware and secret keys.\n2. **==Using UART/JTAG debug ports==** to bypass protections or rewrite firmware.\n3. **==Hardware tampering==** such as modifying sensor signals or forcing a reset.",
+          "at": "1. **==قراءة ذاكرة الفلاش==** لاستخراج البرنامج الثابت والمفاتيح السرية.\n2. **==استخدام منافذ تصحيح الأخطاء UART/JTAG==** لتجاوز الحماية أو إعادة كتابة البرنامج الثابت.\n3. **==العبث بالأجهزة==** مثل تعديل إشارات المستشعر أو فرض إعادة التشغيل.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "6. What is **hashing**? Explain it in simple words.",
+          "qt": "6. ما هي **التجزئة (Hashing)**؟ اشرحها بكلمات بسيطة.",
+          "a": "Hashing creates a **==one-way fingerprint==** to detect changes.",
+          "at": "التجزئة تنشئ **==بصمة ذات اتجاه واحد==** لاكتشاف التغييرات.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "7. Why is **IoT security special** compared to normal computer security?",
+          "qt": "7. لماذا يعتبر **أمن إنترنت الأشياء مميزاً** مقارنة بأمن الكمبيوتر العادي؟",
+          "a": "IoT connects digital systems to real environments, so a security issue can become a **==real-world problem==**, not just a \"computer problem\".",
+          "at": "لأن إنترنت الأشياء يربط الأنظمة الرقمية بالبيئات الحقيقية، لذا فإن أي مشكلة أمنية قد تتحول إلى **==مشكلة واقعية==**، وليست مجرد \"مشكلة حاسوبية\".",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "8. What does **TLS protect**, and what does it **NOT fix** by itself?",
+          "qt": "8. ماذا يحمي بروتوكول **TLS**، وما الذي **لا يعالجه** بمفرده؟",
+          "a": "• TLS protects: **==Confidentiality, Integrity, and Authentication==**.\n• TLS does NOT fix by itself: **==Weak passwords, Bad authorization, Application logic bugs, and DoS attacks==**.",
+          "at": "• يحمي TLS: **==السرية، النزاهة، والمصادقة==**.\n• لا يعالج TLS بمفرده: **==كلمات المرور الضعيفة، سوء التفويض، أخطاء منطق التطبيق، وهجمات حجب الخدمة (DoS)==**.",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "9. Draw a simple **IoT system diagram** for: sensor → Wi-Fi → cloud API → mobile app. Label each part.",
+          "qt": "9. ارسم مخططاً مبسطاً لـ **نظام IoT** يشمل: حساس ← Wi-Fi ← واجهة سحابية ← تطبيق هاتف. وقم بتسمية كل جزء.",
+          "a": "**==Sensor/Device==** (sensor + firmware) → **==Wi-Fi/Router/Internet==** (network) → **==Cloud API/Server==** (API + database) → **==Mobile App==** (dashboard/control).",
+          "at": "**==الجهاز/الحساس==** (حساس + برنامج ثابت) ← **==Wi-Fi/الراوتر/الإنترنت==** (الشبكة) ← **==السحابة/الخادم==** (واجهة برمجية API + قاعدة بيانات) ← **==تطبيق الهاتف==** (لوحة تحكم).",
+          "correct": true
+        },
+        {
+          "type": "written",
+          "q": "10. Explain the 3 goals of secure storage (**confidentiality, integrity, access control**) with one example each.",
+          "qt": "10. اشرح الأهداف الثلاثة للتخزين الآمن (**السرية، النزاهة، التحكم في الوصول**) مع مثال لكل منها.",
+          "a": "• Confidentiality: **==Secrets must not be readable==** by unauthorized people. (Example: Storing Wi-Fi password securely).\n• Integrity: **==Stored data must not be changed without detection==**. (Example: Attacker cannot edit a config file undetected).\n• Access control: **==Only authorized firmware parts/users can read or modify==** stored data. (Example: Normal code cannot read private keys directly).",
+          "at": "• السرية: **==يجب ألا تكون الأسرار مقروءة==** للأشخاص غير المصرح لهم. (مثال: تخزين كلمة مرور Wi-Fi بأمان).\n• النزاهة: **==يجب عدم تغيير البيانات المخزنة دون اكتشاف ذلك==**. (مثال: لا يمكن للمهاجم تعديل ملف التكوين دون اكتشافه).\n• التحكم في الوصول: **==يُسمح فقط للأجزاء/المستخدمين المصرح لهم بقراءة أو تعديل==** البيانات المخزنة. (مثال: الكود العادي لا يمكنه قراءة المفاتيح الخاصة مباشرة).",
+          "correct": true
+        },
+        {
+          "type": "code",
+          "q": "Code Analysis 1: What is the function of the following code? (Risk Scoring Tool)\n\nAnswer:\nActs as a Risk Scoring Tool that calculates risk (Likelihood × Impact) and outputs a priority and recommended action.",
+          "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")"
+        },
+        {
+          "type": "code",
+          "q": "Code Analysis 2: What is the function of this code, and what does it demonstrate? (Hashing Demo)\n\nAnswer:\nA Hashing demo demonstrating that a tiny change in a message produces a completely different SHA-256 hash.",
+          "code": "import hashlib \nmsg1 = \"temperature=25\" \nmsg2 = \"temperature=26\"  # tiny change \nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest() \nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest() \nprint(\"Message 1:\", msg1) \nprint(\"SHA-256  :\", h1) \nprint() \nprint(\"Message 2:\", msg2) \nprint(\"SHA-256  :\", h2) \nprint() \nprint(\"Are hashes equal?\", h1 == h2)"
+        },
+        {
+          "type": "code",
+          "q": "Code Analysis 3: Read the following MQTT protocol code. What is its primary function?\n\nAnswer:\nFunctions as an MQTT Subscriber that connects to a broker, listens to a telemetry topic, and prints incoming messages.",
+          "code": "import paho.mqtt.client as mqtt \nBROKER = \"localhost\" \nPORT = 1883 \nTOPIC = \"lab/device7/telemetry\" \ndef on_connect(client, userdata, flags, rc): \n    print(\"Connected with result code:\", rc) \n    client.subscribe(TOPIC) \ndef on_message(client, userdata, msg): \n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode()) \nclient = mqtt.Client(client_id=\"viewer_subscriber\") \nclient.on_connect = on_connect \nclient.on_message = on_message \nclient.connect(BROKER, PORT, keepalive=60) \nclient.loop_forever()"
+        },
+        {
+          "type": "code",
+          "q": "Code Analysis 4: Explain what this code does and how it applies secure-coding principles. (Secure Motor Control)\n\nAnswer:\nA script that applies secure coding via Input Validation (checks 0-255 range) and Safe Defaults (defaults to 0 if input is invalid).",
+          "code": "def apply_pwm(value: int): \n    # In real firmware, this would write to a hardware register. \n    print(\"PWM applied:\", value) \ndef get_safe_speed(): \n    raw = input(\"Enter motor speed (0-255): \").strip() \n    # Safe default \n    speed = 0 \n    # Validate input \n    try: \n        candidate = int(raw) \n        if 0 <= candidate <= 255: \n            speed = candidate \n        else: \n            print(\"Unsafe speed -> using safe default (0)\") \n    except ValueError: \n        print(\"Invalid input -> using safe default (0)\") \n    return speed \nspeed = get_safe_speed() \napply_pwm(speed)"
+        },
+        {
+          "type": "code",
+          "q": "Code Analysis 5: What is the purpose of executing the following code, and what does it generate? (Device Identity Record)\n\nAnswer:\nGenerates and saves a Device Identity Record (JSON file) containing a UUID, authentication placeholders, and a revocation status.",
+          "code": "import json \nimport uuid \nfrom datetime import datetime \nrecord = { \n    \"device_id\": str(uuid.uuid4()), \n    \"created_at\": datetime.utcnow().isoformat() + \"Z\", \n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\" \n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\", \n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\", \n    \"revoked\": False \n} \nfilename = \"device_identity.json\" \nwith open(filename, \"w\", encoding=\"utf-8\") as f: \n    json.dump(record, f, indent=2) \nprint(\"Saved:\", filename) \nprint(record)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 1: Read a file in chunks of 4096 bytes inside a loop, and update the SHA-256 hash value to avoid memory overload when reading large files.",
+          "code": "chunk = f.read(4096) \nif not chunk: \n    break \nsha.update(chunk)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 2: Generate an HMAC tag for a message using a shared secret key and the SHA-256 algorithm, then convert it to a hex string.",
+          "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 3: Convert a dictionary named data into a JSON string, then publish it as a payload to a specific MQTT TOPIC.",
+          "code": "payload = json.dumps(data) \nclient.publish(TOPIC, payload)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 4: Add authentication to an MQTT client by setting the USERNAME and PASSWORD before establishing the connection.",
+          "code": "client.username_pw_set(USERNAME, PASSWORD)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 5: Enable TLS protection for an MQTT client by passing the required certificates, and enforce strict certificate verification (disable insecure mode) to prevent MITM attacks.",
+          "code": "client.tls_set( \n    ca_certs=CA_CERT, \n    certfile=CLIENT_CERT, \n    keyfile=CLIENT_KEY, \n    tls_version=ssl.PROTOCOL_TLS_CLIENT \n) \nclient.tls_insecure_set(False)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 6: In a Threat Register program, sort a list of dictionaries named threats in descending order (highest to lowest) based on the \"score\" key.",
+          "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
+        },
+        {
+          "type": "code",
+          "q": "Write the Code 7: In a secure configuration loader, attempt to open and load JSON data from a path, and if an Exception occurs (missing or unreadable file), use a fail-safe mechanism to return a copy of SAFE_DEFAULTS.",
+          "code": "try: \n    with open(path, \"r\", encoding=\"utf-8\") as f: \n        cfg = json.load(f) \nexcept Exception: \n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\") \n    return SAFE_DEFAULTS.copy()"
         }
       ]
     }
