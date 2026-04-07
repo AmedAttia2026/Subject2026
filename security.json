@@ -1,13 +1,14 @@
 {
   "status": "safe",
   "authorized_devices": [
+    ["محمود عباس 4", "DEV11EA81E2", "every all"],
+    ["احمد عطية", "DEV6C968D3F", "every all"],
     ["Public Users", "every person", ["big_data", "machine_learning", "ccnp_route", "ccnp_switch", "entrepreneurship"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
     ["web", "DEVECA7EB69", "every all"],
     ["احمد عطية", "DEV6C968D3F", "every all"],
-    ["محمود عباس 4", "DEV11EA81E2", "every all"],
     ["احمد رزق", "DEVA42AC22F", "every all"],
     ["احمد عثمان", "DEV275DA664", "every all"],
     ["رضوان", "DEVDB8A2917", "every all"],
@@ -31,6 +32,5 @@
     ],
     "how_to_add_user": "لإضافة مستخدم جديد: [الاسم، كود الجهاز، الصلاحية]. الصلاحية تكون 'every all' للكل، أو قائمة معرفات محددة مثل ['big_data']",
     "public_access_note": "سطر 'Public Users' مع 'every person' يسمح لأي مستخدم جديد بفتح المواد المحددة له تلقائياً بدون تفعيل خاص"
-    ["every all"]
   }
 }
