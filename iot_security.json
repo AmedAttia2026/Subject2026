@@ -1861,62 +1861,62 @@
         },
         {
           "type": "code",
-          "q": "Code Analysis 1: What is the function of the following code? (Risk Scoring Tool)\n\nAnswer:\nActs as a Risk Scoring Tool that calculates risk (Likelihood × Impact) and outputs a priority and recommended action.",
+          "q": "Code Analysis 1: What is the function of the following code? (Risk Scoring Tool)\n\n**Answer:**\n**==Acts as a Risk Scoring Tool==** that calculates risk (**==Likelihood × Impact==**) and outputs a **==priority and recommended action==**.",
           "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")"
         },
         {
           "type": "code",
-          "q": "Code Analysis 2: What is the function of this code, and what does it demonstrate? (Hashing Demo)\n\nAnswer:\nA Hashing demo demonstrating that a tiny change in a message produces a completely different SHA-256 hash.",
+          "q": "Code Analysis 2: What is the function of this code, and what does it demonstrate? (Hashing Demo)\n\n**Answer:**\nA Hashing demo demonstrating that a **==tiny change==** in a message produces a **==completely different SHA-256 hash==**.",
           "code": "import hashlib \nmsg1 = \"temperature=25\" \nmsg2 = \"temperature=26\"  # tiny change \nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest() \nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest() \nprint(\"Message 1:\", msg1) \nprint(\"SHA-256  :\", h1) \nprint() \nprint(\"Message 2:\", msg2) \nprint(\"SHA-256  :\", h2) \nprint() \nprint(\"Are hashes equal?\", h1 == h2)"
         },
         {
           "type": "code",
-          "q": "Code Analysis 3: Read the following MQTT protocol code. What is its primary function?\n\nAnswer:\nFunctions as an MQTT Subscriber that connects to a broker, listens to a telemetry topic, and prints incoming messages.",
+          "q": "Code Analysis 3: Read the following MQTT protocol code. What is its primary function?\n\n**Answer:**\nFunctions as an **==MQTT Subscriber==** that **==connects to a broker, listens to a telemetry topic, and prints incoming messages==**.",
           "code": "import paho.mqtt.client as mqtt \nBROKER = \"localhost\" \nPORT = 1883 \nTOPIC = \"lab/device7/telemetry\" \ndef on_connect(client, userdata, flags, rc): \n    print(\"Connected with result code:\", rc) \n    client.subscribe(TOPIC) \ndef on_message(client, userdata, msg): \n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode()) \nclient = mqtt.Client(client_id=\"viewer_subscriber\") \nclient.on_connect = on_connect \nclient.on_message = on_message \nclient.connect(BROKER, PORT, keepalive=60) \nclient.loop_forever()"
         },
         {
           "type": "code",
-          "q": "Code Analysis 4: Explain what this code does and how it applies secure-coding principles. (Secure Motor Control)\n\nAnswer:\nA script that applies secure coding via Input Validation (checks 0-255 range) and Safe Defaults (defaults to 0 if input is invalid).",
+          "q": "Code Analysis 4: Explain what this code does and how it applies secure-coding principles. (Secure Motor Control)\n\n**Answer:**\nA script that applies secure coding via **==Input Validation==** (checks 0-255 range) and **==Safe Defaults==** (defaults to 0 if input is invalid).",
           "code": "def apply_pwm(value: int): \n    # In real firmware, this would write to a hardware register. \n    print(\"PWM applied:\", value) \ndef get_safe_speed(): \n    raw = input(\"Enter motor speed (0-255): \").strip() \n    # Safe default \n    speed = 0 \n    # Validate input \n    try: \n        candidate = int(raw) \n        if 0 <= candidate <= 255: \n            speed = candidate \n        else: \n            print(\"Unsafe speed -> using safe default (0)\") \n    except ValueError: \n        print(\"Invalid input -> using safe default (0)\") \n    return speed \nspeed = get_safe_speed() \napply_pwm(speed)"
         },
         {
           "type": "code",
-          "q": "Code Analysis 5: What is the purpose of executing the following code, and what does it generate? (Device Identity Record)\n\nAnswer:\nGenerates and saves a Device Identity Record (JSON file) containing a UUID, authentication placeholders, and a revocation status.",
+          "q": "Code Analysis 5: What is the purpose of executing the following code, and what does it generate? (Device Identity Record)\n\n**Answer:**\nGenerates and saves a **==Device Identity Record (JSON file)==** containing a **==UUID, authentication placeholders, and a revocation status==**.",
           "code": "import json \nimport uuid \nfrom datetime import datetime \nrecord = { \n    \"device_id\": str(uuid.uuid4()), \n    \"created_at\": datetime.utcnow().isoformat() + \"Z\", \n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\" \n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\", \n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\", \n    \"revoked\": False \n} \nfilename = \"device_identity.json\" \nwith open(filename, \"w\", encoding=\"utf-8\") as f: \n    json.dump(record, f, indent=2) \nprint(\"Saved:\", filename) \nprint(record)"
         },
         {
           "type": "code",
-          "q": "Write the Code 1: Read a file in chunks of 4096 bytes inside a loop, and update the SHA-256 hash value to avoid memory overload when reading large files.",
+          "q": "Write the Code 1: **==Read a file in chunks of 4096 bytes==** inside a loop, and **==update the SHA-256 hash value==** to avoid memory overload when reading large files.",
           "code": "chunk = f.read(4096) \nif not chunk: \n    break \nsha.update(chunk)"
         },
         {
           "type": "code",
-          "q": "Write the Code 2: Generate an HMAC tag for a message using a shared secret key and the SHA-256 algorithm, then convert it to a hex string.",
+          "q": "Write the Code 2: Generate an **==HMAC tag==** for a message using a **==shared secret key==** and the **==SHA-256 algorithm==**, then convert it to a hex string.",
           "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
         },
         {
           "type": "code",
-          "q": "Write the Code 3: Convert a dictionary named data into a JSON string, then publish it as a payload to a specific MQTT TOPIC.",
+          "q": "Write the Code 3: Convert a dictionary named data into a **==JSON string==**, then **==publish it as a payload==** to a specific **==MQTT TOPIC==**.",
           "code": "payload = json.dumps(data) \nclient.publish(TOPIC, payload)"
         },
         {
           "type": "code",
-          "q": "Write the Code 4: Add authentication to an MQTT client by setting the USERNAME and PASSWORD before establishing the connection.",
+          "q": "Write the Code 4: Add authentication to an MQTT client by **==setting the USERNAME and PASSWORD==** before establishing the connection.",
           "code": "client.username_pw_set(USERNAME, PASSWORD)"
         },
         {
           "type": "code",
-          "q": "Write the Code 5: Enable TLS protection for an MQTT client by passing the required certificates, and enforce strict certificate verification (disable insecure mode) to prevent MITM attacks.",
+          "q": "Write the Code 5: **==Enable TLS protection==** for an MQTT client by passing the required certificates, and **==enforce strict certificate verification==** (disable insecure mode) to prevent MITM attacks.",
           "code": "client.tls_set( \n    ca_certs=CA_CERT, \n    certfile=CLIENT_CERT, \n    keyfile=CLIENT_KEY, \n    tls_version=ssl.PROTOCOL_TLS_CLIENT \n) \nclient.tls_insecure_set(False)"
         },
         {
           "type": "code",
-          "q": "Write the Code 6: In a Threat Register program, sort a list of dictionaries named threats in descending order (highest to lowest) based on the \"score\" key.",
+          "q": "Write the Code 6: In a Threat Register program, **==sort a list of dictionaries==** named threats in **==descending order==** (highest to lowest) based on the \"score\" key.",
           "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
         },
         {
           "type": "code",
-          "q": "Write the Code 7: In a secure configuration loader, attempt to open and load JSON data from a path, and if an Exception occurs (missing or unreadable file), use a fail-safe mechanism to return a copy of SAFE_DEFAULTS.",
+          "q": "Write the Code 7: In a secure configuration loader, attempt to open and **==load JSON data==** from a path, and if an Exception occurs (missing or unreadable file), use a **==fail-safe mechanism==** to return a copy of SAFE_DEFAULTS.",
           "code": "try: \n    with open(path, \"r\", encoding=\"utf-8\") as f: \n        cfg = json.load(f) \nexcept Exception: \n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\") \n    return SAFE_DEFAULTS.copy()"
         }
       ]
