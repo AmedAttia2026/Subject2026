@@ -1799,8 +1799,8 @@
           "type": "written",
           "q": "3. Explain **telemetry** and **commands** with one IoT example for each.",
           "qt": "3. اشرح **القياس عن بعد (telemetry)** و **الأوامر (commands)** مع مثال واحد في إنترنت الأشياء لكل منهما.",
-          "a": "• Telemetry: **==Data the device sends out==** to report its status or sensor readings (device → server). Example: A temperature sensor sends temp=25°C to the cloud every 5 seconds.\n• Commands: **==Instructions the server/app sends==** to the device to change what it does (server/app → device). Example: A mobile app sends LED=ON or unlock to a smart lock.",
-          "at": "• القياس عن بعد: **==البيانات التي يرسلها الجهاز==** للإبلاغ عن حالته أو قراءات المستشعر (الجهاز ← الخادم). مثال: مستشعر درجة حرارة يرسل temp=25°C إلى السحابة كل 5 ثوانٍ.\n• الأوامر: **==التعليمات التي يرسلها الخادم/التطبيق==** إلى الجهاز لتغيير ما يفعله (الخادم/التطبيق ← الجهاز). مثال: تطبيق جوال يرسل أمر تشغيل الإضاءة (LED=ON) أو فتح قفل ذكي.",
+          "a": "• Telemetry: **==Data the device sends out==** to report its status or sensor readings (device → server). Example: A temperature sensor sends **==temp=25°C==** to the cloud every 5 seconds.\n• Commands: **==Instructions the server/app sends==** to the device to change what it does (server/app → device). Example: A mobile app sends **==LED=ON==** or **==unlock==** to a smart lock.",
+          "at": "• القياس عن بعد: **==البيانات التي يرسلها الجهاز==** للإبلاغ عن حالته أو قراءات المستشعر (الجهاز ← الخادم). مثال: مستشعر درجة حرارة يرسل **==temp=25°C==** إلى السحابة كل 5 ثوانٍ.\n• الأوامر: **==التعليمات التي يرسلها الخادم/التطبيق==** إلى الجهاز لتغيير ما يفعله (الخادم/التطبيق ← الجهاز). مثال: تطبيق جوال يرسل أمر تشغيل الإضاءة **==LED=ON==** أو **==فتح (unlock)==** لقفل ذكي.",
           "correct": true
         },
         {
@@ -1855,69 +1855,93 @@
           "type": "written",
           "q": "10. Explain the 3 goals of secure storage (**confidentiality, integrity, access control**) with one example each.",
           "qt": "10. اشرح الأهداف الثلاثة للتخزين الآمن (**السرية، النزاهة، التحكم في الوصول**) مع مثال لكل منها.",
-          "a": "• Confidentiality: **==Secrets must not be readable==** by unauthorized people. (Example: Storing Wi-Fi password securely).\n• Integrity: **==Stored data must not be changed without detection==**. (Example: Attacker cannot edit a config file undetected).\n• Access control: **==Only authorized firmware parts/users can read or modify==** stored data. (Example: Normal code cannot read private keys directly).",
-          "at": "• السرية: **==يجب ألا تكون الأسرار مقروءة==** للأشخاص غير المصرح لهم. (مثال: تخزين كلمة مرور Wi-Fi بأمان).\n• النزاهة: **==يجب عدم تغيير البيانات المخزنة دون اكتشاف ذلك==**. (مثال: لا يمكن للمهاجم تعديل ملف التكوين دون اكتشافه).\n• التحكم في الوصول: **==يُسمح فقط للأجزاء/المستخدمين المصرح لهم بقراءة أو تعديل==** البيانات المخزنة. (مثال: الكود العادي لا يمكنه قراءة المفاتيح الخاصة مباشرة).",
+          "a": "• Confidentiality: **==Secrets must not be readable==** by unauthorized people. (Example: Storing Wi-Fi password securely).\n• Integrity: **==Stored data must not be changed without detection==**. (Example: Attacker cannot edit a config file like **==allow_remote_commands=true==** undetected).\n• Access control: **==Only authorized firmware parts/users can read or modify==** stored data. (Example: Normal code cannot read private keys directly).",
+          "at": "• السرية: **==يجب ألا تكون الأسرار مقروءة==** للأشخاص غير المصرح لهم. (مثال: تخزين كلمة مرور Wi-Fi بأمان).\n• النزاهة: **==يجب عدم تغيير البيانات المخزنة دون اكتشاف ذلك==**. (مثال: لا يمكن للمهاجم تعديل ملف التكوين مثل **==allow_remote_commands=true==** دون اكتشافه).\n• التحكم في الوصول: **==يُسمح فقط للأجزاء/المستخدمين المصرح لهم بقراءة أو تعديل==** البيانات المخزنة. (مثال: الكود العادي لا يمكنه قراءة المفاتيح الخاصة مباشرة).",
           "correct": true
         },
         {
           "type": "code",
-          "q": "Code Analysis 1: What is the function of the following code? (Risk Scoring Tool)\n\n**Answer:**\n**==Acts as a Risk Scoring Tool==** that calculates risk (**==Likelihood × Impact==**) and outputs a **==priority and recommended action==**.",
-          "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")"
+          "q": "Code Analysis 1: What is the function of the following code? (Risk Scoring Tool)",
+          "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")",
+          "a": "**==Acts as a Risk Scoring Tool==** that calculates risk (**==Likelihood × Impact==**) and outputs a **==priority and recommended action==**.",
+          "at": "يعمل كـ **==أداة لتقييم المخاطر==** تحسب الخطر (**==الاحتمالية × التأثير==**) وتُخرج **==الأولوية والإجراء الموصى به==**."
         },
         {
           "type": "code",
-          "q": "Code Analysis 2: What is the function of this code, and what does it demonstrate? (Hashing Demo)\n\n**Answer:**\nA Hashing demo demonstrating that a **==tiny change==** in a message produces a **==completely different SHA-256 hash==**.",
-          "code": "import hashlib \nmsg1 = \"temperature=25\" \nmsg2 = \"temperature=26\"  # tiny change \nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest() \nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest() \nprint(\"Message 1:\", msg1) \nprint(\"SHA-256  :\", h1) \nprint() \nprint(\"Message 2:\", msg2) \nprint(\"SHA-256  :\", h2) \nprint() \nprint(\"Are hashes equal?\", h1 == h2)"
+          "q": "Code Analysis 2: What is the function of this code, and what does it demonstrate? (Hashing Demo)",
+          "code": "import hashlib \nmsg1 = \"temperature=25\" \nmsg2 = \"temperature=26\"  # tiny change \nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest() \nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest() \nprint(\"Message 1:\", msg1) \nprint(\"SHA-256  :\", h1) \nprint() \nprint(\"Message 2:\", msg2) \nprint(\"SHA-256  :\", h2) \nprint() \nprint(\"Are hashes equal?\", h1 == h2)",
+          "a": "A Hashing demo demonstrating that a **==tiny change==** in a message produces a **==completely different SHA-256 hash==**.",
+          "at": "عرض توضيحي للتجزئة يوضح أن **==تغييراً صغيراً جداً==** في الرسالة ينتج عنه **==تجزئة SHA-256 مختلفة تماماً==**."
         },
         {
           "type": "code",
-          "q": "Code Analysis 3: Read the following MQTT protocol code. What is its primary function?\n\n**Answer:**\nFunctions as an **==MQTT Subscriber==** that **==connects to a broker, listens to a telemetry topic, and prints incoming messages==**.",
-          "code": "import paho.mqtt.client as mqtt \nBROKER = \"localhost\" \nPORT = 1883 \nTOPIC = \"lab/device7/telemetry\" \ndef on_connect(client, userdata, flags, rc): \n    print(\"Connected with result code:\", rc) \n    client.subscribe(TOPIC) \ndef on_message(client, userdata, msg): \n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode()) \nclient = mqtt.Client(client_id=\"viewer_subscriber\") \nclient.on_connect = on_connect \nclient.on_message = on_message \nclient.connect(BROKER, PORT, keepalive=60) \nclient.loop_forever()"
+          "q": "Code Analysis 3: Read the following MQTT protocol code. What is its primary function?",
+          "code": "import paho.mqtt.client as mqtt \nBROKER = \"localhost\" \nPORT = 1883 \nTOPIC = \"lab/device7/telemetry\" \ndef on_connect(client, userdata, flags, rc): \n    print(\"Connected with result code:\", rc) \n    client.subscribe(TOPIC) \ndef on_message(client, userdata, msg): \n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode()) \nclient = mqtt.Client(client_id=\"viewer_subscriber\") \nclient.on_connect = on_connect \nclient.on_message = on_message \nclient.connect(BROKER, PORT, keepalive=60) \nclient.loop_forever()",
+          "a": "Functions as an **==MQTT Subscriber==** that **==connects to a broker, listens to a telemetry topic, and prints incoming messages==**.",
+          "at": "يعمل كـ **==مشترك MQTT (Subscriber)==** حيث **==يتصل بوسيط (broker)، ويستمع إلى موضوع القياس، ويطبع الرسائل الواردة==**."
         },
         {
           "type": "code",
-          "q": "Code Analysis 4: Explain what this code does and how it applies secure-coding principles. (Secure Motor Control)\n\n**Answer:**\nA script that applies secure coding via **==Input Validation==** (checks 0-255 range) and **==Safe Defaults==** (defaults to 0 if input is invalid).",
-          "code": "def apply_pwm(value: int): \n    # In real firmware, this would write to a hardware register. \n    print(\"PWM applied:\", value) \ndef get_safe_speed(): \n    raw = input(\"Enter motor speed (0-255): \").strip() \n    # Safe default \n    speed = 0 \n    # Validate input \n    try: \n        candidate = int(raw) \n        if 0 <= candidate <= 255: \n            speed = candidate \n        else: \n            print(\"Unsafe speed -> using safe default (0)\") \n    except ValueError: \n        print(\"Invalid input -> using safe default (0)\") \n    return speed \nspeed = get_safe_speed() \napply_pwm(speed)"
+          "q": "Code Analysis 4: Explain what this code does and how it applies secure-coding principles. (Secure Motor Control)",
+          "code": "def apply_pwm(value: int): \n    # In real firmware, this would write to a hardware register. \n    print(\"PWM applied:\", value) \ndef get_safe_speed(): \n    raw = input(\"Enter motor speed (0-255): \").strip() \n    # Safe default \n    speed = 0 \n    # Validate input \n    try: \n        candidate = int(raw) \n        if 0 <= candidate <= 255: \n            speed = candidate \n        else: \n            print(\"Unsafe speed -> using safe default (0)\") \n    except ValueError: \n        print(\"Invalid input -> using safe default (0)\") \n    return speed \nspeed = get_safe_speed() \napply_pwm(speed)",
+          "a": "A script that applies secure coding via **==Input Validation==** (checks 0-255 range) and **==Safe Defaults==** (defaults to 0 if input is invalid).",
+          "at": "نص برمجي يطبق البرمجة الآمنة من خلال **==التحقق من صحة الإدخال==** (يفحص النطاق 0-255) و **==الإعدادات الافتراضية الآمنة==** (يعود إلى 0 إذا كان الإدخال غير صالح)."
         },
         {
           "type": "code",
-          "q": "Code Analysis 5: What is the purpose of executing the following code, and what does it generate? (Device Identity Record)\n\n**Answer:**\nGenerates and saves a **==Device Identity Record (JSON file)==** containing a **==UUID, authentication placeholders, and a revocation status==**.",
-          "code": "import json \nimport uuid \nfrom datetime import datetime \nrecord = { \n    \"device_id\": str(uuid.uuid4()), \n    \"created_at\": datetime.utcnow().isoformat() + \"Z\", \n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\" \n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\", \n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\", \n    \"revoked\": False \n} \nfilename = \"device_identity.json\" \nwith open(filename, \"w\", encoding=\"utf-8\") as f: \n    json.dump(record, f, indent=2) \nprint(\"Saved:\", filename) \nprint(record)"
+          "q": "Code Analysis 5: What is the purpose of executing the following code, and what does it generate? (Device Identity Record)",
+          "code": "import json \nimport uuid \nfrom datetime import datetime \nrecord = { \n    \"device_id\": str(uuid.uuid4()), \n    \"created_at\": datetime.utcnow().isoformat() + \"Z\", \n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\" \n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\", \n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\", \n    \"revoked\": False \n} \nfilename = \"device_identity.json\" \nwith open(filename, \"w\", encoding=\"utf-8\") as f: \n    json.dump(record, f, indent=2) \nprint(\"Saved:\", filename) \nprint(record)",
+          "a": "Generates and saves a **==Device Identity Record (JSON file)==** containing a **==UUID, authentication placeholders, and a revocation status==**.",
+          "at": "يُنشئ ويحفظ **==سجل هوية الجهاز (ملف JSON)==** يحتوي على **==معرف فريد UUID، وعناصر نائبة للمصادقة، وحالة الإلغاء==**."
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 1: **==Read a file in chunks of 4096 bytes==** inside a loop, and **==update the SHA-256 hash value==** to avoid memory overload when reading large files.",
-          "code": "chunk = f.read(4096) \nif not chunk: \n    break \nsha.update(chunk)"
+          "qt": "اكتب الكود 1: اقرأ ملفاً في **==أجزاء بحجم 4096 بايت==** داخل حلقة، وقم بـ **==تحديث قيمة تجزئة SHA-256==** لتجنب التحميل الزائد للذاكرة عند قراءة الملفات الكبيرة.",
+          "a": "**==chunk = f.read(4096)==**\n**==if not chunk:==**\n**==    break==**\n**==sha.update(chunk)==**",
+          "at": "**==chunk = f.read(4096)==**\n**==if not chunk:==**\n**==    break==**\n**==sha.update(chunk)==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 2: Generate an **==HMAC tag==** for a message using a **==shared secret key==** and the **==SHA-256 algorithm==**, then convert it to a hex string.",
-          "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
+          "qt": "اكتب الكود 2: قم بإنشاء **==علامة HMAC==** لرسالة باستخدام **==مفتاح سري مشترك==** و **==خوارزمية SHA-256==**، ثم قم بتحويلها إلى سلسلة سداسية عشرية (hex string).",
+          "a": "**==tag = hmac.new(key, message, hashlib.sha256).hexdigest()==**",
+          "at": "**==tag = hmac.new(key, message, hashlib.sha256).hexdigest()==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 3: Convert a dictionary named data into a **==JSON string==**, then **==publish it as a payload==** to a specific **==MQTT TOPIC==**.",
-          "code": "payload = json.dumps(data) \nclient.publish(TOPIC, payload)"
+          "qt": "اكتب الكود 3: قم بتحويل قاموس (dictionary) يسمى data إلى **==سلسلة JSON==**، ثم قم بـ **==نشره كحمولة (payload)==** إلى **==موضوع MQTT==** محدد.",
+          "a": "**==payload = json.dumps(data)==**\n**==client.publish(TOPIC, payload)==**",
+          "at": "**==payload = json.dumps(data)==**\n**==client.publish(TOPIC, payload)==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 4: Add authentication to an MQTT client by **==setting the USERNAME and PASSWORD==** before establishing the connection.",
-          "code": "client.username_pw_set(USERNAME, PASSWORD)"
+          "qt": "اكتب الكود 4: أضف المصادقة إلى عميل MQTT عن طريق **==تعيين اسم المستخدم وكلمة المرور==** قبل إنشاء الاتصال.",
+          "a": "**==client.username_pw_set(USERNAME, PASSWORD)==**",
+          "at": "**==client.username_pw_set(USERNAME, PASSWORD)==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 5: **==Enable TLS protection==** for an MQTT client by passing the required certificates, and **==enforce strict certificate verification==** (disable insecure mode) to prevent MITM attacks.",
-          "code": "client.tls_set( \n    ca_certs=CA_CERT, \n    certfile=CLIENT_CERT, \n    keyfile=CLIENT_KEY, \n    tls_version=ssl.PROTOCOL_TLS_CLIENT \n) \nclient.tls_insecure_set(False)"
+          "qt": "اكتب الكود 5: قم بـ **==تمكين حماية TLS==** لعميل MQTT عن طريق تمرير الشهادات المطلوبة، و **==فرض التحقق الصارم من الشهادة==** (تعطيل الوضع غير الآمن) لمنع هجمات MITM.",
+          "a": "**==client.tls_set(ca_certs=CA_CERT, certfile=CLIENT_CERT, keyfile=CLIENT_KEY, tls_version=ssl.PROTOCOL_TLS_CLIENT)==**\n**==client.tls_insecure_set(False)==**",
+          "at": "**==client.tls_set(ca_certs=CA_CERT, certfile=CLIENT_CERT, keyfile=CLIENT_KEY, tls_version=ssl.PROTOCOL_TLS_CLIENT)==**\n**==client.tls_insecure_set(False)==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 6: In a Threat Register program, **==sort a list of dictionaries==** named threats in **==descending order==** (highest to lowest) based on the \"score\" key.",
-          "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
+          "qt": "اكتب الكود 6: في برنامج سجل التهديدات، قم بـ **==فرز قائمة من القواميس==** تسمى threats بـ **==ترتيب تنازلي==** (من الأعلى إلى الأقل) بناءً على مفتاح \"score\".",
+          "a": "**==threats.sort(key=lambda x: x[\"score\"], reverse=True)==**",
+          "at": "**==threats.sort(key=lambda x: x[\"score\"], reverse=True)==**"
         },
         {
-          "type": "code",
+          "type": "written",
           "q": "Write the Code 7: In a secure configuration loader, attempt to open and **==load JSON data==** from a path, and if an Exception occurs (missing or unreadable file), use a **==fail-safe mechanism==** to return a copy of SAFE_DEFAULTS.",
-          "code": "try: \n    with open(path, \"r\", encoding=\"utf-8\") as f: \n        cfg = json.load(f) \nexcept Exception: \n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\") \n    return SAFE_DEFAULTS.copy()"
+          "qt": "اكتب الكود 7: في أداة تحميل تكوين آمنة، حاول فتح و **==تحميل بيانات JSON==** من مسار، وإذا حدث استثناء (ملف مفقود أو غير قابل للقراءة)، استخدم **==آلية أمان (fail-safe)==** لإرجاع نسخة من SAFE_DEFAULTS.",
+          "a": "**==try:==**\n**==    with open(path, \"r\", encoding=\"utf-8\") as f:==**\n**==        cfg = json.load(f)==**\n**==except Exception:==**\n**==    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")==**\n**==    return SAFE_DEFAULTS.copy()==**",
+          "at": "**==try:==**\n**==    with open(path, \"r\", encoding=\"utf-8\") as f:==**\n**==        cfg = json.load(f)==**\n**==except Exception:==**\n**==    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")==**\n**==    return SAFE_DEFAULTS.copy()==**"
         }
       ]
     }
