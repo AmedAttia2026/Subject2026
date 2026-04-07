@@ -1,7 +1,7 @@
 {
   "status": "safe",
   "authorized_devices": [
-    ["Public Users", "every person", ["every all"]]
+    ["Public Users", "every person", ["big_data", "machine_learning", "ccnp_route", "ccnp_switch", "entrepreneurship"]]
   ],
   "hidden_devices": [
     ["توني", "DEVBADB1960", "every all"],
@@ -31,5 +31,6 @@
     ],
     "how_to_add_user": "لإضافة مستخدم جديد: [الاسم، كود الجهاز، الصلاحية]. الصلاحية تكون 'every all' للكل، أو قائمة معرفات محددة مثل ['big_data']",
     "public_access_note": "سطر 'Public Users' مع 'every person' يسمح لأي مستخدم جديد بفتح المواد المحددة له تلقائياً بدون تفعيل خاص"
+    ["every all"]
   }
 }
