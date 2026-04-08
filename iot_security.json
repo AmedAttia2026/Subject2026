@@ -663,17 +663,20 @@
         {
           "type": "code",
           "q": "Coding Q1: Risk Scoring Tool (Validation + Recommendation)",
-          "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        score = L * I\n\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\n\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")"
+          "qt": "سؤال الكود 1: أداة تقييم المخاطر (التحقق من المدخلات + التوصية)",
+          "code": "try:\n    L = int(input(\"Enter Likelihood (1-3): \"))\n    I = int(input(\"Enter Impact (1-3): \"))\n\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input\")\n    else:\n        ==score = L * I==\n\n        if score <= 2:\n            priority = \"Low\"\n            action = \"Monitor\"\n        elif score <= 4:\n            priority = \"Medium\"\n            action = \"Fix Soon\"\n        else:\n            priority = \"High\"\n            action = \"Fix Now\"\n\n        print(f\"Risk Score = {score} | Priority = {priority} | Action = {action}\")\n\nexcept ValueError:\n    print(\"Invalid input (please enter integers only)\")"
         },
         {
           "type": "code",
           "q": "Coding Q2: STRIDE Checklist Generator (Save to File)",
-          "code": "components = [\"device\", \"network\", \"cloud\", \"app\"]\n\nquestions = {\n    \"S\": \"Spoofing: Can someone pretend to be this component?\",\n    \"T\": \"Tampering: Can someone change data/code without detection?\",\n    \"R\": \"Repudiation: Are actions logged so no one can deny them?\",\n    \"I\": \"Information Disclosure: Can secrets or data leak to others?\",\n    \"D\": \"Denial of Service: Can someone overload it and stop it from working?\",\n    \"E\": \"Elevation of Privilege: Can someone gain admin/higher access?\"\n}\n\nlines = []\nlines.append(\"=== STRIDE Checklist ===\\n\")\nfor comp in components:\n    lines.append(f\"--- {comp.upper()} ---\\n\")\n    for key in [\"S\", \"T\", \"R\", \"I\", \"D\", \"E\"]:\n        lines.append(f\"[{key}] {questions[key]}\\n\")\n    lines.append(\"Notes: ________________________________\\n\\n\")\n\noutput_text = \"\".join(lines)\nprint(output_text)\n\nwith open(\"stride_checklist.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(output_text)\n\nprint(\"Saved to stride_checklist.txt\")"
+          "qt": "سؤال الكود 2: مُنشئ قائمة مراجعة STRIDE (حفظ في ملف)",
+          "code": "components = [\"device\", \"network\", \"cloud\", \"app\"]\n\nquestions = {\n    \"S\": \"Spoofing: Can someone pretend to be this component?\",\n    \"T\": \"Tampering: Can someone change data/code without detection?\",\n    \"R\": \"Repudiation: Are actions logged so no one can deny them?\",\n    \"I\": \"Information Disclosure: Can secrets or data leak to others?\",\n    \"D\": \"Denial of Service: Can someone overload it and stop it from working?\",\n    \"E\": \"Elevation of Privilege: Can someone gain admin/higher access?\"\n}\n\nlines = []\nlines.append(\"=== STRIDE Checklist ===\\n\")\nfor comp in components:\n    lines.append(f\"--- {comp.upper()} ---\\n\")\n    for key in [\"S\", \"T\", \"R\", \"I\", \"D\", \"E\"]:\n        lines.append(f\"[{key}] {questions[key]}\\n\")\n    lines.append(\"Notes: ________________________________\\n\\n\")\n\noutput_text = \"\".join(lines)\nprint(output_text)\n\n==with open(\"stride_checklist.txt\", \"w\", encoding=\"utf-8\") as f:==\n==    f.write(output_text)==\n\nprint(\"Saved to stride_checklist.txt\")"
         },
         {
           "type": "code",
           "q": "Coding Q3: Mini Threat Register (3 threats then sort by score)",
-          "code": "def get_priority(score: int) -> str:\n    # Policy: Low (1-2), Medium (3-4), High (5-9)\n    if score <= 2:\n        return \"Low\"\n    elif score <= 4:\n        return \"Medium\"\n    else:\n        return \"High\"\n\nthreats = []\n\nfor i in range(1, 4):\n    print(f\"\\nEnter threat #{i}\")\n    name = input(\"Threat name: \").strip()\n    component = input(\"Component (device/network/cloud/app): \").strip().lower()\n\n    try:\n        L = int(input(\"Likelihood (1-3): \"))\n        I = int(input(\"Impact (1-3): \"))\n    except ValueError:\n        print(\"Invalid input (integers only). This threat will be skipped.\")\n        continue\n\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input (Likelihood/Impact must be 1-3). This threat will be skipped.\")\n        continue\n\n    score = L * I\n    priority = get_priority(score)\n    \n    threats.append({\n        \"name\": name,\n        \"component\": component,\n        \"likelihood\": L,\n        \"impact\": I,\n        \"score\": score,\n        \"priority\": priority\n    })\n\n# Sort threats from highest score to lowest score\nthreats.sort(key=lambda x: x[\"score\"], reverse=True)\n\nprint(\"\\n=== Threat Register (Sorted by Risk Score) ===\")\nfor idx, t in enumerate(threats, start=1):\n    print(f\"{idx}) Threat: {t['name']} | Component: {t['component']} | \"\n          f\"Score: {t['score']} | Priority: {t['priority']}\")"
+          "qt": "سؤال الكود 3: سجل مصغر للتهديدات (إدخال 3 تهديدات ثم فرزها حسب درجة الخطورة)",
+          "code": "def get_priority(score: int) -> str:\n    # Policy: Low (1-2), Medium (3-4), High (5-9)\n    if score <= 2:\n        return \"Low\"\n    elif score <= 4:\n        return \"Medium\"\n    else:\n        return \"High\"\n\nthreats = []\n\nfor i in range(1, 4):\n    print(f\"\\nEnter threat #{i}\")\n    name = input(\"Threat name: \").strip()\n    component = input(\"Component (device/network/cloud/app): \").strip().lower()\n\n    try:\n        L = int(input(\"Likelihood (1-3): \"))\n        I = int(input(\"Impact (1-3): \"))\n    except ValueError:\n        print(\"Invalid input (integers only). This threat will be skipped.\")\n        continue\n\n    if L not in (1, 2, 3) or I not in (1, 2, 3):\n        print(\"Invalid input (Likelihood/Impact must be 1-3). This threat will be skipped.\")\n        continue\n\n    score = L * I\n    priority = get_priority(score)\n    \n    threats.append({\n        \"name\": name,\n        \"component\": component,\n        \"likelihood\": L,\n        \"impact\": I,\n        \"score\": score,\n        \"priority\": priority\n    })\n\n# Sort threats from highest score to lowest score\n==threats.sort(key=lambda x: x[\"score\"], reverse=True)==\n\nprint(\"\\n=== Threat Register (Sorted by Risk Score) ===\")\nfor idx, t in enumerate(threats, start=1):\n    print(f\"{idx}) Threat: {t['name']} | Component: {t['component']} | \"\n          f\"Score: {t['score']} | Priority: {t['priority']}\")"
         }
       ]
     },
@@ -944,22 +947,26 @@
         {
           "type": "code",
           "q": "Coding Q1: Hashing demo: Write Python code that calculates SHA-256 for two similar messages and prints both hashes to show that a small change produces a very different hash.",
-          "code": "import hashlib\n\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\n\nh1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()\nh2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()\n\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)"
+          "qt": "سؤال الكود 1: عرض توضيحي للتجزئة (Hashing): اكتب كود بايثون يحسب SHA-256 لرسالتين متشابهتين ويطبع كلا النتيجتين لإظهار أن التغيير البسيط ينتج عنه تجزئة مختلفة تماماً.",
+          "code": "import hashlib\n\nmsg1 = \"temperature=25\"\nmsg2 = \"temperature=26\"  # tiny change\n\n==h1 = hashlib.sha256(msg1.encode(\"utf-8\")).hexdigest()==\n==h2 = hashlib.sha256(msg2.encode(\"utf-8\")).hexdigest()==\n\nprint(\"Message 1:\", msg1)\nprint(\"SHA-256  :\", h1)\nprint()\nprint(\"Message 2:\", msg2)\nprint(\"SHA-256  :\", h2)\nprint()\nprint(\"Are hashes equal?\", h1 == h2)"
         },
         {
           "type": "code",
           "q": "Coding Q2: File hashing: Write Python code that reads a file and prints its SHA-256 hash, then explain how this can detect if the file was modified.\n\nExplanation:\nIf you compute the hash of the file, then change even one character in the file and compute the hash again, the hash will change completely. So, if the hash is different, it means the file was modified.",
-          "code": "import hashlib\n\ndef sha256_file(path: str) -> str:\n    sha = hashlib.sha256()\n    with open(path, \"rb\") as f:\n        while True:\n            chunk = f.read(4096)\n            if not chunk:\n                break\n            sha.update(chunk)\n    return sha.hexdigest()\n\nfile_path = input(\"Enter file path: \").strip()\nprint(\"SHA-256:\", sha256_file(file_path))"
+          "qt": "سؤال الكود 2: تجزئة الملفات: اكتب كود بايثون يقرأ ملفاً ويطبع تجزئة SHA-256 الخاصة به، ثم اشرح كيف يمكن لذلك اكتشاف ما إذا كان الملف قد تم تعديله.\n\nالشرح:\nإذا قمت بحساب تجزئة الملف، ثم غيرت حرفاً واحداً فيه وحسبت التجزئة مرة أخرى، ستتغير التجزئة بالكامل. لذا، إذا كانت التجزئة مختلفة، فهذا يعني أن الملف قد تم تعديله.",
+          "code": "import hashlib\n\ndef sha256_file(path: str) -> str:\n    ==sha = hashlib.sha256()==\n    with open(path, \"rb\") as f:\n        while True:\n            chunk = f.read(4096)\n            if not chunk:\n                break\n            ==sha.update(chunk)==\n    return ==sha.hexdigest()==\n\nfile_path = input(\"Enter file path: \").strip()\nprint(\"SHA-256:\", sha256_file(file_path))"
         },
         {
           "type": "code",
           "q": "Coding Q3: HMAC demo: Write Python code that generates an HMAC tag for a message using a shared key, then verifies the tag by recomputing it.",
-          "code": "import hmac\nimport hashlib\n\nkey = b\"shared_secret_key\"\nmessage = b\"device=7;temp=25\"\n\n# Create tag (sender)\ntag = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Message:\", message.decode())\nprint(\"HMAC tag:\", tag)\n\n# Verify (receiver recomputes)\ntag_check = hmac.new(key, message, hashlib.sha256).hexdigest()\nprint(\"Valid?\", hmac.compare_digest(tag, tag_check))"
+          "qt": "سؤال الكود 3: عرض توضيحي لـ HMAC: اكتب كود بايثون يُنشئ علامة HMAC لرسالة باستخدام مفتاح مشترك، ثم يتحقق من العلامة عن طريق إعادة حسابها.",
+          "code": "import hmac\nimport hashlib\n\nkey = b\"shared_secret_key\"\nmessage = b\"device=7;temp=25\"\n\n# Create tag (sender)\n==tag = hmac.new(key, message, hashlib.sha256).hexdigest()==\nprint(\"Message:\", message.decode())\nprint(\"HMAC tag:\", tag)\n\n# Verify (receiver recomputes)\n==tag_check = hmac.new(key, message, hashlib.sha256).hexdigest()==\nprint(\"Valid?\", hmac.compare_digest(tag, tag_check))"
         },
         {
           "type": "code",
           "q": "Coding Q4: Device identity record: Write Python code that generates a JSON file containing a device_id (UUID) plus placeholders for certificate/PSK and a “revoked” field.",
-          "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    \"device_id\": str(uuid.uuid4()),\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    json.dump(record, f, indent=2)\n\nprint(\"Saved:\", filename)\nprint(record)"
+          "qt": "سؤال الكود 4: سجل هوية الجهاز: اكتب كود بايثون يُنشئ ملف JSON يحتوي على معرف الجهاز (device_id) (بصيغة UUID) بالإضافة إلى عناصر نائبة (placeholders) للشهادة/المفتاح المشترك (PSK) وحقل يوضح ما إذا كانت الهوية \"ملغاة\" (revoked).",
+          "code": "import json\nimport uuid\nfrom datetime import datetime\n\nrecord = {\n    ==\"device_id\": str(uuid.uuid4()),==\n    \"created_at\": datetime.utcnow().isoformat() + \"Z\",\n    \"auth_type\": \"CERT\",  # \"CERT\" or \"PSK\"\n    \"certificate_placeholder\": \"-----BEGIN CERTIFICATE-----REPLACE_ME-----END CERTIFICATE-----\",\n    \"psk_placeholder\": \"REPLACE_ME_IF_PSK\",\n    \"revoked\": False\n}\n\nfilename = \"device_identity.json\"\nwith open(filename, \"w\", encoding=\"utf-8\") as f:\n    ==json.dump(record, f, indent=2)==\n\nprint(\"Saved:\", filename)\nprint(record)"
         }
       ]
     },
@@ -1207,22 +1214,26 @@
         {
           "type": "code",
           "q": "Coding Q1: MQTT Publisher (Send Sensor Data)\nGoal: Publish fake sensor data every 2 seconds to a topic.\nThis example teaches:\n• How telemetry is sent (device → broker)\n• Topics and payload format",
-          "code": "import time\nimport json\nimport random\nimport paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nclient = mqtt.Client(client_id=\"device7_publisher\")\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_start()\n\ntry:\n    while True:\n        data = {\n            \"device_id\": \"device7\",\n            \"temp\": round(random.uniform(20, 30), 2),\n            \"hum\": round(random.uniform(40, 60), 2)\n        }\n        payload = json.dumps(data)\n        client.publish(TOPIC, payload)\n        print(\"Published:\", payload)\n        time.sleep(2)\nexcept KeyboardInterrupt:\n    print(\"Stopped publisher.\")\nfinally:\n    client.loop_stop()\n    client.disconnect()"
+          "qt": "سؤال الكود 1: ناشر MQTT (إرسال بيانات المستشعر)\nالهدف: نشر بيانات مستشعر وهمية كل ثانيتين إلى موضوع (topic) معين.\nيعلمنا هذا المثال:\n• كيف يتم إرسال بيانات القياس (الجهاز ← الوسيط)\n• المواضيع (Topics) وتنسيق حمولة البيانات (payload)",
+          "code": "import time\nimport json\nimport random\nimport paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nclient = mqtt.Client(client_id=\"device7_publisher\")\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_start()\n\ntry:\n    while True:\n        data = {\n            \"device_id\": \"device7\",\n            \"temp\": round(random.uniform(20, 30), 2),\n            \"hum\": round(random.uniform(40, 60), 2)\n        }\n        payload = json.dumps(data)\n        ==client.publish(TOPIC, payload)==\n        print(\"Published:\", payload)\n        time.sleep(2)\nexcept KeyboardInterrupt:\n    print(\"Stopped publisher.\")\nfinally:\n    client.loop_stop()\n    client.disconnect()"
         },
         {
           "type": "code",
           "q": "Coding Q2: MQTT Subscriber (Receive and Display Data)\nGoal: Subscribe to the telemetry topic and print incoming messages.",
-          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    client.subscribe(TOPIC)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+          "qt": "سؤال الكود 2: مشترك MQTT (استقبال وعرض البيانات)\nالهدف: الاشتراك في موضوع القياس (telemetry topic) وطباعة الرسائل الواردة.",
+          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\ndef on_connect(client, userdata, flags, rc):\n    print(\"Connected with result code:\", rc)\n    ==client.subscribe(TOPIC)==\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.topic, \"->\", ==msg.payload.decode()==)\n\nclient = mqtt.Client(client_id=\"viewer_subscriber\")\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         },
         {
           "type": "code",
           "q": "Coding Q3: Add Authentication (Username/Password)\nGoal: Connect to broker using username/password.\nIf credentials are wrong, broker should reject connection.\nImportant concept:\n• TLS is about encryption, but authentication is about proving identity.",
-          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nUSERNAME = \"student\"\nPASSWORD = \"student123\"   # instructor may change\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected OK \")\n        client.subscribe(TOPIC)\n    else:\n        print(\"Connection failed , return code:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"auth_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+          "qt": "سؤال الكود 3: إضافة المصادقة (اسم المستخدم/كلمة المرور)\nالهدف: الاتصال بالوسيط باستخدام اسم المستخدم وكلمة المرور.\nإذا كانت بيانات الاعتماد خاطئة، يجب أن يرفض الوسيط الاتصال.\nمفهوم مهم:\n• الـ TLS يختص بالتشفير، بينما المصادقة (Authentication) تختص بإثبات الهوية.",
+          "code": "import paho.mqtt.client as mqtt\n\nBROKER = \"localhost\"\nPORT = 1883\nTOPIC = \"lab/device7/telemetry\"\n\nUSERNAME = \"student\"\nPASSWORD = \"student123\"   # instructor may change\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected OK \")\n        client.subscribe(TOPIC)\n    else:\n        print(\"Connection failed , return code:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"auth_subscriber\")\n==client.username_pw_set(USERNAME, PASSWORD)==\n\nclient.on_connect = on_connect\nclient.on_message = on_message\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         },
         {
           "type": "code",
           "q": "Coding Q4: Add TLS (Concept + Code Configuration)\nWhat TLS adds:\n• Encrypts MQTT traffic (prevents sniffing)\n• Allows server authentication using certificates\n• Prevents MITM if certificates are validated correctly\n\nInstructor will provide:\n• CA certificate file (and possibly client cert/key depending on setup)\n• TLS port (commonly 8883)",
-          "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"             # provided by instructor\n\n# If mutual TLS is used, instructor will provide these too:\nCLIENT_CERT = None             # e.g., \"client.crt\"\nCLIENT_KEY  = None             # e.g., \"client.key\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\nclient.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\n\n# Require certificate verification (important!)\nclient.tls_insecure_set(False)\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
+          "qt": "سؤال الكود 4: إضافة TLS (المفهوم + تكوين الكود)\nما يضيفه TLS:\n• يشفر حركة مرور MQTT (يمنع التنصت)\n• يسمح بمصادقة الخادم باستخدام الشهادات\n• يمنع هجمات الوسيط (MITM) إذا تم التحقق من الشهادات بشكل صحيح\n\nسيوفر المحاضر:\n• ملف شهادة CA (وربما شهادة/مفتاح العميل بناءً على الإعداد)\n• منفذ TLS (عادةً 8883)",
+          "code": "import paho.mqtt.client as mqtt\nimport ssl\n\nBROKER = \"localhost\"\nPORT = 8883\nTOPIC = \"lab/device7/telemetry\"\nUSERNAME = \"student\"\nPASSWORD = \"student123\"\nCA_CERT = \"ca.crt\"             # provided by instructor\n\n# If mutual TLS is used, instructor will provide these too:\nCLIENT_CERT = None             # e.g., \"client.crt\"\nCLIENT_KEY  = None             # e.g., \"client.key\"\n\ndef on_connect(client, userdata, flags, rc):\n    if rc == 0:\n        print(\"Connected with TLS\")\n        client.subscribe(TOPIC)\n    else:\n        print(\"TLS connection failed, rc:\", rc)\n\ndef on_message(client, userdata, msg):\n    print(\"Received:\", msg.payload.decode())\n\nclient = mqtt.Client(client_id=\"tls_subscriber\")\nclient.username_pw_set(USERNAME, PASSWORD)\n\n# Enable TLS\n==client.tls_set(==\n==    ca_certs=CA_CERT,==\n==    certfile=CLIENT_CERT,==\n==    keyfile=CLIENT_KEY,==\n==    tls_version=ssl.PROTOCOL_TLS_CLIENT==\n==)==\n\n# Require certificate verification (important!)\n==client.tls_insecure_set(False)==\n\nclient.on_connect = on_connect\nclient.on_message = on_message\n\nclient.connect(BROKER, PORT, keepalive=60)\nclient.loop_forever()"
         }
       ]
     },
@@ -1887,44 +1898,44 @@
         {
           "type": "code",
           "q": "Write the Code 1: Write the specific lines of code to perform the following function: Read a file in chunks of 4096 bytes inside a loop, and update the SHA-256 hash value to avoid memory overload when reading large files.",
-          "qt": "اكتب الكود 1: اكتب سطور الكود المحددة لأداء الوظيفة التالية: قراءة ملف في أجزاء بحجم 4096 بايت داخل حلقة، وتحديث قيمة تجزئة SHA-256 لتجنب التحميل الزائد للذاكرة عند قراءة الملفات الكبيرة.",
-          "code": "chunk = f.read(4096)\nif not chunk:\n    break\nsha.update(chunk)"
+          "qt": "سؤال الكود 1: اكتب سطور الكود المحددة لأداء الوظيفة التالية: قراءة ملف في أجزاء (chunks) بحجم 4096 بايت داخل حلقة (loop)، وتحديث قيمة تجزئة SHA-256 لتجنب التحميل الزائد للذاكرة عند قراءة الملفات الكبيرة.",
+          "code": "==chunk = f.read(4096)==\n==if not chunk:==\n==    break==\n==sha.update(chunk)=="
         },
         {
           "type": "code",
           "q": "Write the Code 2: Write the specific line of code to perform the following function: Generate an HMAC tag for a message using a shared secret key and the SHA-256 algorithm, then convert it to a hex string.",
-          "qt": "اكتب الكود 2: اكتب سطر الكود المحدد لأداء الوظيفة التالية: إنشاء علامة HMAC لرسالة باستخدام مفتاح سري مشترك وخوارزمية SHA-256، ثم تحويلها إلى سلسلة سداسية عشرية (hex string).",
-          "code": "tag = hmac.new(key, message, hashlib.sha256).hexdigest()"
+          "qt": "سؤال الكود 2: اكتب سطر الكود المحدد لأداء الوظيفة التالية: إنشاء علامة HMAC لرسالة باستخدام مفتاح سري مشترك وخوارزمية SHA-256، ثم تحويلها إلى سلسلة نصية بالنظام السداسي عشر (hex string).",
+          "code": "==tag = hmac.new(key, message, hashlib.sha256).hexdigest()=="
         },
         {
           "type": "code",
           "q": "Write the Code 3: Write the specific lines of code to perform the following function: Convert a dictionary named data into a JSON string, then publish it as a payload to a specific MQTT TOPIC.",
-          "qt": "اكتب الكود 3: اكتب سطور الكود المحددة لأداء الوظيفة التالية: تحويل قاموس (dictionary) يسمى data إلى سلسلة JSON، ثم نشره كحمولة (payload) إلى موضوع MQTT محدد.",
-          "code": "payload = json.dumps(data)\nclient.publish(TOPIC, payload)"
+          "qt": "سؤال الكود 3: اكتب سطور الكود المحددة لأداء الوظيفة التالية: تحويل قاموس (dictionary) يسمى data إلى سلسلة نصية بصيغة JSON، ثم نشره كحمولة (payload) إلى موضوع (TOPIC) محدد في MQTT.",
+          "code": "==payload = json.dumps(data)==\n==client.publish(TOPIC, payload)=="
         },
         {
           "type": "code",
           "q": "Write the Code 4: Write the specific line of code to perform the following function: Add authentication to an MQTT client by setting the USERNAME and PASSWORD before establishing the connection.",
-          "qt": "اكتب الكود 4: اكتب سطر الكود المحدد لأداء الوظيفة التالية: إضافة مصادقة إلى عميل MQTT عن طريق تعيين اسم المستخدم وكلمة المرور قبل إنشاء الاتصال.",
-          "code": "client.username_pw_set(USERNAME, PASSWORD)"
+          "qt": "سؤال الكود 4: اكتب سطر الكود المحدد لأداء الوظيفة التالية: إضافة مصادقة (Authentication) إلى عميل MQTT عن طريق تعيين اسم المستخدم (USERNAME) وكلمة المرور (PASSWORD) قبل إنشاء الاتصال.",
+          "code": "==client.username_pw_set(USERNAME, PASSWORD)=="
         },
         {
           "type": "code",
           "q": "Write the Code 5: Write the specific lines of code to perform the following function: Enable TLS protection for an MQTT client by passing the required certificates, and enforce strict certificate verification (disable insecure mode) to prevent MITM attacks.",
-          "qt": "اكتب الكود 5: اكتب سطور الكود المحددة لأداء الوظيفة التالية: تمكين حماية TLS لعميل MQTT عن طريق تمرير الشهادات المطلوبة، وفرض التحقق الصارم من الشهادة (تعطيل الوضع غير الآمن) لمنع هجمات MITM.",
-          "code": "client.tls_set(\n    ca_certs=CA_CERT,\n    certfile=CLIENT_CERT,\n    keyfile=CLIENT_KEY,\n    tls_version=ssl.PROTOCOL_TLS_CLIENT\n)\nclient.tls_insecure_set(False)"
+          "qt": "سؤال الكود 5: اكتب سطور الكود المحددة لأداء الوظيفة التالية: تفعيل حماية TLS لعميل MQTT عن طريق تمرير الشهادات المطلوبة، وفرض التحقق الصارم من الشهادة (تعطيل الوضع غير الآمن) لمنع هجمات الوسيط (MITM).",
+          "code": "==client.tls_set(==\n==    ca_certs=CA_CERT,==\n==    certfile=CLIENT_CERT,==\n==    keyfile=CLIENT_KEY,==\n==    tls_version=ssl.PROTOCOL_TLS_CLIENT==\n==)==\n==client.tls_insecure_set(False)=="
         },
         {
           "type": "code",
           "q": "Write the Code 6: In a Threat Register program, write the specific line of code to perform the following function: Sort a list of dictionaries named threats in descending order (highest to lowest) based on the \"score\" key.",
-          "qt": "اكتب الكود 6: في برنامج سجل التهديدات، اكتب سطر الكود المحدد لأداء الوظيفة التالية: فرز قائمة من القواميس تسمى threats بترتيب تنازلي (من الأعلى إلى الأقل) بناءً على مفتاح \"score\".",
-          "code": "threats.sort(key=lambda x: x[\"score\"], reverse=True)"
+          "qt": "سؤال الكود 6: في برنامج سجل التهديدات (Threat Register)، اكتب سطر الكود المحدد لأداء الوظيفة التالية: فرز قائمة من القواميس تسمى threats بترتيب تنازلي (من الأعلى إلى الأقل) بناءً على مفتاح \"score\".",
+          "code": "==threats.sort(key=lambda x: x[\"score\"], reverse=True)=="
         },
         {
           "type": "code",
           "q": "Write the Code 7: In a secure configuration loader, write the specific lines of code to perform the following function: Attempt to open and load JSON data from a path, and if an Exception occurs (missing or unreadable file), use a fail-safe mechanism to return a copy of SAFE_DEFAULTS.",
-          "qt": "اكتب الكود 7: في أداة تحميل تكوين آمنة، اكتب سطور الكود المحددة لأداء الوظيفة التالية: محاولة فتح وتحميل بيانات JSON من مسار، وإذا حدث استثناء (ملف مفقود أو غير قابل للقراءة)، استخدام آلية أمان (fail-safe) لإرجاع نسخة من SAFE_DEFAULTS.",
-          "code": "try:\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        cfg = json.load(f)\nexcept Exception:\n    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")\n    return SAFE_DEFAULTS.copy()"
+          "qt": "سؤال الكود 7: في أداة تحميل إعدادات آمنة (secure configuration loader)، اكتب سطور الكود المحددة لأداء الوظيفة التالية: محاولة فتح وتحميل بيانات JSON من مسار معين، وإذا حدث استثناء (ملف مفقود أو غير قابل للقراءة)، استخدم آلية الفشل الآمن (fail-safe) لإرجاع نسخة من الإعدادات الافتراضية الآمنة (SAFE_DEFAULTS).",
+          "code": "==try:==\n==    with open(path, \"r\", encoding=\"utf-8\") as f:==\n==        cfg = json.load(f)==\n==except Exception:==\n==    print(\"Config missing/unreadable -> using SAFE DEFAULTS\")==\n==    return SAFE_DEFAULTS.copy()=="
         }
       ]
     }
