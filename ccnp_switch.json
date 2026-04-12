@@ -188,7 +188,7 @@
           "type": "mcq",
           "q": "20. If a non-root switch receives BPDUs with equal path costs and equal sender BIDs, which tie-breaker is used last?",
           "options": ["A. Lowest Sender Port ID", "B. Lowest Receiver Port ID", "C. Lowest MAC address", "D. Lowest IP address"],
-          "correct": 1
+          "correct": 0
         }
       ]
     },
