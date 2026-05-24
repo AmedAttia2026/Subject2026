@@ -1,2 +1,24 @@
+{
+  "status": "safe",
+  "authorized_devices": [
 
-1311
+    ["Public Users", "every person", ["entrepreneurship"]]
+  ],
+  "hidden_devices": [
+    ["احمد عطية", "DEV6C968D3F", "every all"],
+
+  ],
+  "notes_for_admin": {
+    "info": "دليل معرفات المواد الستة وكيفية استخدامها في الصلاحيات المخصصة",
+    "subjects_description": [
+      { "id": "big_data", "desc": "البيانات الضخمة والتحليلات (Big Data & Analytics)" },
+      { "id": "machine_learning", "desc": "تعلم الآلة والذكاء الاصطناعي (Machine Learning)" },
+      { "id": "ccnp_route", "desc": "توجيه الشبكات المتقدم (CCNP Route)" },
+      { "id": "ccnp_switch", "desc": "تبديل الشبكات المتقدم (CCNP Switch)" },
+      { "id": "entrepreneurship", "desc": "ريادة الأعمال والابتكار (Entrepreneurship)" },
+      { "id": "iot_security", "desc": "أمن إنترنت الأشياء (IOT Security)" }
+    ],
+    "how_to_add_user": "لإضافة مستخدم جديد: [الاسم، كود الجهاز، الصلاحية]. الصلاحية تكون 'every all' للكل، أو قائمة معرفات محددة مثل ['big_data']",
+    "public_access_note": "سطر 'Public Users' مع 'every person' يسمح لأي مستخدم جديد بفتح المواد المحددة له تلقائياً بدون تفعيل خاص"
+  }
+}
