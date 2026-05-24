@@ -2,7 +2,7 @@
   "status": "safe",
   "authorized_devices": [
 
-    ["Public Users", "every person", [""]]
+    ["Public Users", "every person", ["entrepreneurship"]]
   ],
   "hidden_devices": [
     ["احمد عطية", "DEV6C968D3F", "every all"],
