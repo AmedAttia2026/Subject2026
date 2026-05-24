@@ -1,2 +1,354 @@
-
-111
+{
+  "id": "big_data",
+  "title": "Big Data & Analytics",
+  "sheets": [
+    {
+      "title": "Sheet 1",
+      "questions": [
+        { "type": "tf", "q": "1. The growth of IoT devices is one of the main causes of the data explosion.", "correct": "T" },
+        { "type": "tf", "q": "2. Big Data only refers to structured data stored in relational databases.", "correct": "F" },
+        { "type": "tf", "q": "3. Volume refers to the speed at which data is generated.", "correct": "F" },
+        { "type": "tf", "q": "4. Velocity describes how fast data is generated and processed.", "correct": "T" },
+        { "type": "tf", "q": "5. Variety refers to different formats such as text, images, and videos.", "correct": "T" },
+        { "type": "tf", "q": "6. Veracity deals with data accuracy and reliability.", "correct": "T" },
+        { "type": "tf", "q": "7. Traditional systems are always sufficient for handling petabytes of data.", "correct": "F" },
+        { "type": "tf", "q": "8. Distributed computing allows multiple machines to work together.", "correct": "T" },
+        { "type": "tf", "q": "9. Big Data architecture includes ingestion, storage, processing, and analytics layers.", "correct": "T" },
+        { "type": "tf", "q": "10. Scalability is not a challenge in Big Data systems.", "correct": "F" },
+        { "type": "mcq", "q": "1. Which of the following contributes most to the data explosion?", "options": ["a) Manual record keeping", "b) IoT devices", "c) Typewriters", "d) Fax machines"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which “V” represents the scale of data?", "options": ["a) Velocity", "b) Value", "c) Volume", "d) Variety"], "correct": 2 },
+        { "type": "mcq", "q": "3. Which layer is responsible for collecting data from different sources?", "options": ["a) Storage", "b) Analytics", "c) Ingestion", "d) Visualization"], "correct": 2 },
+        { "type": "mcq", "q": "4. Which of the following is an example of unstructured data?", "options": ["a) Excel table", "b) SQL database", "c) Social media image", "d) CSV file"], "correct": 2 },
+        { "type": "mcq", "q": "5. Traditional systems mainly rely on:", "options": ["a) Distributed clusters", "b) Single-server architecture", "c) Cloud-native systems", "d) Edge computing"], "correct": 1 },
+        { "type": "mcq", "q": "6. Velocity mainly concerns:", "options": ["a) Data size", "b) Data speed", "c) Data quality", "d) Data storage cost"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which industry uses Big Data for fraud detection?", "options": ["a) Agriculture", "b) Finance", "c) Construction", "d) Manufacturing"], "correct": 1 },
+        { "type": "mcq", "q": "8. Veracity is related to:", "options": ["a) Data truthfulness", "b) Data format", "c) Data speed", "d) Data duplication"], "correct": 0 },
+        { "type": "mcq", "q": "9. Distributed computing improves:", "options": ["a) Manual processing", "b) Scalability", "c) Paper documentation", "d) Data entry speed"], "correct": 1 },
+        { "type": "mcq", "q": "10. One key challenge in Big Data implementation is:", "options": ["a) Low internet usage", "b) Data security", "c) Small datasets", "d) Limited software options"], "correct": 1 },
+        {
+          "type": "written",
+          "q": "1. Define **Big Data** in your own words.",
+          "qt": "1. عرف **البيانات الضخمة (Big Data)** بكلماتك الخاصة.",
+          "a": "Big Data refers to datasets so **==large or complex==** that **==traditional data processing application software is inadequate==** to deal with them. It requires **==advanced technologies==** to extract **==useful insights==**.",
+          "at": "البيانات الضخمة تشير إلى مجموعات بيانات **==كبيرة أو معقدة جدًا==** لدرجة أن **==برامج معالجة البيانات التقليدية غير قادرة==** على التعامل معها. وتتطلب **==تقنيات متقدمة==** لاستخراج **==رؤى مفيدة==**."
+        },
+        {
+          "type": "written",
+          "q": "2. Explain the difference between **Volume** and **Velocity**.",
+          "qt": "2. اشرح الفرق بين **الحجم (Volume)** و **السرعة (Velocity)**.",
+          "a": "Volume: The **==sheer quantity of data==** generated and stored (terabytes to zettabytes).\nVelocity: The **==speed at which data is generated, collected, and processed==** (real-time data streams).",
+          "at": "الحجم (Volume): **==الكمية الهائلة من البيانات==** التي يتم إنشاؤها وتخزينها (من تيرابايت إلى زيتابايت).\nالسرعة (Velocity): **==السرعة التي يتم بها إنشاء البيانات وجمعها ومعالجتها==** (تدفقات البيانات في الوقت الفعلي)."
+        },
+        {
+          "type": "written",
+          "q": "3. Why do **traditional systems** struggle with Big Data?",
+          "qt": "3. لماذا تواجه **الأنظمة التقليدية** صعوبة في التعامل مع البيانات الضخمة؟",
+          "a": "Traditional systems rely on **==vertical scaling (single server)==** which becomes **==expensive and insufficient==** for the huge volume and velocity of Big Data, causing **==single-node bottlenecks==**.",
+          "at": "تعتمد الأنظمة التقليدية على **==التوسع الرأسي (خادم واحد)==** والذي يصبح **==مكلفًا وغير كافٍ==** للحجم الهائل والسرعة العالية للبيانات الضخمة، مما يتسبب في **==اختناقات العقدة المفردة==**."
+        },
+        {
+          "type": "written",
+          "q": "4. List the main components of the **Big Data technology stack**.",
+          "qt": "4. اذكر المكونات الرئيسية لـ **حزمة تقنيات البيانات الضخمة (Big Data technology stack)**.",
+          "a": "**==1. Ingestion\n2. Storage\n3. Processing\n4. Analytics==**",
+          "at": "**==1. الاستيعاب/الإدخال (Ingestion)\n2. التخزين (Storage)\n3. المعالجة (Processing)\n4. التحليلات (Analytics)==**"
+        },
+        {
+          "type": "written",
+          "q": "5. Mention two Big Data **use cases** in healthcare or e-commerce.",
+          "qt": "5. اذكر **حالتي استخدام (Use cases)** للبيانات الضخمة في الرعاية الصحية أو التجارة الإلكترونية.",
+          "a": "Healthcare: Leveraging patient records and wearable data to **==improve diagnostic accuracy, personalize treatments, and predict disease outbreaks==**.\nE-commerce: Enhancing customer experience through **==personalized recommendations, optimizing supply chains, and forecasting demand==**.",
+          "at": "الرعاية الصحية: الاستفادة من سجلات المرضى وبيانات الأجهزة القابلة للارتداء لـ **==تحسين دقة التشخيص، وتخصيص العلاجات، والتنبؤ بتفشي الأمراض==**.\nالتجارة الإلكترونية: تحسين تجربة العملاء من خلال **==التوصيات المخصصة، وتحسين سلاسل التوريد، والتنبؤ بالطلب==**."
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2 – Part 1",
+      "questions": [
+        { "type": "tf", "q": "1. The ingestion layer is responsible for collecting data from different sources.", "correct": "T" },
+        { "type": "tf", "q": "2. Apache Kafka is mainly used for streaming data ingestion.", "correct": "T" },
+        { "type": "tf", "q": "3. Hadoop Distributed File System is a distributed file system used for large-scale storage.", "correct": "T" },
+        { "type": "tf", "q": "4. Data warehouses are optimized mainly for transactional workloads.", "correct": "F" },
+        { "type": "tf", "q": "5. ETL loads data first and then transforms it.", "correct": "F" },
+        { "type": "tf", "q": "6. Stateless services help improve scalability.", "correct": "T" },
+        { "type": "tf", "q": "7. Leader election is part of high availability mechanisms.", "correct": "T" },
+        { "type": "tf", "q": "8. Encryption is part of the security layer in Big Data architecture.", "correct": "T" },
+        { "type": "mcq", "q": "1. Which layer is responsible for storing large volumes of data?", "options": ["a) Ingestion", "b) Storage", "c) Analytics", "d) Monitoring"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which of the following is an example of streaming ingestion tool?", "options": ["a) Power BI", "b) Apache Kafka", "c) MySQL", "d) Excel"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which storage option is commonly used in Hadoop ecosystems?", "options": ["a) HDFS", "b) FTP", "c) HTML", "d) SMTP"], "correct": 0 },
+        { "type": "mcq", "q": "4. ELT differs from ETL because transformation happens:", "options": ["a) Before loading", "b) During ingestion", "c) After loading", "d) Outside the system"], "correct": 2 },
+        { "type": "mcq", "q": "5. Sharding is mainly used for:", "options": ["a) Backup", "b) Partitioning data", "c) Encryption", "d) Visualization"], "correct": 1 },
+        { "type": "mcq", "q": "6. Geo-replication improves:", "options": ["a) Data formatting", "b) Geographic availability", "c) Dashboard design", "d) Programming speed"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which tool is commonly used for monitoring cluster metrics?", "options": ["a) Kafka", "b) Prometheus", "c) HDFS", "d) SQL Server"], "correct": 1 },
+        { "type": "mcq", "q": "8. Data lakes are beneficial because they:", "options": ["a) Reduce flexibility", "b) Store only structured data", "c) Support machine learning readiness", "d) Eliminate scalability"], "correct": 2 },
+        { "type": "mcq", "q": "9. Stateless services are important for:", "options": ["a) Security only", "b) Scalability and autoscaling", "c) Manual processing", "d) Backup operations"], "correct": 1 },
+        { "type": "mcq", "q": "10. In high availability systems, automated failover ensures:", "options": ["a) Manual restart", "b) Immediate recovery from failure", "c) Data deletion", "d) Reduced monitoring"], "correct": 1 },
+        {
+          "type": "written",
+          "q": "1. Explain the main components of **Big Data Architecture**.",
+          "qt": "1. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
+          "a": "• Ingestion: **==Capture raw data==** from sources (streaming and batch) and deliver to storage or processing systems.\n• Storage: **==Durable, often distributed storage==** optimized for cost and access patterns (cold vs hot data).\n• Processing: **==Transformations, enrichment, aggregations and model training==** using batch or stream compute frameworks.\n• Analytics: **==Serving results to BI tools, dashboards, or ML inference endpoints==**; support for ad-hoc queries and exploratory analysis.",
+          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (التدفق والدفعات) وتوصيلها إلى أنظمة التخزين أو المعالجة.\n• التخزين (Storage): **==تخزين متين وموزع غالباً==** مُحسّن من حيث التكلفة وأنماط الوصول (البيانات الباردة مقابل الساخنة).\n• المعالجة (Processing): **==التحويلات، والإثراء، والتجميعات، وتدريب النماذج==** باستخدام أطر عمل الحوسبة بالدفعات أو التدفق.\n• التحليلات (Analytics): **==تقديم النتائج لأدوات ذكاء الأعمال، لوحات المعلومات، أو نقاط نهاية استدلال تعلم الآلة==**؛ ودعم الاستعلامات المخصصة والتحليل الاستكشافي."
+        },
+        {
+          "type": "written",
+          "q": "2. What is the difference between **ETL** and **ELT**?",
+          "qt": "2. ما الفرق بين **ETL** و **ELT**؟",
+          "a": "• ETL (Extract, Transform, Load): **==Transform data before loading==** → traditional for data warehouses, **==predefined schema==**.\n• ELT (Extract, Load, Transform): **==Load raw data first into data lake, then transform==** → modern for Big Data, **==schema-on-read==**, faster for ad-hoc analytics & ML.",
+          "at": "• ETL (استخراج، تحويل، تحميل): **==تحويل البيانات قبل التحميل==** ← تقليدي لمستودعات البيانات، وله **==مخطط محدد مسبقاً==**.\n• ELT (استخراج، تحميل، تحويل): **==تحميل البيانات الخام أولاً في بحيرة بيانات، ثم تحويلها==** ← حديث للبيانات الضخمة، يعتمد على **==المخطط عند القراءة==**، وأسرع للتحليلات الفورية وتعلم الآلة."
+        },
+        {
+          "type": "written",
+          "q": "3. Define **fault tolerance** and give one **replication strategy** example.",
+          "qt": "3. عرف **التسامح مع الأخطاء (fault tolerance)** واذكر مثالاً على **استراتيجية النسخ المتماثل (replication strategy)**.",
+          "a": "Fault tolerance: **==Ability of the system to continue working when some components fail==** (high availability & no data loss).\nExample: **==Geo-replication==** (copies data across different geographic regions for disaster recovery).",
+          "at": "التسامح مع الأخطاء: **==قدرة النظام على الاستمرار في العمل عند فشل بعض المكونات==** (توافر عالي وبدون فقدان للبيانات).\nمثال: **==النسخ المتماثل الجغرافي (Geo-replication)==** (نسخ البيانات عبر مناطق جغرافية مختلفة للتعافي من الكوارث)."
+        },
+        {
+          "type": "written",
+          "q": "4. What are the benefits of a **Data Lake**?",
+          "qt": "4. ما هي فوائد **بحيرة البيانات (Data Lake)**؟",
+          "a": "• **==Cost-efficient storage==** for large volumes.\n• **==Schema-on-read agility==** (flexible exploration without rigid ETL).\n• **==Machine learning readiness==** (raw data for feature engineering).\n• Supports **==structured, semi-structured, and unstructured data==**.",
+          "at": "• **==تخزين فعال من حيث التكلفة==** للأحجام الكبيرة.\n• **==مرونة المخطط عند القراءة==** (استكشاف مرن بدون قيود ETL الصارمة).\n• **==الجاهزية لتعلم الآلة==** (بيانات خام لهندسة الميزات).\n• يدعم **==البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة==**."
+        },
+        {
+          "type": "written",
+          "q": "5. Explain the importance of **monitoring** in distributed systems.",
+          "qt": "5. اشرح أهمية **المراقبة (monitoring)** في الأنظمة الموزعة.",
+          "a": "• Provides **==operational visibility==** for performance, health, and capacity planning.\n• Combines metrics, logs, and traces for **==rapid incident response==**.\n• Tools: **==Ambari, Prometheus, Grafana==**.",
+          "at": "• يوفر **==رؤية تشغيلية==** للأداء والصحة وتخطيط السعة.\n• يجمع بين المقاييس والسجلات والتتبعات من أجل **==الاستجابة السريعة للحوادث==**.\n• الأدوات: **==Ambari, Prometheus, Grafana==**."
+        }
+      ]
+    },
+    {
+      "title": "Sheet 2 – Part 2",
+      "questions": [
+        { "type": "tf", "q": "1. RDBMS systems are fully optimized for petabyte-scale Big Data workloads.", "correct": "F" },
+        { "type": "tf", "q": "2. Scalability is one of the main limitations of traditional RDBMS when handling Big Data.", "correct": "T" },
+        { "type": "tf", "q": "3. Apache Hadoop is designed for distributed storage and processing of large datasets.", "correct": "T" },
+        { "type": "tf", "q": "4. Hadoop provides built-in fault tolerance.", "correct": "T" },
+        { "type": "tf", "q": "5. NoSQL databases are limited to structured data only.", "correct": "F" },
+        { "type": "tf", "q": "6. Hadoop Distributed File System is part of the Hadoop storage layer.", "correct": "T" },
+        { "type": "tf", "q": "7. Apache Spark is generally faster than MapReduce due to in-memory processing.", "correct": "T" },
+        { "type": "tf", "q": "8. Apache Hive belongs to the data querying layer of the Hadoop ecosystem.", "correct": "T" },
+        { "type": "tf", "q": "9. Hadoop cluster management can be performed using Apache Ambari.", "correct": "T" },
+        { "type": "tf", "q": "10. Hadoop is only suitable for structured relational data.", "correct": "F" },
+        { "type": "mcq", "q": "1. Which of the following is a limitation of RDBMS in Big Data?", "options": ["a) High scalability", "b) Low cost storage", "c) Limited scalability", "d) Built-in fault tolerance"], "correct": 2 },
+        { "type": "mcq", "q": "2. Hadoop mainly solves problems related to:", "options": ["a) Small datasets", "b) Distributed storage and processing", "c) Desktop computing", "d) Word processing"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which tool belongs to the Hadoop ingestion layer?", "options": ["a) Hive", "b) Spark", "c) Flume", "d) HDFS"], "correct": 2 },
+        { "type": "mcq", "q": "4. Which component is used for distributed storage?", "options": ["a) HDFS", "b) Pig", "c) Hive", "d) Oozie"], "correct": 0 },
+        { "type": "mcq", "q": "5. MapReduce primarily processes data in:", "options": ["a) Real-time memory", "b) Distributed batch mode", "c) Manual mode", "d) Local spreadsheets"], "correct": 1 },
+        { "type": "mcq", "q": "6. Which language is commonly used with Hive?", "options": ["a) SQL", "b) HQL", "c) Python", "d) C++"], "correct": 1 },
+        { "type": "mcq", "q": "7. HBase is best described as:", "options": ["a) Relational database", "b) NoSQL wide-column database", "c) Visualization tool", "d) Monitoring tool"], "correct": 1 },
+        { "type": "mcq", "q": "8. Which company is known as a leading Big Data vendor?", "options": ["a) Cloudera", "b) Adobe", "c) Intel", "d) Oracle Forms"], "correct": 0 },
+        { "type": "mcq", "q": "9. Spark is preferred over MapReduce because:", "options": ["a) It is slower", "b) It lacks scalability", "c) It supports in-memory processing", "d) It does not support ML"], "correct": 2 },
+        { "type": "mcq", "q": "10. Hadoop supports which type of data?", "options": ["a) Only structured", "b) Only unstructured", "c) Structured, semi-structured, and unstructured", "d) Only relational"], "correct": 2 },
+        {
+          "type": "written",
+          "q": "1. Why is **RDBMS** not suitable for Big Data workloads?",
+          "qt": "1. لماذا لا يعد نظام **RDBMS** مناسباً لأحمال عمل البيانات الضخمة؟",
+          "a": "RDBMS is designed for structured data and smaller volumes. Main limits:\n• **==Scalability==**: Vertical scaling only.\n• **==Size==**: Petabyte-scale data is too large.\n• **==Data types==**: Cannot handle unstructured/semi-structured data well.\n• **==Velocity==**: Not built for high-speed data.\n• **==Cost==**: Very expensive to scale.",
+          "at": "تم تصميم RDBMS للبيانات المهيكلة والأحجام الأصغر. حدوده الرئيسية هي:\n• **==قابلية التوسع==**: التوسع الرأسي فقط.\n• **==الحجم==**: بيانات بحجم بيتابايت كبيرة جداً.\n• **==أنواع البيانات==**: لا يمكنه التعامل جيداً مع البيانات غير المهيكلة أو شبه المهيكلة.\n• **==السرعة==**: غير مبني للبيانات عالية السرعة.\n• **==التكلفة==**: مكلف جداً للتوسع."
+        },
+        {
+          "type": "written",
+          "q": "2. What are the main advantages of **Hadoop**?",
+          "qt": "2. ما هي المزايا الرئيسية لـ **Hadoop**؟",
+          "a": "It stores and processes huge amounts of any kind of data quickly. Advantages:\n• **==Scalability==**: Scales linearly.\n• **==Flexibility==**: Handles structured, semi-structured, and unstructured data.\n• **==Fault tolerance==**: Built-in data replication.\n• **==Low cost==**: Uses commodity hardware.\n• **==Computing power==**: High distributed processing power.",
+          "at": "يقوم بتخزين ومعالجة كميات ضخمة من أي نوع من البيانات بسرعة. المزايا تشمل:\n• **==قابلية التوسع==**: يتوسع بشكل خطي.\n• **==المرونة==**: يتعامل مع البيانات المهيكلة، شبه المهيكلة، وغير المهيكلة.\n• **==التسامح مع الأخطاء==**: نسخ متماثل مدمج للبيانات.\n• **==تكلفة منخفضة==**: يستخدم أجهزة عادية غير مكلفة.\n• **==قوة الحوسبة==**: قوة معالجة موزعة وعالية."
+        },
+        {
+          "type": "written",
+          "q": "3. Explain the difference between **HDFS** and **HBase**.",
+          "qt": "3. اشرح الفرق بين **HDFS** و **HBase**.",
+          "a": "• **==HDFS==**: Hadoop Distributed File System → The **==storage layer for large files==** with replication and fault tolerance.\n• **==HBase==**: A **==NoSQL wide-column database==** running on top of HDFS. It adds **==random read/write access==** and supports point queries.",
+          "at": "• **==نظام HDFS==**: نظام ملفات هادوب الموزع ← هو **==طبقة التخزين للملفات الكبيرة==** مع النسخ المتماثل والتسامح مع الأخطاء.\n• **==نظام HBase==**: **==قاعدة بيانات NoSQL واسعة الأعمدة==** تعمل فوق HDFS. يضيف **==وصول قراءة وكتابة عشوائي==** ويدعم الاستعلامات النقطية."
+        },
+        {
+          "type": "written",
+          "q": "4. Compare **MapReduce** and **Spark**.",
+          "qt": "4. قارن بين **MapReduce** و **Spark**.",
+          "a": "• **==MapReduce==**: A **==batch processing==** engine that writes intermediate data to **==disk (slower)==**.\n• **==Spark==**: An **==in-memory processing==** engine, making it **==much faster==** for iterative tasks and analytics.",
+          "at": "• **==محرك MapReduce==**: محرك **==معالجة دفعات (Batch processing)==** يكتب البيانات الوسيطة على **==القرص (مما يجعله أبطأ)==**.\n• **==محرك Spark==**: محرك **==معالجة في الذاكرة (In-memory processing)==**، مما يجعله **==أسرع بكثير==** للمهام التكرارية والتحليلات."
+        },
+        {
+          "type": "written",
+          "q": "5. What is the role of **Apache Ambari** in Hadoop?",
+          "qt": "5. ما هو دور **Apache Ambari** في نظام Hadoop؟",
+          "a": "Apache Ambari provides an **==intuitive, easy-to-use web UI==** for Hadoop cluster management. It allows:\n• **==Provisioning==** resources.\n• **==Monitoring==** health and performance.\n• **==Managing==** the entire Hadoop ecosystem (HDFS, MapReduce, Hive, HBase, etc.).",
+          "at": "يوفر Apache Ambari **==واجهة مستخدم ويب سهلة الاستخدام==** لإدارة مجموعة Hadoop. ويسمح بـ:\n• **==تهيئة (Provisioning)==** الموارد.\n• **==مراقبة (Monitoring)==** الصحة والأداء.\n• **==إدارة (Managing)==** نظام Hadoop البيئي بأكمله (مثل HDFS و MapReduce و Hive و HBase)."
+        }
+      ]
+    },
+    {
+      "title": "Sheet 3",
+      "questions": [
+        { "type": "tf", "q": "1. Data Visualization is used to represent data graphically for better understanding.", "correct": "T" },
+        { "type": "tf", "q": "2. Exploratory Data Analysis (EDA) is only performed after model deployment.", "correct": "F" },
+        { "type": "tf", "q": "3. EDA helps in identifying patterns, trends, and anomalies in data.", "correct": "T" },
+        { "type": "tf", "q": "4. Central tendency refers to measures like mean, median, and mode.", "correct": "T" },
+        { "type": "tf", "q": "5. Dispersion measures the spread of data.", "correct": "T" },
+        { "type": "tf", "q": "6. A histogram is used for multivariate analysis only.", "correct": "F" },
+        { "type": "tf", "q": "7. Box plots can help identify outliers in data.", "correct": "T" },
+        { "type": "tf", "q": "8. Correlation matrix is used to analyze relationships between multiple variables.", "correct": "T" },
+        { "type": "tf", "q": "9. Data visualization has no role in machine learning.", "correct": "F" },
+        { "type": "tf", "q": "10. Scatter plots are used for visualizing relationships between two variables.", "correct": "T" },
+        { "type": "mcq", "q": "1. What is the main goal of EDA?", "options": ["a) Data storage", "b) Data exploration and understanding", "c) Data deletion", "d) Data encryption"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which measure represents central tendency?", "options": ["a) Variance", "b) Mean", "c) Range", "d) Standard deviation"], "correct": 1 },
+        { "type": "mcq", "q": "3. Which plot is used for distribution analysis?", "options": ["a) Histogram", "b) Pie chart", "c) Line chart", "d) Bar chart"], "correct": 0 },
+        { "type": "mcq", "q": "4. Which technique is used to detect outliers?", "options": ["a) Scatter plot", "b) Box plot", "c) Heatmap", "d) Line chart"], "correct": 1 },
+        { "type": "mcq", "q": "5. Which library is commonly used for visualization in Python?", "options": ["a) NumPy", "b) Pandas", "c) Matplotlib", "d) TensorFlow"], "correct": 2 },
+        { "type": "mcq", "q": "6. Correlation matrix is used to:", "options": ["a) Store data", "b) Measure relationships between variables", "c) Clean data", "d) Encode data"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which plot is used for multivariate analysis?", "options": ["a) Histogram", "b) Box plot", "c) Scatter matrix", "d) Density plot"], "correct": 2 },
+        { "type": "mcq", "q": "8. Dispersion includes:", "options": ["a) Mean", "b) Median", "c) Standard deviation", "d) Mode"], "correct": 2 },
+        { "type": "mcq", "q": "9. Density plots are used to:", "options": ["a) Show data categories", "b) Show data distribution smoothly", "c) Show exact values", "d) Store data"], "correct": 1 },
+        { "type": "mcq", "q": "10. Data visualization in ML helps in:", "options": ["a) Ignoring data", "b) Understanding features and patterns", "c) Deleting models", "d) Avoiding preprocessing"], "correct": 1 }
+      ]
+    },
+    {
+      "title": "Code_Lec3",
+      "questions": [
+        {
+          "type": "code",
+          "q": "Coding Q1: Create a Histogram (Univariate Plot)",
+          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Generate some random data\ndata = np.random.randn(1000)\n\n# Create the histogram\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Example')\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q2: Create a Density Plot (Univariate Plot)",
+          "code": "import seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load a sample dataset\ndf = sns.load_dataset(\"iris\")\n\n# Create the density plot\nsns.kdeplot(data=df, x=\"sepal_length\", fill=True)\n\n# Add labels and title\nplt.xlabel(\"Sepal Length\")\nplt.ylabel(\"Density\")\nplt.title(\"Density Plot of Sepal Length\")\n\n# Show the plot\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q3: Create a Box and Whisker Plot (Univariate Plot)",
+          "code": "import matplotlib.pyplot as plt\n\n# Sample data\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35]\n\n# Create a figure and axes\nfig, ax = plt.subplots()\n\n# Create the boxplot\nax.boxplot(data)\n\n# Set the title\nax.set_title('Box and Whisker Plot')\n\n# Show the plot\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q4: Create a Correlation Matrix Plot (Multivariate Plot)",
+          "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Sample data\ndata = {'A': [1, 2, 3, 4, 5],\n        'B': [5, 4, 3, 2, 1],\n        'C': [2, 3, 1, 4, 5]}\n\ndf = pd.DataFrame(data)\n\n# Calculate the correlation matrix\nc_matrix = df.corr()\n\n# Create a heatmap\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title(\"Correlation Matrix\")\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Coding Q5: Create a Scatter Matrix Plot (Multivariate Plot)",
+          "code": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn import datasets\n\n# Load the iris dataset\niris = datasets.load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\n\n# Create the scatter matrix plot\npd.plotting.scatter_matrix(df, diagonal='hist', figsize=(8,7))\nplt.show()"
+        }
+      ]
+    },
+    {
+      "title": "Revision 1",
+      "questions": [
+        { "type": "tf", "q": "1. The growth of IoT devices is one of the main causes of the data explosion.", "correct": "T" },
+        { "type": "tf", "q": "2. Big Data only refers to structured data stored in relational databases.", "correct": "F" },
+        { "type": "tf", "q": "3. Volume refers to the speed at which data is generated.", "correct": "F" },
+        { "type": "tf", "q": "4. Velocity describes how fast data is generated and processed.", "correct": "T" },
+        { "type": "tf", "q": "5. Variety refers to different formats such as text, images, and videos.", "correct": "T" },
+        { "type": "tf", "q": "6. Veracity deals with data accuracy and reliability.", "correct": "T" },
+        { "type": "tf", "q": "7. Traditional systems are always sufficient for handling petabytes of data.", "correct": "F" },
+        { "type": "tf", "q": "8. Distributed computing allows multiple machines to work together.", "correct": "T" },
+        { "type": "tf", "q": "9. Big Data architecture includes ingestion, storage, processing, and analytics layers.", "correct": "T" },
+        { "type": "tf", "q": "10. Scalability is not a challenge in Big Data systems.", "correct": "F" },
+        { "type": "tf", "q": "11. Hadoop provides built-in fault tolerance.", "correct": "T" },
+        { "type": "tf", "q": "12. NoSQL databases are limited to structured data only.", "correct": "F" },
+        { "type": "tf", "q": "13. Hadoop Distributed File System is part of the Hadoop storage layer.", "correct": "T" },
+        { "type": "tf", "q": "14. Apache Spark is generally faster than MapReduce due to in-memory processing.", "correct": "T" },
+        { "type": "tf", "q": "15. Apache Hive belongs to the data querying layer of the Hadoop ecosystem.", "correct": "T" },
+        { "type": "tf", "q": "16. Hadoop cluster management can be performed using Apache Ambari.", "correct": "T" },
+        { "type": "tf", "q": "17. Hadoop is only suitable for structured relational data.", "correct": "F" },
+        { "type": "tf", "q": "18. A histogram is used for multivariate analysis only.", "correct": "F" },
+        { "type": "tf", "q": "19. Box plots can help identify outliers in data.", "correct": "T" },
+        { "type": "tf", "q": "20. Correlation matrix is used to analyze relationships between multiple variables.", "correct": "T" },
+        { "type": "tf", "q": "21. Data visualization has no role in machine learning.", "correct": "F" },
+        { "type": "tf", "q": "22. Scatter plots are used for visualizing relationships between two variables.", "correct": "T" },
+        { "type": "tf", "q": "23. Data Visualization is used to represent data graphically for better understanding.", "correct": "T" },
+        { "type": "tf", "q": "24. Exploratory Data Analysis (EDA) is only performed after model deployment.", "correct": "F" },
+        { "type": "tf", "q": "25. Data Visualization is used to represent data graphically for better understanding.", "correct": "T" },
+        { "type": "tf", "q": "26. Exploratory Data Analysis (EDA) is only performed after model deployment.", "correct": "F" },
+        { "type": "tf", "q": "27. EDA helps in identifying patterns, trends, and anomalies in data.", "correct": "T" },
+        { "type": "tf", "q": "28. Central tendency refers to measures like mean, median, and mode.", "correct": "T" },
+        { "type": "tf", "q": "29. RDBMS systems are fully optimized for petabyte-scale Big Data workloads.", "correct": "F" },
+        { "type": "tf", "q": "30. ETL loads data first and then transforms it.", "correct": "F" },
+        { "type": "mcq", "q": "1. Which of the following contributes most to the data explosion?", "options": ["a) Manual record keeping", "b) IoT devices", "c) Typewriters", "d) Fax machines"], "correct": 1 },
+        { "type": "mcq", "q": "2. Which “V” represents the scale of data?", "options": ["a) Velocity", "b) Value", "c) Volume", "d) Variety"], "correct": 2 },
+        { "type": "mcq", "q": "3. Which layer is responsible for collecting data from different sources?", "options": ["a) Storage", "b) Analytics", "c) Ingestion", "d) Visualization"], "correct": 2 },
+        { "type": "mcq", "q": "4. Which of the following is an example of unstructured data?", "options": ["a) Excel table", "b) SQL database", "c) Social media image", "d) CSV file"], "correct": 2 },
+        { "type": "mcq", "q": "5. Traditional systems mainly rely on:", "options": ["a) Distributed clusters", "b) Single-server architecture", "c) Cloud-native systems", "d) Edge computing"], "correct": 1 },
+        { "type": "mcq", "q": "6. Velocity mainly concerns:", "options": ["a) Data size", "b) Data speed", "c) Data quality", "d) Data storage cost"], "correct": 1 },
+        { "type": "mcq", "q": "7. Which industry uses Big Data for fraud detection?", "options": ["a) Agriculture", "b) Finance", "c) Construction", "d) Manufacturing"], "correct": 1 },
+        { "type": "mcq", "q": "8. Veracity is related to:", "options": ["a) Data truthfulness", "b) Data format", "c) Data speed", "d) Data duplication"], "correct": 0 },
+        { "type": "mcq", "q": "9. Distributed computing improves:", "options": ["a) Manual processing", "b) Scalability", "c) Paper documentation", "d) Data entry speed"], "correct": 1 },
+        { "type": "mcq", "q": "10. One key challenge in Big Data implementation is:", "options": ["a) Low internet usage", "b) Data security", "c) Small datasets", "d) Limited software options"], "correct": 1 },
+        { "type": "mcq", "q": "11. Which layer is responsible for storing large volumes of data?", "options": ["a) Ingestion", "b) Storage", "c) Analytics", "d) Monitoring"], "correct": 1 },
+        { "type": "mcq", "q": "12. Which of the following is an example of streaming ingestion tool?", "options": ["a) Power BI", "b) Apache Kafka", "c) MySQL", "d) Excel"], "correct": 1 },
+        { "type": "mcq", "q": "13. Which storage option is commonly used in Hadoop ecosystems?", "options": ["a) HDFS", "b) FTP", "c) HTML", "d) SMTP"], "correct": 0 },
+        { "type": "mcq", "q": "14. ELT differs from ETL because transformation happens:", "options": ["a) Before loading", "b) During ingestion", "c) After loading", "d) Outside the system"], "correct": 2 },
+        { "type": "mcq", "q": "15. Hadoop mainly solves problems related to:", "options": ["a) Small datasets", "b) Distributed storage and processing", "c) Desktop computing", "d) Word processing"], "correct": 1 },
+        { "type": "mcq", "q": "16. Which tool belongs to the Hadoop ingestion layer?", "options": ["a) Hive", "b) Spark", "c) Flume", "d) HDFS"], "correct": 2 },
+        { "type": "mcq", "q": "17. Which component is used for distributed storage?", "options": ["a) HDFS", "b) Pig", "c) Hive", "d) Oozie"], "correct": 0 },
+        { "type": "mcq", "q": "18. MapReduce primarily processes data in:", "options": ["a) Real-time memory", "b) Distributed batch mode", "c) Manual mode", "d) Local spreadsheets"], "correct": 1 },
+        { "type": "mcq", "q": "19. Which language is commonly used with Hive?", "options": ["a) SQL", "b) HQL", "c) Python", "d) C++"], "correct": 1 },
+        { "type": "mcq", "q": "20. What is the main goal of EDA?", "options": ["a) Data storage", "b) Data exploration and understanding", "c) Data deletion", "d) Data encryption"], "correct": 1 },
+        { "type": "mcq", "q": "21. Which measure represents central tendency?", "options": ["a) Variance", "b) Mean", "c) Range", "d) Standard deviation"], "correct": 1 },
+        { "type": "mcq", "q": "22. Which plot is used for distribution analysis?", "options": ["a) Histogram", "b) Pie chart", "c) Line chart", "d) Bar chart"], "correct": 0 },
+        { "type": "mcq", "q": "23. Which technique is used to detect outliers?", "options": ["a) Scatter plot", "b) Box plot", "c) Heatmap", "d) Line chart"], "correct": 1 },
+        { "type": "mcq", "q": "24. Correlation matrix is used to:", "options": ["a) Store data", "b) Measure relationships between variables", "c) Clean data", "d) Encode data"], "correct": 1 },
+        { "type": "mcq", "q": "25. Which plot is used for multivariate analysis?", "options": ["a) Histogram", "b) Box plot", "c) Scatter matrix", "d) Density plot"], "correct": 2 },
+        {
+          "type": "written",
+          "q": "1. Why do **traditional systems** struggle with Big Data?",
+          "qt": "1. لماذا تواجه **الأنظمة التقليدية** صعوبة في التعامل مع البيانات الضخمة؟",
+          "a": "Traditional systems rely on **==vertical scaling (single server)==** which becomes **==expensive and insufficient==** for the huge volume and velocity of Big Data, causing **==single-node bottlenecks==**.",
+          "at": "تعتمد الأنظمة التقليدية على **==التوسع الرأسي (خادم واحد)==** والذي يصبح **==مكلفًا وغير كافٍ==** للحجم الهائل والسرعة العالية للبيانات الضخمة، مما يتسبب في **==اختناقات العقدة المفردة==**."
+        },
+        {
+          "type": "written",
+          "q": "2. Explain the main components of **Big Data Architecture**.",
+          "qt": "2. اشرح المكونات الرئيسية لـ **بنية البيانات الضخمة (Big Data Architecture)**.",
+          "a": "• Ingestion: **==Capture raw data==** from sources (streaming and batch) and deliver to storage or processing systems.\n• Storage: **==Durable, often distributed storage==** optimized for cost and access patterns (cold vs hot data).\n• Processing: **==Transformations, enrichment, aggregations and model training==** using batch or stream compute frameworks.\n• Analytics: **==Serving results to BI tools, dashboards, or ML inference endpoints==**; support for ad-hoc queries and exploratory analysis.",
+          "at": "• الاستيعاب (Ingestion): **==التقاط البيانات الخام==** من المصادر (التدفق والدفعات) وتوصيلها إلى أنظمة التخزين أو المعالجة.\n• التخزين (Storage): **==تخزين متين وموزع غالباً==** مُحسّن من حيث التكلفة وأنماط الوصول (البيانات الباردة مقابل الساخنة).\n• المعالجة (Processing): **==التحويلات، والإثراء، والتجميعات، وتدريب النماذج==** باستخدام أطر عمل الحوسبة بالدفعات أو التدفق.\n• التحليلات (Analytics): **==تقديم النتائج لأدوات ذكاء الأعمال، لوحات المعلومات، أو نقاط نهاية استدلال تعلم الآلة==**؛ ودعم الاستعلامات المخصصة والتحليل الاستكشافي."
+        },
+        {
+          "type": "written",
+          "q": "3. What is the difference between **ETL** and **ELT**?",
+          "qt": "3. ما الفرق بين **ETL** و **ELT**؟",
+          "a": "• ETL (Extract, Transform, Load): **==Transform data before loading==** → traditional for data warehouses, **==predefined schema==**.\n• ELT (Extract, Load, Transform): **==Load raw data first into data lake, then transform==** → modern for Big Data, **==schema-on-read==**, faster for ad-hoc analytics & ML.",
+          "at": "• ETL (استخراج، تحويل، تحميل): **==تحويل البيانات قبل التحميل==** ← تقليدي لمستودعات البيانات، وله **==مخطط محدد مسبقاً==**.\n• ELT (استخراج، تحميل، تحويل): **==تحميل البيانات الخام أولاً في بحيرة بيانات، ثم تحويلها==** ← حديث للبيانات الضخمة، يعتمد على **==المخطط عند القراءة==**، وأسرع للتحليلات الفورية وتعلم الآلة."
+        },
+        {
+          "type": "written",
+          "q": "4. Define **Exploratory Data Analysis (EDA)**.",
+          "qt": "4. عرف **تحليل البيانات الاستكشافي (EDA)**.",
+          "a": "Exploratory Data Analysis (EDA) using data visualization is a critical, **==iterative process of examining datasets==** to **==identify patterns, detect outliers, and test hypotheses==** using plots like **==scatter plots, histograms, and heatmaps==**.",
+          "at": "تحليل البيانات الاستكشافي (EDA) باستخدام تصوير البيانات هو **==عملية تكرارية حاسمة لفحص مجموعات البيانات==** من أجل **==تحديد الأنماط، واكتشاف القيم المتطرفة، واختبار الفرضيات==** باستخدام مخططات مثل **==مخططات التشتت والمدرجات التكرارية والخرائط الحرارية==**."
+        },
+        {
+          "type": "written",
+          "q": "5. Explain the difference between **univariate** and **multivariate** plots.",
+          "qt": "5. اشرح الفرق بين المخططات **أحادية المتغير (univariate)** و **متعددة المتغيرات (multivariate)**.",
+          "a": "• Univariate Analysis: **==Analyzing one variable at a time==** (e.g., histograms).\n• Bivariate/Multivariate Analysis: **==Analyzing relationships between two or more variables==** (e.g., scatter plots, heatmaps).",
+          "at": "• التحليل أحادي المتغير: **==تحليل متغير واحد في كل مرة==** (مثل المدرجات التكرارية).\n• التحليل ثنائي/متعدد المتغيرات: **==تحليل العلاقات بين متغيرين أو أكثر==** (مثل مخططات التشتت والخرائط الحرارية)."
+        },
+        {
+          "type": "code",
+          "q": "Programming Task 1: Load a dataset and display basic statistical summary (mean, median, std).",
+          "code": "import pandas as pd\n\ndf = pd.read_csv('your_dataset.csv')\n\nprint(\"\\nMean:\\n\", df.mean(numeric_only=True))\nprint(\"\\nMedian:\\n\", df.median(numeric_only=True))\nprint(\"\\nStandard Deviation:\\n\", df.std(numeric_only=True))"
+        },
+        {
+          "type": "code",
+          "q": "Programming Task 2: Create a histogram to visualize the distribution of a numeric column.",
+          "code": "import matplotlib.pyplot as plt\nimport numpy as np\n\ndata = np.random.randn(1000)\n\nplt.hist(data, bins=30, color='skyblue', edgecolor='black')\nplt.xlabel('Values')\nplt.ylabel('Frequency')\nplt.title('Histogram Distribution')\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Programming Task 3: Generate a box plot to detect outliers in a dataset.",
+          "code": "import matplotlib.pyplot as plt\n\ndata = [10, 15, 18, 20, 22, 25, 28, 30, 32, 35, 100]\n\nfig, ax = plt.subplots()\nax.boxplot(data)\n\nax.set_title('Box Plot for Outlier Detection')\nplt.show()"
+        },
+        {
+          "type": "code",
+          "q": "Programming Task 4: Create a correlation matrix and visualize it.",
+          "code": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndata = {'A': [1, 2, 3, 4, 5],\n        'B': [5, 4, 3, 2, 1],\n        'C': [2, 3, 1, 4, 5]}\n\ndf = pd.DataFrame(data)\n\nc_matrix = df.corr()\n\nsns.heatmap(c_matrix, annot=True, cmap='coolwarm')\nplt.title(\"Correlation Matrix Visualization\")\nplt.show()"
+        }
+      ]
+    }
+  ]
+}
